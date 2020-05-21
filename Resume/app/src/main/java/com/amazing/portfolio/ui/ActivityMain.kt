@@ -69,6 +69,27 @@ class ActivityMain : AppCompatActivity() {
         }
 
     }
+    fun setFragment(frag: Fragment,from : Int,to : Int) {
+        try {
+            val f = getSupportFragmentManager().beginTransaction()
+            val list = getSupportFragmentManager().getFragments()
+            for(frag in list){
+                if(frag.isVisible){
+                    f.hide(frag)
+                }
+            }
+            f.setCustomAnimations(from,to);
+            MAIN_FLOW_INDEX = MAIN_FLOW_INDEX + 1
+            f.replace(R.id.layoutFragment, frag, MAIN_FLOW_TAG + MAIN_FLOW_INDEX).
+                addToBackStack(
+                    MAIN_FLOW_TAG)
+                .commitAllowingStateLoss()
+            Helper.hideKeyboard(this)
+        } catch (e: Exception) {
+            Helper.logException(this@ActivityMain, e)
+        }
+
+    }
 
     fun jumpToPreviousFlowThenGoTo(fullFragPackageNameThatStillExistInStack: String, targetFrag: Fragment){
         jumpToPreviousFragment(fullFragPackageNameThatStillExistInStack)

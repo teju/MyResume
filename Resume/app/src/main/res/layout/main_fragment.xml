@@ -1,28 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pagerlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@color/White">
-
-    <RelativeLayout
+    android:clipChildren="false"
+    android:background="@android:color/transparent"
+    android:clipToPadding="false">
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <FrameLayout
-            android:id="@+id/mainLayoutFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </RelativeLayout>
-
-
-    <com.amazing.portfolio.ui.views.LoadingCompound
-        android:id="@+id/ld"
-        android:layout_width="match_parent"
+        android:background="@drawable/ic_launcher_background"
         android:layout_height="match_parent"
-        android:clickable="true"
-        android:visibility="gone" />
+        android:layout_centerInParent="true" />
 
-</FrameLayout>
+    <!--content-->
+    <ImageView
+        android:id="@+id/list_item_icon"
+        android:layout_width="164dp"
+
+        android:layout_height="164dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_centerInParent="true" />
+
+    <!--menu-->
+    <!--button -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="@color/White"
+        android:id="@+id/white_bg"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_height="400dp">
+
+    </ImageView>
+
+</RelativeLayout>

@@ -12,7 +12,6 @@ import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import com.amazing.portfolio.R
 import com.amazing.portfolio.ui.adapters.ItemAdapter
-import com.transitionseverywhere.extra.Scale
 import kotlinx.android.synthetic.main.home_fragment.*
 import android.widget.ImageView.ScaleType
 import com.bumptech.glide.load.resource.bitmap.DownsampleStrategy.FIT_CENTER
@@ -20,25 +19,22 @@ import com.bumptech.glide.load.resource.bitmap.DownsampleStrategy.FIT_CENTER
 import androidx.transition.ChangeBounds
 import androidx.transition.ChangeImageTransform
 import androidx.transition.TransitionManager
+import android.view.animation.AccelerateDecelerateInterpolator
+import android.R.attr.duration
+import android.view.animation.Animation
+import android.view.animation.ScaleAnimation
+import android.view.animation.AnimationSet
+import android.R.attr.duration
+import android.view.animation.TranslateAnimation
 
 
 class HomePageFragment : BaseFragment() {
-    private val MOVE_DEFAULT_TIME: Long = 1000
-    private val FADE_DEFAULT_TIME: Long = 300
-    private val mDelayedTransactionHandler = Handler()
-    private val mRunnable = Runnable {
-        val nextFragment = LandingScreenFragment()
-        // 2. Shared Elements Transition
-
-        home().setFragment(LandingScreenFragment())
-    }
 
     private val itemAdapter by lazy {
         ItemAdapter { position: Int, item: Item ->
             item_list.smoothScrollToPosition(position)
-
-           // mDelayedTransactionHandler.postDelayed(mRunnable, 1000);
-
+            val landingScreenFragment = LandingScreenFragment()
+            home().setFragment(landingScreenFragment,R.animator.zoom_exit,R.animator.zoom_out)
         }
     }
     private val possibleItems = listOf(

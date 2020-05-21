@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import com.amazing.portfolio.R
+import kotlinx.android.synthetic.main.fragment_landing_screen.*
 
 class LandingScreenFragment : BaseFragment() ,View.OnClickListener{
     override fun onClick(v: View?) {
@@ -29,7 +30,10 @@ class LandingScreenFragment : BaseFragment() ,View.OnClickListener{
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        list_item_icon.setOnClickListener {
+            val landingScreenFragment = MainFragment()
+            home().setFragment(landingScreenFragment,R.anim.scale_up,R.animator.fragment_slide_right_exit)
+        }
     }
 
 
