@@ -6,23 +6,19 @@
     android:clipChildren="false"
     android:background="@android:color/transparent"
     android:clipToPadding="false">
-    <ImageView
-        android:layout_width="match_parent"
-        android:background="@drawable/ic_launcher_background"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true" />
-
-    <!--content-->
-    <ImageView
-        android:id="@+id/list_item_icon"
-        android:layout_width="164dp"
-
-        android:layout_height="164dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_centerInParent="true" />
-
-    <!--menu-->
-    <!--button -->
+    <ImageView android:maxHeight="60dp"
+        android:layout_height="wrap_content"
+        android:height="60dp"
+        android:layout_width="wrap_content"
+        android:textColor="#ff9900"
+        android:textSize="24sp"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:width="384px"
+        android:id="@+id/earth_button"
+        android:maxWidth="384px"
+        android:background="@anim/earth_animation"
+        android:layout_gravity="center" />
 
 
 </RelativeLayout>

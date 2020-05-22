@@ -53,5 +53,6 @@ dependencies {
     implementation 'jp.wasabeef:recyclerview-animators:3.+'
     compile 'com.jakewharton:butterknife:8.4.0'
     implementation "com.andkulikov:transitionseverywhere:1.8.1"
+    implementation 'com.etebarian:meow-bottom-navigation:1.2.0'
 
 }

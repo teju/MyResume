@@ -15,7 +15,6 @@ import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
 import com.amazing.portfolio.ui.fragments.BaseFragment
-import com.amazing.portfolio.ui.fragments.HomePageFragment
 import com.amazing.portfolio.ui.fragments.LandingScreenFragment
 import com.amazing.portfolio.ui.fragments.MainFragment
 
@@ -45,7 +44,7 @@ class ActivityMain : AppCompatActivity() {
     }
 
     fun triggerMainProcess(){
-        setFragment(HomePageFragment())
+        setFragment(LandingScreenFragment())
     }
 
     fun setFragment(frag: Fragment) {
@@ -80,7 +79,7 @@ class ActivityMain : AppCompatActivity() {
             }
             f.setCustomAnimations(from,to);
             MAIN_FLOW_INDEX = MAIN_FLOW_INDEX + 1
-            f.replace(R.id.layoutFragment, frag, MAIN_FLOW_TAG + MAIN_FLOW_INDEX).
+            f.add(R.id.layoutFragment, frag, MAIN_FLOW_TAG + MAIN_FLOW_INDEX).
                 addToBackStack(
                     MAIN_FLOW_TAG)
                 .commitAllowingStateLoss()
@@ -203,7 +202,10 @@ class ActivityMain : AppCompatActivity() {
                 if(frag.tag!!.contentEquals(MAIN_FLOW_TAG + (MAIN_FLOW_INDEX - 1))){
                     f.show(frag)
                 }
-            } catch (e: Exception) {}
+            } catch (e: Exception) {
+                System.out.println("setOrShowExistingFragmentByTag foundVisible "+e.toString())
+
+            }
         }
 
         if (getSupportFragmentManager().getBackStackEntryCount() <= 1 || (currentFragment is MainFragment)) {
@@ -213,6 +215,7 @@ class ActivityMain : AppCompatActivity() {
                 (currentFragment as BaseFragment).httpScope.onPause()
             } catch (e: Exception) {
                 Helper.logException(null, e)
+                System.out.println("setOrShowExistingFragmentByTag foundVisible "+e.toString())
             }
             super.onBackPressed()
         }
@@ -238,20 +241,24 @@ class ActivityMain : AppCompatActivity() {
 
 
     override fun onBackPressed() {
-        val f = getSupportFragmentManager().beginTransaction()
-        val list = getSupportFragmentManager().getFragments()
-        var foundVisible = false
-        for(i in  0..(list.size - 1)){
-            if(list.get(i).isVisible){
-                if(list.get(i) is BaseFragment) {
-                    foundVisible = true
-                    (list.get(i) as BaseFragment).onBackTriggered()
+        try {
+            val list = getSupportFragmentManager().getFragments()
+            var foundVisible = false
+            for (i in 0..(list.size - 1)) {
+                if (list.get(i).isVisible) {
+                    if (list.get(i) is BaseFragment) {
+                        foundVisible = true
+                        (list.get(i) as BaseFragment).onBackTriggered()
+                    }
                 }
             }
-        }
 
-        if(!foundVisible)
+            if(!foundVisible)
             proceedDoOnBackPressed()
+
+        } catch (e : java.lang.Exception) {
+            super.onBackPressed()
+        }
     }
     fun setOrShowExistingFragmentByTag(
         layoutId: Int,
@@ -294,6 +301,8 @@ class ActivityMain : AppCompatActivity() {
                 try {
                     transaction.show(fragment).commitAllowingStateLoss()
                 } catch (e1: Exception) {
+                    System.out.println("setOrShowExistingFragmentByTag Exception transaction "+e.toString())
+
                     Helper.logException(this@ActivityMain, e)
                 }
 
@@ -304,7 +313,12 @@ class ActivityMain : AppCompatActivity() {
         }
 
         if (!foundExistingFragment) {
+            //setREmoveFragment(newFrag)
             setFragmentInFragment(layoutId, newFrag, fragTag, backstackTag)
+        } else {
+//            setREmoveFragment(newFrag)
+//            setFragmentInFragment(layoutId, newFrag, fragTag, backstackTag)
+
         }
 
     }
@@ -322,6 +336,16 @@ class ActivityMain : AppCompatActivity() {
                 Helper.logException(this@ActivityMain, e)
             }
 
+        }
+
+    }
+    fun setREmoveFragment(frag: Fragment) {
+        try {
+            supportFragmentManager.beginTransaction().remove(frag)
+                .commitAllowingStateLoss()
+            Helper.hideKeyboard(this)
+        } catch (e1: Exception) {
+            Helper.logException(this@ActivityMain, e1)
         }
 
     }

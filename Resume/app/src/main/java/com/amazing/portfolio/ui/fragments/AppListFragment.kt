@@ -26,15 +26,16 @@ import android.view.animation.ScaleAnimation
 import android.view.animation.AnimationSet
 import android.R.attr.duration
 import android.view.animation.TranslateAnimation
+import kotlinx.android.synthetic.main.fragment_app_list.*
 
 
-class HomePageFragment : BaseFragment() {
+class AppListFragment : BaseFragment() {
 
     private val itemAdapter by lazy {
         ItemAdapter { position: Int, item: Item ->
             item_list.smoothScrollToPosition(position)
-            val landingScreenFragment = LandingScreenFragment()
-            home().setFragment(landingScreenFragment,R.animator.zoom_exit,R.animator.zoom_out)
+            val appDetailFragment = AppDetailFragment()
+            home().setFragment(appDetailFragment,R.animator.zoom_exit,R.animator.zoom_out)
         }
     }
     private val possibleItems = listOf(
@@ -45,13 +46,10 @@ class HomePageFragment : BaseFragment() {
         Item("Home", R.drawable.ic_launcher_foreground)
     )
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        v = inflater.inflate(R.layout.home_fragment, container, false)
+        v = inflater.inflate(R.layout.fragment_app_list, container, false)
         return v
     }
 
-    override fun onResume() {
-        super.onResume()
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
