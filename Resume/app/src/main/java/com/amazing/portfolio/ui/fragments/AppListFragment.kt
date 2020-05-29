@@ -35,7 +35,7 @@ class AppListFragment : BaseFragment() {
         ItemAdapter { position: Int, item: Item ->
             item_list.smoothScrollToPosition(position)
             val appDetailFragment = AppDetailFragment()
-            home().setFragment(appDetailFragment,R.animator.zoom_exit,R.animator.zoom_out)
+            home().setFragment(appDetailFragment)
         }
     }
     private val possibleItems = listOf(

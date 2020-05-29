@@ -50,6 +50,8 @@ class AppDetailFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mDelayedTransactionHandler.postDelayed(mRunnable, 1000);
+        val  animLinear = AnimationUtils.loadAnimation(getActivity(), R.anim.bounce);
+        v?.setAnimation(animLinear);
     }
 
 }
