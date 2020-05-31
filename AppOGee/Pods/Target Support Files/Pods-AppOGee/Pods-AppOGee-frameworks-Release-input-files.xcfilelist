@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AMTabView/AMTabView.framework
+${BUILT_PRODUCTS_DIR}/ARNTransitionAnimator/ARNTransitionAnimator.framework

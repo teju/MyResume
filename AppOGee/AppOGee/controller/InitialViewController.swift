@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import AMTabView
 
-class InitialViewController: UIViewController {
+class InitialViewController: UIViewController ,TabItem{
+    
     @IBOutlet weak var image_1: UIImageView!
     @IBOutlet weak var btnImg1: UIButton!
-    
+
+    var tabImage: UIImage? {
+      return UIImage(named: "dummy")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

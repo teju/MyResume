@@ -7,24 +7,30 @@
 //
 
 import UIKit
+import AMTabView
 
-class TabViewController: UIViewController {
+class TabViewController: AMTabsViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setTabsControllers()
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
+   private func setTabsControllers() {
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let graveViewController = storyboard.instantiateViewController(withIdentifier: "WorkTabViewController")
+      let bumpkinViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
+      let fireworkViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
+      let ghostViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+      viewControllers = [
+        graveViewController,
+        bumpkinViewController,
+        fireworkViewController,
+        ghostViewController
+      ]
     }
-    */
 
 }

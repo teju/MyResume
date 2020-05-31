@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
         let navigationController = UINavigationController.init(rootViewController: viewController)
+        //navigationController.setNavigationBarHidden(true, animated: true)
+
         self.window?.rootViewController = navigationController
 
         self.window?.makeKeyAndVisible()
