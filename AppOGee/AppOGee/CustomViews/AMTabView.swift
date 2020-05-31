@@ -122,8 +122,13 @@ public class AMTabView: UIView {
   }
 
   private func setupView() {
+    shapeLayer.cornerRadius = 20.0
+    shapeLayer.shadowColor = UIColor.gray.cgColor
+    shapeLayer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+    shapeLayer.shadowRadius = 12.0
+    shapeLayer.shadowOpacity = 0.7
     shapeLayer.fillColor = AMTabView.settings.tabColor.cgColor
-    shapeLayer.lineWidth = 0.5
+//    shapeLayer.lineWidth = 0.5
     shapeLayer.position = CGPoint(x: 10, y: 10)
     layer.addSublayer(shapeLayer)
     backgroundColor = .clear
@@ -149,7 +154,7 @@ public class AMTabView: UIView {
   // MARK: - View lifecycle
 
   override public func draw(_ rect: CGRect) {
-    moveToSelectedTab()
+    //moveToSelectedTab()
   }
 
   override public func layoutSubviews() {
@@ -204,7 +209,7 @@ public class AMTabView: UIView {
     let fromX = (CGFloat(previousTabIndex + 1) * sectionWidth) - (sectionWidth * 0.5)
     let toX = (CGFloat(selectedTabIndex + 1) * sectionWidth) - (sectionWidth * 0.5)
     var controlPointY = abs(fromX - toX)
-    controlPointY = controlPointY != 0 ? controlPointY : 50
+    controlPointY = -10
     let path = UIBezierPath()
     path.move(to: CGPoint(x: fromX, y: itemHeight * 0.5))
     path.addQuadCurve(to: CGPoint(x: toX, y: itemHeight * 0.25),

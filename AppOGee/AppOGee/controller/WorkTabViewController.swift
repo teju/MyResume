@@ -7,16 +7,11 @@
 //
 
 import UIKit
-import AMTabView
-import ARNTransitionAnimator
 
-class WorkTabViewController: ImageZoomAnimationVC ,TabItem, UICollectionViewDelegate, UICollectionViewDataSource{
+class WorkTabViewController: UIViewController ,TabItem, UICollectionViewDelegate, UICollectionViewDataSource{
     weak var selectedImageView : UIImageView?
        
-       var animator : ARNTransitionAnimator?
-       
-       var isModeModal : Bool = false
-       var isModeInteractive : Bool = false
+    
     var tabImage: UIImage? {
          return UIImage(named: "dummy")
        }
@@ -130,58 +125,12 @@ class WorkTabViewController: ImageZoomAnimationVC ,TabItem, UICollectionViewDele
        
        
        func handleTransition() {
-           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           let controller = storyboard.instantiateViewController(withIdentifier: "WorkListViewController") as! WorkListViewController
-           self.navigationController?.pushViewController(controller, animated: true)
-
-//           let animation = ImageZoomAnimation<ImageZoomAnimationVC>(rootVC: self, modalVC: controller, rootNavigation: self.navigationController)
-//           let animator = ARNTransitionAnimator(duration: 0.5, animation: animation)
-//           
-//           let gestureHandler = TransitionGestureHandler(targetView: controller.view, direction: .bottom)
-//           animator.registerInteractiveTransitioning(.dismiss, gestureHandler: gestureHandler)
-//           
-//           controller.transitioningDelegate = animator
-//           self.animator = animator
-           
-           
-//           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//           let controller = storyboard.instantiateViewController(withIdentifier: "WorkListViewController") as! WorkListViewController
-////
-////           let animation = ImageZoomAnimation<ImageZoomAnimationVC>(rootVC: self, modalVC: controller)
-////           let animator = ARNTransitionAnimator(duration: 0.5, animation: animation)
-////           self.navigationController?.delegate = animator
-////           self.animator = animator
-//
-//           self.navigationController?.pushViewController(controller, animated: true)
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          let controller = storyboard.instantiateViewController(withIdentifier: "WorkListViewController") as! WorkListViewController
+          self.navigationController?.pushViewController(controller, animated: true)
        }
        
        
 
-       // MARK: - ImageTransitionZoomable
        
-       override func createTransitionImageView() -> UIImageView {
-           let imageView = UIImageView(image: self.selectedImageView!.image)
-           imageView.contentMode = self.selectedImageView!.contentMode
-           imageView.clipsToBounds = true
-           imageView.isUserInteractionEnabled = false
-           imageView.frame = self.selectedImageView!.convert(self.selectedImageView!.frame, to: self.view)
-           
-           return imageView
-       }
-       
-       @objc override func presentationBeforeAction() {
-           self.selectedImageView?.isHidden = true
-       }
-       
-       override func presentationCompletionAction(didComplete: Bool) {
-           self.selectedImageView?.isHidden = true
-       }
-       
-       @objc override func dismissalBeforeAction() {
-           self.selectedImageView?.isHidden = true
-       }
-       
-       override func dismissalCompletionAction(didComplete: Bool) {
-           self.selectedImageView?.isHidden = false
-       }
 }

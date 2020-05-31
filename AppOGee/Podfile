@@ -1,7 +1,5 @@
 use_frameworks!
 
 target 'AppOGee' do
-  pod 'AMTabView'
-  pod 'ARNTransitionAnimator'
 
 end

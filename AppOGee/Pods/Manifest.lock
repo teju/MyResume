@@ -1,20 +1,3 @@
-PODS:
-  - AMTabView (0.1.1)
-  - ARNTransitionAnimator (3.2.0)
-
-DEPENDENCIES:
-  - AMTabView
-  - ARNTransitionAnimator
-
-SPEC REPOS:
-  trunk:
-    - AMTabView
-    - ARNTransitionAnimator
-
-SPEC CHECKSUMS:
-  AMTabView: 86e156d6d9ab42d091e46466648ac5ce00abe615
-  ARNTransitionAnimator: 6fea1fe318b251abfd3cbd06d91215deb374ae40
-
-PODFILE CHECKSUM: 10338a81440a7f44a29e41379b117c07a521d5e6
+PODFILE CHECKSUM: f78a526f6f53630f545c1747b360fe3cd478fc35
 
 COCOAPODS: 1.9.1

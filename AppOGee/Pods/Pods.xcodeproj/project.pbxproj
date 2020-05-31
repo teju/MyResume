@@ -7,158 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CF072C4C888016306F1993796694531 /* Pods-AppOGee-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ADEA10C29AEB1EF571DA318788C554 /* Pods-AppOGee-dummy.m */; };
-		223989DBA06F4DFE0B2A38AD6E5FEBB9 /* AnimatedTransitioning .swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C3C9AA75667F667AEBAF6A6A073612 /* AnimatedTransitioning .swift */; };
-		32DB0B0B6EE01DAFE69DC7B0C1654E19 /* InteractiveTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850E0101C4DC33DFE292F4E04DD80305 /* InteractiveTransitioning.swift */; };
-		43653D78BF403855A3A9430417CFED8E /* ARNTransitionAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 501175CBA5D02C9CD0239D265B98259D /* ARNTransitionAnimator-dummy.m */; };
-		4DE342A7F85E70CA3EAEDB8D78636C36 /* AMTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE55E5C6A6754AB43CBEA30154787B5B /* AMTabView.swift */; };
-		6771B7682810CFBD4C2B3C4923FA6738 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		78E08EA1A7DC79630638397EC0DE0BBA /* ARNTransitionAnimator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9863AC02DD69A9EB18B62F9B2E4C8DE /* ARNTransitionAnimator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABF5C2A93F77D19C94B8A469C2167944 /* AMTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539E876318F98AEA5D7D42B3BE06D0E /* AMTabsViewController.swift */; };
-		BCF61A527B1F105F1FAD0D34814AEC02 /* TransitionAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7375EB27F8004AD65A3DC50F37C27F40 /* TransitionAnimatable.swift */; };
-		BE2B98CA490F205D8B69DD29D1D9FB71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		C3B2023F9E385DC1E32EEF4961BEFA0C /* Pods-AppOGee-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0962F1F95684F981B93D86782A408AF5 /* Pods-AppOGee-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4596B6DA0F63D8D5D8C540D4247747F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		C4FB79B162EB43FBC6C8F7F75B8D8F91 /* TransitionGestureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42627D87A5E6333D05AE0FCA9D76B26D /* TransitionGestureHandler.swift */; };
-		D2911CFD54B746449C457D947EA77716 /* AMTabView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF79701F1F6850034F2ACFCF8E7B9C /* AMTabView-dummy.m */; };
-		D58F5ED61E74F8939CE677974A573232 /* TransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B2D4AD2A7BCD91C9E6E3B03CDACC6 /* TransitionAnimator.swift */; };
-		E4C9934CBB28B7C1A61A1434B20D69E5 /* AMTabView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 002632761921B32B635D763E4C3AB3AA /* AMTabView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD3D475FB5604F9A1E3E4D609DDCB2BF /* ARNTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2012B3251D3B6A9B818FD3E0AC573C2D /* ARNTransitionAnimator.swift */; };
+		4E52D41431705E67A1AB7916F9770DDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A11527C9A010C34A8111225E41490026 /* Pods-AppOGee-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E4DE9EE3307D2A00167141BFC3628F /* Pods-AppOGee-dummy.m */; };
+		D8C5523714B49996FB03BF42408AC6BE /* Pods-AppOGee-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB68F54C63DAEC48A8EAB5BD3581AD8B /* Pods-AppOGee-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		810BB2D2769FD981E6353C861A0A155F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 59C9028482380AB83D01F126C3195633;
-			remoteInfo = AMTabView;
-		};
-		8AA78071A1811323747BC1C755C251C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09BA0A439E898134AF1803DD019345A7;
-			remoteInfo = ARNTransitionAnimator;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		002632761921B32B635D763E4C3AB3AA /* AMTabView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMTabView-umbrella.h"; sourceTree = "<group>"; };
-		053E13DE43169C6F7503499823E6B727 /* ARNTransitionAnimator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARNTransitionAnimator.release.xcconfig; sourceTree = "<group>"; };
-		05647304A67BF8C93E340CF69C20B618 /* Pods-AppOGee-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppOGee-frameworks.sh"; sourceTree = "<group>"; };
-		0962F1F95684F981B93D86782A408AF5 /* Pods-AppOGee-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppOGee-umbrella.h"; sourceTree = "<group>"; };
-		09C3C9AA75667F667AEBAF6A6A073612 /* AnimatedTransitioning .swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimatedTransitioning .swift"; path = "Source/AnimatedTransitioning .swift"; sourceTree = "<group>"; };
-		0AF4F86426DB34F378E702699F297CB7 /* AMTabView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AMTabView-Info.plist"; sourceTree = "<group>"; };
-		0AFB800697EE0F3BDAA5D760B272A869 /* AMTabView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMTabView.debug.xcconfig; sourceTree = "<group>"; };
-		2012B3251D3B6A9B818FD3E0AC573C2D /* ARNTransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARNTransitionAnimator.swift; path = Source/ARNTransitionAnimator.swift; sourceTree = "<group>"; };
+		09E5C90E7254E00CF18D4222A207F427 /* Pods-AppOGee.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppOGee.modulemap"; sourceTree = "<group>"; };
+		21B16FEE87F146A4731665EA80A440EA /* Pods-AppOGee-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppOGee-acknowledgements.plist"; sourceTree = "<group>"; };
+		2A488DA4EE59A18BCEC7B98A9DB14630 /* Pods-AppOGee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppOGee.release.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3509E2C80753904C8A01FBA89D1EDFD4 /* AMTabView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AMTabView.modulemap; sourceTree = "<group>"; };
-		390B2D4AD2A7BCD91C9E6E3B03CDACC6 /* TransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = Source/TransitionAnimator.swift; sourceTree = "<group>"; };
-		42627D87A5E6333D05AE0FCA9D76B26D /* TransitionGestureHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionGestureHandler.swift; path = Source/TransitionGestureHandler.swift; sourceTree = "<group>"; };
-		42C923D1C98AA60D48134A38BDA56104 /* AMTabView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AMTabView.framework; path = AMTabView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44308FC79C0B4CE69C213A0284CC92A6 /* ARNTransitionAnimator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ARNTransitionAnimator-Info.plist"; sourceTree = "<group>"; };
-		4539E876318F98AEA5D7D42B3BE06D0E /* AMTabsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMTabsViewController.swift; path = AMTabView/Classes/AMTabsViewController.swift; sourceTree = "<group>"; };
-		4B295B1E67D86870976F87F7DB2F2ABD /* AMTabView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMTabView.release.xcconfig; sourceTree = "<group>"; };
-		501175CBA5D02C9CD0239D265B98259D /* ARNTransitionAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ARNTransitionAnimator-dummy.m"; sourceTree = "<group>"; };
-		517777ED2441BF5F6B7312D0602275E8 /* Pods-AppOGee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppOGee.release.xcconfig"; sourceTree = "<group>"; };
-		54ADEA10C29AEB1EF571DA318788C554 /* Pods-AppOGee-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppOGee-dummy.m"; sourceTree = "<group>"; };
-		6071AE1C2DFC99CD316C3CAD6B6E3322 /* Pods-AppOGee-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppOGee-Info.plist"; sourceTree = "<group>"; };
-		64EC236E3B1C622F7F2E29DF0F4D80E8 /* AMTabView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMTabView-prefix.pch"; sourceTree = "<group>"; };
-		6A36B31814E44123CC181859390A7DE1 /* Pods-AppOGee-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppOGee-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6E914877460521A70D36DCF56B04D7D2 /* Pods_AppOGee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppOGee.framework; path = "Pods-AppOGee.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7375EB27F8004AD65A3DC50F37C27F40 /* TransitionAnimatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimatable.swift; path = Source/TransitionAnimatable.swift; sourceTree = "<group>"; };
-		74030E58F689E1AD08ED2CBBAFB641D9 /* ARNTransitionAnimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ARNTransitionAnimator.framework; path = ARNTransitionAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A0E3ABE353B9FCB5B48E9BECA87C52F /* ARNTransitionAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ARNTransitionAnimator.modulemap; sourceTree = "<group>"; };
-		7B065C754143EC691C88643C0DA20DB5 /* Pods-AppOGee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppOGee.debug.xcconfig"; sourceTree = "<group>"; };
-		850E0101C4DC33DFE292F4E04DD80305 /* InteractiveTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractiveTransitioning.swift; path = Source/InteractiveTransitioning.swift; sourceTree = "<group>"; };
-		8DDF79701F1F6850034F2ACFCF8E7B9C /* AMTabView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AMTabView-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A9863AC02DD69A9EB18B62F9B2E4C8DE /* ARNTransitionAnimator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARNTransitionAnimator-umbrella.h"; sourceTree = "<group>"; };
-		AA4692696BC7B9D3FD425E87A8B03034 /* ARNTransitionAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARNTransitionAnimator-prefix.pch"; sourceTree = "<group>"; };
-		BE55E5C6A6754AB43CBEA30154787B5B /* AMTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMTabView.swift; path = AMTabView/Classes/AMTabView.swift; sourceTree = "<group>"; };
-		C17D8334BEF6610B34BA8B031B9C3647 /* Pods-AppOGee.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppOGee.modulemap"; sourceTree = "<group>"; };
-		E52CE1AAA831495984815B9A767D37FC /* Pods-AppOGee-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppOGee-acknowledgements.plist"; sourceTree = "<group>"; };
-		E6CA5C743F2A6B41BFDC1CBE06E5C33C /* ARNTransitionAnimator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARNTransitionAnimator.debug.xcconfig; sourceTree = "<group>"; };
+		A5E4DE9EE3307D2A00167141BFC3628F /* Pods-AppOGee-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppOGee-dummy.m"; sourceTree = "<group>"; };
+		AB68F54C63DAEC48A8EAB5BD3581AD8B /* Pods-AppOGee-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppOGee-umbrella.h"; sourceTree = "<group>"; };
+		B192B9C9B45718419F8D25ACDC394FB1 /* Pods-AppOGee-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppOGee-Info.plist"; sourceTree = "<group>"; };
+		EBC7E5B6DA7D635F30598E6147A52D9D /* Pods-AppOGee-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppOGee-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EE7EC9B1B95C91CE114EB91EADA81D66 /* Pods-AppOGee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppOGee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20B8AC8EC2B8DA61094D738B00038EDA /* Frameworks */ = {
+		76333919143BE868CCCDCE7A3EBA0D4A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4596B6DA0F63D8D5D8C540D4247747F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD56861F223AB5D60EA34334E110F2B9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE2B98CA490F205D8B69DD29D1D9FB71 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1ECA6C9E8047DB57BEBB1E73CF984F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6771B7682810CFBD4C2B3C4923FA6738 /* Foundation.framework in Frameworks */,
+				4E52D41431705E67A1AB7916F9770DDA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58D5F0A008182FA14A610D3D864890C9 /* Products */ = {
+		1C64FC9B91A35BC1035DF1A9DB446A17 /* Pods-AppOGee */ = {
 			isa = PBXGroup;
 			children = (
-				42C923D1C98AA60D48134A38BDA56104 /* AMTabView.framework */,
-				74030E58F689E1AD08ED2CBBAFB641D9 /* ARNTransitionAnimator.framework */,
+				09E5C90E7254E00CF18D4222A207F427 /* Pods-AppOGee.modulemap */,
+				EBC7E5B6DA7D635F30598E6147A52D9D /* Pods-AppOGee-acknowledgements.markdown */,
+				21B16FEE87F146A4731665EA80A440EA /* Pods-AppOGee-acknowledgements.plist */,
+				A5E4DE9EE3307D2A00167141BFC3628F /* Pods-AppOGee-dummy.m */,
+				B192B9C9B45718419F8D25ACDC394FB1 /* Pods-AppOGee-Info.plist */,
+				AB68F54C63DAEC48A8EAB5BD3581AD8B /* Pods-AppOGee-umbrella.h */,
+				EE7EC9B1B95C91CE114EB91EADA81D66 /* Pods-AppOGee.debug.xcconfig */,
+				2A488DA4EE59A18BCEC7B98A9DB14630 /* Pods-AppOGee.release.xcconfig */,
+			);
+			name = "Pods-AppOGee";
+			path = "Target Support Files/Pods-AppOGee";
+			sourceTree = "<group>";
+		};
+		60C0258442EA1F8D951A63338858DC05 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C64FC9B91A35BC1035DF1A9DB446A17 /* Pods-AppOGee */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9ECF90EDE48A62F837FACE1A78AE6149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
 				6E914877460521A70D36DCF56B04D7D2 /* Pods_AppOGee.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6BD9FD79CABCFDE5D4489C0DA46E574D /* AMTabView */ = {
-			isa = PBXGroup;
-			children = (
-				4539E876318F98AEA5D7D42B3BE06D0E /* AMTabsViewController.swift */,
-				BE55E5C6A6754AB43CBEA30154787B5B /* AMTabView.swift */,
-				D917D93FC170EC901F25BEE952692E81 /* Support Files */,
-			);
-			name = AMTabView;
-			path = AMTabView;
-			sourceTree = "<group>";
-		};
-		6FF416E8C35B5EF8B693013452FD6E31 /* ARNTransitionAnimator */ = {
-			isa = PBXGroup;
-			children = (
-				09C3C9AA75667F667AEBAF6A6A073612 /* AnimatedTransitioning .swift */,
-				2012B3251D3B6A9B818FD3E0AC573C2D /* ARNTransitionAnimator.swift */,
-				850E0101C4DC33DFE292F4E04DD80305 /* InteractiveTransitioning.swift */,
-				7375EB27F8004AD65A3DC50F37C27F40 /* TransitionAnimatable.swift */,
-				390B2D4AD2A7BCD91C9E6E3B03CDACC6 /* TransitionAnimator.swift */,
-				42627D87A5E6333D05AE0FCA9D76B26D /* TransitionGestureHandler.swift */,
-				BE0B7217216504BA4495D3932F05DD91 /* Support Files */,
-			);
-			name = ARNTransitionAnimator;
-			path = ARNTransitionAnimator;
-			sourceTree = "<group>";
-		};
-		BE0B7217216504BA4495D3932F05DD91 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7A0E3ABE353B9FCB5B48E9BECA87C52F /* ARNTransitionAnimator.modulemap */,
-				501175CBA5D02C9CD0239D265B98259D /* ARNTransitionAnimator-dummy.m */,
-				44308FC79C0B4CE69C213A0284CC92A6 /* ARNTransitionAnimator-Info.plist */,
-				AA4692696BC7B9D3FD425E87A8B03034 /* ARNTransitionAnimator-prefix.pch */,
-				A9863AC02DD69A9EB18B62F9B2E4C8DE /* ARNTransitionAnimator-umbrella.h */,
-				E6CA5C743F2A6B41BFDC1CBE06E5C33C /* ARNTransitionAnimator.debug.xcconfig */,
-				053E13DE43169C6F7503499823E6B727 /* ARNTransitionAnimator.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ARNTransitionAnimator";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -174,9 +83,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				F840B5F32ECF7A330B61EEAF3680D7C0 /* Pods */,
-				58D5F0A008182FA14A610D3D864890C9 /* Products */,
-				D7358EDA08D765A4F015885BF40BBBB7 /* Targets Support Files */,
+				9ECF90EDE48A62F837FACE1A78AE6149 /* Products */,
+				60C0258442EA1F8D951A63338858DC05 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,139 +96,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D7358EDA08D765A4F015885BF40BBBB7 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DA99AB9DBDA1BD2FFA6A8B9E7B1F58FA /* Pods-AppOGee */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		D917D93FC170EC901F25BEE952692E81 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3509E2C80753904C8A01FBA89D1EDFD4 /* AMTabView.modulemap */,
-				8DDF79701F1F6850034F2ACFCF8E7B9C /* AMTabView-dummy.m */,
-				0AF4F86426DB34F378E702699F297CB7 /* AMTabView-Info.plist */,
-				64EC236E3B1C622F7F2E29DF0F4D80E8 /* AMTabView-prefix.pch */,
-				002632761921B32B635D763E4C3AB3AA /* AMTabView-umbrella.h */,
-				0AFB800697EE0F3BDAA5D760B272A869 /* AMTabView.debug.xcconfig */,
-				4B295B1E67D86870976F87F7DB2F2ABD /* AMTabView.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/AMTabView";
-			sourceTree = "<group>";
-		};
-		DA99AB9DBDA1BD2FFA6A8B9E7B1F58FA /* Pods-AppOGee */ = {
-			isa = PBXGroup;
-			children = (
-				C17D8334BEF6610B34BA8B031B9C3647 /* Pods-AppOGee.modulemap */,
-				6A36B31814E44123CC181859390A7DE1 /* Pods-AppOGee-acknowledgements.markdown */,
-				E52CE1AAA831495984815B9A767D37FC /* Pods-AppOGee-acknowledgements.plist */,
-				54ADEA10C29AEB1EF571DA318788C554 /* Pods-AppOGee-dummy.m */,
-				05647304A67BF8C93E340CF69C20B618 /* Pods-AppOGee-frameworks.sh */,
-				6071AE1C2DFC99CD316C3CAD6B6E3322 /* Pods-AppOGee-Info.plist */,
-				0962F1F95684F981B93D86782A408AF5 /* Pods-AppOGee-umbrella.h */,
-				7B065C754143EC691C88643C0DA20DB5 /* Pods-AppOGee.debug.xcconfig */,
-				517777ED2441BF5F6B7312D0602275E8 /* Pods-AppOGee.release.xcconfig */,
-			);
-			name = "Pods-AppOGee";
-			path = "Target Support Files/Pods-AppOGee";
-			sourceTree = "<group>";
-		};
-		F840B5F32ECF7A330B61EEAF3680D7C0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6BD9FD79CABCFDE5D4489C0DA46E574D /* AMTabView */,
-				6FF416E8C35B5EF8B693013452FD6E31 /* ARNTransitionAnimator */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3769A9A0B4190A4ECB419C35F58F75D9 /* Headers */ = {
+		4EED96942E97E133639FAA3C28B101AB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3B2023F9E385DC1E32EEF4961BEFA0C /* Pods-AppOGee-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A8711EECD2789EDC3ED25ED653724918 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78E08EA1A7DC79630638397EC0DE0BBA /* ARNTransitionAnimator-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EAC721E3E53C445D8B252B12099B6D58 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4C9934CBB28B7C1A61A1434B20D69E5 /* AMTabView-umbrella.h in Headers */,
+				D8C5523714B49996FB03BF42408AC6BE /* Pods-AppOGee-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		09BA0A439E898134AF1803DD019345A7 /* ARNTransitionAnimator */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B84EF8AFC35456AC7A2F1939A7BDF48B /* Build configuration list for PBXNativeTarget "ARNTransitionAnimator" */;
-			buildPhases = (
-				A8711EECD2789EDC3ED25ED653724918 /* Headers */,
-				22C1EFB73B5FAE3C26BEF4137005CCB7 /* Sources */,
-				CD56861F223AB5D60EA34334E110F2B9 /* Frameworks */,
-				80E29BA3283D22B5CD03CEDD3F91B77F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ARNTransitionAnimator;
-			productName = ARNTransitionAnimator;
-			productReference = 74030E58F689E1AD08ED2CBBAFB641D9 /* ARNTransitionAnimator.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		3EFCBA9738182EC7571695925FA1790F /* Pods-AppOGee */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE8A8B222C71C115C32FE4792F7C0238 /* Build configuration list for PBXNativeTarget "Pods-AppOGee" */;
+			buildConfigurationList = 1CC9A23E5EB0E6648B94BBEC9E49741A /* Build configuration list for PBXNativeTarget "Pods-AppOGee" */;
 			buildPhases = (
-				3769A9A0B4190A4ECB419C35F58F75D9 /* Headers */,
-				6DDED50A5A030D7F4A78B8361AAB7F75 /* Sources */,
-				E1ECA6C9E8047DB57BEBB1E73CF984F1 /* Frameworks */,
-				98A50DD9680D90AA4FAF59811CF7038A /* Resources */,
+				4EED96942E97E133639FAA3C28B101AB /* Headers */,
+				57E46AE30DC6C7C02FEC7D75D2847B30 /* Sources */,
+				76333919143BE868CCCDCE7A3EBA0D4A /* Frameworks */,
+				A1AD569DCF785CA70EC61564150F150A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CF601DA10A2CE8A22EEAA72EF071584C /* PBXTargetDependency */,
-				5B7C3A18CD2FABC83F00CD166FC75939 /* PBXTargetDependency */,
 			);
 			name = "Pods-AppOGee";
 			productName = "Pods-AppOGee";
 			productReference = 6E914877460521A70D36DCF56B04D7D2 /* Pods_AppOGee.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		59C9028482380AB83D01F126C3195633 /* AMTabView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC8A52388388FA36C71FCEDBC93C1BB4 /* Build configuration list for PBXNativeTarget "AMTabView" */;
-			buildPhases = (
-				EAC721E3E53C445D8B252B12099B6D58 /* Headers */,
-				B7371D25E5E4BF7BA3F4AEFC34544AE7 /* Sources */,
-				20B8AC8EC2B8DA61094D738B00038EDA /* Frameworks */,
-				C07E52232D3A1905B3610712BED9E347 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AMTabView;
-			productName = AMTabView;
-			productReference = 42C923D1C98AA60D48134A38BDA56104 /* AMTabView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -341,33 +146,17 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 58D5F0A008182FA14A610D3D864890C9 /* Products */;
+			productRefGroup = 9ECF90EDE48A62F837FACE1A78AE6149 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				59C9028482380AB83D01F126C3195633 /* AMTabView */,
-				09BA0A439E898134AF1803DD019345A7 /* ARNTransitionAnimator */,
 				3EFCBA9738182EC7571695925FA1790F /* Pods-AppOGee */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		80E29BA3283D22B5CD03CEDD3F91B77F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98A50DD9680D90AA4FAF59811CF7038A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C07E52232D3A1905B3610712BED9E347 /* Resources */ = {
+		A1AD569DCF785CA70EC61564150F150A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,60 +166,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		22C1EFB73B5FAE3C26BEF4137005CCB7 /* Sources */ = {
+		57E46AE30DC6C7C02FEC7D75D2847B30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223989DBA06F4DFE0B2A38AD6E5FEBB9 /* AnimatedTransitioning .swift in Sources */,
-				43653D78BF403855A3A9430417CFED8E /* ARNTransitionAnimator-dummy.m in Sources */,
-				FD3D475FB5604F9A1E3E4D609DDCB2BF /* ARNTransitionAnimator.swift in Sources */,
-				32DB0B0B6EE01DAFE69DC7B0C1654E19 /* InteractiveTransitioning.swift in Sources */,
-				BCF61A527B1F105F1FAD0D34814AEC02 /* TransitionAnimatable.swift in Sources */,
-				D58F5ED61E74F8939CE677974A573232 /* TransitionAnimator.swift in Sources */,
-				C4FB79B162EB43FBC6C8F7F75B8D8F91 /* TransitionGestureHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6DDED50A5A030D7F4A78B8361AAB7F75 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0CF072C4C888016306F1993796694531 /* Pods-AppOGee-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7371D25E5E4BF7BA3F4AEFC34544AE7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ABF5C2A93F77D19C94B8A469C2167944 /* AMTabsViewController.swift in Sources */,
-				D2911CFD54B746449C457D947EA77716 /* AMTabView-dummy.m in Sources */,
-				4DE342A7F85E70CA3EAEDB8D78636C36 /* AMTabView.swift in Sources */,
+				A11527C9A010C34A8111225E41490026 /* Pods-AppOGee-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		5B7C3A18CD2FABC83F00CD166FC75939 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ARNTransitionAnimator;
-			target = 09BA0A439E898134AF1803DD019345A7 /* ARNTransitionAnimator */;
-			targetProxy = 8AA78071A1811323747BC1C755C251C8 /* PBXContainerItemProxy */;
-		};
-		CF601DA10A2CE8A22EEAA72EF071584C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AMTabView;
-			target = 59C9028482380AB83D01F126C3195633 /* AMTabView */;
-			targetProxy = 810BB2D2769FD981E6353C861A0A155F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		043CE67F8068BD67D5AA7EF59A6E8B76 /* Debug */ = {
+		4B362453E7537CB94D4700EAE550E21C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6CA5C743F2A6B41BFDC1CBE06E5C33C /* ARNTransitionAnimator.debug.xcconfig */;
+			baseConfigurationReference = EE7EC9B1B95C91CE114EB91EADA81D66 /* Pods-AppOGee.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -441,22 +192,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ARNTransitionAnimator/ARNTransitionAnimator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ARNTransitionAnimator/ARNTransitionAnimator-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-AppOGee/Pods-AppOGee-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/ARNTransitionAnimator/ARNTransitionAnimator.modulemap";
-				PRODUCT_MODULE_NAME = ARNTransitionAnimator;
-				PRODUCT_NAME = ARNTransitionAnimator;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AppOGee/Pods-AppOGee.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -527,80 +279,6 @@
 			};
 			name = Debug;
 		};
-		7088596A2FD7B432FD5A157EFEA675A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B065C754143EC691C88643C0DA20DB5 /* Pods-AppOGee.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AppOGee/Pods-AppOGee-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AppOGee/Pods-AppOGee.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7760F701279B00134E4432F719CAA83D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B295B1E67D86870976F87F7DB2F2ABD /* AMTabView.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AMTabView/AMTabView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AMTabView/AMTabView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/AMTabView/AMTabView.modulemap";
-				PRODUCT_MODULE_NAME = AMTabView;
-				PRODUCT_NAME = AMTabView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -661,46 +339,9 @@
 			};
 			name = Release;
 		};
-		A754CD47A884402C1A49D0FA58366E20 /* Release */ = {
+		BDF3DD7EC18F153963D11D6A1EC362EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 053E13DE43169C6F7503499823E6B727 /* ARNTransitionAnimator.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ARNTransitionAnimator/ARNTransitionAnimator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ARNTransitionAnimator/ARNTransitionAnimator-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ARNTransitionAnimator/ARNTransitionAnimator.modulemap";
-				PRODUCT_MODULE_NAME = ARNTransitionAnimator;
-				PRODUCT_NAME = ARNTransitionAnimator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A766FB436232C0F5FC591C9F3256DB1B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 517777ED2441BF5F6B7312D0602275E8 /* Pods-AppOGee.release.xcconfig */;
+			baseConfigurationReference = 2A488DA4EE59A18BCEC7B98A9DB14630 /* Pods-AppOGee.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -737,76 +378,23 @@
 			};
 			name = Release;
 		};
-		DAA316DFEB5537ED826719AC695949C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AFB800697EE0F3BDAA5D760B272A869 /* AMTabView.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AMTabView/AMTabView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AMTabView/AMTabView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/AMTabView/AMTabView.modulemap";
-				PRODUCT_MODULE_NAME = AMTabView;
-				PRODUCT_NAME = AMTabView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1CC9A23E5EB0E6648B94BBEC9E49741A /* Build configuration list for PBXNativeTarget "Pods-AppOGee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B362453E7537CB94D4700EAE550E21C /* Debug */,
+				BDF3DD7EC18F153963D11D6A1EC362EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */,
 				7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B84EF8AFC35456AC7A2F1939A7BDF48B /* Build configuration list for PBXNativeTarget "ARNTransitionAnimator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				043CE67F8068BD67D5AA7EF59A6E8B76 /* Debug */,
-				A754CD47A884402C1A49D0FA58366E20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC8A52388388FA36C71FCEDBC93C1BB4 /* Build configuration list for PBXNativeTarget "AMTabView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DAA316DFEB5537ED826719AC695949C7 /* Debug */,
-				7760F701279B00134E4432F719CAA83D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE8A8B222C71C115C32FE4792F7C0238 /* Build configuration list for PBXNativeTarget "Pods-AppOGee" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7088596A2FD7B432FD5A157EFEA675A7 /* Debug */,
-				A766FB436232C0F5FC591C9F3256DB1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

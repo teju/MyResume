@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AMTabView
 
 class InitialViewController: UIViewController ,TabItem{
     

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,8 @@
 		7918C2B32483C99A00DD5B33 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2B12483C99A00DD5B33 /* Character.swift */; };
 		7918C2B72483CAFC00DD5B33 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2B62483CAFC00DD5B33 /* UPCarouselFlowLayout.swift */; };
 		7918C2B92483D04700DD5B33 /* WorkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2B82483D04700DD5B33 /* WorkListViewController.swift */; };
-		7918C2C62483D73400DD5B33 /* ImageZoomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2C52483D73400DD5B33 /* ImageZoomAnimation.swift */; };
+		7918C2D924841D6F00DD5B33 /* AMTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2D724841D6F00DD5B33 /* AMTabView.swift */; };
+		7918C2DA24841D6F00DD5B33 /* AMTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2D824841D6F00DD5B33 /* AMTabsViewController.swift */; };
 		796A9D662481446900233FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A9D652481446900233FCF /* AppDelegate.swift */; };
 		796A9D6C2481446C00233FCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796A9D6B2481446C00233FCF /* Assets.xcassets */; };
 		796A9D7D2481446C00233FCF /* AppOGeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A9D7C2481446C00233FCF /* AppOGeeTests.swift */; };
@@ -54,7 +55,8 @@
 		7918C2B12483C99A00DD5B33 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		7918C2B62483CAFC00DD5B33 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		7918C2B82483D04700DD5B33 /* WorkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListViewController.swift; sourceTree = "<group>"; };
-		7918C2C52483D73400DD5B33 /* ImageZoomAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomAnimation.swift; sourceTree = "<group>"; };
+		7918C2D724841D6F00DD5B33 /* AMTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMTabView.swift; sourceTree = "<group>"; };
+		7918C2D824841D6F00DD5B33 /* AMTabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMTabsViewController.swift; sourceTree = "<group>"; };
 		796A9D622481446900233FCF /* AppOGee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOGee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796A9D652481446900233FCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796A9D6B2481446C00233FCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,7 +120,8 @@
 		7918C2AD2483C7D700DD5B33 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				7918C2C52483D73400DD5B33 /* ImageZoomAnimation.swift */,
+				7918C2D824841D6F00DD5B33 /* AMTabsViewController.swift */,
+				7918C2D724841D6F00DD5B33 /* AMTabView.swift */,
 				7918C2B62483CAFC00DD5B33 /* UPCarouselFlowLayout.swift */,
 				7918C2B02483C99A00DD5B33 /* CarouselCollectionViewCell.swift */,
 				7918C2B12483C99A00DD5B33 /* Character.swift */,
@@ -200,7 +203,6 @@
 				796A9D5E2481446900233FCF /* Sources */,
 				796A9D5F2481446900233FCF /* Frameworks */,
 				796A9D602481446900233FCF /* Resources */,
-				6641E6AD7AEBAA2BDE2CA2AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,23 +320,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6641E6AD7AEBAA2BDE2CA2AD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DD665ADFACE87D9A04FADAB2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,10 +350,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7918C2A82483A3B600DD5B33 /* TabViewController.swift in Sources */,
-				7918C2C62483D73400DD5B33 /* ImageZoomAnimation.swift in Sources */,
 				796A9D662481446900233FCF /* AppDelegate.swift in Sources */,
 				7918C2B32483C99A00DD5B33 /* Character.swift in Sources */,
+				7918C2DA24841D6F00DD5B33 /* AMTabsViewController.swift in Sources */,
 				7918C2B92483D04700DD5B33 /* WorkListViewController.swift in Sources */,
+				7918C2D924841D6F00DD5B33 /* AMTabView.swift in Sources */,
 				7918C2AF2483C7F200DD5B33 /* GradientView.swift in Sources */,
 				7918C2A62483A37400DD5B33 /* InitialViewController.swift in Sources */,
 				7918C2B22483C99A00DD5B33 /* CarouselCollectionViewCell.swift in Sources */,
