@@ -72,10 +72,7 @@ class MenuScreenFragment(
     override fun onClick(v: View?) {
         when(v?.id) {
             R.id.planet1 -> {
-                val address = ArrayList<String>()
-                address.add("mztj27@gmail.com")
-                //animate(planet1,0)
-                Helper.mailtoTypeEmailCreation(activity!!,address,"HEllo teju")
+                animate(planet1,0)
             }
             R.id.planet2 -> {
                 animate(planet2,1)
