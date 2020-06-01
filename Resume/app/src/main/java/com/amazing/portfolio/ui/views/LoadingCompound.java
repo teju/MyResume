@@ -86,34 +86,34 @@ public class LoadingCompound
 
 			if (attrs != null) {
 				TypedArray a = context.obtainStyledAttributes(attrs,
-						R.styleable.market);
+						R.styleable.appogee);
 
 				// Set the colors from the attributes
 				int loadingMessageColor = a.getColor(
-						R.styleable.market_loadingMessageColor, context
+						R.styleable.appogee_loadingMessageColor, context
 								.getResources().getColor(R.color.DarkGray));
 				int errTitleColor = a.getColor(
-						R.styleable.market_loadingErrorTitleColor, context
+						R.styleable.appogee_loadingErrorTitleColor, context
 								.getResources().getColor(R.color.Black));
 				int errMessageColor = a.getColor(
-						R.styleable.market_loadingErrorMessageColor,
+						R.styleable.appogee_loadingErrorMessageColor,
 						context.getResources().getColor(R.color.Black));
 				tvLoading.setTextColor(loadingMessageColor);
 				tvTitle.setTextColor(errTitleColor);
 				tvMessage.setTextColor(errMessageColor);
 
 				// Set the text resources from attributes
-				String loadingMessage = a.getString(R.styleable.market_loadingMessage);
+				String loadingMessage = a.getString(R.styleable.appogee_loadingMessage);
 				if (loadingMessage != null) {
 					tvLoading.setText(loadingMessage);
 				}
 
-				String retryButtonText = a.getString(R.styleable.market_loadingRetryButtonText);
+				String retryButtonText = a.getString(R.styleable.appogee_loadingRetryButtonText);
 				if (retryButtonText != null) {
 					btnRetry.setText(retryButtonText);
 				}
 
-				boolean useNilaGif = a.getBoolean(R.styleable.market_loadingGifNila, false);
+				boolean useNilaGif = a.getBoolean(R.styleable.appogee_loadingGifNila, false);
 				if(useNilaGif){
 //					Glide.with(context)
 //							.asGif()
@@ -131,20 +131,20 @@ public class LoadingCompound
 					tvLoading.setVisibility(View.GONE);
 				}
 
-				noNetworkMessage = a.getString(R.styleable.market_loadingErrorNetworkTitle);
-				unknownResponseMessage = a.getString(R.styleable.market_loadingErrorUnknownResponseMessage);
-				noInternetMessage = a.getString(R.styleable.market_loadingErrorNoInternetMessage);
+				noNetworkMessage = a.getString(R.styleable.appogee_loadingErrorNetworkTitle);
+				unknownResponseMessage = a.getString(R.styleable.appogee_loadingErrorUnknownResponseMessage);
+				noInternetMessage = a.getString(R.styleable.appogee_loadingErrorNoInternetMessage);
 
 				if (noNetworkMessage == null) {
-					noNetworkMessage = getContext().getString(R.string.market__network_error);
+					noNetworkMessage = getContext().getString(R.string.appogee__network_error);
 				}
 
 				if (noInternetMessage == null) {
-					noInternetMessage = getContext().getString(R.string.market__no_internet);
+					noInternetMessage = getContext().getString(R.string.appogee__no_internet);
 				}
 
 				if (unknownResponseMessage == null) {
-					unknownResponseMessage = getContext().getString(R.string.market__unknown_response);
+					unknownResponseMessage = getContext().getString(R.string.appogee__unknown_response);
 				}
 
 				a.recycle();

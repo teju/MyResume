@@ -373,8 +373,8 @@ open class BaseFragment : GenericFragment() {
 
 
     fun showLoadingLogicError(ld: LoadingCompound, errorLogicCode : String){
-        ld.showError(getString(R.string.market__network_error),
-            String.format("%s (%s)", getString(R.string.market__unknown_response), errorLogicCode))
+        ld.showError(getString(R.string.appogee__network_error),
+            String.format("%s (%s)", getString(R.string.appogee__unknown_response), errorLogicCode))
     }
 
 

@@ -22,7 +22,7 @@ allprojects {
         maven { url "https://jitpack.io" }
 
     }
-    project.ext.applicationId = "com.amazon.market"
+    project.ext.applicationId = "com.amazing.portfolio"
 
     project.ext.myCompileSdkVersion = 28
     project.ext.myBuildToolsVersion = "28.0.3"

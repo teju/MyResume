@@ -9,10 +9,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/library" />
-            <option value="$PROJECT_DIR$/library/buffertextinputlayout_lib" />
-            <option value="$PROJECT_DIR$/library/easyimage_lib" />
-            <option value="$PROJECT_DIR$/library/meowbottomnavigation" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -114,9 +114,9 @@ open class Helper {
         }
 
         fun intentPlaystore(context: Context, url: String) {
-            val marketUri = Uri.parse(url)
-            val marketIntent = Intent(Intent.ACTION_VIEW, marketUri)
-            context.startActivity(marketIntent)
+            val appogeeUri = Uri.parse(url)
+            val appogeeIntent = Intent(Intent.ACTION_VIEW, appogeeUri)
+            context.startActivity(appogeeIntent)
         }
 
         fun intentPdf(frag: Fragment, url: String) {
@@ -131,13 +131,13 @@ open class Helper {
 
         }
 
-        fun intentMarketSSC(context: Context) {
+        fun intentappogeeSSC(context: Context) {
             val appPackageName = context.packageName
             try {
                 (context as Activity).startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("market://details?id=$appPackageName")
+                        Uri.parse("appogee://details?id=$appPackageName")
                     )
                 )
             } catch (anfe: ActivityNotFoundException) {

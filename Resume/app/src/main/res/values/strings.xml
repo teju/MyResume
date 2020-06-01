@@ -6,9 +6,9 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="loading">Loading</string>
-    <string name="market__network_error">Internal Erro</string>
-    <string name="market__no_internet">No Internet connection</string>
-    <string name="market__unknown_response">Unknown response from server. Please try again later</string>
+    <string name="appogee__network_error">Internal Erro</string>
+    <string name="appogee__no_internet">No Internet connection</string>
+    <string name="appogee__unknown_response">Unknown response from server. Please try again later</string>
     <string name="confirm">Confirm</string>
     <string name="please_allow_deera_access_permission_camera">
         <![CDATA[Please allow De Era to access camera in order to scan & pay!]]></string>

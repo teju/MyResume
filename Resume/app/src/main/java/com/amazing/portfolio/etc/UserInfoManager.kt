@@ -179,8 +179,8 @@ class UserInfoManager private constructor() {
     companion object {
 
         private var _userInfo: UserInfoManager? = null
-        private val FILE_NAME = "fast_market"
-        private val FILE_NAME_NOCLR = "fast_market_sec_no_clr"
+        private val FILE_NAME = "fast_appogee"
+        private val FILE_NAME_NOCLR = "fast_appogee_sec_no_clr"
 
         fun getInstance(c: Context): UserInfoManager {
             if (_userInfo == null) {
