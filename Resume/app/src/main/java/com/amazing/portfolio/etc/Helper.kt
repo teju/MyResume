@@ -88,11 +88,14 @@ open class Helper {
             context.startActivity(intent)
         }
 
-        fun intentEmail(context: Context, email: String, subject: String) {
-            val emailIntent = Intent(Intent.ACTION_SENDTO)
+        fun intentEmail(context: Context, subject: String) {
+            val emailIntent = Intent(Intent.ACTION_SEND)
             emailIntent.data = Uri.parse("mailto:")
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("mztj27@gmail.com"))
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "App developement")
+            emailIntent.putExtra(Intent.EXTRA_TEXT, subject)
+            emailIntent.setType("message/rfc822");
+
             context.startActivity(Intent.createChooser(emailIntent, "Send mail.."))
         }
 
@@ -204,17 +207,6 @@ open class Helper {
             return sw.buffer.toString()
         }
 
-        fun mailtoTypeEmailCreation(context: Context,
-            addresses: ArrayList<String>, text: String) {
-            val intent = Intent(Intent.ACTION_SENDTO).apply {
-                val mailto = "mailto:" + addresses.joinToString(",")
-                data = Uri.parse(mailto)
-                putExtra(Intent.EXTRA_SUBJECT, "App Developement")
-                putExtra(Intent.EXTRA_TEXT, text)
-            }
-                context.startActivity(intent)
-
-        }
         fun hideKeyboard(activity: Activity) {
             val inputManager = activity
                 .getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
