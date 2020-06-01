@@ -13,6 +13,7 @@ class MainFragment : BaseFragment() {
 
     val MAINFRAGMENT_LAYOUT = R.layout.main_fragment
     private var currentTab = FIRST_TAB
+    var instance : Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +23,10 @@ class MainFragment : BaseFragment() {
         return v
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -33,23 +38,44 @@ class MainFragment : BaseFragment() {
     }
 
     fun  initNavigationView() {
-        bottomNavigation.add(MeowBottomNavigation.Model(FIRST_TAB, R.drawable.ic_launcher_foreground))
-        bottomNavigation.add(MeowBottomNavigation.Model(SECOND_TAB, R.drawable.earth0))
-        bottomNavigation.add(MeowBottomNavigation.Model(THIRD_TAB, R.drawable.ic_launcher_foreground))
-        bottomNavigation.add(MeowBottomNavigation.Model(FOURTH_TAB, R.drawable.earth1))
-        setCurrentItem(FIRST_TAB)
-        bottomNavigation.setOnShowListener {
-            setCurrentItem(it.id)
+       bottomNavigation.apply {
+
+            add(MeowBottomNavigation.Model(FIRST_TAB, R.drawable.app_logo))
+            add(MeowBottomNavigation.Model(SECOND_TAB, R.drawable.app_logo))
+            add(MeowBottomNavigation.Model(THIRD_TAB, R.drawable.app_logo))
+            add(MeowBottomNavigation.Model(FOURTH_TAB, R.drawable.app_logo))
+            add(MeowBottomNavigation.Model(FIFTH_TAB, R.drawable.app_logo))
+
+            setCurrentItem(instance)
+            showTab()
+           setOnShowListener {
+                setCurrentItem(it.id)
+
+            }
+
+            setOnClickMenuListener {
+                setCurrentItem(it.id)
+
+            }
+
+            setOnReselectListener {
+                setCurrentItem(it.id)
+
+            }
 
         }
 
-        bottomNavigation.setOnClickMenuListener {
-            setCurrentItem(it.id)
 
-        }
+
     }
 
-
+    open fun showTab() {
+        activity?.runOnUiThread(object:Runnable {
+             override fun run() {
+                 bottomNavigation.show(instance)
+             }
+        })
+    }
     fun setCurrentItem(which: Int) {
 
         if (which == FIRST_TAB) {
@@ -59,6 +85,8 @@ class MainFragment : BaseFragment() {
                 R.id.mainLayoutFragment, "FIRST_TAB",
                 "MAIN_TAB", AppListFragment(), Helper.listFragmentsMainTab
             )
+
+
         } else if (which == SECOND_TAB) {
             currentTab = FIRST_TAB
 
@@ -72,7 +100,7 @@ class MainFragment : BaseFragment() {
 
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "THIRD_TAB",
-                "MAIN_TAB", HomeFragment(), Helper.listFragmentsMainTab
+                "MAIN_TAB", MenuScreenFragment(false,this), Helper.listFragmentsMainTab
             )
         } else if (which == FOURTH_TAB) {
             currentTab = FOURTH_TAB
@@ -83,6 +111,7 @@ class MainFragment : BaseFragment() {
             )
 
         }
+       // bottomNavigation.show(which)
     }
     companion object {
 
@@ -91,6 +120,7 @@ class MainFragment : BaseFragment() {
         var SECOND_TAB = 1 //Pay
         var THIRD_TAB = 2 //De Era
         var FOURTH_TAB = 3 //Cart
+        var FIFTH_TAB = 4 //Cart
 
 
     }

@@ -6,19 +6,85 @@
     android:clipChildren="false"
     android:background="@android:color/transparent"
     android:clipToPadding="false">
-    <ImageView android:maxHeight="60dp"
-        android:layout_height="wrap_content"
-        android:height="60dp"
-        android:layout_width="wrap_content"
-        android:textColor="#ff9900"
-        android:textSize="24sp"
-        android:layout_centerInParent="true"
-        android:textStyle="bold"
-        android:width="384px"
-        android:id="@+id/earth_button"
-        android:maxWidth="384px"
-        android:background="@anim/earth_animation"
-        android:layout_gravity="center" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="@drawable/sky_bg"
+        android:layout_height="match_parent">
 
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_height="80dp"
+            android:src="@drawable/planet1"
+            android:layout_width="80dp"
+            android:textColor="#ff9900"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:width="384px"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/planet1"
+            android:layout_gravity="left" />
+        <ImageView
+            android:layout_height="80dp"
+            android:src="@drawable/planet2"
+            android:layout_width="80dp"
+            android:textColor="#ff9900"
+            android:textSize="24sp"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:width="384px"
+            android:layout_marginTop="20dp"
+            android:id="@+id/planet2"
+            android:maxWidth="384px"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="right" />
+        <ImageView
+            android:layout_height="80dp"
+            android:src="@drawable/planet3"
+            android:layout_width="80dp"
+            android:textColor="#ff9900"
+            android:textSize="24sp"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:width="384px"
+            android:id="@+id/planet3"
+            android:layout_marginTop="40dp"
+            android:maxWidth="384px"
+            android:layout_gravity="center" />
+        <ImageView
+            android:layout_height="80dp"
+            android:src="@drawable/planet4"
+            android:layout_width="80dp"
+            android:textColor="#ff9900"
+            android:layout_marginTop="40dp"
+            android:textSize="24sp"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:width="384px"
+            android:id="@+id/planet4"
+            android:maxWidth="384px"
+            android:layout_gravity="left" />
+
+        <ImageView
+            android:id="@+id/planet5"
+            android:layout_width="91dp"
+            android:layout_height="89dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="80dp"
+            android:width="384px"
+            android:maxWidth="384px"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/planet5"
+            android:textColor="#ff9900"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    android:background="@android:color/transparent"
+    android:background="@color/White"
     android:clipToPadding="false">
     <com.amazing.portfolio.ui.adapters.HorizontalCarouselRecyclerView
         android:id="@+id/item_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
         android:layout_gravity="center_vertical"
         android:clipToPadding="false"
         android:overScrollMode="never" />

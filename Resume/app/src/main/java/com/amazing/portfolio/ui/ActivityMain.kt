@@ -2,23 +2,22 @@ package com.amazing.portfolio.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.transition.Fade
-import android.transition.TransitionInflater
-import android.transition.TransitionSet
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import butterknife.ButterKnife
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
 import com.amazing.portfolio.ui.fragments.BaseFragment
-import com.amazing.portfolio.ui.fragments.LandingScreenFragment
+import com.amazing.portfolio.ui.fragments.MenuScreenFragment
 import com.amazing.portfolio.ui.fragments.MainFragment
 
 import java.util.ArrayList
+import android.os.Handler
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class ActivityMain : AppCompatActivity() {
 
@@ -32,6 +31,7 @@ class ActivityMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         triggerMainProcess()
     }
 
@@ -44,7 +44,12 @@ class ActivityMain : AppCompatActivity() {
     }
 
     fun triggerMainProcess(){
-        setFragment(LandingScreenFragment())
+        Handler().postDelayed(Runnable {
+            setFragment(MenuScreenFragment(true, null))
+            splash_logo.visibility = View.GONE
+
+        }, 3000)
+
     }
 
     fun setFragment(frag: Fragment) {

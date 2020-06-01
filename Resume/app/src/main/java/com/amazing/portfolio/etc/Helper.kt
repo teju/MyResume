@@ -23,6 +23,7 @@ import java.io.PrintWriter
 import java.io.StringWriter
 import java.util.*
 import java.util.regex.Pattern
+import kotlin.collections.ArrayList
 
 open class Helper {
 
@@ -201,6 +202,18 @@ open class Helper {
             val pw = PrintWriter(sw, true)
             throwable.printStackTrace(pw)
             return sw.buffer.toString()
+        }
+
+        fun mailtoTypeEmailCreation(context: Context,
+            addresses: ArrayList<String>, text: String) {
+            val intent = Intent(Intent.ACTION_SENDTO).apply {
+                val mailto = "mailto:" + addresses.joinToString(",")
+                data = Uri.parse(mailto)
+                putExtra(Intent.EXTRA_SUBJECT, "App Developement")
+                putExtra(Intent.EXTRA_TEXT, text)
+            }
+                context.startActivity(intent)
+
         }
         fun hideKeyboard(activity: Activity) {
             val inputManager = activity
