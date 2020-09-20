@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "328422713884",
+    "firebase_url": "https://app-o-gee.firebaseio.com",
+    "project_id": "app-o-gee",
+    "storage_bucket": "app-o-gee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328422713884:android:d663fd03ecaa2819f04dd9",
+        "android_client_info": {
+          "package_name": "com.amazing.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328422713884-424s6i20jld8lvs9k1an22vi794ikq2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChx37zRuIRz2yRUnh16krIa9lU2ZSKuL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328422713884-424s6i20jld8lvs9k1an22vi794ikq2l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

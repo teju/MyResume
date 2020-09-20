@@ -51,10 +51,7 @@
         <attr name="android:layout_gravity" />
     </declare-styleable>
     <declare-styleable name="BannerLayout">
-        <attr name="interval" />
-        <attr name="showIndicator" />
-        <attr name="orientation" />
-        <attr name="autoPlaying"/>
+
         <attr name="itemSpace" format="integer"/>
         <attr name="top_margin" format="integer"/>
         <attr name="centerScale" format="float"/>
