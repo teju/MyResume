@@ -1,8 +1,13 @@
 package com.amazing.portfolio.ui
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
+import android.view.animation.*
+import android.view.animation.Animation.AnimationListener
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -11,12 +16,9 @@ import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
 import com.amazing.portfolio.ui.fragments.BaseFragment
-import com.amazing.portfolio.ui.fragments.MenuScreenFragment
 import com.amazing.portfolio.ui.fragments.MainFragment
-
-import java.util.ArrayList
-import android.os.Handler
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 
 class ActivityMain : AppCompatActivity() {
@@ -42,13 +44,53 @@ class ActivityMain : AppCompatActivity() {
                 this.finish();
             }
     }
+    fun startDribbleAnimation(){
+        splash_logo.setImageResource(R.drawable.app_logo)
+        splash_logo.clearAnimation()
+        val transAnim = TranslateAnimation(
+            0f, 0f, 0f,
+            getResources().getDisplayMetrics().heightPixels.toFloat() / 2 - 300
+        )
+        transAnim.startOffset = 500
+        transAnim.duration = 3000
+        transAnim.fillAfter = true
+        transAnim.interpolator = BounceInterpolator()
+        transAnim.setAnimationListener(object : AnimationListener {
+            override fun onAnimationStart(animation: Animation) {
+            }
 
+            override fun onAnimationRepeat(animation: Animation) {
+                // TODO Auto-generated method stub
+            }
+
+            override fun onAnimationEnd(animation: Animation) {
+                img_app.setImageResource(R.drawable.img_app)
+
+                val slideAnimation = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.left_enter)
+                img_app.startAnimation(slideAnimation)
+
+                // we used the postDelayed(Runnable, time) method
+                // to send a message with a delayed time.
+                Handler().postDelayed({
+                    gee.setImageResource(R.drawable.gee)
+
+                    val slideAnimation = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.right_enter)
+                    gee.startAnimation(slideAnimation)
+                }, 1500) // 3000 is the delayed time in milliseconds.
+
+            }
+        })
+        splash_logo.startAnimation(transAnim);
+
+    }
     fun triggerMainProcess(){
-        Handler().postDelayed(Runnable {
-            setFragment(MenuScreenFragment(true, null))
+        startDribbleAnimation()
+        /*Handler().postDelayed(Runnable {
+            setFragment(LoginFragment())
+           // setFragment(MenuScreenFragment(true, null))
             splash_logo.visibility = View.GONE
 
-        }, 3000)
+        }, 3000)*/
 
     }
 

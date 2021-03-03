@@ -1,0 +1,32 @@
+<<<<<<< HEAD:Resume/app/src/androidTest/java/com/appogee/portfolio/ExampleInstrumentedTest.kt
+package com.amazing.portfolio
+=======
+package com.appogee
+>>>>>>> ba556cc9117767e7787dd410a63e327d2c62d069:Resume/app/src/androidTest/java/com/appogee/market/ExampleInstrumentedTest.kt
+
+import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.ext.junit.runners.AndroidJUnit4
+
+import org.junit.Test
+import org.junit.runner.RunWith
+
+import org.junit.Assert.*
+
+/**
+ * Instrumented test, which will execute on an Android device.
+ *
+ * See [testing documentation](http://d.android.com/tools/testing).
+ */
+@RunWith(AndroidJUnit4::class)
+class ExampleInstrumentedTest {
+    @Test
+    fun useAppContext() {
+        // Context of the app under test.
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+<<<<<<< HEAD:Resume/app/src/androidTest/java/com/appogee/portfolio/ExampleInstrumentedTest.kt
+        assertEquals("com.amazing.appogee", appContext.packageName)
+=======
+        assertEquals("com.appogee", appContext.packageName)
+>>>>>>> ba556cc9117767e7787dd410a63e327d2c62d069:Resume/app/src/androidTest/java/com/appogee/market/ExampleInstrumentedTest.kt
+    }
+}
