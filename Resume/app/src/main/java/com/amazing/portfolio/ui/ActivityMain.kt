@@ -16,6 +16,7 @@ import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
 import com.amazing.portfolio.ui.fragments.BaseFragment
+import com.amazing.portfolio.ui.fragments.LoginFragment
 import com.amazing.portfolio.ui.fragments.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -49,7 +50,7 @@ class ActivityMain : AppCompatActivity() {
         splash_logo.clearAnimation()
         val transAnim = TranslateAnimation(
             0f, 0f, 0f,
-            getResources().getDisplayMetrics().heightPixels.toFloat() / 2 - 300
+            getResources().getDisplayMetrics().heightPixels.toFloat() / 2 - 200
         )
         transAnim.startOffset = 500
         transAnim.duration = 3000
@@ -68,15 +69,15 @@ class ActivityMain : AppCompatActivity() {
 
                 val slideAnimation = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.left_enter)
                 img_app.startAnimation(slideAnimation)
+                gee.setImageResource(R.drawable.gee)
 
-                // we used the postDelayed(Runnable, time) method
-                // to send a message with a delayed time.
+                val slideAnimationright = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.right_enter)
+                gee.startAnimation(slideAnimationright)
+
                 Handler().postDelayed({
-                    gee.setImageResource(R.drawable.gee)
-
-                    val slideAnimation = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.right_enter)
-                    gee.startAnimation(slideAnimation)
-                }, 1500) // 3000 is the delayed time in milliseconds.
+                    rllanding.visibility = View.GONE
+                   setFragment(LoginFragment())
+                }, 3000)
 
             }
         })
