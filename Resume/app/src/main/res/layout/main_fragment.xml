@@ -21,7 +21,7 @@
     </RelativeLayout>
 
 
-    <com.amazon.market.ui.views.LoadingCompound
+    <com.appogee.ui.views.LoadingCompound
         android:id="@+id/ld"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

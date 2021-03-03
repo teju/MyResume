@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "89352270483",
+    "project_id": "appozee-ab103",
+    "storage_bucket": "appozee-ab103.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89352270483:android:cf891a7fa3128478965366",
+        "android_client_info": {
+          "package_name": "com.appogee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89352270483-73b4ac97dnud1oh55fai3tn0tj9nhmue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlmyLXquvz-jhzGrXTkvTbPFn7GEwsFys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89352270483-73b4ac97dnud1oh55fai3tn0tj9nhmue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
