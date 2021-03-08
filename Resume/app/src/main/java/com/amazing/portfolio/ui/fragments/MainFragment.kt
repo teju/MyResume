@@ -13,7 +13,7 @@ class MainFragment : BaseFragment() {
 
     val MAINFRAGMENT_LAYOUT = R.layout.main_fragment
     private var currentTab = FIRST_TAB
-    var instance : Int = 0
+    var instance : Int = 2
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -83,7 +83,7 @@ class MainFragment : BaseFragment() {
 
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "FIRST_TAB",
-                "MAIN_TAB", AppListFragment(), Helper.listFragmentsMainTab
+                "MAIN_TAB", HomeFragment(), Helper.listFragmentsMainTab
             )
 
 
@@ -92,7 +92,7 @@ class MainFragment : BaseFragment() {
 
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "SECOND_TAB",
-                "MAIN_TAB", HomeFragment(), Helper.listFragmentsMainTab
+                "MAIN_TAB", AppListFragment(), Helper.listFragmentsMainTab
             )
 
         } else if (which == THIRD_TAB) {

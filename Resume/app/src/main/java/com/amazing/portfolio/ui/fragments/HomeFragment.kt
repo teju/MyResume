@@ -35,9 +35,10 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        fetchData()
+       // fetchData()
     }
 
+/*
     private fun fetchData() {
         val firebaseDatabase = FirebaseDatabase.getInstance()
         val databaseReference = firebaseDatabase.reference
@@ -62,5 +63,6 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
             }
         })
     }
+*/
 
 }
