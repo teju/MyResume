@@ -21,6 +21,10 @@
     <dimen name="_2dp">2dp</dimen>
     <dimen name="_4dp">4dp</dimen>
     <dimen name="_100dp">100dp</dimen>
-
+    <dimen name="cbn_fab_size">56dp</dimen>
+    <dimen name="cbn_height">56dp</dimen>
+    <dimen name="cbn_layout_height">84dp</dimen>
+    <dimen name="cbn_bottom_curve_offset">12dp</dimen>
+    <dimen name="cbn_fab_top_offset">8dp</dimen>
     <dimen name="_18sp">18sp</dimen>
 </resources>

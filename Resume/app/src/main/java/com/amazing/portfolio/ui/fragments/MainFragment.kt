@@ -2,12 +2,13 @@ package com.amazing.portfolio.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Helper
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import kotlinx.android.synthetic.main.main_fragment.*
+import np.com.susanthapa.curved_bottom_navigation.CbnMenuItem
 
 class MainFragment : BaseFragment() {
 
@@ -38,33 +39,39 @@ class MainFragment : BaseFragment() {
     }
 
     fun  initNavigationView() {
-       bottomNavigation.apply {
 
-            add(MeowBottomNavigation.Model(FIRST_TAB, R.drawable.app_logo))
-            add(MeowBottomNavigation.Model(SECOND_TAB, R.drawable.app_logo))
-            add(MeowBottomNavigation.Model(THIRD_TAB, R.drawable.app_logo))
-            add(MeowBottomNavigation.Model(FOURTH_TAB, R.drawable.app_logo))
-            add(MeowBottomNavigation.Model(FIFTH_TAB, R.drawable.app_logo))
-
-            setCurrentItem(instance)
-            showTab()
-           setOnShowListener {
-                setCurrentItem(it.id)
-
-            }
-
-            setOnClickMenuListener {
-                setCurrentItem(it.id)
-
-            }
-
-            setOnReselectListener {
-                setCurrentItem(it.id)
-
-            }
-
+        val menuItems = arrayOf(
+            CbnMenuItem(
+                R.drawable.ic_home, // the icon
+                R.drawable.avd_home,// the AVD that will be shown in FAB
+                FIRST_TAB // optional if you use Jetpack Navigation
+            ),
+            CbnMenuItem(
+                R.drawable.ic_dashboard,
+                R.drawable.avd_dashboard,
+                SECOND_TAB
+            ),
+            CbnMenuItem(
+                R.drawable.ic_dashboard,
+                R.drawable.avd_dashboard,
+                THIRD_TAB
+            ),
+            CbnMenuItem(
+                R.drawable.ic_profile,
+                R.drawable.avd_profile,
+                FOURTH_TAB
+            ),
+            CbnMenuItem(
+                R.drawable.ic_settings,
+                R.drawable.avd_settings,
+                FIFTH_TAB
+            )
+        )
+        nav_view.setMenuItems(menuItems, instance)
+        setCurrentItem(instance)
+        nav_view.setOnMenuItemClickListener { item, _ ->
+            setCurrentItem(item.destinationId)
         }
-
 
 
     }
@@ -72,7 +79,9 @@ class MainFragment : BaseFragment() {
     open fun showTab() {
         activity?.runOnUiThread(object:Runnable {
              override fun run() {
-                 bottomNavigation.show(instance)
+                 nav_view.onMenuItemClick(instance)
+                 setCurrentItem(instance)
+
              }
         })
     }
@@ -119,6 +128,7 @@ class MainFragment : BaseFragment() {
             )
 
         }
+
        // bottomNavigation.show(which)
     }
     companion object {

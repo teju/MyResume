@@ -9,8 +9,9 @@
     <string name="appogee__network_error">Internal Erro</string>
     <string name="appogee__no_internet">No Internet connection</string>
     <string name="appogee__unknown_response">Unknown response from server. Please try again later</string>
-    <string name="mobile_apps_dev"><b>Mobile Apps Development</b>\nScrutinize business intent to propose the best mobile app design features to suit your budget and achieve target’s\nAn App is never complete, our experience team ensure your product development and long journey smoother.</string>
-    <string name="we_build">We build mobile apps with Native SDK that provides best user experience. iOS &amp; Android with integration of Google Analytics, Fabric &amp; mobile attribution platform.</string>
+    <string name="mobile_apps_dev">Scrutinize business intent to propose the best mobile app design features to suit your budget and achieve target’s</string>
+    <string name="mobile_apps_dev_smoother">An App is never complete, our experience team ensure your product development and long journey smoother.</string>
+    <string name="we_build">We build mobile apps with Native SDK that provides best user experience.</string>
     <string name="confirm">Confirm</string>
     <string name="please_allow_deera_access_permission_camera">
         <![CDATA[Please allow De Era to access camera in order to scan & pay!]]></string>

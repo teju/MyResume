@@ -63,7 +63,7 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
                     icn_2.startAnimation(slideAnimationRights)
                     icn_1.startAnimation(slideAnimationRights)
                     friendly_apps.setImageResource(R.drawable.friendly_apps)
-                    icn_1.setImageResource(R.drawable.friendly_apps)
+                    icn_1.setImageResource(R.drawable.icn_1)
                     icn_2.setImageResource(R.drawable.icn_2)
 
                     val slideAnimattxt = AnimationUtils.loadAnimation(activity!!, R.anim.bottom_up)

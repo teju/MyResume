@@ -1,36 +1,25 @@
 package com.amazing.portfolio.ui.fragments
 
 import android.os.Bundle
-import android.os.Handler
-import android.transition.Fade
-import android.transition.TransitionInflater
-import android.transition.TransitionSet
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import com.amazing.portfolio.R
+import com.amazing.portfolio.model.Products
+import com.amazing.portfolio.model.ProductsArray
 import com.amazing.portfolio.ui.adapters.ItemAdapter
-import kotlinx.android.synthetic.main.home_fragment.*
-import android.widget.ImageView.ScaleType
-import com.bumptech.glide.load.resource.bitmap.DownsampleStrategy.FIT_CENTER
-
-import androidx.transition.ChangeBounds
-import androidx.transition.ChangeImageTransform
-import androidx.transition.TransitionManager
-import android.view.animation.AccelerateDecelerateInterpolator
-import android.R.attr.duration
-import android.view.animation.Animation
-import android.view.animation.ScaleAnimation
-import android.view.animation.AnimationSet
-import android.R.attr.duration
-import android.view.animation.TranslateAnimation
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.fragment_app_list.*
 
 
 class AppListFragment : BaseFragment() {
-
+    var TAG = "AppListFragment"
     private val itemAdapter by lazy {
         ItemAdapter { position: Int, item: Item ->
             item_list.smoothScrollToPosition(position)
@@ -59,12 +48,32 @@ class AppListFragment : BaseFragment() {
     fun initUI() {
         val displayMetrics = DisplayMetrics()
         activity!!.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics)
-        val screenWidth = displayMetrics.widthPixels
         item_list.initialize(itemAdapter)
         item_list.setViewsToChangeColor(listOf(R.id.list_item_background,R.id.list_item_icon))
         itemAdapter.context = activity!!
         itemAdapter.setItems(getLargeListOfItems())
+        getAppList()
 
+    }
+    fun  getAppList() {
+        val databaseReference = FirebaseDatabase.getInstance().getReference("/myApps");
+
+        databaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val appsList = ArrayList<Products>()
+                for (postSnapshot in dataSnapshot.children) {
+                    val products : Products = postSnapshot.getValue(Products::class.java)!!
+                    appsList.add(products)
+                }
+                Log.d(TAG,"onDataChange "+appsList.size)
+
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Getting Post failed, log a message
+                Log.d(TAG,"onCancelled "+databaseError)
+            }
+        })
 
     }
     private fun getLargeListOfItems(): List<Item> {
