@@ -23,7 +23,6 @@
                 android:id="@+id/img_app"
                 android:layout_gravity="center_vertical"
                 android:visibility="visible"
-                android:layout_marginTop="15dp"
                 android:layout_height="wrap_content">
             </ImageView>
 
@@ -35,16 +34,21 @@
                 android:visibility="visible"
                 android:layout_height="120dp">
             </ImageView>
-            <ImageView
+            <FrameLayout
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
-                android:layout_marginLeft="@dimen/_2dp"
-                android:adjustViewBounds="true"
-                android:id="@+id/gee"
                 android:layout_gravity="center_vertical"
-                android:visibility="visible"
-                android:layout_height="wrap_content">
-            </ImageView>
+                android:layout_height="@dimen/_100dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/_2dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/gee"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content">
+                </ImageView>
+
+            </FrameLayout>
 
         </LinearLayout>
         <FrameLayout

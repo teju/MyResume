@@ -20,6 +20,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:indeterminateTint="@color/White"
             android:visibility="visible"/>
 
         <TextView
@@ -31,17 +32,13 @@
             android:fontFamily="@font/poppins_regular"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/Black"
-            android:visibility="visible"
-             />
-
-
+            android:visibility="visible" />
         <ImageView
             android:id="@+id/ivNila"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:adjustViewBounds="true"
-            android:visibility="gone"
-            />
+            android:visibility="gone" />
 
     </LinearLayout>
 

@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.fragment_landing_screen.*
 import android.view.animation.LinearInterpolator
 import android.widget.ImageView
 import com.amazing.portfolio.etc.Helper
+import java.lang.Exception
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.concurrent.schedule
@@ -36,31 +37,36 @@ class MenuScreenFragment(
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val runnable = object : Runnable {
-            override fun run() {
-                planet1.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                    .setInterpolator(LinearInterpolator()).start()
-                planet2.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                    .setInterpolator(LinearInterpolator()).start()
-                planet3.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                    .setInterpolator(LinearInterpolator()).start()
-                planet4.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                    .setInterpolator(LinearInterpolator()).start()
-                planet5.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                    .setInterpolator(LinearInterpolator()).start()
+        try {
+            val runnable = object : Runnable {
+                override fun run() {
+                    planet1.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                        .setInterpolator(LinearInterpolator()).start()
+                    planet2.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                        .setInterpolator(LinearInterpolator()).start()
+                    planet3.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                        .setInterpolator(LinearInterpolator()).start()
+                    planet4.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                        .setInterpolator(LinearInterpolator()).start()
+                    planet5.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                        .setInterpolator(LinearInterpolator()).start()
+                }
             }
+            planet1.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
+                .setInterpolator(LinearInterpolator()).start()
+            planet2.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
+                .setInterpolator(LinearInterpolator()).start()
+            planet3.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
+                .setInterpolator(LinearInterpolator()).start()
+            planet4.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
+                .setInterpolator(LinearInterpolator()).start()
+            planet5.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
+                .setInterpolator(LinearInterpolator()).start()
+        } catch (e:Exception) {
+
         }
 
-        planet1.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
-            .setInterpolator(LinearInterpolator()).start()
-        planet2.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
-            .setInterpolator(LinearInterpolator()).start()
-        planet3.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
-            .setInterpolator(LinearInterpolator()).start()
-        planet4.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
-            .setInterpolator(LinearInterpolator()).start()
-        planet5.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)
-            .setInterpolator(LinearInterpolator()).start()
+
         planet1.setOnClickListener(this)
         planet2.setOnClickListener(this)
         planet3.setOnClickListener(this)

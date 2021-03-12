@@ -107,7 +107,15 @@ class MainFragment : BaseFragment() {
 
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "FOURTH_TAB",
-                "MAIN_TAB", HomeFragment(), Helper.listFragmentsMainTab
+                "MAIN_TAB", AboutUsFragment(), Helper.listFragmentsMainTab
+            )
+
+        } else if (which == FIFTH_TAB) {
+            currentTab = FIFTH_TAB
+
+            home().setOrShowExistingFragmentByTag(
+                R.id.mainLayoutFragment, "FIFTH_TAB",
+                "MAIN_TAB", ContactUsFragment(), Helper.listFragmentsMainTab
             )
 
         }
