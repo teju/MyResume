@@ -2,7 +2,6 @@ package com.amazing.portfolio.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import com.amazing.portfolio.R
@@ -101,7 +100,8 @@ class MainFragment : BaseFragment() {
 
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "SECOND_TAB",
-                "MAIN_TAB", AppListFragment(), Helper.listFragmentsMainTab
+                "MAIN_TAB",
+                FeaturesFragment(), Helper.listFragmentsMainTab
             )
 
         } else if (which == THIRD_TAB) {
@@ -116,7 +116,7 @@ class MainFragment : BaseFragment() {
 
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "FOURTH_TAB",
-                "MAIN_TAB", AboutUsFragment(), Helper.listFragmentsMainTab
+                "MAIN_TAB", AppListFragment(), Helper.listFragmentsMainTab
             )
 
         } else if (which == FIFTH_TAB) {

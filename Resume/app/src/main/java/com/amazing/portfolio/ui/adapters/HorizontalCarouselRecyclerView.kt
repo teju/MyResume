@@ -27,23 +27,27 @@ class HorizontalCarouselRecyclerView(
         newAdapter.registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
             override fun onChanged() {
                 post {
-                    val sidePadding = (width / 2) - (getChildAt(0).width / 2)
-                    setPadding(sidePadding, 100, sidePadding, 100)
-                    //scrollToPosition(0)
+                    try {
+                        val sidePadding = (width / 2) - (getChildAt(0).width / 2)
+                        //setPadding(sidePadding, 100, sidePadding, 100)
+                        //scrollToPosition(0)
 
-                    addOnScrollListener(object : OnScrollListener() {
-                        override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                            super.onScrolled(recyclerView, dx, dy)
+                        addOnScrollListener(object : OnScrollListener() {
+                            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                                super.onScrolled(recyclerView, dx, dy)
 
-                            try {
-                                firstCompletelyVisibleItemPosition =
-                                    (recyclerView.layoutManager as LinearLayoutManager).findLastVisibleItemPosition()
-                            } catch (e : Exception) {
+                                try {
+                                    firstCompletelyVisibleItemPosition =
+                                        (recyclerView.layoutManager as LinearLayoutManager).findLastVisibleItemPosition()
+                                } catch (e: Exception) {
 
+                                }
+                                onScrollChanged()
                             }
-                            onScrollChanged()
-                        }
-                    })
+                        })
+                    } catch (e:Exception){
+
+                    }
                 }
             }
         })
@@ -61,7 +65,7 @@ class HorizontalCarouselRecyclerView(
                 val childCenterX = (child.left  + child.right) / 2
                 val scaleValue = getGaussianScale(childCenterX, 1f, 0.5f, 500.toDouble())
                 child.scaleX = scaleValue - 0.5f
-                child.scaleY = scaleValue - 0.6f
+                child.scaleY = scaleValue - 0.4f
                 colorView(child, scaleValue,position)
             }
         }

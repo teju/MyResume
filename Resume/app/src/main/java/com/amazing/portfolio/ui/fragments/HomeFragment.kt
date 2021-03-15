@@ -9,7 +9,12 @@ import android.view.ViewTreeObserver.OnScrollChangedListener
 import android.view.animation.AnimationUtils
 import androidx.annotation.RequiresApi
 import com.amazing.portfolio.R
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.home_fragment.*
 
 
@@ -91,10 +96,10 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
                 }
 
             })
-       // fetchData()
+        //fetchData()
     }
 
-/*
+
     private fun fetchData() {
         val firebaseDatabase = FirebaseDatabase.getInstance()
         val databaseReference = firebaseDatabase.reference
@@ -119,6 +124,6 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
             }
         })
     }
-*/
+
 
 }

@@ -20,7 +20,6 @@ import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.ResultCallback
 import com.google.android.gms.common.api.Status
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.login_fragment.*
@@ -101,11 +100,6 @@ class LoginFragment : BaseFragment() ,View.OnClickListener, GoogleApiClient.OnCo
                         + ", Image: " + personPhotoUrl
             )
             updateUI(personName!!,acct.email!!,"","",personPhotoUrl);
-        } else {
-            val acct = result.signInAccount
-
-            // Signed out, show unauthenticated UI.
-            updateUI(acct?.displayName!!,acct?.email!!,"","",acct.photoUrl.toString());
         }
         ld.hide()
     }

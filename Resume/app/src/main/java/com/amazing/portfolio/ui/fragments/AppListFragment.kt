@@ -16,23 +16,23 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.fragment_app_list.*
+import java.lang.Exception
 
 
 class AppListFragment : BaseFragment() {
     var TAG = "AppListFragment"
+    val appsList = ArrayList<Products>()
+
     private val itemAdapter by lazy {
-        ItemAdapter { position: Int, item: Item ->
+        ItemAdapter { position: Int, item: Products ->
             item_list.smoothScrollToPosition(position)
             val appDetailFragment = AppDetailFragment()
+            appDetailFragment.product = item
             home().setFragment(appDetailFragment)
         }
     }
     private val possibleItems = listOf(
-        Item("Airplanes", R.drawable.ic_launcher_foreground),
-        Item("Cars", R.drawable.ic_launcher_foreground),
-        Item("Food", R.drawable.ic_launcher_foreground),
-        Item("Gas", R.drawable.ic_launcher_foreground),
-        Item("Home", R.drawable.ic_launcher_foreground)
+        Products()
     )
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.fragment_app_list, container, false)
@@ -51,7 +51,7 @@ class AppListFragment : BaseFragment() {
         item_list.initialize(itemAdapter)
         item_list.setViewsToChangeColor(listOf(R.id.list_item_background,R.id.list_item_icon))
         itemAdapter.context = activity!!
-        itemAdapter.setItems(getLargeListOfItems())
+        itemAdapter.setItems(appsList)
         getAppList()
 
     }
@@ -60,13 +60,15 @@ class AppListFragment : BaseFragment() {
 
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val appsList = ArrayList<Products>()
+                appsList.clear()
                 for (postSnapshot in dataSnapshot.children) {
                     val products : Products = postSnapshot.getValue(Products::class.java)!!
                     appsList.add(products)
-                }
-                Log.d(TAG,"onDataChange "+appsList.size)
+                    Log.d(TAG,"onDataChange "+postSnapshot.value)
 
+                }
+                itemAdapter.setItems(appsList)
+                itemAdapter.notifyDataSetChanged()
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
@@ -75,11 +77,6 @@ class AppListFragment : BaseFragment() {
             }
         })
 
-    }
-    private fun getLargeListOfItems(): List<Item> {
-        val items = mutableListOf<Item>()
-        (0..40).map { items.add(possibleItems.random()) }
-        return items
     }
 }
 data class Item(

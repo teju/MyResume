@@ -8,18 +8,11 @@
     android:clipToPadding="false">
     <ImageView
         android:layout_width="match_parent"
-        android:background="@drawable/ic_launcher_background"
         android:layout_height="match_parent"
+        android:id="@+id/app_img"
         android:layout_centerInParent="true" />
 
     <!--content-->
-    <ImageView
-        android:id="@+id/list_item_icon"
-        android:layout_width="164dp"
-
-        android:layout_height="164dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_centerInParent="true" />
 
     <!--menu-->
     <!--button -->

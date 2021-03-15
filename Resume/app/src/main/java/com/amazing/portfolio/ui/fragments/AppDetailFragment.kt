@@ -17,11 +17,14 @@ import android.opengl.ETC1.getHeight
 import android.os.Handler
 import android.view.animation.Animation.AnimationListener
 import com.amazing.portfolio.etc.Helper
+import com.amazing.portfolio.model.Products
+import com.amazing.portfolio.ui.GlideApp
 import kotlinx.android.synthetic.main.app_detail_fragment.*
 import java.lang.Exception
 
 class AppDetailFragment : BaseFragment() {
 
+    var product: Products? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,6 +45,7 @@ class AppDetailFragment : BaseFragment() {
 
             white_bg.visibility = View.VISIBLE
             white_bg.setAnimation(animation);
+
         } catch (e : Exception){
 
         }
@@ -49,9 +53,12 @@ class AppDetailFragment : BaseFragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mDelayedTransactionHandler.postDelayed(mRunnable, 1000);
+        //mDelayedTransactionHandler.postDelayed(mRunnable, 1000);
         val  animLinear = AnimationUtils.loadAnimation(getActivity(), R.anim.bounce);
         v?.setAnimation(animLinear);
+        GlideApp.with(activity!!)
+            .load(product!!.image)
+            .into(app_img)
     }
 
 }

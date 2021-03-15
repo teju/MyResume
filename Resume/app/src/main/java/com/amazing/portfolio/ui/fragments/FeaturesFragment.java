@@ -9,10 +9,10 @@ import androidx.fragment.app.Fragment;
 
 import com.amazing.portfolio.R;
 
-public class AboutUsFragment extends Fragment {
+public class FeaturesFragment extends Fragment {
 
 
-    public AboutUsFragment() {
+    public FeaturesFragment() {
         // Required empty public constructor
     }
 

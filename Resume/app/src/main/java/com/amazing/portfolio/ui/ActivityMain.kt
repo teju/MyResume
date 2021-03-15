@@ -1,24 +1,33 @@
 package com.amazing.portfolio.ui
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.view.animation.*
+import android.view.animation.Animation
 import android.view.animation.Animation.AnimationListener
+import android.view.animation.AnimationUtils
+import android.view.animation.BounceInterpolator
+import android.view.animation.TranslateAnimation
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.FirebaseImageLoader
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
 import com.amazing.portfolio.ui.fragments.BaseFragment
 import com.amazing.portfolio.ui.fragments.LoginFragment
 import com.amazing.portfolio.ui.fragments.MainFragment
+import com.bumptech.glide.Glide
+import com.bumptech.glide.Registry
+import com.bumptech.glide.annotation.GlideModule
+import com.bumptech.glide.module.AppGlideModule
+import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.InputStream
 import java.util.*
 
 
@@ -399,3 +408,4 @@ class ActivityMain : AppCompatActivity() {
     }
 
 }
+
