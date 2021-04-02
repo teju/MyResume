@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/scrollView"
+    android:background="@color/White"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/imageview"
+            android:src="@drawable/bg_img"
+            android:adjustViewBounds="true"
+            android:layout_height="match_parent">
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/framelayoutfour"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_marginTop="-200dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/framelayoutthree"
+            android:background="@drawable/dark_brown_gradient"
+            android:src="@drawable/smart_o_gee"
+            android:layout_marginBottom="@dimen/_100dp"
+            app:layout_collapseMode="pin"
+            android:scaleType="centerCrop" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="120dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="New Capablities "
+                    android:textSize="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/White"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="LEAD'S IT"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textAlignment="textEnd"
+                    android:fontFamily="@font/poppins_bolditalic"
+                    android:textColor="@color/White"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+            <com.github.demono.AutoScrollViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/new_capibilities"
+                android:textSize="15dp"
+                android:padding="15dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/White"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/framelayoutthree"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_marginTop="-100dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/framelayouttwo"
+            android:background="@drawable/biscuit_gradient"
+            android:src="@drawable/smart_o_gee"
+            android:layout_marginBottom="@dimen/_100dp"
+            app:layout_collapseMode="pin"
+            android:scaleType="centerCrop" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Have an Idea !!"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text=" Let's Get Started."
+                android:textSize="20dp"
+                android:layout_marginLeft="50dp"
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/poppins_bolditalic"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/mobile_app_dev"
+                android:textSize="15dp"
+                android:id="@+id/lets_start"
+                android:maxLines="3"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="15dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/framelayouttwo"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-100dp"
+            android:layout_below="@+id/framelayoutone"
+            android:visibility="visible"
+            android:background="@drawable/peach_gradient"
+            android:src="@drawable/smart_o_gee"
+            app:layout_collapseMode="pin"
+            android:scaleType="centerCrop" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Mobile App Development"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:text="We build not just Apps but an experiences that You will never forget."
+                android:textSize="12dp"
+                android:maxLines="3"
+                android:fontFamily="@font/poppins_italic"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <include layout="@layout/mobile_app_dev"></include>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/framelayoutone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/light_peach_gradient"
+            android:src="@drawable/smart_o_gee"
+            app:layout_collapseMode="pin"
+            android:orientation="vertical"
+            android:scaleType="centerCrop" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Remote work's . . . . . ."
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:text=" The New Normal . . . . . "
+                android:textSize="20dp"
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/poppins_bolditalic"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <include layout="@layout/remote_message"
+                android:visibility="visible"
+                android:id="@+id/remote_message"></include>
+        </LinearLayout>
+    </RelativeLayout>
+
+<!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/llRoot"
+        android:background="@color/theme_blue"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/rounded_one_side"
+            android:layout_height="200dp">
+        </LinearLayout>
+    </RelativeLayout>
+-->
+</androidx.core.widget.NestedScrollView>
+
+

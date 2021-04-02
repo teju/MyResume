@@ -9,10 +9,10 @@ import androidx.fragment.app.Fragment;
 
 import com.amazing.portfolio.R;
 
-public class FeaturesFragment extends Fragment {
+public class FeaturesFragmentThree extends Fragment {
 
 
-    public FeaturesFragment() {
+    public FeaturesFragmentThree() {
         // Required empty public constructor
     }
 
@@ -27,6 +27,6 @@ public class FeaturesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about_us, container, false);
+        return inflater.inflate(R.layout.fragment_features_three, container, false);
     }
 }

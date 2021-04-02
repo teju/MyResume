@@ -14,8 +14,11 @@ import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.amazing.portfolio.R
+import com.amazing.portfolio.ui.GlideApp
+import kotlinx.android.synthetic.main.list_item.view.*
 import org.joda.time.DateTime
 import org.joda.time.Seconds
 
@@ -191,6 +194,15 @@ open class Helper {
             } catch (e1: Exception) {
             }
 
+        }
+        fun loadImags(context:Context,url:String,Img:ImageView) {
+            try {
+                GlideApp.with(context)
+                    .load(url.trim())
+                    .into(Img)
+            } catch (e:java.lang.Exception){
+
+            }
         }
         fun showLog(str : String) {
             try {

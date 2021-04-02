@@ -21,4 +21,11 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="features">Features</string>
+    <string name="keynote">KeyNote</string>
+    <string name="works">Projects</string>
+    <string name="Remote_work">It does not matter the team is in New York, Singapore, Sweden, Bangalore or anywhere in the world. World class IT team on demand.\nWe specialise in Mobile app development, block chain and ai projects. Expert Indian Developers for our esteemed client all over the world.</string>
+    <string name="mobile_app_dev">We create a fast and smooth app for Android &amp; iOS on native platform, we also deliver products with outsourcing app development model.\nRejuvenate your brand, increase visibility and accessibility through professionally built mobile apps from Smart IT ian’s across the world. We’ll make your Mobile App Development easy and problem-free using agile app development strategies to meet your various business requirements.</string>
+    <string name="lets_start">We help you with latest innovative idea &amp; app development at are friendly price. We imagine your future app and get started with the development.</string>
+    <string name="new_capibilities">Let our experts handle all your ideas and document into a right set of configurations to code &amp; decode to the right paths of success. As AppOGee says Remote works is the new normal. We have experienced it before 2021 pandemic. We always have worked Remote</string>
 </resources>

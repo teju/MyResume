@@ -8,6 +8,7 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.StyleSpan
 import android.view.View
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -16,7 +17,6 @@ import androidx.lifecycle.*
 import androidx.lifecycle.Observer
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.UserInfoManager
-import com.amazing.portfolio.etc.callback.PermissionListener
 import com.amazing.portfolio.etc.generics.GenericFragment
 
 import java.util.*
@@ -24,14 +24,13 @@ import java.util.concurrent.Executors
 import kotlin.coroutines.CoroutineContext
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Constants
-import com.amazing.portfolio.etc.callback.DatePickerListener
-import com.amazing.portfolio.etc.callback.NoInternetListener
-import com.amazing.portfolio.etc.callback.NotifyListener
+import com.amazing.portfolio.etc.callback.*
 import com.amazing.portfolio.ui.ActivityMain
 import com.amazing.portfolio.ui.fragments.dialog.DatePickerDialogFragment
 import com.amazing.portfolio.ui.fragments.dialog.NoInternetDialogFragment
 import com.amazing.portfolio.ui.fragments.dialog.NotifyDialogFragment
 import com.amazing.portfolio.ui.views.LoadingCompound
+import com.google.android.material.appbar.AppBarLayout
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -47,11 +46,12 @@ open class BaseFragment : GenericFragment() {
             private set
         var permissionListener: PermissionListener? = null
             private set
+        var tabbarClickListener: TabBarClickListener? = null
 
     }
 
     var v: View? = null
-
+    var tabv: View? = null
     var obsOAuthExpired: Observer<Boolean> = Observer { isOauthExpired ->
         if (isOauthExpired!!) {
             showNotifyDialog(
@@ -77,6 +77,11 @@ open class BaseFragment : GenericFragment() {
         } catch (e: Exception) {
             Helper.logException(activity, e)
         }
+    }
+    fun isAppBArExpanded(abl: AppBarLayout): Boolean {
+        val behavior =
+            (abl.layoutParams as CoordinatorLayout.LayoutParams).behavior
+        return if (behavior is AppBarLayout.Behavior) behavior.topAndBottomOffset == 0 else false
     }
 
     class HttpLifecycleScope : CoroutineScope, LifecycleObserver {

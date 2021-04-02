@@ -40,16 +40,21 @@ class MenuScreenFragment(
         try {
             val runnable = object : Runnable {
                 override fun run() {
-                    planet1.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                        .setInterpolator(LinearInterpolator()).start()
-                    planet2.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                        .setInterpolator(LinearInterpolator()).start()
-                    planet3.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                        .setInterpolator(LinearInterpolator()).start()
-                    planet4.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                        .setInterpolator(LinearInterpolator()).start()
-                    planet5.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
-                        .setInterpolator(LinearInterpolator()).start()
+                    try {
+                        planet1.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                            .setInterpolator(LinearInterpolator()).start()
+                        planet2.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                            .setInterpolator(LinearInterpolator()).start()
+                        planet3.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                            .setInterpolator(LinearInterpolator()).start()
+                        planet4.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                            .setInterpolator(LinearInterpolator()).start()
+                        planet5.animate().rotationBy(360F).withEndAction(this).setDuration(8000)
+                            .setInterpolator(LinearInterpolator()).start()
+                    } catch (e:Exception) {
+
+                    }
+
                 }
             }
             planet1.animate().rotationBy(360F).withEndAction(runnable).setDuration(8000)

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/theme_blue"
+    android:background="@drawable/rounded_one_side">
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:background="@drawable/rounded_one_side"
+        android:layout_gravity="bottom"
+        android:layout_below="@+id/topview"
+        android:text="@string/we_build"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/topview"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@null"
+            android:tint="@color/White"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_logo" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image"
+            android:padding="10dp"
+            android:textColor="@color/White"
+            android:text="@string/app_name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/short_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:textColor="@color/White"
+            android:layout_toRightOf="@+id/image"
+            android:paddingLeft="10dp"
+            android:text="@string/appogee__no_internet"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/show_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/short_content"
+            android:layout_toRightOf="@+id/image"
+            android:drawablePadding="5dp"
+            android:textColor="@color/White"
+            android:drawableRight="@drawable/chevron_double_right"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="SHOW"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>
