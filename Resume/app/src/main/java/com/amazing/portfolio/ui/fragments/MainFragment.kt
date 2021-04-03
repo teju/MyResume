@@ -116,7 +116,7 @@ class MainFragment : BaseFragment() {
 
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "FOURTH_TAB",
-                "MAIN_TAB", ProjectListFragment(), Helper.listFragmentsMainTab
+                "MAIN_TAB", AppListFragment(), Helper.listFragmentsMainTab
             )
 
         } else if (which == FIFTH_TAB) {

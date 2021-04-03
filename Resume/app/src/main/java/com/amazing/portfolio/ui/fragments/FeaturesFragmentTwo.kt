@@ -5,18 +5,24 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.model.featuresContent.KeyNotes
+import com.amazing.portfolio.model.featuresContent.KeyNotesICons
 import com.amazing.portfolio.ui.adapters.FeaturesAdapter
+import com.amazing.portfolio.ui.adapters.FeaturesIconsAdapter
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_features_two.*
 
 
 class FeaturesFragmentTwo : Fragment() {
-    private var animationDown: Animation? = null
-    private var animationUp: Animation? = null
+    private var recyclerViewAdapter: FeaturesAdapter? = null
+    private var recyclerViewBottomAdapter: FeaturesIconsAdapter? = null
+    var databaseReference: DatabaseReference? = null
+    val keynotesList = ArrayList<KeyNotes>()
+    val keynotesIConsList = ArrayList<KeyNotesICons>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,19 +41,73 @@ class FeaturesFragmentTwo : Fragment() {
         savedInstanceState: Bundle?
     ) {
         super.onViewCreated(view, savedInstanceState)
-        val linearLayoutManager = LinearLayoutManager(activity!!)
+        val linearLayoutManager = LinearLayoutManager(activity!!,RecyclerView.HORIZONTAL,false)
+        val linearLayoutManager_ = LinearLayoutManager(activity!!,RecyclerView.HORIZONTAL,false)
         recyclerView.layoutManager = linearLayoutManager
+        recyclerView_bottom.layoutManager = linearLayoutManager_
 
-        animationUp = AnimationUtils.loadAnimation(
-            activity,
-            R.anim.slide_up
-        )
-        animationDown = AnimationUtils.loadAnimation(
-            activity,
-            R.anim.slide_down
-        )
-
-        val recyclerViewAdapter = FeaturesAdapter(activity, animationUp, animationDown)
+        recyclerViewAdapter = FeaturesAdapter(activity!!)
+        recyclerViewAdapter?.keynotesList = keynotesList
+        recyclerViewBottomAdapter = FeaturesIconsAdapter(activity!!)
         recyclerView.adapter = recyclerViewAdapter
+        recyclerView_bottom.adapter = recyclerViewBottomAdapter
+
+        recyclerView.setOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                val firstVisibleItemCount = linearLayoutManager.findFirstVisibleItemPosition()
+                recyclerViewBottomAdapter?.selectedPosition = firstVisibleItemCount
+                recyclerViewBottomAdapter?.notifyDataSetChanged()
+
+            }
+
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+            }
+        })
+        ld.showLoadingV2()
+        fetchIcons()
     }
+
+    fun fetchData() {
+        databaseReference = FirebaseDatabase.getInstance().getReference("features/keynotes")
+        databaseReference?.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                keynotesList.clear()
+                ld.hide()
+                for (postSnapshot in snapshot.children) {
+                    val products : KeyNotes = postSnapshot.getValue(KeyNotes::class.java)!!
+                    keynotesList.add(products)
+                }
+                recyclerViewAdapter?.keynotesList = keynotesList
+                recyclerViewAdapter?.notifyDataSetChanged()
+
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+            }
+        })
+    }
+    fun fetchIcons() {
+        databaseReference = FirebaseDatabase.getInstance().getReference("features/keynotes_icons")
+        databaseReference?.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                keynotesList.clear()
+                for (postSnapshot in snapshot.children) {
+                    val products : KeyNotesICons = postSnapshot.getValue(KeyNotesICons::class.java)!!
+                    keynotesIConsList.add(products)
+                }
+
+                ld.hide()
+                recyclerViewBottomAdapter?.keynotesList = keynotesIConsList
+                recyclerViewBottomAdapter?.notifyDataSetChanged()
+                ld.showLoadingV2()
+                fetchData()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+            }
+        })
+    }
+
 }

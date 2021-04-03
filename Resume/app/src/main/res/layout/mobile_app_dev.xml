@@ -16,7 +16,6 @@
         android:textColor="@color/colorPrimaryDark"
         android:foreground="?android:attr/selectableItemBackground"
         android:maxLines="3"
-        android:text="@string/mobile_app_dev"
         android:padding="16dp"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"

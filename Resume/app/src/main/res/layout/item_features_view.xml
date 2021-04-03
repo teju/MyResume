@@ -2,69 +2,53 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/theme_blue"
-    android:background="@drawable/rounded_one_side">
-    <TextView
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:background="@drawable/rounded_one_side"
-        android:layout_gravity="bottom"
-        android:layout_below="@+id/topview"
-        android:text="@string/we_build"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:visibility="gone" />
+    android:id="@+id/parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:id="@+id/topview"
-        android:padding="20dp"
+        android:elevation="5dp"
+        android:id="@+id/cbg"
+        app:cardBackgroundColor="@color/colorAccent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
         android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:contentDescription="@null"
-            android:tint="@color/White"
-            android:scaleType="fitXY"
-            android:src="@drawable/app_logo" />
-        <TextView
-            android:id="@+id/title"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/image"
-            android:padding="10dp"
-            android:textColor="@color/White"
-            android:text="@string/app_name"
-            android:textStyle="bold" />
+            android:id="@+id/topview"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="18dp"
+                android:padding="15dp"
+                android:fontFamily="@font/poppins_bold"
+                android:background="@drawable/rounded_two_side" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/image_view"
+                android:adjustViewBounds="true"
+                android:layout_height="150dp">
+            </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="13dp"
+                android:id="@+id/description"
+                android:padding="20dp" />
 
-        <TextView
-            android:id="@+id/short_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/title"
-            android:textColor="@color/White"
-            android:layout_toRightOf="@+id/image"
-            android:paddingLeft="10dp"
-            android:text="@string/appogee__no_internet"
-            android:textStyle="bold" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/show_more"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/short_content"
-            android:layout_toRightOf="@+id/image"
-            android:drawablePadding="5dp"
-            android:textColor="@color/White"
-            android:drawableRight="@drawable/chevron_double_right"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:text="SHOW"
-            android:textStyle="bold" />
-    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
