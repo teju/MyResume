@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.model.featuresContent.KeyNotesICons
@@ -27,17 +28,18 @@ class FeaturesIconsAdapter(
         //holder.parent.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.list_enter)
         //holder.cbg.setBackgroundResource(R.drawable.peach_gradient);
         var imageURl = keynotesList.get(position).unselected
-        if(position == selectedPosition) {
-            imageURl = keynotesList.get(position).unselected
-        } else{
-            imageURl = keynotesList.get(position).selected
-        }
         try {
             GlideApp.with(context)
                 .load(imageURl)
                 .into(holder.icons)
         } catch (e: Exception) {
         }
+        if(position == selectedPosition) {
+            holder.icons.setColorFilter(ContextCompat.getColor(context, R.color.colorAccent), android.graphics.PorterDuff.Mode.MULTIPLY);
+        } else{
+            holder.icons.setColorFilter(ContextCompat.getColor(context, R.color.Black), android.graphics.PorterDuff.Mode.MULTIPLY);
+        }
+
 
     }
     override fun getItemCount(): Int {

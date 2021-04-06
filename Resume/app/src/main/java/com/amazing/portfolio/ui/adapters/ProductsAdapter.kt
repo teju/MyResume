@@ -40,7 +40,6 @@ class ProductsAdapter(
     }
 
 
-    var FirstCompletelyVisibleItemPosition = -1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductsAdapter.ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.adapter, parent, false)

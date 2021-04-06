@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import com.amazing.portfolio.R
+import com.amazing.portfolio.model.AppData
 import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.model.ProductsArray
 import com.amazing.portfolio.ui.adapters.ItemAdapter
@@ -22,15 +23,8 @@ import java.lang.Exception
 class AppListFragment : BaseFragment() {
     var TAG = "AppListFragment"
     val appsList = ArrayList<Products>()
+    private var products: ArrayList<AppData> = ArrayList()
 
-    private val itemAdapter by lazy {
-        ItemAdapter { position: Int, item: Products ->
-            item_list.smoothScrollToPosition(position)
-            val appDetailFragment = AppDetailFragment()
-            appDetailFragment.product = item
-            home().setFragment(appDetailFragment)
-        }
-    }
     private val possibleItems = listOf(
         Products()
     )
@@ -53,7 +47,7 @@ class AppListFragment : BaseFragment() {
         itemAdapter.context = activity!!
         itemAdapter.setItems(appsList)
         getAppList()
-
+        ld.showLoadingV2()
     }
     fun  getAppList() {
         val databaseReference = FirebaseDatabase.getInstance().getReference("/myApps");
@@ -61,6 +55,7 @@ class AppListFragment : BaseFragment() {
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 appsList.clear()
+                ld.hide()
                 for (postSnapshot in dataSnapshot.children) {
                     val products : Products = postSnapshot.getValue(Products::class.java)!!
                     appsList.add(products)
@@ -78,6 +73,39 @@ class AppListFragment : BaseFragment() {
         })
 
     }
+    private val itemAdapter by lazy {
+        ItemAdapter { position: Int, item: Products ->
+            item_list.smoothScrollToPosition(position)
+           getAppData()
+            ld.showLoadingV2()
+        }
+    }
+    fun  getAppData() {
+        val databaseReference = FirebaseDatabase.getInstance().getReference("/AppDetails");
+
+        databaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+
+                ld.hide()
+                for (postSnapshot in dataSnapshot.children) {
+                    val AppData  = postSnapshot.getValue(AppData::class.java)!!
+                    products.add(AppData)
+                }
+                ld.hide()
+                val appDetailFragment = AppDetailFragment()
+                appDetailFragment.products = products
+                home().setFragment(appDetailFragment)
+
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Getting Post failed, log a message
+            }
+        })
+
+    }
+
+
 }
 data class Item(
     val title: String,

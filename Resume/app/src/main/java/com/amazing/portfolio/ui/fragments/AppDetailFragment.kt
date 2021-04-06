@@ -5,26 +5,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.amazing.portfolio.R
-import android.view.animation.AccelerateDecelerateInterpolator
-import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.view.animation.ScaleAnimation
-import androidx.databinding.adapters.ViewGroupBindingAdapter
-import kotlinx.android.synthetic.main.main_fragment.*
-import android.widget.RelativeLayout
-import android.opengl.ETC1.getWidth
-import android.opengl.ETC1.getHeight
+
 import android.os.Handler
-import android.view.animation.Animation.AnimationListener
-import com.amazing.portfolio.etc.Helper
-import com.amazing.portfolio.model.Products
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.amazing.portfolio.etc.callback.ItemClickListener
+import com.amazing.portfolio.model.AppData
 import com.amazing.portfolio.ui.GlideApp
+import com.amazing.portfolio.ui.adapters.ProductImagesAdapter
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.app_detail_fragment.*
 import java.lang.Exception
 
 class AppDetailFragment : BaseFragment() {
 
-    var product: Products? = null
+    private var productImagesAdapter: ProductImagesAdapter? = null
+    public var products: ArrayList<AppData> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,16 +49,38 @@ class AppDetailFragment : BaseFragment() {
         } catch (e : Exception){
 
         }
-
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //mDelayedTransactionHandler.postDelayed(mRunnable, 1000);
         val  animLinear = AnimationUtils.loadAnimation(getActivity(), R.anim.bounce);
         v?.setAnimation(animLinear);
-        GlideApp.with(activity!!)
-            .load(product!!.image)
-            .into(app_img)
+
+        val linearLayoutManager = LinearLayoutManager(activity!!, RecyclerView.HORIZONTAL,false)
+        rv_images.layoutManager = linearLayoutManager
+        productImagesAdapter = ProductImagesAdapter(activity!!)
+        rv_images.adapter = productImagesAdapter
+        productImagesAdapter?.itemClick = object : ItemClickListener{
+            override fun onClickpos(pos: Int) {
+                val productImagesFullScreenFragment = ProductImagesFullScreenFragment()
+                productImagesFullScreenFragment.images = products.get(0).releated_images
+                home().setFragment(productImagesFullScreenFragment)
+            }
+
+        }
+        initData()
     }
 
+    fun initData() {
+        productImagesAdapter?.images = products.get(0).releated_images
+        GlideApp.with(activity!!)
+            .load(products.get(0).bg_image)
+            .into(app_img)
+        GlideApp.with(activity!!)
+            .load(products.get(0).logo)
+            .into(logo)
+        tv_description.text = products.get(0).description
+        ratings.text = products.get(0).ratings
+    }
 }
