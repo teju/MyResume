@@ -2,21 +2,31 @@ package com.amazing.portfolio.ui.fragments
 
 import android.animation.LayoutTransition
 import android.animation.ObjectAnimator
+import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
+import android.transition.Slide
+import android.transition.Transition
+import android.transition.TransitionManager
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import butterknife.OnClick
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.callback.TabBarClickListener
+import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
 import com.amazing.portfolio.ui.adapters.ViewPagerAdapter
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayout
@@ -31,6 +41,9 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
         R.drawable.account_key,
         R.drawable.cellphone_text
     )
+    private var mAdapter: MyProjectsAdapter? = null
+    var mDatas = ArrayList<String>()
+
     private val navLabels = intArrayOf(
         R.string.features,
         R.string.keynote,
@@ -55,8 +68,21 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
     override fun onViewCreated(
         view: View,
         savedInstanceState: Bundle?) {
-
         super.onViewCreated(view, savedInstanceState)
+
+        initData()
+
+        rv.setLayoutManager(LinearLayoutManager(activity))
+        rv.getViewTreeObserver().addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                findView()
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    rv.getViewTreeObserver().removeOnGlobalLayoutListener(this)
+                }
+            }
+        })
+        rv.setClipToPadding(false);
+        rv.setClipChildren(false);
         tab_tablayout.setupWithViewPager(viewpager)
 
         setupViewPager()
@@ -71,8 +97,21 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                 }
             }
         }
-
+        arrow_right_drop_circle.setOnClickListener {
+            toggle(left_project_list.isVisible)
+        }
     }
+
+    private fun toggle(show: Boolean) {
+        val transition: Transition = Slide(Gravity.START)
+        transition.duration = 1000
+        transition.addTarget(R.id.left_project_list)
+
+        TransitionManager.beginDelayedTransition(left_project_list!!, transition)
+        left_project_list.visibility = if (!show) View.VISIBLE else View.GONE
+        left_project_list.bringToFront()
+    }
+
     override fun onClicked() {
 
     }
@@ -167,4 +206,35 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
         // setting adapter to view pager.
         viewpager.setAdapter(adapter)
     }
+    private fun initData() {
+        if (mDatas == null) mDatas = ArrayList()
+        for (i in 0..98) {
+            mDatas!!.add("CAR_Item$i")
+        }
+    }
+    private fun findView() {
+        mAdapter = MyProjectsAdapter(activity!!,rv)
+        mAdapter?.mDatas = mDatas
+        rv.setAdapter(mAdapter)
+        rv.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(
+                recyclerView: RecyclerView,
+                newState: Int
+            ) {
+                super.onScrollStateChanged(recyclerView, newState)
+            }
+
+            override fun onScrolled(
+                recyclerView: RecyclerView,
+                dx: Int,
+                dy: Int
+            ) {
+                super.onScrolled(recyclerView, dx, dy)
+                for (i in 0 until recyclerView.childCount) {
+                    recyclerView.getChildAt(i).invalidate()
+                }
+            }
+        })
+    }
+
 }
