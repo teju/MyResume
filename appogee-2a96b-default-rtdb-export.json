@@ -1,0 +1,92 @@
+{
+  "AppDetails" : [ {
+    "app_name" : "Netzealous",
+    "bg_image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2Fbg.png?alt=media&token=74d0f24c-c54c-4051-b086-c91a0a15a3b3",
+    "description" : "NetZealous, a provider of Professional Education, e-learning solutions. Our training services set new benchmarks, as a result of which our customers get customized, cost-effective, on-demand training solutions from us. Our trainings are effective and tailored to suit their exact needs, and are from Experts who are well-known in the industry.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2FLogo%201.png?alt=media&token=7b73bcf2-400f-48e1-8c36-4f02cac740e5",
+    "ratings" : "4",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2F2.1.png?alt=media&token=dfa60666-9be5-4280-a3f1-34e2362bca8c", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2F2.2.png?alt=media&token=214bcbb4-f6f5-4b5d-92a8-50fc9677c82f", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2F2.3.png?alt=media&token=61098893-1974-43d9-aa3b-41ede64bce65" ]
+  } ],
+  "features" : {
+    "contents" : [ {
+      "content" : "It does not matter the team is in New York, Singapore, Sweden, Bangalore or anywhere in the world. World class IT team on demand.\nWe specialise in Mobile app development, block chain and ai projects. Expert Indian Developers for our esteemed client all over the world",
+      "description" : "null",
+      "subtitle" : " The New Normal . . . . . ",
+      "tittle" : "Remote 's . . . . . ."
+    }, {
+      "content" : "We create a fast and smooth app for Android &amp; iOS on native platform, we also deliver products with outsourcing app development model.\nRejuvenate your brand, increase visibility and accessibility through professionally built mobile apps from Smart IT ian’s across the world. We’ll make your Mobile App Development easy and problem-free using agile app development strategies to meet your various business requirements.",
+      "description" : "We build not just Apps but an experiences that You will never forget.",
+      "subtitle" : "null",
+      "tittle" : "Mobile App Development"
+    }, {
+      "content" : "It does not matter the team is in New York, Singapore, Sweden, Bangalore or anywhere in the world. World class IT team on demand.\nWe specialise in Mobile app development, block chain and ai projects. Expert Indian Developers for our esteemed client all over the world",
+      "description" : "null",
+      "subtitle" : " Let's Get Started.",
+      "tittle" : "Have an Idea !!"
+    }, {
+      "content" : "Let our experts handle all your ideas and document into a right set of configurations to code &amp; decode to the right paths of success. As AppOGee says Remote works is the new normal. We have experienced it before 2021 pandemic. We always have worked Remote",
+      "description" : "null",
+      "subtitle" : "LEAD'S IT",
+      "tittle" : "New Capablities "
+    } ],
+    "keynotes" : [ {
+      "description" : "Mobile app development for iPhone, iPad and Android in Native. Natives are very fast. Easily distributed in google apple app stores. More interactive and intuitive. Easily interact with any feature of the phone.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-mateusz-dach-424299.jpg?alt=media&token=97ff1b62-ce34-4d64-9e7b-aea3ea45a389",
+      "title" : "Native Mobile Apps"
+    }, {
+      "description" : "Futuristic app development techniques to create iOS mobile apps for iPhone and iPad.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-mateusz-dach-424299.jpg?alt=media&token=97ff1b62-ce34-4d64-9e7b-aea3ea45a389",
+      "title" : "Latest iOS Apps"
+    } ],
+    "keynotes_icons" : [ {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCompetitive%20Price.png?alt=media&token=0092229e-6d7b-4aa9-8051-562e17002e75",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCompetitive%20Price.png?alt=media&token=0092229e-6d7b-4aa9-8051-562e17002e75"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCompetitive%20Price.png?alt=media&token=0092229e-6d7b-4aa9-8051-562e17002e75",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCompetitive%20Price.png?alt=media&token=0092229e-6d7b-4aa9-8051-562e17002e75"
+    } ],
+    "scrollImages" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-christina-morillo-1181244.jpg?alt=media&token=e0d3b55d-d078-4926-b381-3f3e6a454df3", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-lisa-fotios-1092671.jpg?alt=media&token=d56f3921-6a4e-47ad-8a09-428b7da8fc59" ]
+  },
+  "myApps" : [ {
+    "description" : "The ultimate continuing professional education provider offers you regulatory and compliance trainings from the industry’s leading experts.",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Compliance4all.png?alt=media&token=02a17db2-8e7a-4b8d-a9fa-cb5ec3e20987",
+    "name" : "Compliance4All",
+    "othersLink" : "null",
+    "playstoreLink" : "null"
+  }, {
+    "description" : "Caferides is a high-end luxury motorcycle renting. Caferides helps motorcycle enthusiasts, adventure holiday travellers and destination explorers to discover and enjoy the places on two wheels.",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Caferide.png?alt=media&token=784d10ee-13fc-4ec9-94c2-15d681a91fc5",
+    "name" : "Caferides",
+    "othersLink" : "null",
+    "playstoreLink" : "null"
+  }, {
+    "description" : "Eazy is a kind of a never ending fashion magazine or blog that contains daily new styles wearing from ordinary people and not only from high fashioned.",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Eazi.png?alt=media&token=c7b2529a-8412-42e7-a536-6ad4bbfaef16",
+    "name" : "Eazy",
+    "othersLink" : "null",
+    "playstoreLink" : "null"
+  }, {
+    "description" : "GIVB is a new record keeping App for Agriculture that makes farmer's work efficiently. Reports can be outputted easily just by adding entry records",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/GIVB.png?alt=media&token=dc246f5c-8268-40bc-9c04-8a7e82102779",
+    "name" : "GIVB",
+    "othersLink" : "null",
+    "playstoreLink" : "null"
+  }, {
+    "description" : "A Singapore rediscovers Edition of community game GameOn Nila!",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/GON.png?alt=media&token=9e11cd32-4446-4717-a8b7-214dae227519",
+    "name" : "GON",
+    "othersLink" : "null",
+    "playstoreLink" : "null"
+  } ],
+  "users" : {
+    "user" : {
+      "array" : [ {
+        "email" : "nteju37@gmail.com",
+        "image" : "https://lh3.googleusercontent.com/a-/AOh14GjGxDYrfC1jIrT9mtuSlKrWiJOgPlnBNgMo2pX9Gw",
+        "mobile_no" : "",
+        "name" : "Tejaswini N",
+        "password" : ""
+      } ]
+    }
+  }
+}
