@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazing.portfolio.R;
-import com.amazing.portfolio.ui.views.MatrixTranslateLayout;
 import com.amazing.portfolio.ui.views.MatrixView;
 
 import java.util.ArrayList;
@@ -34,6 +33,8 @@ public class MyProjectsAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         MyProjectsAdapter.VH vh = (MyProjectsAdapter.VH) holder;
+        System.out.println("MatrixView1234 "+rv.getHeight());
+
         ((MatrixView) vh.itemView).setParentHeight(rv.getHeight());
         //vh.tv.setText(mDatas.get(position));
         final int fp = position;
@@ -47,7 +48,7 @@ public class MyProjectsAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return mDatas.size();
+        return 999;
     }
 
     class VH extends RecyclerView.ViewHolder {

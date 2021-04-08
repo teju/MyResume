@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 
 public class MatrixView extends LinearLayout {
     private int h = 0;
-    private float fullAngelFactor = 30f;
+    private float fullAngelFactor = 60f;
     private float fullScaleFactor=1;
     public MatrixView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -25,6 +25,7 @@ public class MatrixView extends LinearLayout {
 
         float rotate = calculateAngel(top, h);
         float scale = calcuylateScale(top, h);
+        System.out.println("MatrixView "+h +" top "+top+ " rotate "+rotate+ "getHeight "+getHeight());
 
         Matrix m = canvas.getMatrix();
         m.preTranslate(-2 / getWidth(), -2 / getHeight());

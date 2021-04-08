@@ -8,6 +8,7 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.featuresContent.KeyNotesICons
 import com.amazing.portfolio.ui.GlideApp
 import java.util.*
@@ -17,6 +18,7 @@ class FeaturesIconsAdapter(
     public var selectedPosition = 0
     private val layoutInflater: LayoutInflater
     private val context: Context
+    var itemClickListener:ItemClickListener? = null
     public var keynotesList = ArrayList<KeyNotesICons>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReyclerViewHolder {
         val item =
@@ -28,19 +30,22 @@ class FeaturesIconsAdapter(
         //holder.parent.animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.list_enter)
         //holder.cbg.setBackgroundResource(R.drawable.peach_gradient);
         var imageURl = keynotesList.get(position).unselected
+
+        if(position == selectedPosition) {
+            imageURl = keynotesList.get(position).selected
+        } else{
+            imageURl = keynotesList.get(position).unselected
+        }
+
         try {
             GlideApp.with(context)
                 .load(imageURl)
                 .into(holder.icons)
         } catch (e: Exception) {
         }
-        if(position == selectedPosition) {
-            holder.icons.setColorFilter(ContextCompat.getColor(context, R.color.colorAccent), android.graphics.PorterDuff.Mode.MULTIPLY);
-        } else{
-            holder.icons.setColorFilter(ContextCompat.getColor(context, R.color.Black), android.graphics.PorterDuff.Mode.MULTIPLY);
+        holder.icons.setOnClickListener {
+            itemClickListener?.onClickpos(holder.layoutPosition)
         }
-
-
     }
     override fun getItemCount(): Int {
         return keynotesList.size

@@ -2,22 +2,25 @@ package com.amazing.portfolio.ui
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.view.animation.Animation
+import android.view.ViewTreeObserver
+import android.view.animation.*
 import android.view.animation.Animation.AnimationListener
-import android.view.animation.AnimationUtils
-import android.view.animation.BounceInterpolator
-import android.view.animation.TranslateAnimation
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.FirebaseImageLoader
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
+import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
 import com.amazing.portfolio.ui.fragments.BaseFragment
 import com.amazing.portfolio.ui.fragments.LoginFragment
 import com.amazing.portfolio.ui.fragments.MainFragment
@@ -37,7 +40,8 @@ class ActivityMain : AppCompatActivity() {
         private var MAIN_FLOW_INDEX = 0
         private val MAIN_FLOW_TAG = "MainFlowFragment"
     }
-
+    private var mAdapter: MyProjectsAdapter? = null
+    var mDatas = ArrayList<String>()
     private val MOVE_DEFAULT_TIME: Long = 1000
     private val FADE_DEFAULT_TIME: Long = 300
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,6 +90,7 @@ class ActivityMain : AppCompatActivity() {
                 Handler().postDelayed({
                     rllanding.visibility = View.GONE
                    setFragment(LoginFragment())
+
                 }, 3000)
 
             }
@@ -95,6 +100,7 @@ class ActivityMain : AppCompatActivity() {
     }
     fun triggerMainProcess(){
         startDribbleAnimation()
+
         /*Handler().postDelayed(Runnable {
             setFragment(LoginFragment())
            // setFragment(MenuScreenFragment(true, null))
@@ -406,6 +412,7 @@ class ActivityMain : AppCompatActivity() {
         }
 
     }
+
 
 }
 

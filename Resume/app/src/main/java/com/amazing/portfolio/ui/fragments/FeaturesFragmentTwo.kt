@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.featuresContent.KeyNotes
 import com.amazing.portfolio.model.featuresContent.KeyNotesICons
 import com.amazing.portfolio.ui.adapters.FeaturesAdapter
@@ -52,6 +53,12 @@ class FeaturesFragmentTwo : Fragment() {
         recyclerView.adapter = recyclerViewAdapter
         recyclerView_bottom.adapter = recyclerViewBottomAdapter
 
+        recyclerViewBottomAdapter?.itemClickListener = object :ItemClickListener {
+            override fun onClickpos(pos: Int) {
+                recyclerView.scrollToPosition(pos)
+            }
+
+        }
         recyclerView.setOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)

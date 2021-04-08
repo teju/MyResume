@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.amazing.portfolio.ui.views.MatrixView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <com.amazing.portfolio.ui.views.RoundImageView
+        android:id="@+id/image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="30dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="20dp"
+        android:background="@color/colorAccent"
+        android:text="Hello Charming~"
+        android:textSize="18sp" />
+
+</com.amazing.portfolio.ui.views.MatrixView>
