@@ -45,6 +45,7 @@ class FeaturesIconsAdapter(
         }
         holder.icons.setOnClickListener {
             itemClickListener?.onClickpos(holder.layoutPosition)
+            selectedPosition = holder.layoutPosition
         }
     }
     override fun getItemCount(): Int {

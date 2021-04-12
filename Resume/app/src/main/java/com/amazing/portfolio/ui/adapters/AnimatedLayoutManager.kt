@@ -123,6 +123,7 @@ class AnimatedLayoutManager constructor(
                 previousDy = 0
             }
             duration = (lerp(800f, 400f, currentDy.toFloat() / 1000)).toLong()
+
             start()
         }
     }
@@ -149,7 +150,7 @@ class AnimatedLayoutManager constructor(
     ) {
         val linearSmoothScroller: LinearSmoothScroller =
             object : LinearSmoothScroller(recyclerView!!.context) {
-                private val MILLISECONDS_PER_INCH = 1000f
+                private val MILLISECONDS_PER_INCH = 100f
                 override fun computeScrollVectorForPosition(targetPosition: Int): PointF? {
                     return this@AnimatedLayoutManager
                         .computeScrollVectorForPosition(targetPosition)

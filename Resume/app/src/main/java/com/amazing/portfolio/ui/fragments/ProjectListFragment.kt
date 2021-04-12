@@ -24,6 +24,9 @@ import kotlinx.android.synthetic.main.activity_rv.*
  */
 class ProjectListFragment : BaseFragment() {
     private var projectsAdapter: ProjectListsAdapter? = null
+    var runnable: Runnable? = null
+    val handler = Handler()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,6 +43,8 @@ class ProjectListFragment : BaseFragment() {
         projectLists()
 
     }
+
+
     fun projectLists() {
         val linearLayoutManager = AnimatedLayoutManager(activity!!)
 
@@ -55,23 +60,26 @@ class ProjectListFragment : BaseFragment() {
     }
     fun autoScroll() {
         try {
-            val handler = Handler()
-            val runnable: Runnable = object : Runnable {
+            runnable = object : Runnable {
                 var count = 0
                 override fun run() {
                     if (count == projectsAdapter?.getItemCount()) count = 0
                     if (count < projectsAdapter?.getItemCount()!!) {
                         recycler_view.smoothScrollToPosition(++count)
-                        handler.postDelayed(this, 20)
+                        handler.postDelayed(this, 0)
                     }
                 }
             }
-            handler.postDelayed(runnable, 20)
+            handler.postDelayed(runnable, 0)
         } catch (e:Exception){
 
         }
     }
 
+    override fun onStop() {
+        super.onStop()
+        handler.removeCallbacks(runnable)
+    }
 
 
 }
