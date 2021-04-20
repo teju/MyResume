@@ -6,6 +6,7 @@ class Products {
     var description : String = ""
     var playstoreLink : String = ""
     var othersLink :String = ""
-    var image : String = ""
+    var bg_colour :String = ""
+    var logo : String = ""
 
 }

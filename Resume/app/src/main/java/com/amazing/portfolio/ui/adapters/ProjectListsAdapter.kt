@@ -1,6 +1,7 @@
 package com.amazing.portfolio.ui.adapters
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ import com.amazing.portfolio.R
 import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.model.featuresContent.KeyNotes
 import com.amazing.portfolio.ui.GlideApp
+import kotlinx.android.synthetic.main.list_item.view.*
 import java.util.*
 
 class ProjectListsAdapter(
@@ -29,7 +31,12 @@ class ProjectListsAdapter(
     }
 
     override fun onBindViewHolder(holder: ReyclerViewHolder, position: Int) {
-
+        GlideApp.with(context)
+            .load(projectList.get(position).logo)
+            .into(holder.app_logo)
+        holder.app_name.text = projectList.get(position).name
+        holder.app_name.text = projectList.get(position).description
+        holder.parent.setCardBackgroundColor(Color. parseColor(projectList.get(position).bg_colour))
     }
     override fun getItemCount(): Int {
         return projectList.size
@@ -37,11 +44,17 @@ class ProjectListsAdapter(
 
     inner class ReyclerViewHolder(v: View) :
         RecyclerView.ViewHolder(v) {
-        val parent: RelativeLayout
+        val parent: CardView
+        val app_logo: ImageView
+        val app_name: TextView
+        val tv_description: TextView
 
 
         init {
-            parent = v.findViewById<View>(R.id.parent) as RelativeLayout
+            parent = v.findViewById<View>(R.id.parent) as CardView
+            app_logo = v.findViewById<View>(R.id.app_logo) as ImageView
+            app_name = v.findViewById<View>(R.id.app_name) as TextView
+            tv_description = v.findViewById<View>(R.id.tv_description) as TextView
 
         }
     }

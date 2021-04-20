@@ -124,7 +124,7 @@ class MainFragment : BaseFragment() {
 
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "FIFTH_TAB",
-                "MAIN_TAB", ContactUsFragment(), Helper.listFragmentsMainTab
+                "MAIN_TAB", AboutUsFragment(), Helper.listFragmentsMainTab
             )
 
         }

@@ -31,45 +31,6 @@
         </RelativeLayout>
 
     </androidx.core.widget.NestedScrollView>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
-
-        <RelativeLayout
-            android:layout_width="300dp"
-            android:visibility="visible"
-            android:id="@+id/left_project_list"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:visibility="visible"
-                android:alpha="0.5"
-                android:layout_marginLeft="-200dp"
-                android:src="@drawable/semi_circle"
-                app:layout_constraintStart_toStartOf="parent">
-            </ImageView>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv"
-                android:layout_width="match_parent"
-                android:clipToPadding="false"
-                android:layout_centerVertical="true"
-                android:layout_height="match_parent" />
-        </RelativeLayout>
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="-20dp"
-            android:layout_toRightOf="@+id/left_project_list"
-            android:id="@+id/arrow_right_drop_circle"
-            android:rotation="180"
-            android:src="@drawable/arrow_right_drop_circle"
-            android:layout_height="50dp">
-
-        </ImageView>
-
-    </RelativeLayout>
 
 
     <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar"

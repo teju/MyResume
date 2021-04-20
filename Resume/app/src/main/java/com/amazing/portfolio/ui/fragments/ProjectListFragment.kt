@@ -1,5 +1,6 @@
 package com.amazing.portfolio.ui.fragments
 
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -20,6 +21,7 @@ import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.ui.adapters.AnimatedLayoutManager
 import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
 import com.amazing.portfolio.ui.adapters.ProjectListsAdapter
+import com.cunoraz.continuouscrollable.ContinuousScrollableImageView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -66,8 +68,13 @@ class ProjectListFragment : BaseFragment() {
         projectsAdapter?.projectList = ArrayList()
         recycler_view.adapter = projectsAdapter
         autoScroll()
+
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+    }
     fun  getAppList() {
         val databaseReference = FirebaseDatabase.getInstance().getReference("/myApps");
 

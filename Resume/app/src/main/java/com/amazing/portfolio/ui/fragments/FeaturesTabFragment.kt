@@ -2,6 +2,7 @@ package com.amazing.portfolio.ui.fragments
 
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,10 +15,12 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.callback.TabBarClickListener
 import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
 import com.amazing.portfolio.ui.adapters.ViewPagerAdapter
+import com.amazing.portfolio.ui.views.layoutmanager.BannerLayoutManager
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_features_tab.*
 
@@ -58,7 +61,7 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
         savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initSideView()
+
         tab_tablayout.setupWithViewPager(viewpager)
 
         setupViewPager()
@@ -170,59 +173,40 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
 
         // setting adapter to view pager.
         viewpager.setAdapter(adapter)
-    }
-    fun initSideView() {
-        initData()
+        viewpager.setOnPageChangeListener(object  : ViewPager.OnPageChangeListener{
+            override fun onPageScrollStateChanged(state: Int) {
 
-        rv.setLayoutManager(LinearLayoutManager(activity))
-        rv.setClipToPadding(false);
-        rv.setClipChildren(false);
-        sideView()
-        arrow_right_drop_circle.setOnClickListener {
-            toggle(left_project_list.isVisible)
-        }
-    }
-    private fun toggle(show: Boolean) {
-        if(show) {
-            left_project_list.visibility = View.GONE
-            arrow_right_drop_circle.animate().rotation(360f).setInterpolator(LinearInterpolator()).setDuration(500)
-        } else {
-            left_project_list.visibility = View.VISIBLE
-            arrow_right_drop_circle.animate().rotation(-180f).setInterpolator(LinearInterpolator()).setDuration(500)
-
-        }
-    }
-
-    fun sideView() {
-
-        mAdapter = MyProjectsAdapter(activity!!,rv)
-        mAdapter?.mDatas = mDatas
-        rv.setAdapter(mAdapter)
-        rv.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(
-                recyclerView: RecyclerView,
-                newState: Int
-            ) {
-                super.onScrollStateChanged(recyclerView, newState)
             }
 
-            override fun onScrolled(
-                recyclerView: RecyclerView,
-                dx: Int,
-                dy: Int
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
             ) {
-                super.onScrolled(recyclerView, dx, dy)
-                for (i in 0 until recyclerView.childCount) {
-                    recyclerView.getChildAt(i).invalidate()
+                if(position == 2) {
+                    Handler().postDelayed({
+                        home().toggle(false)
+                    }, 1000)
+                    Handler().postDelayed({
+                        home().toggle(true)
+
+                    }, 5000)
                 }
             }
-        })
 
+            override fun onPageSelected(position: Int) {
+                if(position == 2) {
+                    Handler().postDelayed({
+                        home().toggle(false)
+                    }, 1000)
+                    Handler().postDelayed({
+                        home().toggle(true)
+
+                    }, 5000)
+                }
+            }
+
+        })
     }
-    private fun initData() {
-        if (mDatas == null) mDatas = java.util.ArrayList()
-        for (i in 0..98) {
-            mDatas!!.add("CAR_Item$i")
-        }
-    }
+
 }

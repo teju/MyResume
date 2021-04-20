@@ -20,6 +20,7 @@ import com.amazing.portfolio.etc.FirebaseImageLoader
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
+import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
 import com.amazing.portfolio.ui.fragments.BaseFragment
 import com.amazing.portfolio.ui.fragments.LoginFragment
@@ -28,8 +29,13 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.Registry
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_rv.*
 import java.io.InputStream
 import java.util.*
 
@@ -41,7 +47,7 @@ class ActivityMain : AppCompatActivity() {
         private val MAIN_FLOW_TAG = "MainFlowFragment"
     }
     private var mAdapter: MyProjectsAdapter? = null
-    var mDatas = ArrayList<String>()
+    var mDatas = ArrayList<Products>()
     private val MOVE_DEFAULT_TIME: Long = 1000
     private val FADE_DEFAULT_TIME: Long = 300
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +55,7 @@ class ActivityMain : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         triggerMainProcess()
+        initSideView()
     }
 
     fun exitApp() {
@@ -90,7 +97,6 @@ class ActivityMain : AppCompatActivity() {
                 Handler().postDelayed({
                     rllanding.visibility = View.GONE
                    setFragment(LoginFragment())
-
                 }, 3000)
 
             }
@@ -129,7 +135,12 @@ class ActivityMain : AppCompatActivity() {
         } catch (e: Exception) {
             Helper.logException(this@ActivityMain, e)
         }
+        if (frag is MainFragment) {
+            arrow_right_drop_circle.visibility = View.VISIBLE
+        } else{
+            arrow_right_drop_circle.visibility = View.GONE
 
+        }
     }
     fun setFragment(frag: Fragment,from : Int,to : Int) {
         try {
@@ -413,6 +424,73 @@ class ActivityMain : AppCompatActivity() {
 
     }
 
+    fun initSideView() {
+        getAppList()
+        rv.setLayoutManager(LinearLayoutManager(this))
+        rv.setClipToPadding(false);
+        rv.setClipChildren(false);
+        sideView()
+        arrow_right_drop_circle.setOnClickListener {
+            toggle(left_project_list.isVisible)
+        }
+    }
+
+    public fun toggle(show: Boolean) {
+        if(show) {
+            left_project_list.visibility = View.GONE
+            arrow_right_drop_circle.animate().rotation(360f).setInterpolator(LinearInterpolator()).setDuration(500)
+        } else {
+            left_project_list.visibility = View.VISIBLE
+            arrow_right_drop_circle.animate().rotation(-180f).setInterpolator(LinearInterpolator()).setDuration(500)
+        }
+    }
+
+    fun sideView() {
+        mAdapter = MyProjectsAdapter(this,rv)
+        mAdapter?.mDatas = mDatas
+        rv.setAdapter(mAdapter)
+        rv.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(
+                recyclerView: RecyclerView,
+                newState: Int
+            ) {
+                super.onScrollStateChanged(recyclerView, newState)
+            }
+
+            override fun onScrolled(
+                recyclerView: RecyclerView,
+                dx: Int,
+                dy: Int
+            ) {
+                super.onScrolled(recyclerView, dx, dy)
+                for (i in 0 until recyclerView.childCount) {
+                    recyclerView.getChildAt(i).invalidate()
+                }
+            }
+        })
+
+    }
+    fun  getAppList() {
+        val databaseReference = FirebaseDatabase.getInstance().getReference("/myApps");
+
+        databaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                mDatas.clear()
+                for (postSnapshot in dataSnapshot.children) {
+                    val products : Products = postSnapshot.getValue(Products::class.java)!!
+                    mDatas.add(products)
+
+                }
+                mAdapter?.mDatas = mDatas
+                mAdapter?.notifyDataSetChanged()
+
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+            }
+        })
+
+    }
 
 }
 
