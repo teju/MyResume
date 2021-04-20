@@ -21,6 +21,7 @@ import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
 import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
+import com.amazing.portfolio.ui.fragments.AppDetailFragment
 import com.amazing.portfolio.ui.fragments.BaseFragment
 import com.amazing.portfolio.ui.fragments.LoginFragment
 import com.amazing.portfolio.ui.fragments.MainFragment
@@ -149,7 +150,10 @@ class ActivityMain : AppCompatActivity() {
         } catch (e: Exception) {
             Helper.logException(this@ActivityMain, e)
         }
-        if (frag is MainFragment) {
+        toggleListButton(frag)
+    }
+    fun toggleListButton(frag: Fragment) {
+        if (frag is MainFragment || frag is AppDetailFragment) {
             arrow_right_drop_circle.visibility = View.VISIBLE
             contact_us.visibility = View.VISIBLE
         } else{
