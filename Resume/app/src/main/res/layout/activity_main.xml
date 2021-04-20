@@ -102,5 +102,15 @@
     </RelativeLayout>
 
 
-
+    <Button
+        android:id="@+id/contact_us"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="80dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:background="@drawable/whatsapp"
+        android:src="@drawable/whatsapp"
+        android:layout_gravity="bottom|right"/>
 </FrameLayout>

@@ -1,60 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_container"
+    android:background="@color/White"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="6dp">
-
+    android:layout_height="match_parent">
     <ImageView
-        android:id="@+id/image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:contentDescription="@null"
+        android:layout_width="match_parent"
+        android:src="@drawable/bg_img"
         android:scaleType="fitXY"
-        android:src="@drawable/app_logo" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/title"
+    </ImageView>
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/image"
-        android:padding="10dp"
-        android:text="@string/app_name"
-        android:textStyle="bold" />
+        android:id="@+id/recyclerView"
+        android:layout_marginBottom="60dp"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/short_content"
+    </androidx.recyclerview.widget.RecyclerView>
+    <com.amazing.portfolio.ui.views.LoadingCompound
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_toRightOf="@+id/image"
-        android:paddingLeft="10dp"
-        android:text="@string/appogee__no_internet"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/show_more"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/short_content"
-        android:layout_toRightOf="@+id/image"
-        android:drawablePadding="5dp"
-        android:drawableRight="@drawable/chevron_double_right"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:text="SHOW"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image"
-        android:background="@color/colorPrimary"
-        android:drawablePadding="5dp"
-        android:padding="5dp"
-        android:text="@string/we_build"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:visibility="gone" />
+        android:id="@+id/ld"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        android:layout_height="match_parent">
+    </com.amazing.portfolio.ui.views.LoadingCompound>
 
 </RelativeLayout>

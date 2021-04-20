@@ -1,12 +1,12 @@
 package com.amazing.portfolio.ui
 
-import android.content.Context
+import android.R.id.message
 import android.content.Intent
-import android.os.Build
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.view.ViewTreeObserver
 import android.view.animation.*
 import android.view.animation.Animation.AnimationListener
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +16,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
-import com.amazing.portfolio.etc.FirebaseImageLoader
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
@@ -25,18 +24,12 @@ import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
 import com.amazing.portfolio.ui.fragments.BaseFragment
 import com.amazing.portfolio.ui.fragments.LoginFragment
 import com.amazing.portfolio.ui.fragments.MainFragment
-import com.bumptech.glide.Glide
-import com.bumptech.glide.Registry
-import com.bumptech.glide.annotation.GlideModule
-import com.bumptech.glide.module.AppGlideModule
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_rv.*
-import java.io.InputStream
+import java.net.URLEncoder
 import java.util.*
 
 
@@ -56,6 +49,9 @@ class ActivityMain : AppCompatActivity() {
 
         triggerMainProcess()
         initSideView()
+        contact_us.setOnClickListener {
+            contactUS()
+        }
     }
 
     fun exitApp() {
@@ -64,6 +60,24 @@ class ActivityMain : AppCompatActivity() {
         }else if(getSupportFragmentManager().getBackStackEntryCount()==1){
                 this.finish();
             }
+    }
+    fun contactUS() {
+        try {
+            val packageManager: PackageManager = getPackageManager()
+            val i = Intent(Intent.ACTION_VIEW)
+            val url =
+                "https://api.whatsapp.com/send?phone=" + "+91 9964062237" + "&text=" + URLEncoder.encode(
+                    "hi",
+                    "UTF-8"
+                )
+            i.setPackage("com.whatsapp")
+            i.data = Uri.parse(url)
+            if (i.resolveActivity(packageManager) != null) {
+                startActivity(i)
+            }
+        } catch (e: java.lang.Exception) {
+            e.printStackTrace()
+        }
     }
     fun startDribbleAnimation(){
         splash_logo.setImageResource(R.drawable.app_logo)
@@ -137,8 +151,10 @@ class ActivityMain : AppCompatActivity() {
         }
         if (frag is MainFragment) {
             arrow_right_drop_circle.visibility = View.VISIBLE
+            contact_us.visibility = View.VISIBLE
         } else{
             arrow_right_drop_circle.visibility = View.GONE
+            contact_us.visibility = View.GONE
 
         }
     }

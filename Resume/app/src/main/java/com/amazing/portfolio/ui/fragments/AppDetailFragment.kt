@@ -1,5 +1,6 @@
 package com.amazing.portfolio.ui.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -74,9 +75,7 @@ class AppDetailFragment : BaseFragment() {
 
     fun initData() {
         productImagesAdapter?.images = products?.releated_images!!
-        GlideApp.with(activity!!)
-            .load(products?.bg_image)
-            .into(app_img)
+        //app_img.setBackgroundColor(Color.parseColor(products?.bg_image))
         GlideApp.with(activity!!)
             .load(products?.logo)
             .into(logo)
