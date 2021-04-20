@@ -22,7 +22,7 @@ import java.lang.Exception
 
 class AppListFragment : BaseFragment() {
     var TAG = "AppListFragment"
-    val appsList = ArrayList<Products>()
+    val appsList = ArrayList<AppData>()
     private var products: ArrayList<AppData> = ArrayList()
 
     private val possibleItems = listOf(
@@ -50,14 +50,14 @@ class AppListFragment : BaseFragment() {
         ld.showLoadingV2()
     }
     fun  getAppList() {
-        val databaseReference = FirebaseDatabase.getInstance().getReference("/myApps");
+        val databaseReference = FirebaseDatabase.getInstance().getReference("/AppDetails");
 
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 appsList.clear()
                 ld.hide()
                 for (postSnapshot in dataSnapshot.children) {
-                    val products : Products = postSnapshot.getValue(Products::class.java)!!
+                    val products : AppData = postSnapshot.getValue(AppData::class.java)!!
                     appsList.add(products)
                     Log.d(TAG,"onDataChange "+postSnapshot.value)
 
@@ -74,35 +74,12 @@ class AppListFragment : BaseFragment() {
 
     }
     private val itemAdapter by lazy {
-        ItemAdapter { position: Int, item: Products ->
+        ItemAdapter { position: Int, item: AppData ->
             item_list.smoothScrollToPosition(position)
-           getAppData()
-            ld.showLoadingV2()
+            val appDetailFragment = AppDetailFragment()
+            appDetailFragment.products = appsList.get(position)
+            home().setFragment(appDetailFragment)
         }
-    }
-    fun  getAppData() {
-        val databaseReference = FirebaseDatabase.getInstance().getReference("/AppDetails");
-
-        databaseReference.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-
-                ld.hide()
-                for (postSnapshot in dataSnapshot.children) {
-                    val AppData  = postSnapshot.getValue(AppData::class.java)!!
-                    products.add(AppData)
-                }
-                ld.hide()
-                val appDetailFragment = AppDetailFragment()
-                appDetailFragment.products = products
-                home().setFragment(appDetailFragment)
-
-            }
-
-            override fun onCancelled(databaseError: DatabaseError) {
-                // Getting Post failed, log a message
-            }
-        })
-
     }
 
 

@@ -24,6 +24,13 @@
 
 
 
+    <com.amazing.portfolio.ui.views.LoadingCompound
+        android:layout_width="match_parent"
+        android:id="@+id/ld"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        android:layout_height="match_parent">
+    </com.amazing.portfolio.ui.views.LoadingCompound>
 
 
 </RelativeLayout>

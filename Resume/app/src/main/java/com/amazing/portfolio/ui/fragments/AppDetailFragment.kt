@@ -24,7 +24,7 @@ import java.lang.Exception
 class AppDetailFragment : BaseFragment() {
 
     private var productImagesAdapter: ProductImagesAdapter? = null
-    public var products: ArrayList<AppData> = ArrayList()
+    public var products: AppData? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -64,7 +64,7 @@ class AppDetailFragment : BaseFragment() {
         productImagesAdapter?.itemClick = object : ItemClickListener{
             override fun onClickpos(pos: Int) {
                 val productImagesFullScreenFragment = ProductImagesFullScreenFragment()
-                productImagesFullScreenFragment.images = products.get(0).releated_images
+                productImagesFullScreenFragment.images = products?.releated_images!!
                 home().setFragment(productImagesFullScreenFragment)
             }
 
@@ -73,14 +73,14 @@ class AppDetailFragment : BaseFragment() {
     }
 
     fun initData() {
-        productImagesAdapter?.images = products.get(0).releated_images
+        productImagesAdapter?.images = products?.releated_images!!
         GlideApp.with(activity!!)
-            .load(products.get(0).bg_image)
+            .load(products?.bg_image)
             .into(app_img)
         GlideApp.with(activity!!)
-            .load(products.get(0).logo)
+            .load(products?.logo)
             .into(logo)
-        tv_description.text = products.get(0).description
-        ratings.text = products.get(0).ratings
+        tv_description.text = products?.description
+        ratings.text = products?.ratings
     }
 }

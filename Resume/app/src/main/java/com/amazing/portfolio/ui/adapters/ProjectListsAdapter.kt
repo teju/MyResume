@@ -32,7 +32,7 @@ class ProjectListsAdapter(
 
     }
     override fun getItemCount(): Int {
-        return 30
+        return projectList.size
     }
 
     inner class ReyclerViewHolder(v: View) :

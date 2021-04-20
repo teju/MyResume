@@ -6,6 +6,7 @@ class AppData {
     var description: String = ""
     var bg_image: String = ""
     var logo: String = ""
+    var image: String = ""
     var releated_images: ArrayList<String> = ArrayList()
 
 }

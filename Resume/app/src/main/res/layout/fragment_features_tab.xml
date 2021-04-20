@@ -94,7 +94,7 @@
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_tablayout"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
                 app:tabIndicatorHeight="0dp"
                 app:layout_collapseMode="pin"
                 android:backgroundTint="@color/colorAccent"

@@ -10,6 +10,7 @@ import android.widget.RelativeLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Helper
+import com.amazing.portfolio.model.AppData
 import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.ui.GlideApp
 import com.bumptech.glide.Glide
@@ -18,9 +19,9 @@ import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.list_item.view.*
 
 
-class ItemAdapter(val itemClick: (position:Int,item:Products) -> Unit) : RecyclerView.Adapter<ItemViewHolder>() {
+class ItemAdapter(val itemClick: (position:Int,item:AppData) -> Unit) : RecyclerView.Adapter<ItemViewHolder>() {
 
-    private var items: List<Products> = listOf()
+    private var items: List<AppData> = listOf()
     var context:Context? = null
     var firstCompletelyVisibleItemPosition = 0
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder =
@@ -41,7 +42,7 @@ class ItemAdapter(val itemClick: (position:Int,item:Products) -> Unit) : Recycle
 
     override fun getItemCount() = items.size
 
-    fun setItems(newItems: List<Products>) {
+    fun setItems(newItems: List<AppData>) {
         items = newItems
         notifyDataSetChanged()
     }
@@ -50,7 +51,7 @@ class ItemAdapter(val itemClick: (position:Int,item:Products) -> Unit) : Recycle
 class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
     val storage = FirebaseStorage.getInstance()
 
-    fun bind(item: Products) {
+    fun bind(item: AppData) {
         view.list_item_icon.setImageResource(R.drawable.ic_launcher_background)
         GlideApp.with(itemView.context)
             .load(item.image.trim())
