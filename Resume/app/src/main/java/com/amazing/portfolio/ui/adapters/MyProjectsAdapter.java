@@ -1,16 +1,20 @@
 package com.amazing.portfolio.ui.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazing.portfolio.R;
 import com.amazing.portfolio.model.Products;
+import com.amazing.portfolio.ui.GlideApp;
 import com.amazing.portfolio.ui.views.MatrixView;
 
 import java.util.ArrayList;
@@ -35,14 +39,26 @@ public class MyProjectsAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         MyProjectsAdapter.VH vh = (MyProjectsAdapter.VH) holder;
         ((MatrixView) vh.itemView).setParentHeight(rv.getHeight());
-        //vh.tv.setText(mDatas.get(position));
-        final int fp = position;
-        vh.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //  TUtils.show(ArcActivity.this, "点击" +mDatas.get(fp));
+        try {
+            vh.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //  TUtils.show(ArcActivity.this, "点击" +mDatas.get(fp));
+                }
+            });
+            vh.parent.setCardBackgroundColor(Color.parseColor(mDatas.get(position).getBg_colour()));
+            vh.text.setText(mDatas.get(position).getApp_name());
+            if (mDatas.get(position).getText_colour().contains("light")) {
+                vh.text.setTextColor(context.getResources().getColor(R.color.White));
+            } else {
+                vh.text.setTextColor(context.getResources().getColor(R.color.Black));
             }
-        });
+            GlideApp.with(context)
+                    .load(mDatas.get(position).getLogo())
+                    .into(vh.app_logo);
+        } catch (Exception e){
+            vh.itemView.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -52,11 +68,15 @@ public class MyProjectsAdapter extends RecyclerView.Adapter {
 
     class VH extends RecyclerView.ViewHolder {
 
-        public TextView tv;
+        public CardView parent;
+        public TextView text;
+        public ImageView app_logo;
 
         public VH(@NonNull View itemView) {
             super(itemView);
-           // tv = itemView.findViewById(R.id.tv);
+            parent = itemView.findViewById(R.id.parent);
+            text = itemView.findViewById(R.id.text);
+            app_logo = itemView.findViewById(R.id.app_logo);
         }
     }
 }

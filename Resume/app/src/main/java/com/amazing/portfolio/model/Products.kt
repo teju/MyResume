@@ -2,7 +2,8 @@ package com.amazing.portfolio.model
 
 
 class Products {
-    var name : String = ""
+    var app_name : String = ""
+    var text_colour : String = ""
     var description : String = ""
     var playstoreLink : String = ""
     var othersLink :String = ""

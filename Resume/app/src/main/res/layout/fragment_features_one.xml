@@ -120,6 +120,7 @@
                 android:textSize="15dp"
                 android:id="@+id/lets_start"
                 android:maxLines="3"
+                android:layout_marginBottom="25dp"
                 android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/colorPrimaryDark"
                 android:padding="15dp"

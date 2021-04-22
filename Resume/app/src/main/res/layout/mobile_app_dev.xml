@@ -10,8 +10,10 @@
         android:id="@+id/mobile_app_dev"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="false"
+        android:clickable="true"
         android:focusable="true"
+        android:layout_marginBottom="25dp"
+
         android:fontFamily="@font/poppins_regular"
         android:textColor="@color/colorPrimaryDark"
         android:foreground="?android:attr/selectableItemBackground"

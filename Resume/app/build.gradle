@@ -91,6 +91,7 @@ dependencies {
     implementation 'com.github.cachapa:ExpandableLayout:2.9.2'
     compile 'com.github.demoNo:AutoScrollViewPager:v1.0.2'
     implementation 'com.google.android.material:material:1.2.0-alpha04'
+    compile 'com.borjabravo:readmoretextview:2.1.0'
 
 }
 apply plugin: 'com.google.gms.google-services'

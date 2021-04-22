@@ -496,12 +496,14 @@ class ActivityMain : AppCompatActivity() {
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 mDatas.clear()
+                mDatas.add(Products())
                 for (postSnapshot in dataSnapshot.children) {
                     val products : Products = postSnapshot.getValue(Products::class.java)!!
                     mDatas.add(products)
 
                 }
                 mAdapter?.mDatas = mDatas
+                mDatas.add(Products())
                 mAdapter?.notifyDataSetChanged()
 
             }

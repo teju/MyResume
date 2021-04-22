@@ -75,7 +75,11 @@ class AppDetailFragment : BaseFragment() {
 
     fun initData() {
         productImagesAdapter?.images = products?.releated_images!!
-        //app_img.setBackgroundColor(Color.parseColor(products?.bg_image))
+        try {
+            app_img.setBackgroundColor(Color.parseColor(products?.bg_image))
+        }catch (e:Exception){
+
+        }
         GlideApp.with(activity!!)
             .load(products?.logo)
             .into(logo)

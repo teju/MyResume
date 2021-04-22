@@ -34,9 +34,17 @@ class ProjectListsAdapter(
         GlideApp.with(context)
             .load(projectList.get(position).logo)
             .into(holder.app_logo)
-        holder.app_name.text = projectList.get(position).name
-        holder.app_name.text = projectList.get(position).description
+        holder.app_name.text = projectList.get(position).app_name
+        holder.tv_description.text = projectList.get(position).description
         holder.parent.setCardBackgroundColor(Color. parseColor(projectList.get(position).bg_colour))
+        if(projectList.get(position).text_colour.contains("light")) {
+            holder.app_name.setTextColor(context.resources.getColor(R.color.White))
+            holder.tv_description.setTextColor(context.resources.getColor(R.color.White))
+        } else {
+            holder.app_name.setTextColor(context.resources.getColor(R.color.Black))
+            holder.tv_description.setTextColor(context.resources.getColor(R.color.Black))
+        }
+
     }
     override fun getItemCount(): Int {
         return projectList.size
