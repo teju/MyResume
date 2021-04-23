@@ -2,6 +2,7 @@ package np.com.susanthapa.curved_bottom_navigation
 
 import android.animation.*
 import android.content.Context
+import android.graphics.Color
 import android.util.AttributeSet
 import android.util.Log
 import android.view.animation.DecelerateInterpolator
@@ -29,7 +30,11 @@ class BottomNavItemViewTittle @JvmOverloads constructor(
 
 
     fun setMenuItem(itemCbn: CbnMenuItem) {
-        setText(itemCbn.tittle)
+        setTextSize(12f)
+        if(itemCbn.tittle != 0) {
+            setText(itemCbn.tittle)
+
+        }
     }
 
 }

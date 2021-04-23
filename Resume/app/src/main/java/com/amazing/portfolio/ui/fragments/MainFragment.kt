@@ -48,26 +48,26 @@ class MainFragment : BaseFragment() {
             ),
             CbnMenuItem(
                 R.string.features,
-                R.drawable.ic_dashboard,
-                R.drawable.avd_dashboard,
+                R.drawable.ic_features,
+                R.drawable.avd_features,
                 SECOND_TAB
             ),
             CbnMenuItem(
-                R.string.app_name,
-                R.drawable.ic_dashboard,
+                0,
+                R.drawable.ic_menu,
                 R.drawable.avd_dashboard,
                 THIRD_TAB
             ),
             CbnMenuItem(
                 R.string.works,
-                R.drawable.ic_profile,
-                R.drawable.avd_profile,
+                R.drawable.ic_work,
+                R.drawable.avd_work,
                 FOURTH_TAB
             ),
             CbnMenuItem(
                 R.string.aboutus,
-                R.drawable.ic_settings,
-                R.drawable.avd_settings,
+                R.drawable.icn_about_us,
+                R.drawable.avd_about_us,
                 FIFTH_TAB
             )
         )
