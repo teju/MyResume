@@ -40,9 +40,9 @@ class AboutUsAdapter(
         }
         holder.name.text = aboutusList.get(position).Name
         holder.description.text = aboutusList.get(position).description
-        holder.education.text = "Education : "+aboutusList.get(position).education
         holder.experience.text = "Experience : "+aboutusList.get(position).experience
-        holder.role.text = "Role : "+aboutusList.get(position).role
+        holder.level.text = "Level : "+aboutusList.get(position).level
+        holder.role.text = aboutusList.get(position).role
         setAnimation(holder.itemView,position)
     }
     private fun setAnimation(viewToAnimate: View, position: Int) {
@@ -71,20 +71,20 @@ class AboutUsAdapter(
         val profile_pic: ImageView
         val deatils: LinearLayout
         val description: TextView
-        val education: TextView
         val role: TextView
         val experience: TextView
         val name: TextView
+        val level: TextView
 
 
         init {
             profile_pic = v.findViewById<View>(R.id.profile_pic) as ImageView
             deatils = v.findViewById<View>(R.id.deatils) as LinearLayout
             description = v.findViewById<View>(R.id.description) as TextView
-            education = v.findViewById<View>(R.id.education) as TextView
             role = v.findViewById<View>(R.id.role) as TextView
             experience = v.findViewById<View>(R.id.experience) as TextView
             name = v.findViewById<View>(R.id.name) as TextView
+            level = v.findViewById<View>(R.id.level) as TextView
 
         }
     }

@@ -155,7 +155,7 @@ class ActivityMain : AppCompatActivity() {
     fun toggleListButton(frag: Fragment) {
         if (frag is MainFragment || frag is AppDetailFragment) {
             arrow_right_drop_circle.visibility = View.VISIBLE
-            contact_us.visibility = View.VISIBLE
+            contact_us.visibility = View.GONE
         } else{
             arrow_right_drop_circle.visibility = View.GONE
             contact_us.visibility = View.GONE

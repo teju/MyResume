@@ -74,9 +74,16 @@ class AppDetailFragment : BaseFragment() {
     }
 
     fun initData() {
+        val slideAnimation = AnimationUtils.loadAnimation(activity!!, R.anim.left_enter)
+        val slideAnimationRight = AnimationUtils.loadAnimation(activity!!, R.anim.right_enter)
+        logo.startAnimation(slideAnimation)
+        rv_images.startAnimation(slideAnimation)
+        tv_description.startAnimation(slideAnimationRight)
+        ratings.startAnimation(slideAnimationRight)
+
         productImagesAdapter?.images = products?.releated_images!!
         try {
-            app_img.setBackgroundColor(Color.parseColor(products?.bg_image))
+            pagerlayout.setBackgroundColor(Color.parseColor(products?.bg_image))
         }catch (e:Exception){
 
         }

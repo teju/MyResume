@@ -6,10 +6,31 @@
     android:clipChildren="false"
     android:background="@color/White"
     android:clipToPadding="false">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Our Works"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:id="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rvnames"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/tv1"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
     <com.amazing.portfolio.ui.adapters.HorizontalCarouselRecyclerView
         android:id="@+id/item_list"
+        android:layout_below="@+id/rvnames"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginBottom="80dp"
         android:layout_gravity="center_vertical"
         android:clipToPadding="false"

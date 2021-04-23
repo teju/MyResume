@@ -186,11 +186,11 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                 if(position == 2) {
                     Handler().postDelayed({
                         home().toggle(false)
-                    }, 1000)
+                    }, 100)
                     Handler().postDelayed({
                         home().toggle(true)
 
-                    }, 5000)
+                    }, 1500)
                 }
             }
 
@@ -202,7 +202,7 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                     Handler().postDelayed({
                         home().toggle(true)
 
-                    }, 5000)
+                    }, 500)
                 }
             }
 

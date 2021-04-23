@@ -10,13 +10,6 @@
         android:clipChildren="false"
         android:background="@android:color/transparent"
         android:clipToPadding="false">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/app_img"
-            android:background="@color/colorAccent"
-            android:scaleType="fitXY"
-            android:layout_centerInParent="true" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,24 +22,24 @@
                 android:layout_margin="30dp"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:layout_width="150dp"
+                    android:layout_width="120dp"
                     android:id="@+id/logo"
                     android:layout_centerVertical="true"
                     android:adjustViewBounds="true"
-                    android:layout_height="wrap_content">
+                    android:layout_height="120dp">
                 </ImageView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:id="@+id/ratings"
-                    android:padding="15dp"
-                    android:backgroundTint="@color/DarkGray"
+                    android:padding="10dp"
+                    android:backgroundTint="@color/soft_transparent_grey"
                     android:background="@drawable/rounded_corner_blue"
                     android:layout_centerVertical="true"
                     android:drawablePadding="10dp"
                     android:textColor="@color/White"
                     android:drawableRight="@drawable/star"
                     android:layout_alignParentRight="true"
-                    android:layout_height="wrap_content">
+                    android:layout_height="40dp">
                 </TextView>
 
             </RelativeLayout>
@@ -54,6 +47,8 @@
                 android:layout_width="wrap_content"
                 android:id="@+id/tv_description"
                 android:layout_margin="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/White"
                 android:layout_alignParentRight="true"
@@ -62,7 +57,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:id="@+id/rv_images"
-                android:layout_height="match_parent">
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>

@@ -60,7 +60,7 @@ class ProjectListFragment : BaseFragment() {
         val linearLayoutManager = AnimatedLayoutManager(activity!!)
 
         recycler_view.setLayoutManager(linearLayoutManager)
-        recycler_view.updatePadding(top = 400)
+        recycler_view.updatePadding(top = 100)
         recycler_view.doOnLayout {
             (recycler_view.layoutManager as AnimatedLayoutManager).animateItemsIn()
         }

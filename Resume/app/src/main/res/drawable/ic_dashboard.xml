@@ -6,21 +6,25 @@
   <path
       android:pathData="m11,15h-8v6h8z"
       android:strokeWidth="1.5"
+      android:name="outline"
       android:fillColor="#00000000"
       android:strokeColor="#000"/>
   <path
       android:pathData="m21,11h-8v10h8z"
       android:strokeWidth="1.5"
+      android:name="outline"
       android:fillColor="#00000000"
       android:strokeColor="#000"/>
   <path
       android:pathData="m11,3h-8v10h8z"
       android:strokeWidth="1.5"
+      android:name="outline"
       android:fillColor="#00000000"
       android:strokeColor="#000"/>
   <path
       android:pathData="m21,3h-8v6h8z"
       android:strokeWidth="1.5"
+      android:name="outline"
       android:fillColor="#00000000"
       android:strokeColor="#000"/>
 </vector>

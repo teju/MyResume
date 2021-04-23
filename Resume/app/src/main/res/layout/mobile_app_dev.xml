@@ -12,8 +12,6 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginBottom="25dp"
-
         android:fontFamily="@font/poppins_regular"
         android:textColor="@color/colorPrimaryDark"
         android:foreground="?android:attr/selectableItemBackground"

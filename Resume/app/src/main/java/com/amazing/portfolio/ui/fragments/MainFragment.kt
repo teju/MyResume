@@ -41,31 +41,37 @@ class MainFragment : BaseFragment() {
 
         val menuItems = arrayOf(
             CbnMenuItem(
+                R.string.home,
                 R.drawable.ic_home, // the icon
                 R.drawable.avd_home,// the AVD that will be shown in FAB
                 FIRST_TAB // optional if you use Jetpack Navigation
             ),
             CbnMenuItem(
+                R.string.features,
                 R.drawable.ic_dashboard,
                 R.drawable.avd_dashboard,
                 SECOND_TAB
             ),
             CbnMenuItem(
+                R.string.app_name,
                 R.drawable.ic_dashboard,
                 R.drawable.avd_dashboard,
                 THIRD_TAB
             ),
             CbnMenuItem(
+                R.string.works,
                 R.drawable.ic_profile,
                 R.drawable.avd_profile,
                 FOURTH_TAB
             ),
             CbnMenuItem(
+                R.string.aboutus,
                 R.drawable.ic_settings,
                 R.drawable.avd_settings,
                 FIFTH_TAB
             )
         )
+
         nav_view.setMenuItems(menuItems, instance)
         setCurrentItem(instance)
         nav_view.setOnMenuItemClickListener { item, _ ->

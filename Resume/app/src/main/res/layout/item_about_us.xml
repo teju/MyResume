@@ -36,30 +36,28 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_width="wrap_content"
-                        android:fontFamily="@font/poppins_bold"
-                        android:id="@+id/name"
-                        android:textSize="@dimen/_18sp"
                         android:textColor="@color/colorAccent"
+                        android:id="@+id/role"
+                        android:textSize="@dimen/_18sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:id="@+id/name"
                         android:layout_height="wrap_content">
                     </TextView>
                     <TextView
                         android:layout_width="wrap_content"
                         android:id="@+id/experience"
-                        android:textColor="@color/Black"
                         android:fontFamily="@font/poppins_regular"
                         android:layout_height="wrap_content">
                     </TextView>
                     <TextView
                         android:layout_width="wrap_content"
-                        android:textColor="@color/Black"
-                        android:id="@+id/role"
-                        android:fontFamily="@font/poppins_regular"
-                        android:layout_height="wrap_content">
-                    </TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/Black"
-                        android:id="@+id/education"
+                        android:id="@+id/level"
                         android:fontFamily="@font/poppins_regular"
                         android:layout_height="wrap_content">
                     </TextView>

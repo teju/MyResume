@@ -25,8 +25,6 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
         }
     }
 
-    var mStorage: FirebaseStorage? = null
-    val banners: ArrayList<Int> = ArrayList()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.home_fragment, container, false)
         return v
@@ -88,42 +86,12 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
                     lets_connect.startAnimation(slideAnimationRights)
                     lets_connect.setImageResource(R.drawable.lets_connect)
                 }
-                if(scrollY > 1100 &&  scrollY < 1250) {
-                    val slideAnimationRights = AnimationUtils.loadAnimation(activity!!, R.anim.left_enter)
-                    llwhatsapp.startAnimation(slideAnimationRights)
-                    whatsapp.setImageResource(R.drawable.whatsapp)
-                    tvChat.setText("Need Help? Chat with us")
-                }
 
             })
         //fetchData()
     }
 
 
-    private fun fetchData() {
-        val firebaseDatabase = FirebaseDatabase.getInstance()
-        val databaseReference = firebaseDatabase.reference
-        val getImage = databaseReference.child("dummy_image")
-
-        getImage.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // getting a DataSnapshot for the location at the specified
-                // relative path and getting in the link variable
-                val link =
-                    dataSnapshot.getValue(String::class.java)!!
-
-                // loading that data into rImage
-                // variable which is ImageView
-                Picasso.get().load(link).into(imageview)
-            }
-
-            // this will called when any problem
-            // occurs in getting data
-            override fun onCancelled(databaseError: DatabaseError) {
-                // we are showing that error message in toast
-            }
-        })
-    }
 
 
 }

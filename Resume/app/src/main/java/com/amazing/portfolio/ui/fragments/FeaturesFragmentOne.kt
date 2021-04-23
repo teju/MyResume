@@ -53,7 +53,7 @@ class FeaturesFragmentOne : BaseFragment() ,View.OnClickListener{
         imageAdapter = ImagePagerAdapter(activity)
         imageAdapter?.imageIdList = data
         viewPager.setAdapter(imageAdapter)
-        viewPager.setSlideDuration(500)
+        viewPager.setSlideDuration(50)
         viewPager.startAutoScroll()
 
         fetchData()
@@ -162,10 +162,10 @@ class FeaturesFragmentOne : BaseFragment() ,View.OnClickListener{
                 val endColorIndex = startColorIndex + word.length
                 try {
                     coloredString.setSpan(
-                        ForegroundColorSpan(Color.parseColor("#EF6C00")), startColorIndex, endColorIndex,
+                        ForegroundColorSpan(Color.parseColor("#FF21C9F3")), startColorIndex, endColorIndex,
                         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                     )
-                    val bss = StyleSpan(Typeface.BOLD); // Span to make text bold
+                    val bss = StyleSpan(Typeface.BOLD_ITALIC); // Span to make text bold
 
                     coloredString.setSpan(
                         bss, startColorIndex, endColorIndex,

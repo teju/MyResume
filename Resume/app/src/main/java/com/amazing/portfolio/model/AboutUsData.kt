@@ -7,4 +7,5 @@ class AboutUsData {
     var experience: String = ""
     var image: String = ""
     var role: String = ""
+    var level: String = "Expert"
 }
