@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#efddcf"
+    android:background="@drawable/bg_img"
     android:id="@+id/coordinator"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
+        android:layout_marginTop="-120dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.example.myapplication.MainActivity">
         <RelativeLayout
@@ -25,7 +26,9 @@
             <androidx.viewpager.widget.ViewPager
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:paddingTop="80dp"
                 android:visibility="visible"
+                android:layout_marginTop="-50dp"
                 android:id="@+id/viewpager"/>
 
         </RelativeLayout>
@@ -37,8 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
-        android:backgroundTint="#efddcf"
-        android:background="@drawable/rounded_one_side"
+        android:background="@drawable/top_tab_gradient"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -58,8 +60,7 @@
                 android:layout_height="110dp"
                 app:tabIndicatorHeight="0dp"
                 app:layout_collapseMode="pin"
-                android:backgroundTint="@color/colorAccent"
-                android:background="@drawable/rounded_one_side"
+                android:background="@drawable/top_tab_gradient"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

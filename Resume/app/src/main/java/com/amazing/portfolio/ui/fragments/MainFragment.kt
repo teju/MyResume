@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Helper
+import com.amazing.portfolio.etc.callback.NotifyListener
+import com.amazing.portfolio.ui.fragments.dialog.NotifyDialogFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 import np.com.susanthapa.curved_bottom_navigation.CbnMenuItem
 
@@ -55,7 +57,7 @@ class MainFragment : BaseFragment() {
             CbnMenuItem(
                 0,
                 R.drawable.ic_menu,
-                R.drawable.avd_menu,
+                R.drawable.ic_menu,
                 THIRD_TAB
             ),
             CbnMenuItem(

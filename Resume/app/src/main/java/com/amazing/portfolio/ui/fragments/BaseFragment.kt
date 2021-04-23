@@ -54,13 +54,6 @@ open class BaseFragment : GenericFragment() {
     var tabv: View? = null
     var obsOAuthExpired: Observer<Boolean> = Observer { isOauthExpired ->
         if (isOauthExpired!!) {
-            showNotifyDialog(
-                getString(R.string.session_expired), getString(R.string.you_have_been_loggedout),
-                getString(R.string.ok),"",object : NotifyListener {
-                    override fun onButtonClicked(which: Int) {
-                        home().logout()
-                    }
-                })
         }
     }
 
@@ -155,7 +148,7 @@ open class BaseFragment : GenericFragment() {
             }
 
             override fun onUserNotGrantedThePermission() {
-                showNotifyDialog(
+              home() .showNotifyDialog(
                     "",getString(R.string.please_allow_deera_access_permission_camera),
                     getString(R.string.ok),"",object : NotifyListener {
                         override fun onButtonClicked(which: Int) {}
@@ -348,23 +341,6 @@ open class BaseFragment : GenericFragment() {
         f.show(childFragmentManager, DatePickerDialogFragment.TAG)
     }
 
-    open fun showNotifyDialog(
-        tittle: String?,
-        messsage: String?,
-        button_positive:String?,
-        button_negative: String?,
-        n: NotifyListener){
-        val f = NotifyDialogFragment().apply {
-            this.listener = n
-        }
-        f.notify_tittle = tittle
-        f.notify_messsage = messsage
-        f.button_positive = button_positive
-        f.button_negative = button_negative
-        f.showTick = false
-        f.isCancelable = false
-        f.show(activity!!.supportFragmentManager, NotifyDialogFragment.TAG)
-    }
 
     open fun showNoInternetDialog(n: NoInternetListener){
         val f = NoInternetDialogFragment().apply {

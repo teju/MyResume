@@ -19,12 +19,14 @@ import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
+import com.amazing.portfolio.etc.callback.NotifyListener
 import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
 import com.amazing.portfolio.ui.fragments.AppDetailFragment
 import com.amazing.portfolio.ui.fragments.BaseFragment
 import com.amazing.portfolio.ui.fragments.LoginFragment
 import com.amazing.portfolio.ui.fragments.MainFragment
+import com.amazing.portfolio.ui.fragments.dialog.NotifyDialogFragment
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -56,11 +58,12 @@ class ActivityMain : AppCompatActivity() {
     }
 
     fun exitApp() {
+
         if(getSupportFragmentManager().getBackStackEntryCount()>1){
             getSupportFragmentManager().popBackStack();
         }else if(getSupportFragmentManager().getBackStackEntryCount()==1){
-                this.finish();
-            }
+            this@ActivityMain.finish();
+        }
     }
     fun contactUS() {
         try {
@@ -107,10 +110,13 @@ class ActivityMain : AppCompatActivity() {
                 gee.setImageResource(R.drawable.gee)
 
                 val slideAnimationright = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.right_enter)
+                val slideAnimationduo = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.scale_up)
                 gee.startAnimation(slideAnimationright)
-
+                subtitle.text = "Application developers"
+                subtitle.startAnimation(slideAnimationduo)
                 Handler().postDelayed({
                     rllanding.visibility = View.GONE
+                    subtitle.visibility = View.GONE
                    setFragment(LoginFragment())
                 }, 3000)
 
@@ -303,7 +309,20 @@ class ActivityMain : AppCompatActivity() {
         }
 
         if (getSupportFragmentManager().getBackStackEntryCount() <= 1 || (currentFragment is MainFragment)) {
-            this@ActivityMain.finish()
+            if(currentFragment is MainFragment) {
+                showNotifyDialog("", "Are you sure you want to exit the app?",
+                    "Okay", "Cancel", object : NotifyListener {
+                        override fun onButtonClicked(which: Int) {
+                            if (which == NotifyDialogFragment.BUTTON_POSITIVE) {
+                                this@ActivityMain.finish()
+                            }
+                        }
+                    })
+
+            } else {
+                this@ActivityMain.finish()
+
+            }
         } else {
             try {
                 (currentFragment as BaseFragment).httpScope.onPause()
@@ -351,6 +370,7 @@ class ActivityMain : AppCompatActivity() {
             proceedDoOnBackPressed()
 
         } catch (e : java.lang.Exception) {
+            e.printStackTrace()
             super.onBackPressed()
         }
     }
@@ -512,6 +532,24 @@ class ActivityMain : AppCompatActivity() {
             }
         })
 
+    }
+    open fun showNotifyDialog(
+        tittle: String?,
+        messsage: String?,
+        button_positive:String?,
+        button_negative: String?,
+        n: NotifyListener
+    ){
+        val f = NotifyDialogFragment().apply {
+            this.listener = n
+        }
+        f.notify_tittle = tittle
+        f.notify_messsage = messsage
+        f.button_positive = button_positive
+        f.button_negative = button_negative
+        f.showTick = false
+        f.isCancelable = false
+        f.show(supportFragmentManager, NotifyDialogFragment.TAG)
     }
 
 }

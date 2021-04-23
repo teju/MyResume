@@ -13,7 +13,7 @@
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/poppins_regular"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/White"
         android:foreground="?android:attr/selectableItemBackground"
         android:maxLines="3"
         android:padding="16dp"

@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@android:color/transparent"
+        android:background="@drawable/welcome_bg"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -50,8 +50,20 @@
                 </ImageView>
 
             </FrameLayout>
-
         </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:textAllCaps="true"
+            android:id="@+id/subtitle"
+            android:textColor="@color/Black"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:paddingTop="160dp"
+            android:textSize="@dimen/_18sp"
+            android:layout_height="wrap_content">
+
+        </TextView>
         <FrameLayout
             android:id="@+id/layoutFragment"
             android:background="@android:color/transparent"

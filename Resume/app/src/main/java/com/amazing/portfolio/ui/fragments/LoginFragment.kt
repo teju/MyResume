@@ -44,7 +44,6 @@ class LoginFragment : BaseFragment() ,View.OnClickListener, GoogleApiClient.OnCo
         Handler().postDelayed({
             val image = ContinuousScrollableImageView(activity);
             image.setResourceId(R.drawable.sign_in_page);
-            image.alpha = 0.8f
             image.setDirection(ContinuousScrollableImageView.LEFT);
             image.setScaleType(ContinuousScrollableImageView.FIT_XY);
             image.setDuration(10000);

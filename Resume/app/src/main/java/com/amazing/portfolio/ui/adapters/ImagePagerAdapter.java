@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.amazing.portfolio.R;
 import com.amazing.portfolio.ui.GlideApp;
 import com.bumptech.glide.Glide;
 
@@ -56,9 +57,12 @@ public class ImagePagerAdapter extends RecyclingPagerAdapter {
         } else {
             holder = (ViewHolder)view.getTag();
         }
+
+        //holder.imageView.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.loading));
         try {
             GlideApp.with(context)
                         .load(imageIdList.get(getPosition(position)))
+                    .placeholder(R.drawable.loading)
                         .into(holder.imageView);
 
         }catch (Exception e){

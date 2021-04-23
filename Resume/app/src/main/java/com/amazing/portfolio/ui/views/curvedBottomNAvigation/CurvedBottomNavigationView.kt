@@ -61,7 +61,7 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
     var selectedColor = Color.parseColor("#000000")
         set(value) {
             field = value
-            initializeMenuAVDs()
+          //  initializeMenuAVDs()
             invalidate()
         }
     var unSelectedColor = Color.parseColor("#8F8F8F")
@@ -264,7 +264,7 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
         initializeBottomItems(cbnMenuItems, activeIndex)
 
         // setup the initial AVD
-        setupInitialAVD(activeIndex)
+      //  setupInitialAVD(activeIndex)
     }
 
     private fun setupInitialAVD(activeIndex: Int) {
@@ -289,7 +289,9 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
         val activeColorFilter = PorterDuffColorFilter(selectedColor, PorterDuff.Mode.SRC_IN)
         menuAVDs = Array(cbnMenuItems.size) {
             val avd = AnimatedVectorDrawableCompat.create(context, cbnMenuItems[it].avdIcon)!!
-            avd.colorFilter = activeColorFilter
+            if(cbnMenuItems[it].avdIcon != R.drawable.ic_menu) {
+                avd.colorFilter = activeColorFilter
+            }
             avd
         }
     }
@@ -395,7 +397,9 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
 
             bottomNavLayoutNew.orientation = LinearLayout.VERTICAL
             val menuItem = bottomNavItemViews[index]
-            menuItem.imageTintList = ColorStateList.valueOf(unSelectedColor)
+            if(item.icon != R.drawable.ic_menu) {
+                menuItem.imageTintList = ColorStateList.valueOf(unSelectedColor)
+            }
             menuItem.setMenuItem(item)
             menuItem.setOnClickListener {
                 onMenuItemClick(index)
@@ -451,7 +455,9 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
         }
 
         fabIconIndex = selectedIndex
-        menuAVDs[index].stop()
+        if(index != 2) {
+            menuAVDs[index].stop()
+        }
         prevSelectedIndex = selectedIndex
         selectedIndex = index
         // make all item except current item invisible
@@ -471,45 +477,48 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
     }
 
     private fun animateItemSelection(offset: Int, width: Int, index: Int) {
-        val finalCenterX = menuCellWidth * index + (menuCellWidth / 2f)
-        val propertyOffset = PropertyValuesHolder.ofInt(PROPERTY_OFFSET, cellOffsetX, offset)
-        val propertyCenterX = PropertyValuesHolder.ofFloat(PROPERTY_CENTER_X, centerX, finalCenterX)
+            val finalCenterX = menuCellWidth * index + (menuCellWidth / 2f)
+            val propertyOffset = PropertyValuesHolder.ofInt(PROPERTY_OFFSET, cellOffsetX, offset)
+            val propertyCenterX =
+                PropertyValuesHolder.ofFloat(PROPERTY_CENTER_X, centerX, finalCenterX)
 
-        // watch the direction and compute the diff
-        val isLTR = (prevSelectedIndex - index) < 0
-        val diff = abs(prevSelectedIndex - index)
-        // time allocated for each icon in the bottom nav
-        val iconAnimSlot = animDuration / diff
-        // compute the time it will take to move from start to bottom of the curve
-        val curveBottomOffset = ((curveHalfWidth * animDuration) / this.width).toLong()
+            // watch the direction and compute the diff
+            val isLTR = (prevSelectedIndex - index) < 0
+            val diff = abs(prevSelectedIndex - index)
+            // time allocated for each icon in the bottom nav
+            val iconAnimSlot = animDuration / diff
+            // compute the time it will take to move from start to bottom of the curve
+            val curveBottomOffset = ((curveHalfWidth * animDuration) / this.width).toLong()
 
-        val offsetAnimator = getBezierCurveAnimation(
-            animDuration,
-            width,
-            iconAnimSlot,
-            isLTR,
-            index,
-            curveBottomOffset,
-            diff,
-            propertyOffset,
-            propertyCenterX
-        )
+            val offsetAnimator = getBezierCurveAnimation(
+                animDuration,
+                width,
+                iconAnimSlot,
+                isLTR,
+                index,
+                curveBottomOffset,
+                diff,
+                propertyOffset,
+                propertyCenterX
+            )
 
-        val fabYOffset = firstCurveEnd.y + fabRadius
-        val halfAnimDuration = animDuration / 2
-        // hide the FAB
-        val centerYAnimatorHide = hideFAB(fabYOffset)
-        centerYAnimatorHide.duration = halfAnimDuration
+            val fabYOffset = firstCurveEnd.y + fabRadius
+            val halfAnimDuration = animDuration / 2
+            // hide the FAB
+            val centerYAnimatorHide = hideFAB(fabYOffset)
+            centerYAnimatorHide.duration = halfAnimDuration
 
-        // show the FAB with delay
-        val centerYAnimatorShow = showFAB(fabYOffset, index)
-        centerYAnimatorShow.startDelay = halfAnimDuration
-        centerYAnimatorShow.duration = halfAnimDuration
+            // show the FAB with delay
+            val centerYAnimatorShow = showFAB(fabYOffset, index)
+            centerYAnimatorShow.startDelay = halfAnimDuration
+            centerYAnimatorShow.duration = halfAnimDuration
 
-        val set = AnimatorSet()
-        set.playTogether(centerYAnimatorHide, offsetAnimator, centerYAnimatorShow)
-        set.interpolator = FastOutSlowInInterpolator()
-        set.start()
+            val set = AnimatorSet()
+            set.playTogether(centerYAnimatorHide, offsetAnimator, centerYAnimatorShow)
+
+            set.interpolator = FastOutSlowInInterpolator()
+            set.start()
+
     }
 
     private fun getBezierCurveAnimation(slideAnimDuration: Long, width: Int, iconAnimSlot: Long, isLTR: Boolean, index: Int, curveBottomOffset: Long, diff: Int, vararg propertyOffset: PropertyValuesHolder): ValueAnimator {
@@ -606,8 +615,10 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
                     // internally uses WeakReference. So settings the callback only during initialization
                     // will result in callback being cleared after certain time. This is a good place
                     // to set the callback so that we can sync the drawable animation with our canvas
-                    menuAVDs[index].callback = avdUpdateCallback
-                    menuAVDs[index].start()
+                    if(index != 2) {
+                        menuAVDs[index].callback = avdUpdateCallback
+                        menuAVDs[index].start()
+                    }
                 }
 
                 override fun onAnimationEnd(animation: Animator?) {
@@ -722,17 +733,40 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+
         if (!isMenuInitialized) {
             return
         }
-        canvas.drawCircle(centerX, curCenterY, fabSize / 2f, fabPaint)
+        val fabPainttrans = Paint().apply {
+            style = Paint.Style.FILL_AND_STROKE
+            color = Color.TRANSPARENT
+            setShadowLayer(
+                fabElevation,
+                0f,
+                6f,
+                Color.TRANSPARENT
+            )
+        }
+        if(fabIconIndex == 2) {
+            canvas.drawCircle(centerX, curCenterY, fabSize / 1f,fabPainttrans)
+            menuAVDs[fabIconIndex].setBounds(
+                (centerX - menuIcons[fabIconIndex].width ).toInt(),
+                (curCenterY - menuIcons[fabIconIndex].height ).toInt(),
+                (centerX + menuIcons[fabIconIndex].width ).toInt(),
+                (curCenterY + menuIcons[fabIconIndex].height ).toInt()
+            )
+        } else {
+
+            canvas.drawCircle(centerX, curCenterY, fabSize / 2f, fabPaint)
+            menuAVDs[fabIconIndex].setBounds(
+                (centerX - menuIcons[fabIconIndex].width / 2).toInt(),
+                (curCenterY - menuIcons[fabIconIndex].height / 2).toInt(),
+                (centerX + menuIcons[fabIconIndex].width / 2).toInt(),
+                (curCenterY + menuIcons[fabIconIndex].height / 2).toInt()
+            )
+        }
         // draw the AVD within the circle
-        menuAVDs[fabIconIndex].setBounds(
-            (centerX - menuIcons[fabIconIndex].width / 2).toInt(),
-            (curCenterY - menuIcons[fabIconIndex].height / 2).toInt(),
-            (centerX + menuIcons[fabIconIndex].width / 2).toInt(),
-            (curCenterY + menuIcons[fabIconIndex].height / 2).toInt()
-        )
+
         menuAVDs[fabIconIndex].draw(canvas)
         // draw the path last so that we can clip the FAB and AVD
         canvas.drawPath(path, navPaint)
