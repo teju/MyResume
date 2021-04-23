@@ -40,11 +40,24 @@
                     android:layout_width="wrap_content"
                     android:fontFamily="@font/poppins_regular"
                     android:textColor="@color/White"
-                    android:id="@+id/tv_description"
-                    android:maxLines="3"
-                    android:textSize="14dp"
+                    android:id="@+id/tv_platforn"
+                    android:textSize="12dp"
+                    android:singleLine="true"
+                    android:text="Platform : Android &amp; iOS"
                     android:layout_height="wrap_content">
 
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/White"
+                    android:id="@+id/tv_description"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:layout_marginTop="@dimen/_18sp"
+                    android:textSize="14dp"
+                    android:layout_height="wrap_content">
                 </TextView>
 
             </LinearLayout>

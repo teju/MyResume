@@ -183,7 +183,7 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
-                if(position == 2) {
+                /*if(position == 2) {
                     Handler().postDelayed({
                         home().toggle(false)
                     }, 100)
@@ -191,7 +191,7 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                         home().toggle(true)
 
                     }, 1500)
-                }
+                }*/
             }
 
             override fun onPageSelected(position: Int) {
@@ -202,7 +202,7 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                     Handler().postDelayed({
                         home().toggle(true)
 
-                    }, 500)
+                    }, 2000)
                 }
             }
 

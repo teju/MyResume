@@ -55,7 +55,7 @@ class MainFragment : BaseFragment() {
             CbnMenuItem(
                 0,
                 R.drawable.ic_menu,
-                R.drawable.avd_dashboard,
+                R.drawable.avd_menu,
                 THIRD_TAB
             ),
             CbnMenuItem(
