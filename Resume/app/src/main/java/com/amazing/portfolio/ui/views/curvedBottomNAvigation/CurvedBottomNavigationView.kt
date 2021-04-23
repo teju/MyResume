@@ -22,7 +22,6 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.NavGraph
 import androidx.navigation.NavOptions
-
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.amazing.portfolio.R
 import kotlin.math.abs
@@ -94,6 +93,7 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
     // initialize empty array so that we don't have to check if it's initialized or not
     private var cbnMenuItems: Array<CbnMenuItem> = arrayOf()
     private lateinit var bottomNavItemViews: Array<BottomNavItemView>
+    private lateinit var bottomNavItemViewsTittle: Array<BottomNavItemViewTittle>
     private lateinit var menuIcons: Array<Bitmap>
     private lateinit var menuAVDs: Array<AnimatedVectorDrawableCompat>
 
@@ -255,6 +255,9 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
         bottomNavItemViews = Array(cbnMenuItems.size) {
             BottomNavItemView(context)
         }
+        bottomNavItemViewsTittle = Array(cbnMenuItems.size) {
+            BottomNavItemViewTittle(context)
+        }
         initializeMenuIcons()
         initializeMenuAVDs()
         initializeCurve(activeIndex)
@@ -385,6 +388,12 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
         val typedValue = TypedValue()
         context.theme.resolveAttribute(R.attr.selectableItemBackground, typedValue, true)
         cbnMenuItems.forEachIndexed { index, item ->
+            val bottomNavLayoutNew = LinearLayout(context)
+            val layoutParamsNew = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,  ViewGroup.LayoutParams.WRAP_CONTENT)
+            layoutParamsNew.setMargins(0,10,0,0)
+            layoutParamsNew.gravity = Gravity.CENTER;
+
+            bottomNavLayoutNew.orientation = LinearLayout.VERTICAL
             val menuItem = bottomNavItemViews[index]
             menuItem.imageTintList = ColorStateList.valueOf(unSelectedColor)
             menuItem.setMenuItem(item)
@@ -395,9 +404,26 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
                 // render the icon in fab instead of image view, but still allocate the space
                 menuItem.visibility = View.INVISIBLE
             }
-            val layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT)
+            bottomNavLayoutNew.addView(menuItem,layoutParamsNew)
+
+
+            val menuItemTittle = bottomNavItemViewsTittle[index]
+            menuItemTittle.setTextColor(ColorStateList.valueOf(unSelectedColor))
+            menuItemTittle.setMenuItem(item)
+            menuItemTittle.setTag(index)
+            menuItemTittle.setOnClickListener {
+                onMenuItemClick(index)
+            }
+            if(item.tittle != 0) {
+                bottomNavLayoutNew.addView(menuItemTittle, layoutParamsNew)
+            }
+
+            val layoutParams = LinearLayout.LayoutParams(0,  ViewGroup.LayoutParams.MATCH_PARENT)
             layoutParams.weight = 1f
-            bottomNavLayout.addView(menuItem, layoutParams)
+            bottomNavLayout.addView(bottomNavLayoutNew, layoutParams)
+
+            // bottomNavLayout.addView(menuItemTittle, layoutParams)
+
         }
         val bottomNavLayoutParams = LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
@@ -408,6 +434,13 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
     }
 
     fun onMenuItemClick(index: Int) {
+        bottomNavItemViewsTittle.forEachIndexed { i, textview ->
+            if(i == index) {
+                textview.visibility = View.GONE
+            } else {
+                textview.visibility = View.VISIBLE
+            }
+        }
         if (selectedIndex == index) {
             Log.i(TAG, "same icon multiple clicked, skipping animation!")
             return
@@ -429,6 +462,7 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
                 imageView.alpha = 0f
             }
         }
+
         val newOffsetX = menuCellWidth * index
         isAnimating = true
         animateItemSelection(newOffsetX, menuCellWidth, index)
