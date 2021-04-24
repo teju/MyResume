@@ -21,18 +21,20 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="wrap_content">
-                <ImageView
+                <com.amazing.portfolio.ui.views.RoundImageView
                     android:layout_width="@dimen/_100dp"
                     android:id="@+id/profile_pic"
+                    android:src="@drawable/app_logo"
+                    android:layout_marginLeft="20dp"
                     android:adjustViewBounds="true"
                     android:layout_height="@dimen/_100dp">
-                </ImageView>
+                </com.amazing.portfolio.ui.views.RoundImageView>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:orientation="vertical"
                     android:id="@+id/deatils"
                     android:layout_toRightOf="@+id/profile_pic"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_width="wrap_content"

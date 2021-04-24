@@ -13,6 +13,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.model.AboutUsData
+import com.amazing.portfolio.ui.GlideApp
+import kotlinx.android.synthetic.main.home_fragment.*
 import java.util.*
 
 
@@ -31,6 +33,7 @@ class AboutUsAdapter(
         if(position % 2 != 0) {
             val params = holder.profile_pic.getLayoutParams() as RelativeLayout.LayoutParams
             params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT)
+            params.setMargins(0,0,40,0)
             holder.profile_pic.setLayoutParams(params)
 
             val deatilsparams = holder.deatils.getLayoutParams() as RelativeLayout.LayoutParams
@@ -38,12 +41,15 @@ class AboutUsAdapter(
             deatilsparams.addRule(RelativeLayout.RIGHT_OF,0)
             holder.deatils.setLayoutParams(deatilsparams)
         }
-        holder.name.text = aboutusList.get(position).Name
+        holder.name.text = "Name : "+aboutusList.get(position).Name
         holder.description.text = aboutusList.get(position).description
         holder.experience.text = "Experience : "+aboutusList.get(position).experience
         holder.level.text = "Level : "+aboutusList.get(position).level
         holder.role.text = aboutusList.get(position).role
         setAnimation(holder.itemView,position)
+        GlideApp.with(context)
+            .load(aboutusList.get(position).image)
+            .into(holder.profile_pic)
     }
     private fun setAnimation(viewToAnimate: View, position: Int) {
         // If the bound view wasn't previously displayed on screen, it's animated
