@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView android:layout_height="match_parent"
+<androidx.core.widget.NestedScrollView
+    android:layout_height="match_parent"
+    android:id="@+id/myScrollView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" >
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,6 +31,8 @@
                 android:layout_marginRight="25dp"
                 android:layout_height="match_parent">
             </androidx.recyclerview.widget.RecyclerView>
+            <include layout="@layout/whatsapp"></include>
+
         </LinearLayout>
         <com.amazing.portfolio.ui.views.LoadingCompound
             android:layout_width="match_parent"

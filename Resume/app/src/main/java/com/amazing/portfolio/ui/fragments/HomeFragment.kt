@@ -4,21 +4,20 @@ import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.FOCUS_DOWN
 import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnScrollChangedListener
 import android.view.animation.AnimationUtils
 import androidx.annotation.RequiresApi
 import com.amazing.portfolio.R
-import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.ui.GlideApp
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.storage.FirebaseStorage
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.home_fragment.*
-import java.util.ArrayList
+import kotlinx.android.synthetic.main.whatsapp.*
+import java.util.*
 
 
 class HomeFragment : BaseFragment() ,View.OnClickListener{
@@ -39,8 +38,8 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
         super.onViewCreated(view, savedInstanceState)
         ld.showLoadingV2()
         getImageList()
+        whatapp()
     }
-
     fun initUI() {
         GlideApp.with(activity!!)
             .load(mDatas.get(0))

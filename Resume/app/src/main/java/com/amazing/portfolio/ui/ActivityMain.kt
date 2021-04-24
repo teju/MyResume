@@ -52,9 +52,7 @@ class ActivityMain : AppCompatActivity() {
 
         triggerMainProcess()
         initSideView()
-        contact_us.setOnClickListener {
-            contactUS()
-        }
+
     }
 
     fun exitApp() {
@@ -63,24 +61,6 @@ class ActivityMain : AppCompatActivity() {
             getSupportFragmentManager().popBackStack();
         }else if(getSupportFragmentManager().getBackStackEntryCount()==1){
             this@ActivityMain.finish();
-        }
-    }
-    fun contactUS() {
-        try {
-            val packageManager: PackageManager = getPackageManager()
-            val i = Intent(Intent.ACTION_VIEW)
-            val url =
-                "https://api.whatsapp.com/send?phone=" + "+91 9964062237" + "&text=" + URLEncoder.encode(
-                    "hi",
-                    "UTF-8"
-                )
-            i.setPackage("com.whatsapp")
-            i.data = Uri.parse(url)
-            if (i.resolveActivity(packageManager) != null) {
-                startActivity(i)
-            }
-        } catch (e: java.lang.Exception) {
-            e.printStackTrace()
         }
     }
     fun startDribbleAnimation(){
@@ -156,17 +136,7 @@ class ActivityMain : AppCompatActivity() {
         } catch (e: Exception) {
             Helper.logException(this@ActivityMain, e)
         }
-        toggleListButton(frag)
-    }
-    fun toggleListButton(frag: Fragment) {
-        if (frag is MainFragment || frag is AppDetailFragment) {
-            arrow_right_drop_circle.visibility = View.VISIBLE
-            contact_us.visibility = View.GONE
-        } else{
-            arrow_right_drop_circle.visibility = View.GONE
-            contact_us.visibility = View.GONE
 
-        }
     }
     fun setFragment(frag: Fragment,from : Int,to : Int) {
         try {

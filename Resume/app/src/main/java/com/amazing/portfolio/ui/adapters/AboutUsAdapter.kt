@@ -39,13 +39,27 @@ class AboutUsAdapter(
             val deatilsparams = holder.deatils.getLayoutParams() as RelativeLayout.LayoutParams
             deatilsparams.addRule(RelativeLayout.LEFT_OF,R.id.profile_pic)
             deatilsparams.addRule(RelativeLayout.RIGHT_OF,0)
+            deatilsparams.setMargins(0,0,40,0)
+
+            holder.deatils.setLayoutParams(deatilsparams)
+        } else {
+            val params = holder.profile_pic.getLayoutParams() as RelativeLayout.LayoutParams
+            params.addRule(RelativeLayout.ALIGN_PARENT_LEFT)
+            params.setMargins(40,0,0,0)
+            holder.profile_pic.setLayoutParams(params)
+
+            val deatilsparams = holder.deatils.getLayoutParams() as RelativeLayout.LayoutParams
+            deatilsparams.addRule(RelativeLayout.LEFT_OF,0)
+            deatilsparams.setMargins(40,0,20,0)
+
+            deatilsparams.addRule(RelativeLayout.RIGHT_OF,R.id.profile_pic)
             holder.deatils.setLayoutParams(deatilsparams)
         }
         holder.name.text = "Name : "+aboutusList.get(position).Name
-        holder.description.text = aboutusList.get(position).description
-        holder.experience.text = "Experience : "+aboutusList.get(position).experience
-        holder.level.text = "Level : "+aboutusList.get(position).level
-        holder.role.text = aboutusList.get(position).role
+        holder.description.text = aboutusList.get(position).Description
+        holder.experience.text = "Experience : "+aboutusList.get(position).Experience
+        holder.level.text = "Level : "+aboutusList.get(position).Level
+        holder.role.text = aboutusList.get(position).Role
         setAnimation(holder.itemView,position)
         GlideApp.with(context)
             .load(aboutusList.get(position).image)

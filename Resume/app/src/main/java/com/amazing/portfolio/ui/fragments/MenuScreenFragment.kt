@@ -77,6 +77,7 @@ class MenuScreenFragment(
         planet3.setOnClickListener(this)
         planet4.setOnClickListener(this)
         planet5.setOnClickListener(this)
+        whatapp()
     }
 
 

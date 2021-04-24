@@ -1,8 +1,10 @@
 package com.amazing.portfolio.ui.fragments
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Typeface
+import android.net.Uri
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -31,10 +33,13 @@ import com.amazing.portfolio.ui.fragments.dialog.NoInternetDialogFragment
 import com.amazing.portfolio.ui.fragments.dialog.NotifyDialogFragment
 import com.amazing.portfolio.ui.views.LoadingCompound
 import com.google.android.material.appbar.AppBarLayout
+import kotlinx.android.synthetic.main.home_fragment.*
+import kotlinx.android.synthetic.main.whatsapp.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.asCoroutineDispatcher
+import java.net.URLEncoder
 
 open class BaseFragment : GenericFragment() {
 
@@ -415,6 +420,46 @@ open class BaseFragment : GenericFragment() {
             permissionListener.onPermissionAlreadyGranted()
         }
     }
+    fun contactUS() {
+        try {
+            val packageManager: PackageManager = activity?.getPackageManager()!!
+            val i = Intent(Intent.ACTION_VIEW)
+            val url =
+                "https://api.whatsapp.com/send?phone=" + "+91 9964062237" + "&text=" + URLEncoder.encode(
+                    "hi",
+                    "UTF-8"
+                )
+            i.setPackage("com.whatsapp")
+            i.data = Uri.parse(url)
+            if (i.resolveActivity(packageManager) != null) {
+                startActivity(i)
+            }
+        } catch (e: java.lang.Exception) {
+            e.printStackTrace()
+        }
+    }
 
+    fun whatapp() {
+        contact_us.setOnClickListener {
+            contact_us.visibility = View.GONE
+            rl_whatsapp.visibility = View.VISIBLE
+
+            try {
+                myScrollView.post(Runnable
+                {
+                    myScrollView.fullScroll(View.FOCUS_DOWN)
+                })
+            } catch (e:java.lang.Exception){
+
+            }
+        }
+        contact_us_full.setOnClickListener {
+            contact_us.visibility = View.VISIBLE
+            rl_whatsapp.visibility = View.GONE
+        }
+        rl_whatsapp.setOnClickListener {
+            contactUS()
+        }
+    }
 
 }

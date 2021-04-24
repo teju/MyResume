@@ -18,7 +18,7 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_features_two.*
 
 
-class FeaturesFragmentTwo : Fragment() {
+class FeaturesFragmentTwo : BaseFragment() {
     private var recyclerViewAdapter: FeaturesAdapter? = null
     private var recyclerViewBottomAdapter: FeaturesIconsAdapter? = null
     var databaseReference: DatabaseReference? = null
@@ -74,6 +74,7 @@ class FeaturesFragmentTwo : Fragment() {
         })
         ld.showLoadingV2()
         fetchIcons()
+        whatapp()
     }
 
     fun fetchData() {

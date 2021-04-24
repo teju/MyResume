@@ -13,13 +13,10 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
-        <ImageView
+        <include layout="@layout/whatsapp"
+            android:layout_below="@+id/framelayoutfour"
             android:layout_width="match_parent"
-            android:id="@+id/imageview"
-            android:src="@drawable/bg_img"
-            android:adjustViewBounds="true"
-            android:layout_height="match_parent">
-        </ImageView>
+            android:layout_height="wrap_content"></include>
 
         <LinearLayout
             android:id="@+id/framelayoutfour"
@@ -33,7 +30,6 @@
             android:layout_below="@+id/framelayoutthree"
             android:background="@drawable/peach_gradient"
             android:src="@drawable/smart_o_gee"
-            android:layout_marginBottom="@dimen/_100dp"
             app:layout_collapseMode="pin"
             android:scaleType="centerCrop" >
             <LinearLayout

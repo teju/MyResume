@@ -44,6 +44,7 @@ class AboutUsFragment : BaseFragment() {
 
         getAboutUSist()
         ld.showLoadingV2()
+        whatapp()
     }
 
     fun  getAboutUSist() {

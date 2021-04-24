@@ -57,6 +57,7 @@ class FeaturesFragmentOne : BaseFragment() ,View.OnClickListener{
         viewPager.startAutoScroll()
 
         fetchData()
+        whatapp()
         ld.showLoadingV2()
 
     }
