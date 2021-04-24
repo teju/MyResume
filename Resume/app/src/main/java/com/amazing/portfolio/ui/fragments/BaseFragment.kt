@@ -13,6 +13,7 @@ import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.*
@@ -33,7 +34,6 @@ import com.amazing.portfolio.ui.fragments.dialog.NoInternetDialogFragment
 import com.amazing.portfolio.ui.fragments.dialog.NotifyDialogFragment
 import com.amazing.portfolio.ui.views.LoadingCompound
 import com.google.android.material.appbar.AppBarLayout
-import kotlinx.android.synthetic.main.home_fragment.*
 import kotlinx.android.synthetic.main.whatsapp.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -443,9 +443,10 @@ open class BaseFragment : GenericFragment() {
         contact_us.setOnClickListener {
             contact_us.visibility = View.GONE
             rl_whatsapp.visibility = View.VISIBLE
-
             try {
-                myScrollView.post(Runnable
+                val myScrollView = v?.findViewById<NestedScrollView>(R.id.myScrollView)
+
+                myScrollView?.post(Runnable
                 {
                     myScrollView.fullScroll(View.FOCUS_DOWN)
                 })

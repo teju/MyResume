@@ -136,7 +136,15 @@ class ActivityMain : AppCompatActivity() {
         } catch (e: Exception) {
             Helper.logException(this@ActivityMain, e)
         }
+        toggleListButton(frag)
+    }
+    fun toggleListButton(frag: Fragment) {
+        if (frag is MainFragment || frag is AppDetailFragment) {
+            arrow_right_drop_circle.visibility = View.VISIBLE
+        } else{
+            arrow_right_drop_circle.visibility = View.GONE
 
+        }
     }
     fun setFragment(frag: Fragment,from : Int,to : Int) {
         try {
