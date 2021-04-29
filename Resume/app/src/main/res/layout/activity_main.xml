@@ -8,9 +8,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@drawable/welcome_bg"
         android:layout_height="match_parent">
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/welcome_bg"
+            android:scaleType="fitXY"
+            android:alpha="0.4"
+            android:layout_height="match_parent">
+        </ImageView>
         <LinearLayout
             android:layout_width="match_parent"
             android:id="@+id/rllanding"
@@ -58,9 +63,10 @@
             android:textColor="@color/Black"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
+            android:fontFamily="@font/shipporimincho_extrabold"
             android:layout_centerVertical="true"
             android:paddingTop="160dp"
-            android:textSize="@dimen/_18sp"
+            android:textSize="16dp"
             android:layout_height="wrap_content">
 
         </TextView>

@@ -39,7 +39,7 @@
                     android:text="WHAT WE DO"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="16dp"
-                    android:fontFamily="@font/poppins_bold"
+                    android:fontFamily="@font/shipporimincho_extrabold"
                     android:layout_height="wrap_content">
                 </TextView>
                 <View
@@ -53,7 +53,7 @@
                     android:text="WE DO IT BEST"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/_18sp"
-                    android:fontFamily="@font/poppins_bold"
+                    android:fontFamily="@font/shipporimincho_extrabold"
                     android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content">
                 </TextView>
@@ -66,8 +66,9 @@ mobile apps that engage today's consumer."
                 android:gravity="center_horizontal"
                 android:textColor="@color/colorAccent"
                 android:textSize="14sp"
-                android:fontFamily="@font/poppins_regular"
-                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/shipporimincho_extrabold"
+                android:layout_marginLeft="15dp"
                 android:layout_height="wrap_content">
             </TextView>
             <ImageView
@@ -90,10 +91,11 @@ mobile apps that engage today's consumer."
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
                 android:text="Mobile Apps Development"
+                android:layout_marginRight="20dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/poppins_bold"
-                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/shipporimincho_extrabold"
+                android:layout_marginLeft="20dp"
                 android:layout_height="wrap_content">
             </TextView>
 
@@ -118,10 +120,11 @@ mobile apps that engage today's consumer."
                     android:layout_width="match_parent"
                     android:textColor="@color/colorAccent"
                     android:textSize="15dp"
+                    android:textAlignment="center"
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center_vertical"
                     android:id="@+id/tvmobile_apps_dev"
-                    android:fontFamily="@font/poppins_regular"
+                    android:fontFamily="@font/shipporimincho_extrabold"
                     android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content">
                 </TextView>
@@ -134,7 +137,7 @@ mobile apps that engage today's consumer."
                 android:text="Native Android &amp; iOS"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
-                android:fontFamily="@font/poppins_bold"
+                android:fontFamily="@font/shipporimincho_extrabold"
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content">
             </TextView>
@@ -155,7 +158,7 @@ mobile apps that engage today's consumer."
                     android:layout_below="@+id/native_sdk_apps"
                     android:textSize="15dp"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppins_regular"
+                    android:fontFamily="@font/poppins_bold"
                     android:layout_height="wrap_content">
                 </TextView>
                 <ImageView
@@ -199,7 +202,7 @@ mobile apps that engage today's consumer."
                         android:id="@+id/tv1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:fontFamily="@font/poppins_bold"
+                        android:fontFamily="@font/shipporimincho_extrabold"
                         android:layout_centerVertical="true"
                         android:paddingLeft="15dp"
                         android:textAlignment="center"
@@ -253,7 +256,7 @@ mobile apps that engage today's consumer."
                         android:id="@+id/tv2"
                         android:textColor="@color/Black"
                         android:textSize="15dp"
-                        android:fontFamily="@font/poppins_bold"
+                        android:fontFamily="@font/shipporimincho_extrabold"
                         android:layout_height="wrap_content">
                     </TextView>
 
@@ -278,7 +281,7 @@ mobile apps that engage today's consumer."
                         android:id="@+id/tv3"
                         android:textColor="@color/Black"
                         android:textSize="15dp"
-                        android:fontFamily="@font/poppins_bold"
+                        android:fontFamily="@font/shipporimincho_extrabold"
                         android:layout_height="wrap_content">
                     </TextView>
 
@@ -328,7 +331,7 @@ mobile apps that engage today's consumer."
                         android:textAlignment="center"
                         android:textColor="@color/Black"
                         android:textSize="15dp"
-                        android:fontFamily="@font/poppins_bold"
+                        android:fontFamily="@font/shipporimincho_extrabold"
                         android:layout_height="wrap_content">
                     </TextView>
 
