@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    android:background="@color/White"
+    android:background="@drawable/bg_img"
     android:clipToPadding="false">
     <TextView
         android:layout_width="wrap_content"
@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:id="@+id/rvnames"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
         android:layout_below="@+id/tv1"
         android:layout_height="wrap_content">

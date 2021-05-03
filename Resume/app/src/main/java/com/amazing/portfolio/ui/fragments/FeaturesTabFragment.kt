@@ -107,8 +107,8 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                 tab_icon.setColorFilter(ContextCompat.getColor(activity!!, R.color.White), android.graphics.PorterDuff.Mode.SRC_IN);
 
             } else {
-                tab_icon.setColorFilter(ContextCompat.getColor(activity!!, R.color.Black), android.graphics.PorterDuff.Mode.SRC_IN);
-                tab_label.setTextColor(resources.getColor(R.color.Black))
+                tab_icon.setColorFilter(ContextCompat.getColor(activity!!, R.color.DarkGray), android.graphics.PorterDuff.Mode.SRC_IN);
+                tab_label.setTextColor(resources.getColor(R.color.DarkGray))
 
             }
             tab_icon.setImageResource(navIcons.get(i))
@@ -147,13 +147,13 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                     val tab_icon =
                         tabView!!.findViewById<View>(R.id.nav_icon) as ImageView
 
-                    // back to the black color
-                    tab_label.setTextColor(resources.getColor(R.color.Black))
-                    // and the icon resouce to the old black image
+                    // back to the DarkGray color
+                    tab_label.setTextColor(resources.getColor(R.color.DarkGray))
+                    // and the icon resouce to the old DarkGray image
                     // also via array that holds the icon resources in order
                     // and get the one of this tab's position
                     tab_icon.setImageResource(navIcons[tab.position])
-                    tab_icon.setColorFilter(ContextCompat.getColor(activity!!, R.color.Black), android.graphics.PorterDuff.Mode.SRC_IN);
+                    tab_icon.setColorFilter(ContextCompat.getColor(activity!!, R.color.DarkGray), android.graphics.PorterDuff.Mode.SRC_IN);
 
                 }
 

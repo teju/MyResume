@@ -56,7 +56,6 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
                 if(scrollY > 320 &&  scrollY < 500) {
                     val slideAnimation = AnimationUtils.loadAnimation(activity!!, R.anim.left_enter)
                     mobile_apps_dev.startAnimation(slideAnimation)
-                    mobile_apps_dev.setImageResource(R.drawable.mobile_apps_dev)
                     val slideAnimationRights = AnimationUtils.loadAnimation(activity!!, R.anim.right_enter)
                     tvmobile_apps_dev.startAnimation(slideAnimationRights)
                     tvmobile_apps_dev.setText(activity!!.resources.getString(R.string.mobile_apps_dev))
@@ -67,7 +66,6 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
                     we_build.setText(R.string.we_build)
                     val slideAnimationRights = AnimationUtils.loadAnimation(activity!!, R.anim.right_enter)
                     native_sdk_apps.startAnimation(slideAnimationRights)
-                    native_sdk_apps.setImageResource(R.drawable.native_sdk_apps)
                 }
                 if(scrollY > 700 &&  scrollY < 900) {
                     val slideAnimation = AnimationUtils.loadAnimation(activity!!, R.anim.left_enter)
@@ -100,7 +98,6 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
                 if(scrollY > 1000 &&  scrollY < 1200) {
                     val slideAnimationRights = AnimationUtils.loadAnimation(activity!!, R.anim.bottom_up)
                     lets_connect.startAnimation(slideAnimationRights)
-                    lets_connect.setImageResource(R.drawable.lets_connect)
                 }
 
             })

@@ -351,13 +351,28 @@ mobile apps that engage today's consumer."
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:layout_marginTop="20dp"
                 android:id="@+id/lets_connect"
                 android:adjustViewBounds="true"
                 android:layout_height="wrap_content">
             </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/colorAccent"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv5"
+                android:textStyle="bold"
+                android:text="Get in touch with us!\nGet free quote for your business idea."
+                android:fontFamily="@font/shipporimincho_extrabold"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
             <include layout="@layout/whatsapp"></include>
 
         </LinearLayout>
