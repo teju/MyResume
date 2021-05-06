@@ -16,6 +16,7 @@ import com.amazing.portfolio.ui.adapters.FeaturesAdapter
 import com.amazing.portfolio.ui.adapters.FeaturesIconsAdapter
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_features_two.*
+import kotlinx.android.synthetic.main.whatsapp.*
 
 
 class FeaturesFragmentTwo : BaseFragment() {
@@ -42,8 +43,8 @@ class FeaturesFragmentTwo : BaseFragment() {
         savedInstanceState: Bundle?
     ) {
         super.onViewCreated(view, savedInstanceState)
-        val linearLayoutManager = LinearLayoutManager(activity!!,RecyclerView.HORIZONTAL,false)
-        val linearLayoutManager_ = LinearLayoutManager(activity!!,RecyclerView.HORIZONTAL,false)
+        val linearLayoutManager = LinearLayoutManager(activity!!)
+        val linearLayoutManager_ = LinearLayoutManager(activity!!)
         recyclerView.layoutManager = linearLayoutManager
         recyclerView_bottom.layoutManager = linearLayoutManager_
 
@@ -74,6 +75,7 @@ class FeaturesFragmentTwo : BaseFragment() {
         })
         ld.showLoadingV2()
         fetchIcons()
+        connect.background = activity?.resources?.getDrawable(R.drawable.connect_two)
         whatapp()
     }
 

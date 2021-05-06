@@ -36,7 +36,7 @@ class AppNamesAdapter(
         holder.names.text = aboutusList.get(position).app_name
         if(selectedPos == position) {
             holder.names.setTextColor(context.resources.getColor(R.color.White))
-            holder.names.setBackgroundTintList(ColorStateList.valueOf(context.resources.getColor(R.color.colorPrimaryDark)));
+            holder.names.setBackgroundTintList(ColorStateList.valueOf(context.resources.getColor(R.color.light_grape)));
         } else {
             holder.names.setTextColor(context.resources.getColor(R.color.Black))
             holder.names.setBackgroundTintList(ColorStateList.valueOf(context.resources.getColor(R.color.soft_grey)));

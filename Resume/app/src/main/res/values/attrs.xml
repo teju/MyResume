@@ -66,4 +66,13 @@
         <attr name="cbn_fabBg" format="color" />
         <attr name="cbn_bg" format="color" />
     </declare-styleable>
+    <declare-styleable name="CurveView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="curve_color" format="color" />
+        <attr name="curve_gravity" format="enum" >
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>

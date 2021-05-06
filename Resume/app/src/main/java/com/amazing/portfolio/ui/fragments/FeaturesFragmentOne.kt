@@ -90,6 +90,7 @@ class FeaturesFragmentOne : BaseFragment() ,View.OnClickListener{
 
         tv_mobile_app.text = featuresList.get(1).tittle
         tv_mobile_app_subtitle.text = featuresList.get(1).description
+        tv_mobile_app_subtitle.setTextColor(R.color.colorPrimaryDark)
         mobile_app_dev.text = featuresList.get(1).content
         readMoreLess(mobile_app_dev,3)
 

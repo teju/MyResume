@@ -107,14 +107,6 @@ class ActivityMain : AppCompatActivity() {
     }
     fun triggerMainProcess(){
         startDribbleAnimation()
-
-        /*Handler().postDelayed(Runnable {
-            setFragment(LoginFragment())
-           // setFragment(MenuScreenFragment(true, null))
-            splash_logo.visibility = View.GONE
-
-        }, 3000)*/
-
     }
 
     fun setFragment(frag: Fragment) {

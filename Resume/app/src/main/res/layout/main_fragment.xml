@@ -17,7 +17,7 @@
         app:cbn_selectedColor="@color/White"
         app:cbn_bg="#FDF9F7"
         app:cbn_unSelectedColor="@color/Black"
-        app:cbn_fabBg="@color/colorPrimaryDark"
+        app:cbn_fabBg="@color/light_grape"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

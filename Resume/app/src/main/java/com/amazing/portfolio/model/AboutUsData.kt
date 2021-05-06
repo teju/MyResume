@@ -8,4 +8,5 @@ class AboutUsData {
     var image: String = ""
     var Role: String = ""
     var Level: String = ""
+    var bg_view: String = ""
 }

@@ -1,80 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_height="wrap_content"
+<FrameLayout android:layout_height="wrap_content"
     android:layout_width="match_parent"
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:elevation="5dp"
-        app:cardCornerRadius="10dp"
-        android:layout_marginTop="15dp"
+        android:id="@+id/bg_view"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent">
+    </ImageView>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_margin="15dp"
         android:layout_height="wrap_content">
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:padding="15dp"
+            android:orientation="horizontal"
             android:layout_height="wrap_content">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-                <com.amazing.portfolio.ui.views.RoundImageView
-                    android:layout_width="@dimen/_100dp"
-                    android:id="@+id/profile_pic"
-                    android:src="@drawable/app_logo"
-                    android:layout_marginLeft="20dp"
-                    android:adjustViewBounds="true"
-                    android:layout_height="@dimen/_100dp">
-                </com.amazing.portfolio.ui.views.RoundImageView>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:orientation="vertical"
-                    android:id="@+id/deatils"
-                    android:layout_toRightOf="@+id/profile_pic"
-                    android:layout_marginLeft="20dp"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/colorAccent"
-                        android:id="@+id/role"
-                        android:textSize="@dimen/_18sp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:layout_height="wrap_content">
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
-                        android:id="@+id/name"
-                        android:layout_height="wrap_content">
-                    </TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:id="@+id/experience"
-                        android:fontFamily="@font/poppins_regular"
-                        android:layout_height="wrap_content">
-                    </TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:id="@+id/level"
-                        android:fontFamily="@font/poppins_regular"
-                        android:layout_height="wrap_content">
-                    </TextView>
-
-                </LinearLayout>
-            </RelativeLayout>
-            <TextView
+            <com.amazing.portfolio.ui.views.RoundImageView
+                android:layout_width="120dp"
+                android:id="@+id/profile_pic"
+                android:src="@drawable/app_logo"
+                android:layout_marginLeft="20dp"
+                android:adjustViewBounds="true"
+                android:layout_height="120dp">
+            </com.amazing.portfolio.ui.views.RoundImageView>
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_marginTop="10dp"
-                android:id="@+id/description"
-                android:fontFamily="@font/poppins_regular"
+                android:orientation="vertical"
+                android:id="@+id/deatils"
+                android:layout_toRightOf="@+id/profile_pic"
+                android:layout_marginLeft="20dp"
                 android:layout_height="wrap_content">
-            </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/White"
+                    android:id="@+id/role"
+                    android:textSize="@dimen/_18sp"
+                    android:fontFamily="@font/shipporimincho_extrabold"
+                    android:layout_height="wrap_content">
+                </TextView>
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/White"
 
-    </androidx.cardview.widget.CardView>
-</RelativeLayout>
+                    android:id="@+id/name"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/experience"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/White"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/level"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/White"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/description"
+            android:textColor="@color/White"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </LinearLayout>
+
+</FrameLayout>

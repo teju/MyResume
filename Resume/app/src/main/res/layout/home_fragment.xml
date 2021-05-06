@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/myScrollView"
-    android:background="@drawable/bg_img"
+    android:background="@color/White"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -12,38 +12,44 @@
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/app_o_gee"
-                android:layout_height="wrap_content">
-            </ImageView>
-            <ImageView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_margin="20dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/loading"
-                android:id="@+id/welcome"
                 android:layout_height="wrap_content">
-            </ImageView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/welcome"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/welcome"
+                    android:layout_height="wrap_content">
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/app_o_gee"
+                    android:layout_height="wrap_content">
+                </ImageView>
+            </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:gravity="center_horizontal"
                 android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
                     android:text="WHAT WE DO"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="16dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp"
                     android:fontFamily="@font/shipporimincho_extrabold"
                     android:layout_height="wrap_content">
                 </TextView>
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="2dp"
                     android:layout_marginLeft="10dp"
                     android:background="@color/colorPrimaryDark"
                     android:layout_height="match_parent">
@@ -51,8 +57,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:text="WE DO IT BEST"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="@dimen/_18sp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp"
                     android:fontFamily="@font/shipporimincho_extrabold"
                     android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content">
@@ -61,11 +67,11 @@
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:text="We implement best on every design build wonderful
-mobile apps that engage today's consumer."
+                android:text="We implement best on every design\nbuild wonderful mobile apps that\nengage today's consumer."
                 android:gravity="center_horizontal"
-                android:textColor="@color/colorAccent"
-                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
                 android:fontFamily="@font/shipporimincho_extrabold"
                 android:layout_marginLeft="15dp"
@@ -73,23 +79,16 @@ mobile apps that engage today's consumer."
             </TextView>
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_margin="10dp"
-                android:adjustViewBounds="true"
-                android:layout_height="wrap_content">
-            </ImageView>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:src="@drawable/loading"
+                android:src="@drawable/smart_o_gee"
                 android:id="@+id/smart_o_gee"
+                android:layout_marginTop="-35dp"
                 android:adjustViewBounds="true"
                 android:layout_height="wrap_content">
             </ImageView>
             <TextView
                 android:layout_width="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
                 android:text="Mobile Apps Development"
                 android:layout_marginRight="20dp"
                 android:layout_gravity="center_horizontal"
@@ -102,9 +101,7 @@ mobile apps that engage today's consumer."
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="15dp"
+
                 android:layout_height="wrap_content">
                 <ImageView
                     android:layout_width="match_parent"
@@ -113,27 +110,29 @@ mobile apps that engage today's consumer."
                     android:id="@+id/mobile_apps_dev"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_gravity="center_vertical"
                     android:layout_height="wrap_content">
                 </ImageView>
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/White"
+                    android:layout_marginTop="-45dp"
                     android:textSize="15dp"
                     android:textAlignment="center"
-                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
                     android:layout_gravity="center_vertical"
                     android:id="@+id/tvmobile_apps_dev"
+                    android:background="@drawable/mobileapps_banner"
                     android:fontFamily="@font/shipporimincho_extrabold"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content">
-                </TextView>
+                </ImageView>
 
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
                 android:text="Native Android &amp; iOS"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
@@ -151,7 +150,7 @@ mobile apps that engage today's consumer."
                 android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorPrimaryDark"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/we_build"
                     android:textAlignment="center"
@@ -170,6 +169,7 @@ mobile apps that engage today's consumer."
                 </ImageView>
 
             </RelativeLayout>
+<!--
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
@@ -221,6 +221,8 @@ mobile apps that engage today's consumer."
                 </ImageView>
 
             </RelativeLayout>
+-->
+<!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -299,6 +301,8 @@ mobile apps that engage today's consumer."
                 </ImageView>
 
             </RelativeLayout>
+-->
+<!--
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -348,13 +352,10 @@ mobile apps that engage today's consumer."
                 </ImageView>
 
             </RelativeLayout>
-
+-->
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginTop="20dp"
-                android:id="@+id/lets_connect"
+                android:id="@+id/banner_four"
                 android:adjustViewBounds="true"
                 android:layout_height="wrap_content">
             </ImageView>
@@ -365,13 +366,23 @@ mobile apps that engage today's consumer."
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/tv5"
+                android:id="@+id/tv6"
                 android:textStyle="bold"
-                android:text="Get in touch with us!\nGet free quote for your business idea."
+                android:text="Let's Connect ,Share your Ideas\nGet in touch with us!"
                 android:fontFamily="@font/shipporimincho_extrabold"
                 android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content">
             </TextView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/lets_connect"
+                android:adjustViewBounds="true"
+                android:layout_height="wrap_content">
+            </ImageView>
 
             <include layout="@layout/whatsapp"></include>
 

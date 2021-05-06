@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#940909</color>
-    <color name="colorAccent">#000000</color>
+    <color name="colorPrimary">#262130</color>
+    <color name="colorPrimaryDark">#262130</color>
+    <color name="colorAccent">#D31336</color>
     <color name="theme_blue">#1E3567</color>
     <color name="theme_orange">#EF6C00</color>
     <color name="theme_green">#236F00</color>
@@ -13,5 +13,7 @@
     <color name="soft_grey">#FFDDDDDD</color>
     <color name="transparent_grey">#77333333</color>
     <color name="DarkGray">#A9A9A9</color>
-    <color name="features_text">#495246</color>
+    <color name="features_text">#fff</color>
+    <color name="dark_grape">#262130</color>
+    <color name="light_grape">#3A5A81</color>
 </resources>

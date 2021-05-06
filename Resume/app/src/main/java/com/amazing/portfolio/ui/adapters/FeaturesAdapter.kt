@@ -1,20 +1,22 @@
 package com.amazing.portfolio.ui.adapters
 
+import android.R.attr.bitmap
 import android.content.Context
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
-import android.widget.ImageView
-import android.widget.RelativeLayout
-import android.widget.TextView
-import androidx.cardview.widget.CardView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.model.featuresContent.KeyNotes
 import com.amazing.portfolio.ui.GlideApp
 import com.amazing.portfolio.ui.adapters.FeaturesAdapter.ReyclerViewHolder
+import java.net.URL
 import java.util.*
+
 
 class FeaturesAdapter(
     context: Context) : RecyclerView.Adapter<ReyclerViewHolder>() {
@@ -37,17 +39,23 @@ class FeaturesAdapter(
                 .into(holder.image_view)
         } catch (e: Exception) {
         }
-    }
-    private fun setAnimation(viewToAnimate: View, position: Int) {
-        // If the bound view wasn't previously displayed on screen, it's animated
-        if (position > lastPosition) {
-            val animation = AnimationUtils.loadAnimation(
-                context,
-                R.anim.list_enter
-            )
-            viewToAnimate.startAnimation(animation)
-            lastPosition = position
+        val params = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
+        if(position == 0) {
+            params.setMargins(0, 80, 0, 0)
+        } else {
+            params.setMargins(0, 0, 0, 0)
         }
+        try {
+            Helper.loadImags(context, keynotesList.get(position).bg_img, holder.bg_img)
+        } catch (e:java.lang.Exception){
+            e.printStackTrace()
+        }
+        holder.tittle.layoutParams = params
+
+
     }
     override fun getItemCount(): Int {
         return keynotesList.size
@@ -55,18 +63,18 @@ class FeaturesAdapter(
 
     inner class ReyclerViewHolder(v: View) :
         RecyclerView.ViewHolder(v) {
-        val parent: RelativeLayout
-        val cbg: CardView
+        val parent: FrameLayout
         val tittle: TextView
         val description: TextView
         val image_view: ImageView
+        val bg_img: ImageView
 
         init {
-            parent = v.findViewById<View>(R.id.parent) as RelativeLayout
-            cbg = v.findViewById<View>(R.id.cbg) as CardView
+            parent = v.findViewById<View>(R.id.parent) as FrameLayout
             tittle = v.findViewById<View>(R.id.tittle) as TextView
             description = v.findViewById<View>(R.id.description) as TextView
             image_view = v.findViewById<View>(R.id.image_view) as ImageView
+            bg_img = v.findViewById<View>(R.id.bg_img) as ImageView
         }
     }
 

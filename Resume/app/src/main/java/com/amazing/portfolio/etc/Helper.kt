@@ -18,6 +18,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.amazing.portfolio.R
 import com.amazing.portfolio.ui.GlideApp
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.list_item.view.*
 import org.joda.time.DateTime
 import org.joda.time.Seconds
@@ -197,11 +198,11 @@ open class Helper {
         }
         fun loadImags(context:Context,url:String,Img:ImageView) {
             try {
-                GlideApp.with(context)
+                Glide.with(context)
                     .load(url.trim())
                     .into(Img)
-            } catch (e:java.lang.Exception){
 
+            } catch (e:java.lang.Exception){
             }
         }
         fun showLog(str : String) {

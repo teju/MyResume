@@ -8,7 +8,7 @@
     android:clipToPadding="false">
     <ImageView
         android:layout_width="match_parent"
-        android:background="@drawable/sky_bg"
+        android:background="@drawable/sky_bg_two"
         android:layout_height="match_parent">
 
     </ImageView>

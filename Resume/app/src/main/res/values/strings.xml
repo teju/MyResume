@@ -11,7 +11,7 @@
     <string name="appogee__unknown_response">Unknown response from server. Please try again later</string>
     <string name="mobile_apps_dev">Scrutinize business intent to propose the best mobile app design features to suit your budget and achieve target’s</string>
     <string name="mobile_apps_dev_smoother">An App is never complete, our experience team ensure your product development and long journey smoother.</string>
-    <string name="we_build">We build mobile apps with Native SDK that provides best user experience.</string>
+    <string name="we_build">We build Mobile App’s with Native SDK\nthat provides the best User Experience</string>
     <string name="confirm">Confirm</string>
     <string name="please_allow_deera_access_permission_camera">
         <![CDATA[Please allow De Era to access camera in order to scan & pay!]]></string>

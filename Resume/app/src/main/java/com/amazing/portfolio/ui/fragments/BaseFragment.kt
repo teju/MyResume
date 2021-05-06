@@ -440,7 +440,7 @@ open class BaseFragment : GenericFragment() {
     }
 
     fun whatapp() {
-        contact_us.setOnClickListener {
+        /*contact_us.setOnClickListener {
             contact_us.visibility = View.GONE
             rl_whatsapp.visibility = View.VISIBLE
             try {
@@ -460,7 +460,7 @@ open class BaseFragment : GenericFragment() {
         }
         rl_whatsapp.setOnClickListener {
             contactUS()
-        }
+        }*/
     }
 
 }

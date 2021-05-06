@@ -9,7 +9,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/root_container"
-        android:background="@drawable/bg_img"
+        android:background="@color/White"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -19,22 +19,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/shipporimincho_extrabold"
                 android:text="Who We R !. . . "
-                android:textColor="@color/colorAccent"
-                android:textSize="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25dp"
                 android:layout_height="wrap_content">
 
             </TextView>
+            <include layout="@layout/whatsapp_reverted"></include>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:id="@+id/recyclerView"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="150dp"
                 android:layout_height="match_parent">
 
             </androidx.recyclerview.widget.RecyclerView>
-            <include layout="@layout/whatsapp"></include>
 
         </LinearLayout>
         <com.amazing.portfolio.ui.views.LoadingCompound
