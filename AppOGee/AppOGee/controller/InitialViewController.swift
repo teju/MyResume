@@ -7,58 +7,32 @@
 //
 
 import UIKit
+import RBBAnimation
 
-class InitialViewController: UIViewController ,TabItem{
+class InitialViewController: UIViewController {
     
-    @IBOutlet weak var image_1: UIImageView!
-    @IBOutlet weak var btnImg1: UIButton!
-
-    var tabImage: UIImage? {
-      return UIImage(named: "dummy")
-    }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        rotate2(imageView: image_1, aCircleTime: 5.0)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // Change `2.0` to the desired number of seconds.
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabViewController")
+//            self.navigationController?.pushViewController(initialViewController, animated: true)
+//        }
         
     }
     
-    func rotate2(imageView: UIImageView, aCircleTime: Double) { //UIView
-     
-         UIView.animate(withDuration: aCircleTime/5, delay: 0.0, options: .curveLinear, animations: {
-             imageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-         }, completion: { finished in
-             UIView.animate(withDuration: aCircleTime/5, delay: 0.0, options: .curveLinear, animations: {
-                 imageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi*2))
-             }, completion: { finished in
-                 self.rotate2(imageView: imageView, aCircleTime: aCircleTime)
-             })
-         })
-    }
-    
-    func zoomOut(imageview : UIImageView) {
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
-                // HERE
-            imageview.transform = CGAffineTransform.identity.scaledBy(x: 3, y: 3) // Scale your image
+    func dribbleAnim() {
+        let spring = RBBSpringAnimation(keyPath: "position.y")
 
-            }) { (finished) in
-                 //imageview.transform = CGAffineTransform.identity // undo in 1 seconds
+        spring.fromValue = NSNumber(value: -100.0)
+        spring.toValue = NSNumber(value: 100.0)
+        spring.velocity = 0
+        spring.mass = 1
+        spring.damping = 10
+        spring.stiffness = 100
 
-                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                 let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabViewController")
-                 self.navigationController?.pushViewController(initialViewController, animated: true)
-        }
-    }
-    
-    func nukeAllAnimations(imageview : UIImageView) {
-         imageview.layer.removeAllAnimations()
-         imageview.layoutIfNeeded()
-    }
-    
-    @IBAction func image1_click(_ sender: Any) {
-        nukeAllAnimations(imageview: image_1)
-        zoomOut(imageview: image_1)
-        
-
+        spring.isAdditive = true
+        spring.duration = spring.duration(forEpsilon: 0.01)
     }
 }

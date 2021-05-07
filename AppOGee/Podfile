@@ -1,5 +1,6 @@
 use_frameworks!
 
 target 'AppOGee' do
+pod 'RBBAnimation', '0.4.0'
 
 end

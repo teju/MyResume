@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7918C2A62483A37400DD5B33 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2A52483A37400DD5B33 /* InitialViewController.swift */; };
 		7918C2A82483A3B600DD5B33 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2A72483A3B600DD5B33 /* TabViewController.swift */; };
-		7918C2AA2483AADC00DD5B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7918C2A92483AADC00DD5B33 /* LaunchScreen.storyboard */; };
 		7918C2AC2483C74C00DD5B33 /* WorkTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2AB2483C74C00DD5B33 /* WorkTabViewController.swift */; };
 		7918C2AF2483C7F200DD5B33 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2AE2483C7F200DD5B33 /* GradientView.swift */; };
 		7918C2B22483C99A00DD5B33 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C2B02483C99A00DD5B33 /* CarouselCollectionViewCell.swift */; };
@@ -23,13 +22,7 @@
 		796A9D7D2481446C00233FCF /* AppOGeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A9D7C2481446C00233FCF /* AppOGeeTests.swift */; };
 		796A9D882481446C00233FCF /* AppOGeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A9D872481446C00233FCF /* AppOGeeUITests.swift */; };
 		796A9D98248145CC00233FCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796A9D97248145CC00233FCF /* Main.storyboard */; };
-		BDC780582640017C00353257 /* LNPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC780512640017900353257 /* LNPanelViewController.swift */; };
-		BDC780592640017C00353257 /* LNSideMenuMangement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC780522640017900353257 /* LNSideMenuMangement.swift */; };
-		BDC7805A2640017C00353257 /* LNCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC780532640017900353257 /* LNCommon.swift */; };
-		BDC7805B2640017C00353257 /* LNItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC780542640017B00353257 /* LNItemView.swift */; };
-		BDC7805C2640017C00353257 /* LNSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC780552640017B00353257 /* LNSideMenuView.swift */; };
-		BDC7805D2640017C00353257 /* LNSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC780562640017C00353257 /* LNSideMenu.swift */; };
-		BDC7805E2640017C00353257 /* LNSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC780572640017C00353257 /* LNSideMenuNavigationController.swift */; };
+		BD3F51622643EAA200F14311 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3F51612643EAA000F14311 /* MenuViewController.swift */; };
 		BE23F9C716819DE3F981000F /* Pods_AppOGee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D1CF156318ADAFF2ED1307 /* Pods_AppOGee.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +48,6 @@
 		43C79F648D6E6D7D3A0378F5 /* Pods-AppOGee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppOGee.release.xcconfig"; path = "Target Support Files/Pods-AppOGee/Pods-AppOGee.release.xcconfig"; sourceTree = "<group>"; };
 		7918C2A52483A37400DD5B33 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		7918C2A72483A3B600DD5B33 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		7918C2A92483AADC00DD5B33 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7918C2AB2483C74C00DD5B33 /* WorkTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTabViewController.swift; sourceTree = "<group>"; };
 		7918C2AE2483C7F200DD5B33 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		7918C2B02483C99A00DD5B33 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -76,13 +68,7 @@
 		796A9D892481446C00233FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796A9D97248145CC00233FCF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B2D1CF156318ADAFF2ED1307 /* Pods_AppOGee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppOGee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDC780512640017900353257 /* LNPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNPanelViewController.swift; sourceTree = "<group>"; };
-		BDC780522640017900353257 /* LNSideMenuMangement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNSideMenuMangement.swift; sourceTree = "<group>"; };
-		BDC780532640017900353257 /* LNCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNCommon.swift; sourceTree = "<group>"; };
-		BDC780542640017B00353257 /* LNItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNItemView.swift; sourceTree = "<group>"; };
-		BDC780552640017B00353257 /* LNSideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNSideMenuView.swift; sourceTree = "<group>"; };
-		BDC780562640017C00353257 /* LNSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNSideMenu.swift; sourceTree = "<group>"; };
-		BDC780572640017C00353257 /* LNSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		BD3F51612643EAA000F14311 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = AppOGee/controller/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				7918C2A52483A37400DD5B33 /* InitialViewController.swift */,
-				796A9D652481446900233FCF /* AppDelegate.swift */,
 				7918C2A72483A3B600DD5B33 /* TabViewController.swift */,
 				7918C2AB2483C74C00DD5B33 /* WorkTabViewController.swift */,
 				7918C2B82483D04700DD5B33 /* WorkListViewController.swift */,
+				BD3F51612643EAA000F14311 /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -134,7 +120,6 @@
 		7918C2AD2483C7D700DD5B33 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				BDC78048264000EA00353257 /* sideMenu */,
 				7918C2D824841D6F00DD5B33 /* AMTabsViewController.swift */,
 				7918C2D724841D6F00DD5B33 /* AMTabView.swift */,
 				7918C2B62483CAFC00DD5B33 /* UPCarouselFlowLayout.swift */,
@@ -173,8 +158,8 @@
 				7918C2AD2483C7D700DD5B33 /* CustomViews */,
 				7918C2A424839FF100DD5B33 /* Controller */,
 				796A9D6B2481446C00233FCF /* Assets.xcassets */,
+				796A9D652481446900233FCF /* AppDelegate.swift */,
 				796A9D732481446C00233FCF /* Info.plist */,
-				7918C2A92483AADC00DD5B33 /* LaunchScreen.storyboard */,
 				796A9D97248145CC00233FCF /* Main.storyboard */,
 			);
 			path = AppOGee;
@@ -207,20 +192,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BDC78048264000EA00353257 /* sideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				BDC780532640017900353257 /* LNCommon.swift */,
-				BDC780542640017B00353257 /* LNItemView.swift */,
-				BDC780512640017900353257 /* LNPanelViewController.swift */,
-				BDC780562640017C00353257 /* LNSideMenu.swift */,
-				BDC780522640017900353257 /* LNSideMenuMangement.swift */,
-				BDC780572640017C00353257 /* LNSideMenuNavigationController.swift */,
-				BDC780552640017B00353257 /* LNSideMenuView.swift */,
-			);
-			path = sideMenu;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,6 +203,7 @@
 				796A9D5E2481446900233FCF /* Sources */,
 				796A9D5F2481446900233FCF /* Frameworks */,
 				796A9D602481446900233FCF /* Resources */,
+				24120E9FA159E68AFF44A9F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,7 +298,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7918C2AA2483AADC00DD5B33 /* LaunchScreen.storyboard in Resources */,
 				796A9D6C2481446C00233FCF /* Assets.xcassets in Resources */,
 				796A9D98248145CC00233FCF /* Main.storyboard in Resources */,
 			);
@@ -349,6 +320,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24120E9FA159E68AFF44A9F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DD665ADFACE87D9A04FADAB2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,20 +370,14 @@
 				796A9D662481446900233FCF /* AppDelegate.swift in Sources */,
 				7918C2B32483C99A00DD5B33 /* Character.swift in Sources */,
 				7918C2DA24841D6F00DD5B33 /* AMTabsViewController.swift in Sources */,
-				BDC7805A2640017C00353257 /* LNCommon.swift in Sources */,
 				7918C2B92483D04700DD5B33 /* WorkListViewController.swift in Sources */,
 				7918C2D924841D6F00DD5B33 /* AMTabView.swift in Sources */,
-				BDC7805E2640017C00353257 /* LNSideMenuNavigationController.swift in Sources */,
 				7918C2AF2483C7F200DD5B33 /* GradientView.swift in Sources */,
 				7918C2A62483A37400DD5B33 /* InitialViewController.swift in Sources */,
 				7918C2B22483C99A00DD5B33 /* CarouselCollectionViewCell.swift in Sources */,
 				7918C2B72483CAFC00DD5B33 /* UPCarouselFlowLayout.swift in Sources */,
-				BDC780592640017C00353257 /* LNSideMenuMangement.swift in Sources */,
 				7918C2AC2483C74C00DD5B33 /* WorkTabViewController.swift in Sources */,
-				BDC7805B2640017C00353257 /* LNItemView.swift in Sources */,
-				BDC7805C2640017C00353257 /* LNSideMenuView.swift in Sources */,
-				BDC7805D2640017C00353257 /* LNSideMenu.swift in Sources */,
-				BDC780582640017C00353257 /* LNPanelViewController.swift in Sources */,
+				BD3F51622643EAA200F14311 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

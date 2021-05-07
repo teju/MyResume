@@ -20,13 +20,16 @@ class TabViewController: AMTabsViewController {
    private func setTabsControllers() {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
       let graveViewController = storyboard.instantiateViewController(withIdentifier: "WorkTabViewController")
-      let bumpkinViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
-      let fireworkViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
-      let ghostViewController = storyboard.instantiateViewController(withIdentifier: "InitialViewController")
+      let bumpkinViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+    let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+
+      let fireworkViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+      let ghostViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
 
       viewControllers = [
         graveViewController,
         bumpkinViewController,
+        menuViewController,
         fireworkViewController,
         ghostViewController
       ]
