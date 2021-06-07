@@ -1,92 +1,272 @@
 {
   "AppDetails" : [ {
+    "ID" : "1000",
     "app_name" : "Netzealous",
-    "bg_image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2Fbg.png?alt=media&token=74d0f24c-c54c-4051-b086-c91a0a15a3b3",
+    "bg_image" : "#1A78B7",
     "description" : "NetZealous, a provider of Professional Education, e-learning solutions. Our training services set new benchmarks, as a result of which our customers get customized, cost-effective, on-demand training solutions from us. Our trainings are effective and tailored to suit their exact needs, and are from Experts who are well-known in the industry.",
-    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2FLogo%201.png?alt=media&token=7b73bcf2-400f-48e1-8c36-4f02cac740e5",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Shadow%20Screens%2FNetZealous.png?alt=media&token=ce12130a-02cd-45d8-8b39-9a67ebe54a51",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
     "ratings" : "4",
-    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2F2.1.png?alt=media&token=dfa60666-9be5-4280-a3f1-34e2362bca8c", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2F2.2.png?alt=media&token=214bcbb4-f6f5-4b5d-92a8-50fc9677c82f", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2Fnetzealous%2F2.3.png?alt=media&token=61098893-1974-43d9-aa3b-41ede64bce65" ]
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FNetZealous.jpg?alt=media&token=ecfe079f-01a4-4ea1-9da0-8b5a0640daf0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2F1%20(2).jpg?alt=media&token=12bf471b-1ec6-4cee-91dc-48bff733737d", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2F1%20(3).jpg?alt=media&token=4161bd2f-a0f5-450e-8496-8c9ab81d5a89", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2F1%20(4.1).jpg?alt=media&token=87b4f3fc-c3b5-4c1a-853d-41aa3bdcaa69", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2F1%20(5).jpg?alt=media&token=890035e4-0b46-4103-ad09-f91666479065", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2F1%20(6).jpg?alt=media&token=70a5cf1a-98b6-4b56-9515-d227eaead89b", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2F1%20(7).jpg?alt=media&token=c1ca934b-b62d-4457-9d5e-b0f042bda589", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2F1%20(8).jpg?alt=media&token=23526867-2405-45f2-880e-7dd8f5175ff8", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2F1%20(9).jpg?alt=media&token=c3e53d6d-0310-45d8-aaea-96b8d5c08bc2", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2F1%20(10).jpg?alt=media&token=66549175-5729-4578-bb5f-9969907fe6f9" ]
+  }, {
+    "ID" : "1001",
+    "app_name" : "Caferides",
+    "bg_image" : "#900D11",
+    "description" : "Caferides is a high-end luxury motorcycles renting company based in Kerala, the Gods Own Country. Kerala's first authorised motorcycle rental firm.",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Shadow%20Screens%2FCaferide.png?alt=media&token=fa7a9d1f-68ec-42ff-826b-d3fa8f54c97a",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2FCLogo.png?alt=media&token=84b5d9b1-b179-4bb3-84fb-7dd6d715b4ad",
+    "ratings" : "4.3",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2F1%20(1).jpg?alt=media&token=2b88f87b-d927-41d9-ada4-5e60d7bc4c83", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2F1%20(2).jpg?alt=media&token=ffeaf640-2ce5-45cf-b34c-6ad8b5d808b5", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2F1%20(3).jpg?alt=media&token=bb7064a3-3be7-4e23-9f43-ccb42c19f9f1", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2F1%20(4).jpg?alt=media&token=f3ce3cd0-46e1-4f35-8614-a19bd5b29cb8", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2F1%20(5).jpg?alt=media&token=c9fa3a04-a152-43ca-b641-9721856cd48e", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2F1%20(6).jpg?alt=media&token=c8689e89-b6d7-4922-ac71-4492a705ec96", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2F1%20(7).jpg?alt=media&token=2f3b2f9f-046a-488a-8a0b-66073ae7c9ca" ]
+  }, {
+    "ID" : "1002",
+    "app_name" : "Compliance4All",
+    "bg_image" : "#3497DA",
+    "description" : "Compliance4All, the ultimate continuing professional education provider offers you regulatory and compliance trainings from the industry,s leading experts.",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Shadow%20Screens%2FCompliance4all.png?alt=media&token=a0064d94-3994-4515-aee0-466a6b3c37d0",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2Flogo.png?alt=media&token=b3c9141a-8366-4deb-8daf-c809480d4a0e",
+    "ratings" : "4",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(1).jpg?alt=media&token=d14b3002-7987-42e9-a06b-2be766fa53f3", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(2).jpg?alt=media&token=34d1b2f6-98f8-4cef-a446-1a5654bdbdf1", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(3).jpg?alt=media&token=3552699b-6162-4c17-8b65-db07ceb80117", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(4).jpg?alt=media&token=98f9a769-9d43-4894-9f08-010f7f5fccdf", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(5).jpg?alt=media&token=c8b3264f-8492-404a-afac-741ab04a1398", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(6).jpg?alt=media&token=688c5b9f-8372-4e20-80fe-1c2d63b5a92d", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(7).jpg?alt=media&token=de1e3101-a47e-45ac-b53e-46e6797b49a2", "https://console.firebase.google.com/u/3/project/appogee-2a96b/storage/appogee-2a96b.appspot.com/files~2Fapps~2FComplaince4All", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(9).jpg?alt=media&token=c21c2249-bc8e-4286-a453-5a0493767282", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(10).jpg?alt=media&token=3e708d17-d5c9-4a05-85b7-5057ca419693", "https://console.firebase.google.com/u/3/project/appogee-2a96b/storage/appogee-2a96b.appspot.com/files~2Fapps~2FComplaince4All", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2F1%20(12).jpg?alt=media&token=0393f56a-07bc-4feb-963e-b64fb20725fc" ]
+  }, {
+    "ID" : "1003",
+    "app_name" : "Eazy Chat",
+    "bg_image" : "#85B1F2",
+    "description" : "Be together whenever, with our free* all-in-one communication app, complete with unlimited text, voice, video calling and group video chat features and more",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Shadow%20Screens%2FEazi.png?alt=media&token=5a2976f1-9a8a-4d3d-97de-752d42cfc57e",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2Flogo.jpg?alt=media&token=122311a8-add4-4a1a-8e34-7fe3dc48ca58",
+    "ratings" : "4.3",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.1.jpg?alt=media&token=bf53c5b9-0ea0-4170-9f83-557ffa42a35e", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.2.jpg?alt=media&token=e78399fd-d1a4-43ea-8ddc-0370cd6dad59", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.3.jpg?alt=media&token=c81cd11f-66af-4038-872c-4d2044fbe84f", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.4.jpg?alt=media&token=ee58e9c7-2400-4102-a552-d267dfeec854", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.5.jpg?alt=media&token=7cdb70c8-7e8c-426b-bfdf-9677498ecff2", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.6.jpg?alt=media&token=a05aede8-3838-4707-a8f4-7927a69e6696", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.7.jpg?alt=media&token=437a7fc1-9005-4bee-93f1-e3bbc8618a77", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.8.jpg?alt=media&token=cbb8f295-72ee-4d03-b62d-3801be4f707b", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.9.jpg?alt=media&token=ce67174d-e90c-4b59-a3e4-9771d93d37af", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2F1.10.jpg?alt=media&token=8e90765a-61f3-4c73-a2e0-66f6e9a77924" ]
+  }, {
+    "ID" : "1004",
+    "app_name" : "GIVB",
+    "bg_image" : "8A4145",
+    "description" : "GIVB is a suite of global social-personal financial mobile applications designed and built especially for the underserved or unbanked smallholders in agrifood supply chains.",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Shadow%20Screens%2FGIVB.png?alt=media&token=ba397052-969b-4d26-95b0-384fbd9fe524",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2FcLogo.png?alt=media&token=f7438514-f696-4dae-91e5-6569ce8ff7b1",
+    "ratings" : "3.9",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2F1.jpg?alt=media&token=eb9c551a-3ca7-41ca-a4c2-021348ea1ae2", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2F2.jpg?alt=media&token=0faa8093-e71a-4aa5-8209-43002698bb7d", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2F3.jpg?alt=media&token=1b195073-098d-481b-baa9-8db5ffd1fb79", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2F4.jpg?alt=media&token=8cf507da-b464-4ba7-8ee7-b32b49e701ae", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2F5.jpg?alt=media&token=2d1e6bbc-4cc2-45d9-a426-4e93d474686c", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2F6.jpg?alt=media&token=e609552c-3db5-4fe0-bf5b-c2e05a16d525", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2F7.jpg?alt=media&token=c4e1e79e-4fc4-4923-842c-e671a55d67cc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2F8.jpg?alt=media&token=1cd64610-5f61-4295-a13e-494ec3d0e188" ]
+  }, {
+    "ID" : "1005",
+    "app_name" : "Game On Nila",
+    "bg_image" : "C62044",
+    "description" : "Game On Nila is a Sport Singapore portal with sports news, events calendar as well as facilities and coaches directory for everyone to watch and play sports!",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Shadow%20Screens%2FGON.png?alt=media&token=8c51c2cb-b79b-45c9-9705-7b0435782400",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2Fclogo.png?alt=media&token=79e9b9f6-e8da-4a98-8796-c8c905473307",
+    "ratings" : "4.5",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2F1.jpg?alt=media&token=a0b5bdec-e97b-43a7-a183-4a1b74aaa20a", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2F2%20(1).jpg?alt=media&token=b92c56b0-17e3-4cc5-b135-22da28cdb9c9", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2F2%20(2).jpg?alt=media&token=94208e1c-54fe-4f13-9a07-b04377bba62e", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2F2%20(3).jpg?alt=media&token=851d0644-dc2b-4a99-9ecf-6baefa2e2353", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2F2%20(4).jpg?alt=media&token=88c68205-c701-4f32-9b4d-45e0298601ad", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2F2%20(5).jpg?alt=media&token=345c8559-4ec7-4573-9a84-a2bcbc9d2800", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2F2%20(6).jpg?alt=media&token=f7b81756-65bd-4559-bb26-2e4e7144a68c", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2F2%20(7).jpg?alt=media&token=a02e4dbf-1337-4605-b82e-6bff03f30a3e", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2F2%20(8).jpg?alt=media&token=2732a964-d928-45a4-9671-d0dfdf26696d" ]
+  }, {
+    "ID" : "1006",
+    "app_name" : "GridChamps",
+    "bg_image" : "13171F",
+    "description" : "GridChamps, bet on your favorite sports and esports around the world using live in-play odds from a major sportsbook. Now you can enjoy the fun and thrill of sports",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Shadow%20Screens%2FGrid%20Champs.png?alt=media&token=42a7985a-7d00-420d-bab0-bd80b175d019",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGridChamps%2Flogo.png?alt=media&token=9c9ee29b-2833-4e51-830b-7cac00eb7086",
+    "ratings" : "4",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGridChamps%2F1.jpg?alt=media&token=d91fa27f-f6d2-43b7-bb55-1d799c8e31f2", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGridChamps%2F1%20(2).jpg?alt=media&token=9b3afe7e-3092-4308-9d6a-d3c288bbb130", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGridChamps%2F1%20(3).jpg?alt=media&token=f47f9bec-22e3-470a-8f11-e7be0464ffa4", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGridChamps%2F1%20(4).jpg?alt=media&token=8c7b3941-a2b5-48ab-b8d6-98d41017714b", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGridChamps%2F1%20(5).jpg?alt=media&token=1ff68c09-9521-4568-a479-0d30a5308e7f", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGridChamps%2F1%20(6).jpg?alt=media&token=6cd3514e-012f-4c51-a84e-7b27b1684ee4" ]
+  }, {
+    "ID" : "1007",
+    "app_name" : "MaaTiffan",
+    "bg_image" : "A60000",
+    "description" : "MaaTiffan, It is a healthy home made food tiffan subscription service. South Indian & Multi Cuisine subscription based daily meal service.",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Shadow%20Screens%2FMaaTiffens.png?alt=media&token=da70a5ab-f5f0-4bfc-bd52-9f9eab1eb427",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2FLogo.png?alt=media&token=71e17738-23dc-4aac-9f4d-9a8bdcc77e06",
+    "ratings" : "3",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2FMaaTiffens.jpg?alt=media&token=0aacc8e6-b551-4699-a81b-bd8e575d4605", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2F1%20(2).jpg?alt=media&token=62841541-aeb7-4b6b-a173-e5e99e6ec72f", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2F1%20(3).jpg?alt=media&token=dba269b4-cd64-4771-ac0d-a22d89f6b734", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2F1%20(4).jpg?alt=media&token=bdbb71b9-4d64-478c-9804-e1ef01df9968", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2F1%20(5).jpg?alt=media&token=6e74ac31-8751-4a5a-ad1f-b78a3b69a051", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2F1%20(6).jpg?alt=media&token=6ee902b3-21d1-48b2-ab74-e5c266b4508d", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2F1%20(7).jpg?alt=media&token=30e0c57b-194b-4000-a7da-7baf0d34fe37", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2F1%20(8).jpg?alt=media&token=74a72a6f-7473-4b36-8b9b-a79e47b16721" ]
+  } ],
+  "aboutus" : [ {
+    "Description" : "Well-qualified Full Stack Developer familiar with a wide range of programming utilities and languages. Knowledgeable of web development and DevOps. Able to handle any part of the process with ease. Collaborative team player with excellent technical abilities offering 6 years of related experience. Proposed technical feasibility solutions for new functional designs and suggested options for performance improvement of technical objects. Managed milestones from initial steps through final delivery. Reviewed code, debugged problems,troubleshooting, diagnostics and analysis to uncover root malfunctions and corrected issues. ",
+    "Experience" : "6 years",
+    "Level" : "Expert",
+    "Name" : "Tejaswini",
+    "Role" : "iOS & Android Developer",
+    "bg_view" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FBG%2FTR.png?alt=media&token=4411a789-2f6b-4984-9304-ececfb5c325a",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2Fteju.jpg?alt=media&token=9f3993c9-6c11-4c15-8c73-cb62d3150312"
+  }, {
+    "Description" : "Data Scientist, Machine Learning Engineer, Artificial Intelligence Engineer with a good math background, who takes pride in building models that translate data points into business insights. Always looking for a challenging and fast-paced environment which develop skills and apply knowledge to real-world business problems. Responsibilities Includes, thinking the solution of Problems related data and Machine Learning. And Obviously code in Python. ",
+    "Experience" : "3 years",
+    "Level" : "Skillful",
+    "Name" : "Chaithanya",
+    "Role" : "Data Scientist & AI Developer",
+    "bg_view" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FBG%2FTB.png?alt=media&token=25fb1cbc-4e65-4ae4-b939-a5f1089b61e9",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2Fchai.jpg?alt=media&token=0e2f4e93-7d16-4fdd-9711-745eb34d8c77"
+  }, {
+    "Description" : "Passionately Curious about Business Development. Fascinated most about service and marketing. Love to dig into customer problems and solve them with modern technology. Create, scale, and optimize service portfolio that matters. To accomplish this, focus on key results, build amazing teams, and quickly adapt to new insights. Enjoyed many executive positions throughout career.  ",
+    "Experience" : "6 years",
+    "Level" : "Proficient",
+    "Name" : "Nijin",
+    "bg_view" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FBG%2FTG.png?alt=media&token=cdd0816a-cc0a-4e06-bca7-5046832b531f",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FNijin.jpg?alt=media&token=d22455b8-3724-4339-a0eb-9ba9dbfc063b",
+    "role" : "Business Development Manager"
+  }, {
+    "Description" : "Experienced in Program/Project Management professional skills, with a demonstrated history of working in IT and services industry. Project scope review and analysis. Gathering end user requirements through documentation, client communication, project transformation, observation and questionnaires. Development task allocation. Organizing and motivating a project team. Project Delivery, Management, Financial Management and Stakeholder Management. Planned projects defining goals, schedule, scope/deliverables, and budget with high values. Excellent presentation, communication and organizational skills. Coordinated cross-functional teams up to a size of 30 in acquiring software and hardware resources, monitoring status, and controlling project changes.",
+    "Experience" : "8 years",
+    "Level" : "Proficient",
+    "Name" : "Zeeshan",
+    "bg_view" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FBG%2FTR1.png?alt=media&token=fb9ad83c-d2d9-4186-b0fd-1620a8be5c78",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FZsh.jpg?alt=media&token=b2d8c7db-6eda-49d1-9817-f45b918e5094",
+    "role" : "Project Manager"
   } ],
   "features" : {
     "contents" : [ {
-      "content" : "It does not matter the team is in New York, Singapore, Sweden, Bangalore or anywhere in the world. World class IT team on demand.\nWe specialise in Mobile app development, block chain and ai projects. Expert Indian Developers for our esteemed client all over the world",
+      "content" : "It does not matter the team is in New York, Singapore, Sweden, Bangalore or anywhere in the world. World class IT team on demand.\nWe specialise in Mobile app development, block chain and AI projects. Expert Indian Developers for our esteemed client from all over the world",
       "description" : "null",
       "subtitle" : " The New Normal . . . . . ",
-      "tittle" : "Remote 's . . . . . ."
+      "tittle" : "Remote Work's . . . . . ."
     }, {
-      "content" : "We create a fast and smooth app for Android &amp; iOS on native platform, we also deliver products with outsourcing app development model.\nRejuvenate your brand, increase visibility and accessibility through professionally built mobile apps from Smart IT ian’s across the world. We’ll make your Mobile App Development easy and problem-free using agile app development strategies to meet your various business requirements.",
+      "content" : "We create a fast and smooth app for Android & iOS on native platform, we also deliver products with outsourcing app development model.\nRejuvenate your brand, increase visibility and accessibility through professionally built mobile apps from Smart IT ian’s across the world. We’ll make your Mobile App Development easy and problem-free using agile app development strategies to meet your various Business requirements.",
       "description" : "We build not just Apps but an experiences that You will never forget.",
       "subtitle" : "null",
       "tittle" : "Mobile App Development"
     }, {
-      "content" : "It does not matter the team is in New York, Singapore, Sweden, Bangalore or anywhere in the world. World class IT team on demand.\nWe specialise in Mobile app development, block chain and ai projects. Expert Indian Developers for our esteemed client all over the world",
+      "content" : "We are just a text away to estimate your unique app idea, we imagine your future app and get started with the development. Build what you need on time & stay in budget. Get a guaranteed price for your app before you start, You control it. add more features and pay more, remove features and you’ll pay less. There’s no guesswork with your app. You decide how fast you want it delivered. Almost Done! Find the Whats App logo below and reach us with a lightening speed. Team replies typically in few minutes.",
       "description" : "null",
       "subtitle" : " Let's Get Started.",
-      "tittle" : "Have an Idea !!"
+      "tittle" : "Turn your idea into an app, fast !!"
     }, {
-      "content" : "Let our experts handle all your ideas and document into a right set of configurations to code &amp; decode to the right paths of success. As AppOGee says Remote works is the new normal. We have experienced it before 2021 pandemic. We always have worked Remote",
+      "content" : "Let our experts handle all your ideas and document into a right set of configurations to code & decode to the right paths of success. Reliable code - Rigorous testing. Everything just works automated. We use AI and ML to test your code. Human testers recheck it. We do not have to waste time on typos & concentrate on making your app more engaging. Quick development & delivery. We maintain your project to keep it running smoothly. AppOGee Cloud Experts make huge savings and chose best cloud partner to run your app. As AppOGee says remote works is the new normal. We have experienced it before 2021 pandemic. We always have worked Remotely",
       "description" : "null",
       "subtitle" : "LEAD'S IT",
       "tittle" : "New Capablities "
     } ],
     "keynotes" : [ {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%202.png?alt=media&token=e77a4249-6f37-41a5-93d2-14d583a15439",
       "description" : "Mobile app development for iPhone, iPad and Android in Native. Natives are very fast. Easily distributed in google apple app stores. More interactive and intuitive. Easily interact with any feature of the phone.",
-      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-mateusz-dach-424299.jpg?alt=media&token=97ff1b62-ce34-4d64-9e7b-aea3ea45a389",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-pixabay-356056.jpg?alt=media&token=3278cb4f-e88f-493f-910c-d95bc2fddfa1",
       "title" : "Native Mobile Apps"
     }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%204.png?alt=media&token=3e064c70-408b-498a-9a84-f02008c67be6",
       "description" : "Futuristic app development techniques to create iOS mobile apps for iPhone and iPad.",
-      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-mateusz-dach-424299.jpg?alt=media&token=97ff1b62-ce34-4d64-9e7b-aea3ea45a389",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fdaniel-korpai-Y3LGWCsrgmg-unsplash.jpg?alt=media&token=aa9f0f4c-6e05-41d9-9751-f0cda612d276",
       "title" : "Latest iOS Apps"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%203.png?alt=media&token=448c4cf6-5237-4fe7-91d2-d6cbad7b9baf",
+      "description" : "Our highly skilled & knowledgeable team of Android & iOS app developers deliver the best neatest code possible, which will be branched, and sub branched in a chain. Easy fix even to adapt the change in future version updates.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fflorian-olivo-4hbJ-eymZ1o-unsplash.jpg?alt=media&token=871e73ca-e250-4472-896e-3714c1fa2939",
+      "title" : "Skilful Team"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%205.png?alt=media&token=2183eae8-0e05-4da7-8f7b-70caf3e62f5a",
+      "description" : "We use agile methodology to deliver apps that match your goals, timeline and budget. We seek immediate solutions and evolve through the collaborative effort of self-organizing and cross-functional teams and their customers.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FTrust%20Security.jpg?alt=media&token=989ec549-4821-4d87-845a-cc05a9ccec1f",
+      "title" : "Trusted Delivery"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%204.png?alt=media&token=3e064c70-408b-498a-9a84-f02008c67be6",
+      "description" : "We test as until we stress the RAM to the core for crashes or bugs before production. Our QA’s (Quality Assurance) team ensures smooth app functioning.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-christina-morillo-1181244.jpg?alt=media&token=431a15dc-aa42-4248-9620-df0f9981a9c1",
+      "title" : "Rigorous Quality"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%203.png?alt=media&token=448c4cf6-5237-4fe7-91d2-d6cbad7b9baf",
+      "description" : "We follow App Store & Playstore policies & guidelines thoroughly and every time we be up to date with updates to address industry specific security requirements and business compliance standards.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Falexander-shatov-mr4JG4SYOF8-unsplash.jpg?alt=media&token=f756792e-c75e-4c0b-a14b-c1c8454c2d29",
+      "title" : "Security & Compliance"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%205.png?alt=media&token=2183eae8-0e05-4da7-8f7b-70caf3e62f5a",
+      "description" : "Team viewer, Skype etc,. Access granted, watch as we work, we provide complete project visibility from day one, work with you, always available for you.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-pew-nguyen-241028.jpg?alt=media&token=92340efa-5999-4fb7-83cc-b35ee7c85f02",
+      "title" : "Transparency"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%203.png?alt=media&token=448c4cf6-5237-4fe7-91d2-d6cbad7b9baf",
+      "description" : "We offer your best in Industry and friendly Mobile App Development Project competitive quotes and rates, pay by hours of works or pay as whole quote.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-pixabay-262470.jpg?alt=media&token=99fe7a7c-3139-4095-8288-35d28952cc2c",
+      "title" : "Competetive Quotes"
     } ],
     "keynotes_icons" : [ {
-      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCompetitive%20Price.png?alt=media&token=0092229e-6d7b-4aa9-8051-562e17002e75",
-      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCompetitive%20Price.png?alt=media&token=0092229e-6d7b-4aa9-8051-562e17002e75"
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCustomised%20Mobile%20Apps.png?alt=media&token=a1f6e4e8-e72f-4ea4-8d99-09903462f756",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Customised%20Mobile%20Apps.png?alt=media&token=2df8787c-415a-494e-8da7-8e26c6668b29"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FLatest%20iOS%20Apps.png?alt=media&token=3dfa9b1f-5d36-4987-b91f-93c45f644a9b",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUn%20Latest%20iOS%20Apps.png?alt=media&token=10da1383-a75b-4da2-a50b-80c9ab1f5669"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FSkilful%20Team.png?alt=media&token=1ce5b7e7-642e-4020-bd02-1150ee088534",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Skilful%20Team.png?alt=media&token=01da1c3c-61fa-4845-ae09-caa537f3e1a8"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FTrusted%20Delivery.png?alt=media&token=5aef60a6-0cc3-45e1-a22c-bfc9a537991a",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Trusted%20Delivery.png?alt=media&token=31d2f629-29a0-4e9c-992f-0e4f617a2d72"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FRigorous%20Quality.png?alt=media&token=f10a7976-7e83-4b16-8c06-338570c1b781",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Rigorous%20Quality.png?alt=media&token=eb96e6ef-55bc-4a4e-97c1-a1a06c5c0a7a"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FSecurity%20_%20Compliance.png?alt=media&token=eee315b3-8c3f-4653-a549-c47204a84483",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Security%20_%20Compliance.png?alt=media&token=6d4da893-06b1-44ca-a795-2ec7a859e13c"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FProject%20Transparency.png?alt=media&token=0f587552-9826-4685-8b2e-9bf06406b447",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUn%20Project%20Transparency.png?alt=media&token=2b80aed5-275b-442f-ad5d-beee5e76f5cc"
     }, {
       "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCompetitive%20Price.png?alt=media&token=0092229e-6d7b-4aa9-8051-562e17002e75",
-      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCompetitive%20Price.png?alt=media&token=0092229e-6d7b-4aa9-8051-562e17002e75"
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2Funselected%20Competitive%20Price.png?alt=media&token=d207f225-018a-4716-a086-594fd7ffd642"
     } ],
-    "scrollImages" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-christina-morillo-1181244.jpg?alt=media&token=e0d3b55d-d078-4926-b381-3f3e6a454df3", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-lisa-fotios-1092671.jpg?alt=media&token=d56f3921-6a4e-47ad-8a09-428b7da8fc59" ]
+    "scrollImages" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fpexels-fabian-wiktor-3471423.jpg?alt=media&token=1af4a135-a31d-4eca-9481-9d32bbf81924", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fdiscussing-mobile-app.jpg?alt=media&token=365d7d6f-fbe8-4795-8af7-fbc6845b3984", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fjoan-gamell-ZS67i1HLllo-unsplash.jpg?alt=media&token=f1114018-3494-4fa9-bbec-b3a130406c5b", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fmarvin-meyer-SYTO3xs06fU-unsplash.jpg?alt=media&token=8b4a9e90-0db8-4818-bd25-c1b641ad16b0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fux-indonesia-qC2n6RQU4Vw-unsplash.jpg?alt=media&token=1df13cc6-0de2-4486-81a3-72e9d596cc50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fmarkus-winkler-f2CPZZ2qcKs-unsplash.jpg?alt=media&token=f9ed344f-cf63-4a09-a70d-40dd663264e0" ]
   },
+  "home_page" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/home%2Fwelcome.png?alt=media&token=db6dba24-c0a4-430c-a3f4-80320c6ab8a1", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/home%2Fsmart_o_gee.png?alt=media&token=a1861979-1f7e-458b-900f-d397d8f065de", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/home%2Flets_connect.png?alt=media&token=a1370e9a-ea2a-4b91-a1e5-72da0d970045" ],
   "myApps" : [ {
-    "description" : "The ultimate continuing professional education provider offers you regulatory and compliance trainings from the industry’s leading experts.",
-    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Compliance4all.png?alt=media&token=02a17db2-8e7a-4b8d-a9fa-cb5ec3e20987",
-    "name" : "Compliance4All",
-    "othersLink" : "null",
-    "playstoreLink" : "null"
+    "ID" : "null",
+    "app_name" : "Netzealous",
+    "bg_colour" : "#1A78B7",
+    "description" : "NetZealous, a provider of Professional Education, e-learning solutions. Our training services set new benchmarks, as a result of which our customers get customized, cost-effective, on-demand training solutions from us. Our trainings are effective and tailored to suit their exact needs, and are from Experts who are well-known in the industry.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "text_colour" : "light"
   }, {
-    "description" : "Caferides is a high-end luxury motorcycle renting. Caferides helps motorcycle enthusiasts, adventure holiday travellers and destination explorers to discover and enjoy the places on two wheels.",
-    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Caferide.png?alt=media&token=784d10ee-13fc-4ec9-94c2-15d681a91fc5",
-    "name" : "Caferides",
-    "othersLink" : "null",
-    "playstoreLink" : "null"
+    "ID" : "null",
+    "app_name" : "Caferides",
+    "bg_colour" : "#900D11",
+    "description" : "Caferides is a high-end luxury motorcycles renting company based in Kerala, the Gods Own Country. Kerala's first authorised motorcycle rental firm.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2FCLogo.png?alt=media&token=84b5d9b1-b179-4bb3-84fb-7dd6d715b4ad",
+    "playstore_link" : "null",
+    "text_colour" : "light"
   }, {
-    "description" : "Eazy is a kind of a never ending fashion magazine or blog that contains daily new styles wearing from ordinary people and not only from high fashioned.",
-    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/Eazi.png?alt=media&token=c7b2529a-8412-42e7-a536-6ad4bbfaef16",
-    "name" : "Eazy",
-    "othersLink" : "null",
-    "playstoreLink" : "null"
+    "ID" : "null",
+    "app_name" : "Compliance4All",
+    "bg_colour" : "#3497DA",
+    "description" : "Compliance4All, the ultimate continuing professional education provider offers you regulatory and compliance trainings from the industry,s leading experts.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2Fclogo.png?alt=media&token=bff58296-7623-42e0-a317-59b90e6b4a40",
+    "playstore_link" : "null",
+    "text_colour" : "dark"
   }, {
-    "description" : "GIVB is a new record keeping App for Agriculture that makes farmer's work efficiently. Reports can be outputted easily just by adding entry records",
-    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/GIVB.png?alt=media&token=dc246f5c-8268-40bc-9c04-8a7e82102779",
-    "name" : "GIVB",
-    "othersLink" : "null",
-    "playstoreLink" : "null"
+    "ID" : "null",
+    "app_name" : "Eazy Chat",
+    "bg_colour" : "#85B1F2",
+    "description" : "Be together whenever, with our free* all-in-one communication app, complete with unlimited text, voice, video calling and group video chat features and more.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2FCNlogo.png?alt=media&token=02a434b6-1292-4209-aa43-468ece6e51cf",
+    "playstore_link" : "null",
+    "text_colour" : "light"
   }, {
-    "description" : "A Singapore rediscovers Edition of community game GameOn Nila!",
-    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/GON.png?alt=media&token=9e11cd32-4446-4717-a8b7-214dae227519",
-    "name" : "GON",
-    "othersLink" : "null",
-    "playstoreLink" : "null"
-  } ],
-  "users" : {
-    "user" : {
-      "array" : [ {
-        "email" : "nteju37@gmail.com",
-        "image" : "https://lh3.googleusercontent.com/a-/AOh14GjGxDYrfC1jIrT9mtuSlKrWiJOgPlnBNgMo2pX9Gw",
-        "mobile_no" : "",
-        "name" : "Tejaswini N",
-        "password" : ""
-      } ]
-    }
-  }
+    "ID" : "null",
+    "app_name" : "GIVB",
+    "bg_colour" : "#8A4145",
+    "description" : "GIVB is a suite of global social-personal financial mobile applications designed and built especially for the underserved or unbanked smallholders in agrifood supply chains.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2FcLogo.png?alt=media&token=f7438514-f696-4dae-91e5-6569ce8ff7b1",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "Game On Nila",
+    "bg_colour" : "#C62044",
+    "description" : "Game On Nila is a Sport Singapore portal with sports news, events calendar as well as facilities and coaches directory for everyone to watch and play sports!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2Fclogo.png?alt=media&token=79e9b9f6-e8da-4a98-8796-c8c905473307",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "GridChamps",
+    "bg_colour" : "#13171F",
+    "description" : "GridChamps, bet on your favorite sports and esports around the world using live in-play odds from a major sportsbook. Now you can enjoy the fun and thrill of sports",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGridChamps%2Fclogo.png?alt=media&token=2545a4b2-cf05-449d-bcc7-a1bf21bca193",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "MaaTiffan",
+    "bg_colour" : "#A60000",
+    "description" : "MaaTiffan, It is a healthy home made food tiffan subscription service. South Indian & Multi Cuisine subscription based daily meal service.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2FcLogo.png?alt=media&token=f6f5dafb-7d46-4494-9ab1-daba37fa9ec9",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "MaaTiffan",
+    "bg_colour" : "#000000",
+    "description" : "MaaTiffan, It is a healthy home made food tiffan subscription service. South Indian & Multi Cuisine subscription based daily meal service.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2FLogo.png?alt=media&token=26102330-591c-4333-b2dd-ba686767436c",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  } ]
 }

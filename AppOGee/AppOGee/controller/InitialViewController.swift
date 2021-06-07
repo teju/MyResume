@@ -12,6 +12,7 @@ import RBBAnimation
 class InitialViewController: UIViewController {
     
  
+    @IBOutlet weak var app_logo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // Change `2.0` to the desired number of seconds.
@@ -19,20 +20,21 @@ class InitialViewController: UIViewController {
 //            let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabViewController")
 //            self.navigationController?.pushViewController(initialViewController, animated: true)
 //        }
-        
+        dribbleAnim()
     }
     
     func dribbleAnim() {
-        let spring = RBBSpringAnimation(keyPath: "position.y")
+        let animator = UIDynamicAnimator(referenceView: view)
 
-        spring.fromValue = NSNumber(value: -100.0)
-        spring.toValue = NSNumber(value: 100.0)
-        spring.velocity = 0
-        spring.mass = 1
-        spring.damping = 10
-        spring.stiffness = 100
+        let gravityBehavior = UIGravityBehavior(items: [app_logo])
+        animator.addBehavior(gravityBehavior)
 
-        spring.isAdditive = true
-        spring.duration = spring.duration(forEpsilon: 0.01)
+        let collisionBehavior = UICollisionBehavior(items: [app_logo])
+        collisionBehavior.translatesReferenceBoundsIntoBoundary = true
+        animator.addBehavior(collisionBehavior)
+
+        let elasticityBehavior = UIDynamicItemBehavior(items: [app_logo])
+        elasticityBehavior.elasticity = 0.7
+        animator.addBehavior(elasticityBehavior)
     }
 }
