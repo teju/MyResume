@@ -19,20 +19,26 @@
                     android:layout_width="wrap_content"
                     android:adjustViewBounds="true"
                     android:src="@drawable/welcome"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="30dp"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/welcome"
                     android:layout_height="wrap_content">
                 </ImageView>
 
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/app_o_gee"
-                    android:layout_height="wrap_content">
-                </ImageView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/White"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/app_o_gee"
+                        android:layout_height="wrap_content">
+                    </ImageView>
+
+                </RelativeLayout>
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -69,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:text="We implement best on every design\nbuild wonderful mobile apps that\nengage today's consumer."
                 android:gravity="center_horizontal"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
@@ -81,7 +87,6 @@
                 android:layout_width="match_parent"
                 android:src="@drawable/smart_o_gee"
                 android:id="@+id/smart_o_gee"
-                android:layout_marginTop="-35dp"
                 android:adjustViewBounds="true"
                 android:layout_height="wrap_content">
             </ImageView>

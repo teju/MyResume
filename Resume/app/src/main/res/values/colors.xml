@@ -9,6 +9,7 @@
     <color name="transparent">#00000000</color>
     <color name="White">#ffffff</color>
     <color name="Black">#000000</color>
+    <color name="Black_transparent">#CC000000</color>
     <color name="soft_transparent_grey">#77DDDDDD</color>
     <color name="soft_grey">#FFDDDDDD</color>
     <color name="transparent_grey">#77333333</color>

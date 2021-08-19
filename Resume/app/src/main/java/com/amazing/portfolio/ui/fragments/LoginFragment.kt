@@ -44,9 +44,9 @@ class LoginFragment : BaseFragment() ,View.OnClickListener, GoogleApiClient.OnCo
         Handler().postDelayed({
             val image = ContinuousScrollableImageView(activity);
             image.setResourceId(R.drawable.sign_in_page);
-            image.setDirection(ContinuousScrollableImageView.LEFT);
+            image.setDirection(ContinuousScrollableImageView.UP);
             image.setScaleType(ContinuousScrollableImageView.FIT_XY);
-            image.setDuration(10000);
+            image.setDuration(80000);
             flTop.addView(image)
         }, 3)
         val gso =

@@ -1,9 +1,6 @@
 package com.amazing.portfolio.ui
 
-import android.R.id.message
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -32,7 +29,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_main.*
-import java.net.URLEncoder
 import java.util.*
 
 
@@ -66,43 +62,24 @@ class ActivityMain : AppCompatActivity() {
     fun startDribbleAnimation(){
         splash_logo.setImageResource(R.drawable.app_logo)
         splash_logo.clearAnimation()
-        val transAnim = TranslateAnimation(
-            0f, 0f, 0f,
-            getResources().getDisplayMetrics().heightPixels.toFloat() / 2 - 200
-        )
-        transAnim.startOffset = 500
-        transAnim.duration = 3000
-        transAnim.fillAfter = true
-        transAnim.interpolator = BounceInterpolator()
-        transAnim.setAnimationListener(object : AnimationListener {
+        val logoMoveAnimation = AnimationUtils.loadAnimation(this, R.anim.scale_out)
+
+        logoMoveAnimation.setAnimationListener(object : AnimationListener {
             override fun onAnimationStart(animation: Animation) {
             }
-
             override fun onAnimationRepeat(animation: Animation) {
                 // TODO Auto-generated method stub
             }
 
             override fun onAnimationEnd(animation: Animation) {
-                img_app.setImageResource(R.drawable.img_app)
-
-                val slideAnimation = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.left_enter)
-                img_app.startAnimation(slideAnimation)
-                gee.setImageResource(R.drawable.gee)
-
-                val slideAnimationright = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.right_enter)
-                val slideAnimationduo = AnimationUtils.loadAnimation(this@ActivityMain, R.anim.scale_up)
-                gee.startAnimation(slideAnimationright)
-                subtitle.text = "Application developers"
-                subtitle.startAnimation(slideAnimationduo)
+                app_o_gee.visibility = View.VISIBLE
                 Handler().postDelayed({
-                    rllanding.visibility = View.GONE
-                    subtitle.visibility = View.GONE
                    setFragment(LoginFragment())
                 }, 3000)
 
             }
         })
-        splash_logo.startAnimation(transAnim);
+        splash_logo.startAnimation(logoMoveAnimation);
 
     }
     fun triggerMainProcess(){
