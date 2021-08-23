@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.model.featuresContent.KeyNotes
-import com.amazing.portfolio.ui.GlideApp
 import com.amazing.portfolio.ui.adapters.FeaturesAdapter.ReyclerViewHolder
+import com.bumptech.glide.Glide
 import java.net.URL
 import java.util.*
 
@@ -34,7 +34,7 @@ class FeaturesAdapter(
         holder.tittle.text = keynotesList.get(position).title
         holder.description.text = keynotesList.get(position).description
         try {
-            GlideApp.with(context)
+            Glide.with(context)
                 .load(keynotesList.get(position).image)
                 .into(holder.image_view)
         } catch (e: Exception) {

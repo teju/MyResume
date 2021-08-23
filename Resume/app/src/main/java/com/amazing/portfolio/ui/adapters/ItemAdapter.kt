@@ -12,7 +12,6 @@ import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.model.AppData
 import com.amazing.portfolio.model.Products
-import com.amazing.portfolio.ui.GlideApp
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Glide.with
 import com.google.firebase.storage.FirebaseStorage
@@ -53,7 +52,7 @@ class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(item: AppData) {
         view.list_item_icon.setImageResource(R.drawable.ic_launcher_background)
-        GlideApp.with(itemView.context)
+        Glide.with(itemView.context)
             .load(item.image.trim())
             .into(view.list_item_icon)
 

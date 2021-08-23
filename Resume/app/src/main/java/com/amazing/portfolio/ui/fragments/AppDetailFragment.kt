@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.AppData
-import com.amazing.portfolio.ui.GlideApp
 import com.amazing.portfolio.ui.adapters.ProductImagesAdapter
+import com.bumptech.glide.Glide
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -87,7 +87,7 @@ class AppDetailFragment : BaseFragment() {
         }catch (e:Exception){
 
         }
-        GlideApp.with(activity!!)
+        Glide.with(activity!!)
             .load(products?.logo)
             .into(logo)
         tv_description.text = products?.description

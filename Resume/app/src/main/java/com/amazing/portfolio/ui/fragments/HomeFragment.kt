@@ -10,7 +10,6 @@ import android.view.ViewTreeObserver.OnScrollChangedListener
 import android.view.animation.AnimationUtils
 import androidx.annotation.RequiresApi
 import com.amazing.portfolio.R
-import com.amazing.portfolio.ui.GlideApp
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -44,7 +43,7 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
         myScrollView.getViewTreeObserver()
             .addOnScrollChangedListener(OnScrollChangedListener {
                 val scrollY: Int = myScrollView.getScrollY() // For ScrollView
-                if(scrollY > 320 &&  scrollY < 500) {
+                /*if(scrollY > 320 &&  scrollY < 500) {
                     val slideAnimation = AnimationUtils.loadAnimation(activity!!, R.anim.left_enter)
                     mobile_apps_dev.startAnimation(slideAnimation)
                     val slideAnimationRights = AnimationUtils.loadAnimation(activity!!, R.anim.right_enter)
@@ -68,7 +67,7 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
                     lets_connect.startAnimation(slideAnimationRights)
                     lets_connect.setImageResource(R.drawable.lets_connect)
                 }
-
+*/
             })
 
     }

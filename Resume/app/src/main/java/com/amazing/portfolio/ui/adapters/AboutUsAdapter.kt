@@ -13,7 +13,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.model.AboutUsData
-import com.amazing.portfolio.ui.GlideApp
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.home_fragment.*
 import java.util.*
 
@@ -61,10 +61,10 @@ class AboutUsAdapter(
         holder.level.text = "Level : "+aboutusList.get(position).Level
         holder.role.text = aboutusList.get(position).Role
         setAnimation(holder.itemView,position)
-        GlideApp.with(context)
+        Glide.with(context)
             .load(aboutusList.get(position).image)
             .into(holder.profile_pic)
-        GlideApp.with(context)
+        Glide.with(context)
             .load(aboutusList.get(position).bg_view)
             .into(holder.bg_view)
     }

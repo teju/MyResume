@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.Products
-import com.amazing.portfolio.ui.GlideApp
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.app_detail_fragment.*
 import kotlinx.android.synthetic.main.products_image_itemview.view.*
 
@@ -38,7 +38,7 @@ class ProductImagesAdapter(val context: Context) : RecyclerView.Adapter<ProductI
     override fun onBindViewHolder(holder: ProductImagesAdapter.ViewHolder, position: Int) {
         holder.itemView.setOnClickListener(this)
         holder.itemView.tag = holder.position
-        GlideApp.with(context)
+        Glide.with(context)
             .load(images.get(position))
             .into(holder.image_view)
 

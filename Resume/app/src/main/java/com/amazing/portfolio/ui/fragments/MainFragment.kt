@@ -15,7 +15,7 @@ class MainFragment : BaseFragment() {
 
     val MAINFRAGMENT_LAYOUT = R.layout.main_fragment
     private var currentTab = FIRST_TAB
-    var instance : Int = 2
+    var instance : Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

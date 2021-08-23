@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amazing.portfolio.R;
 import com.amazing.portfolio.model.Products;
-import com.amazing.portfolio.ui.GlideApp;
 import com.amazing.portfolio.ui.views.MatrixView;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -53,7 +53,7 @@ public class MyProjectsAdapter extends RecyclerView.Adapter {
             } else {
                 vh.text.setTextColor(context.getResources().getColor(R.color.Black));
             }
-            GlideApp.with(context)
+            Glide.with(context)
                     .load(mDatas.get(position).getLogo())
                     .into(vh.app_logo);
         } catch (Exception e){

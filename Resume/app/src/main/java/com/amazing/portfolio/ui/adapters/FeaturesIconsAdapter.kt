@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.featuresContent.KeyNotesICons
-import com.amazing.portfolio.ui.GlideApp
+import com.bumptech.glide.Glide
 import java.util.*
 
 class FeaturesIconsAdapter(
@@ -38,7 +38,7 @@ class FeaturesIconsAdapter(
         }
 
         try {
-            GlideApp.with(context)
+            Glide.with(context)
                 .load(imageURl)
                 .into(holder.icons)
         } catch (e: Exception) {

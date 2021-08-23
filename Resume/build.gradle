@@ -27,7 +27,7 @@ allprojects {
     project.ext.applicationId = "com.amazing.portfolio"
 
 
-    project.ext.myCompileSdkVersion = 28
+    project.ext.myCompileSdkVersion = 29
     project.ext.myBuildToolsVersion = "28.0.3"
 
     project.ext.myMinSdkVersion = 21

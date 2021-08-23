@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
-import com.amazing.portfolio.ui.GlideApp
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.app_detail_fragment.*
 import kotlinx.android.synthetic.main.products_image_itemview.view.*
 
@@ -35,7 +35,7 @@ class ProductImagesFullScreenAdapter(val context: Context) : RecyclerView.Adapte
     }
 
     override fun onBindViewHolder(holder: ProductImagesFullScreenAdapter.ViewHolder, position: Int) {
-        GlideApp.with(context)
+        Glide.with(context)
             .load(images.get(position))
             .into(holder.image_view)
 

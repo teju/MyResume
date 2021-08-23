@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.model.featuresContent.KeyNotes
-import com.amazing.portfolio.ui.GlideApp
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.list_item.view.*
 import java.lang.Exception
 import java.util.*
@@ -33,7 +33,7 @@ class ProjectListsAdapter(
 
     override fun onBindViewHolder(holder: ReyclerViewHolder, position: Int) {
         try {
-            GlideApp.with(context)
+            Glide.with(context)
                 .load(projectList.get(position).logo)
                 .into(holder.app_logo)
             holder.app_name.text = projectList.get(position).app_name
