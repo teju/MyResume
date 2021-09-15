@@ -5,14 +5,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.featuresContent.KeyNotes
 import com.amazing.portfolio.model.featuresContent.KeyNotesICons
-import com.amazing.portfolio.ui.adapters.FeaturesAdapter
+import com.amazing.portfolio.ui.adapters.KeyNotesAdapter
 import com.amazing.portfolio.ui.adapters.FeaturesIconsAdapter
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_features_two.*
@@ -20,7 +19,7 @@ import kotlinx.android.synthetic.main.whatsapp.*
 
 
 class FeaturesFragmentTwo : BaseFragment() {
-    private var recyclerViewAdapter: FeaturesAdapter? = null
+    private var recyclerViewAdapter: KeyNotesAdapter? = null
     private var recyclerViewBottomAdapter: FeaturesIconsAdapter? = null
     var databaseReference: DatabaseReference? = null
     val keynotesList = ArrayList<KeyNotes>()
@@ -48,7 +47,7 @@ class FeaturesFragmentTwo : BaseFragment() {
         recyclerView.layoutManager = linearLayoutManager
         recyclerView_bottom.layoutManager = linearLayoutManager_
 
-        recyclerViewAdapter = FeaturesAdapter(activity!!)
+        recyclerViewAdapter = KeyNotesAdapter(activity!!)
         recyclerViewAdapter?.keynotesList = keynotesList
         recyclerViewBottomAdapter = FeaturesIconsAdapter(activity!!)
         recyclerView.adapter = recyclerViewAdapter

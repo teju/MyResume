@@ -22,15 +22,16 @@ import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
 import com.amazing.portfolio.ui.adapters.ViewPagerAdapter
 import com.amazing.portfolio.ui.views.layoutmanager.BannerLayoutManager
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.feature_tab_item.*
 import kotlinx.android.synthetic.main.fragment_features_tab.*
 
 
 class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
     private val MAX_LINES_COLLAPSED = 3
     private val navIcons = intArrayOf(
-        R.drawable.order_alphabetical_ascending,
-        R.drawable.account_key,
-        R.drawable.cellphone_text
+        R.drawable.features,
+        R.drawable.keynote,
+        R.drawable.works
     )
     private var mAdapter: MyProjectsAdapter? = null
     var mDatas = ArrayList<String>()
@@ -68,12 +69,6 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
         setUpTAbs()
         tabbarClickListener = object  : TabBarClickListener {
             override fun onClicked() {
-                if(isAppBArExpanded(app_bar!!)) {
-                    app_bar?.setExpanded(false)
-                } else {
-                    app_bar?.setExpanded(true)
-
-                }
             }
         }
 
@@ -100,19 +95,7 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
             // set the label text by getting the actual string value by its id
             // by getting the actual resource value `getResources().getString(string_id)`
             tab_label.text = resources.getString(navLabels.get(i))
-
-            // set the home to be active at first
-            if (i == 0) {
-                tab_label.setTextColor(resources.getColor(R.color.White))
-                tab_icon.setColorFilter(ContextCompat.getColor(activity!!, R.color.White), android.graphics.PorterDuff.Mode.SRC_IN);
-
-            } else {
-                tab_icon.setColorFilter(ContextCompat.getColor(activity!!, R.color.DarkGray), android.graphics.PorterDuff.Mode.SRC_IN);
-                tab_label.setTextColor(resources.getColor(R.color.DarkGray))
-
-            }
             tab_icon.setImageResource(navIcons.get(i))
-
             // finally publish this custom view to navigation tab
             tab_tablayout.getTabAt(i)?.setCustomView(tab)
         }
@@ -130,8 +113,6 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                         tabView!!.findViewById<View>(R.id.nav_icon) as ImageView
 
                     // change the label color, by getting the color resource value
-                    tab_icon.setColorFilter(ContextCompat.getColor(activity!!, R.color.White), android.graphics.PorterDuff.Mode.SRC_IN);
-                    tab_label.setTextColor(resources.getColor(R.color.White))
                     // change the image Resource
                     // i defined all icons in an array ordered in order of tabs appearances
                     // call tab.getPosition() to get active tab index.
@@ -148,12 +129,10 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                         tabView!!.findViewById<View>(R.id.nav_icon) as ImageView
 
                     // back to the DarkGray color
-                    tab_label.setTextColor(resources.getColor(R.color.DarkGray))
                     // and the icon resouce to the old DarkGray image
                     // also via array that holds the icon resources in order
                     // and get the one of this tab's position
                     tab_icon.setImageResource(navIcons[tab.position])
-                    tab_icon.setColorFilter(ContextCompat.getColor(activity!!, R.color.DarkGray), android.graphics.PorterDuff.Mode.SRC_IN);
 
                 }
 

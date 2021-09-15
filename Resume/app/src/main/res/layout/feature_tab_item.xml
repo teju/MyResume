@@ -7,20 +7,32 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginTop="28dp"
-        android:scaleType="centerInside"
-        android:id="@+id/nav_icon"
-        android:layout_marginBottom="2dp"/>
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:scaleType="centerInside"
+            android:id="@+id/nav_icon_bg"
+            android:layout_marginBottom="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:id="@+id/nav_icon"
+            android:layout_marginBottom="2dp"/>
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/nav_label"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/shipporimincho_extrabold"
         android:layout_height="wrap_content"
         android:shadowColor="@android:color/black"
-        android:textColor="@color/Black"
+        android:textColor="@color/White"
         android:textSize="15dp" />
 
 </LinearLayout>

@@ -1,58 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/parent"
-    android:layout_marginTop="0dp"
-    android:background="@android:color/transparent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
     <ImageView
         android:layout_width="match_parent"
-        android:id="@+id/bg_img"
+        android:id="@+id/image_view"
         android:scaleType="fitXY"
-        android:layout_height="match_parent">
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="150dp">
+
     </ImageView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:id="@+id/topview"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/tittle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:paddingTop="50dp"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/White"
-            android:textSize="20dp"
-            android:text="@string/aboutus"
-            android:fontFamily="@font/shipporimincho_extrabold" />
-        <ImageView
-            android:layout_width="match_parent"
-            android:id="@+id/image_view"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:visibility="visible"
-            android:layout_height="200dp">
-        </ImageView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_bold"
-            android:textAlignment="center"
-            android:textColor="@color/White"
-            android:textSize="15dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:text="@string/we_build"
-            android:layout_marginBottom="60dp"
-            android:id="@+id/description" />
-
-    </LinearLayout>
-
 </FrameLayout>

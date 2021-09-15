@@ -162,7 +162,7 @@
 
                         <ImageView
                             android:layout_width="50dp"
-                            android:src="@drawable/chat"
+                            android:src="@drawable/telegram"
                             android:layout_marginLeft="20dp"
                             android:layout_gravity="center_vertical"
                             android:adjustViewBounds="true"
