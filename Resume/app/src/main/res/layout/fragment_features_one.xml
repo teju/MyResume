@@ -13,13 +13,30 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
-        <androidx.recyclerview.widget.RecyclerView
+        <ImageView
             android:layout_width="match_parent"
-            android:id="@+id/recyclerView"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="150dp"
+            android:src="@drawable/features_bg"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:alpha="0.6"
             android:layout_height="match_parent">
-        </androidx.recyclerview.widget.RecyclerView>
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerView"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+            <include layout="@layout/whatsapp"
+                android:layout_marginTop="-80dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"></include>
+        </LinearLayout>
         <com.amazing.portfolio.ui.views.LoadingCompound
             android:layout_width="match_parent"
             android:id="@+id/ld"
@@ -27,7 +44,6 @@
             android:layout_marginTop="300dp"
             android:layout_height="match_parent">
         </com.amazing.portfolio.ui.views.LoadingCompound>
-
     </RelativeLayout>
 
 

@@ -35,23 +35,6 @@ class KeyNotesAdapter(
                 .into(holder.image_view)
         } catch (e: Exception) {
         }
-        val params = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        )
-        if(position == 0) {
-            params.setMargins(0, 80, 0, 0)
-        } else {
-            params.setMargins(0, 0, 0, 0)
-        }
-        try {
-            Helper.loadImags(context, keynotesList.get(position).bg_img, holder.bg_img)
-        } catch (e:java.lang.Exception){
-            e.printStackTrace()
-        }
-        holder.tittle.layoutParams = params
-
-
     }
     override fun getItemCount(): Int {
         return keynotesList.size
@@ -63,14 +46,12 @@ class KeyNotesAdapter(
         val tittle: TextView
         val description: TextView
         val image_view: ImageView
-        val bg_img: ImageView
 
         init {
             parent = v.findViewById<View>(R.id.parent) as FrameLayout
             tittle = v.findViewById<View>(R.id.tittle) as TextView
             description = v.findViewById<View>(R.id.description) as TextView
             image_view = v.findViewById<View>(R.id.image_view) as ImageView
-            bg_img = v.findViewById<View>(R.id.bg_img) as ImageView
         }
     }
 

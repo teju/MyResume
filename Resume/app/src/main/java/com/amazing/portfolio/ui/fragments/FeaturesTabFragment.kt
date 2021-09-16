@@ -10,6 +10,7 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.view.animation.LinearInterpolator
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -84,56 +85,42 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
             // inflate the Parent LinearLayout Container for the tab
             // from the layout nav_tab.xml file that we created 'R.layout.nav_tab
             val tab =
-                LayoutInflater.from(activity!!).inflate(R.layout.feature_tab_item, null) as LinearLayout
+                LayoutInflater.from(activity!!).inflate(R.layout.feature_tab_item, null) as RelativeLayout
 
             // get child TextView and ImageView from this layout for the icon and label
             val tab_label =
                 tab.findViewById<View>(R.id.nav_label) as TextView
-            val tab_icon: ImageView =
-                tab.findViewById<View>(R.id.nav_icon) as ImageView
+            val tab_icon: ImageView = tab.findViewById<View>(R.id.nav_icon) as ImageView
+            val nav_icon_bg: ImageView = tab.findViewById<View>(R.id.nav_icon_bg) as ImageView
 
             // set the label text by getting the actual string value by its id
             // by getting the actual resource value `getResources().getString(string_id)`
             tab_label.text = resources.getString(navLabels.get(i))
             tab_icon.setImageResource(navIcons.get(i))
+            if (i == 0) {
+                nav_icon_bg.visibility = View.VISIBLE
+            } else {
+                nav_icon_bg.visibility = View.GONE
+
+            }
             // finally publish this custom view to navigation tab
             tab_tablayout.getTabAt(i)?.setCustomView(tab)
         }
         tab_tablayout.setOnTabSelectedListener(
             object : TabLayout.OnTabSelectedListener {
                 override fun onTabSelected(tab: TabLayout.Tab) {
-
-                    // 1. get the custom View you've added
                     val tabView = tab.customView
+                    val nav_icon_bg = tabView!!.findViewById<View>(R.id.nav_icon_bg) as ImageView
 
-                    // get inflated children Views the icon and the label by their id
-                    val tab_label =
-                        tabView!!.findViewById<View>(R.id.nav_label) as TextView
-                    val tab_icon =
-                        tabView!!.findViewById<View>(R.id.nav_icon) as ImageView
-
-                    // change the label color, by getting the color resource value
-                    // change the image Resource
-                    // i defined all icons in an array ordered in order of tabs appearances
-                    // call tab.getPosition() to get active tab index.
-                    tab_icon.setImageResource(navIcons[tab.position])
+                    nav_icon_bg.visibility = View.VISIBLE
                 }
 
                 // do as the above the opposite way to reset tab when state is changed
                 // as it not the active one any more
                 override fun onTabUnselected(tab: TabLayout.Tab) {
                     val tabView = tab.customView
-                    val tab_label =
-                        tabView!!.findViewById<View>(R.id.nav_label) as TextView
-                    val tab_icon =
-                        tabView!!.findViewById<View>(R.id.nav_icon) as ImageView
-
-                    // back to the DarkGray color
-                    // and the icon resouce to the old DarkGray image
-                    // also via array that holds the icon resources in order
-                    // and get the one of this tab's position
-                    tab_icon.setImageResource(navIcons[tab.position])
-
+                    val nav_icon_bg = tabView!!.findViewById<View>(R.id.nav_icon_bg) as ImageView
+                    nav_icon_bg.visibility = View.GONE
                 }
 
                 override fun onTabReselected(tab: TabLayout.Tab) {

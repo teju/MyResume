@@ -74,7 +74,6 @@ class FeaturesFragmentTwo : BaseFragment() {
         })
         ld.showLoadingV2()
         fetchIcons()
-        connect.background = activity?.resources?.getDrawable(R.drawable.connect_two)
         whatapp()
     }
 

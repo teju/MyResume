@@ -63,9 +63,11 @@ class FeaturesFragmentOne : BaseFragment() ,View.OnClickListener{
         databaseReference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 ld.hide()
+                data.clear()
                 for (postSnapshot in snapshot.children) {
                     data.add(postSnapshot.value.toString())
                 }
+
                 featureAdapter?.featureList = data
                 featureAdapter?.notifyDataSetChanged()
             }

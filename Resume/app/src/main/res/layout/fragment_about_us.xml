@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content">
 
             </TextView>
-            <include layout="@layout/whatsapp_reverted"></include>
+            <include layout="@layout/whatsapp"></include>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
