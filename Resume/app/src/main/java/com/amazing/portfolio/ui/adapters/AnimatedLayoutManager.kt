@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
 import com.bitvale.fitnesschallenge.commons.lerp
 import com.bitvale.fitnesschallenge.commons.withEndActionOnce
+import java.lang.Exception
 import kotlin.math.abs
 
 
@@ -105,26 +106,30 @@ class AnimatedLayoutManager constructor(
         } else {
             animatedDy = currentDy
         }
+        try {
+            animator = ValueAnimator.ofInt(0, animatedDy).apply {
+                addUpdateListener {
+                    val value = it.animatedValue as Int
+                    val offset = value - previousDy
+                    previousDy = value
+                    offsetChildrenVertical(offset * coefficient)
+                    updateViews()
+                }
+                doOnStart {
+                    isAnimated = true
+                    currentDy = 0
+                }
+                doOnEnd {
+                    isAnimated = false
+                    previousDy = 0
+                }
+                duration = (lerp(800f, 400f, currentDy.toFloat() / 1000)).toLong()
 
-        animator = ValueAnimator.ofInt(0, animatedDy).apply {
-            addUpdateListener {
-                val value = it.animatedValue as Int
-                val offset = value - previousDy
-                previousDy = value
-                offsetChildrenVertical(offset * coefficient)
-                updateViews()
+                start()
             }
-            doOnStart {
-                isAnimated = true
-                currentDy = 0
-            }
-            doOnEnd {
-                isAnimated = false
-                previousDy = 0
-            }
-            duration = (lerp(800f, 400f, currentDy.toFloat() / 1000)).toLong()
 
-            start()
+        } catch (e:Exception){
+
         }
     }
 

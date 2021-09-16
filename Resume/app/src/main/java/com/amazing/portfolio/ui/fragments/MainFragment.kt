@@ -54,12 +54,12 @@ class MainFragment : BaseFragment() {
                 R.drawable.avd_features,
                 SECOND_TAB
             ),
-            CbnMenuItem(
+            /*CbnMenuItem(
                 0,
                 R.drawable.ic_menu,
                 R.drawable.ic_menu,
                 THIRD_TAB
-            ),
+            ),*/
             CbnMenuItem(
                 R.string.works,
                 R.drawable.ic_work,

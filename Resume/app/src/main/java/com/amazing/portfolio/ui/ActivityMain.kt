@@ -75,6 +75,7 @@ class ActivityMain : AppCompatActivity() {
 
             override fun onAnimationEnd(animation: Animation) {
                 app_o_gee.visibility = View.VISIBLE
+
                 Handler().postDelayed({
                    setFragment(LoginFragment())
                 }, 3000)

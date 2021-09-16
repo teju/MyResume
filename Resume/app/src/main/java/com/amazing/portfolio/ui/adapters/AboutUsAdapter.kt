@@ -64,9 +64,7 @@ class AboutUsAdapter(
         Glide.with(context)
             .load(aboutusList.get(position).image)
             .into(holder.profile_pic)
-        Glide.with(context)
-            .load(aboutusList.get(position).bg_view)
-            .into(holder.bg_view)
+
     }
     private fun setAnimation(viewToAnimate: View, position: Int) {
         // If the bound view wasn't previously displayed on screen, it's animated
@@ -92,7 +90,6 @@ class AboutUsAdapter(
     inner class ReyclerViewHolder(v: View) :
         RecyclerView.ViewHolder(v) {
         val profile_pic: ImageView
-        val bg_view: ImageView
         val deatils: LinearLayout
         val description: TextView
         val role: TextView
@@ -103,7 +100,6 @@ class AboutUsAdapter(
 
         init {
             profile_pic = v.findViewById<View>(R.id.profile_pic) as ImageView
-            bg_view = v.findViewById<View>(R.id.bg_view) as ImageView
             deatils = v.findViewById<View>(R.id.deatils) as LinearLayout
             description = v.findViewById<View>(R.id.description) as TextView
             role = v.findViewById<View>(R.id.role) as TextView

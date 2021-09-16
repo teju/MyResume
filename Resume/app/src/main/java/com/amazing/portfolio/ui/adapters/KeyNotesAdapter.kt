@@ -1,6 +1,7 @@
 package com.amazing.portfolio.ui.adapters
 
 import android.content.Context
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,7 +29,7 @@ class KeyNotesAdapter(
 
     override fun onBindViewHolder(holder: ReyclerViewHolder, position: Int) {
         holder.tittle.text = keynotesList.get(position).title
-        holder.description.text = keynotesList.get(position).description
+        holder.description.text = Html.fromHtml(keynotesList.get(position).description)
         try {
             Glide.with(context)
                 .load(keynotesList.get(position).image)

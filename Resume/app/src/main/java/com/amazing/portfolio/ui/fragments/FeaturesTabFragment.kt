@@ -99,8 +99,10 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
             tab_icon.setImageResource(navIcons.get(i))
             if (i == 0) {
                 nav_icon_bg.visibility = View.VISIBLE
+                tab_label.setTextColor(activity?.resources?.getColor(R.color.Black)!!)
             } else {
                 nav_icon_bg.visibility = View.GONE
+                tab_label.setTextColor(activity?.resources?.getColor(R.color.White)!!)
 
             }
             // finally publish this custom view to navigation tab
@@ -111,6 +113,8 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                 override fun onTabSelected(tab: TabLayout.Tab) {
                     val tabView = tab.customView
                     val nav_icon_bg = tabView!!.findViewById<View>(R.id.nav_icon_bg) as ImageView
+                    val tab_label = tabView!!.findViewById<View>(R.id.nav_label) as TextView
+                    tab_label.setTextColor(activity?.resources?.getColor(R.color.Black)!!)
 
                     nav_icon_bg.visibility = View.VISIBLE
                 }
@@ -120,6 +124,8 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
                 override fun onTabUnselected(tab: TabLayout.Tab) {
                     val tabView = tab.customView
                     val nav_icon_bg = tabView!!.findViewById<View>(R.id.nav_icon_bg) as ImageView
+                    val tab_label = tabView!!.findViewById<View>(R.id.nav_label) as TextView
+                    tab_label.setTextColor(activity?.resources?.getColor(R.color.White)!!)
                     nav_icon_bg.visibility = View.GONE
                 }
 
