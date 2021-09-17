@@ -31,28 +31,23 @@ class AboutUsAdapter(
 
     override fun onBindViewHolder(holder: ReyclerViewHolder, position: Int) {
         if(position % 2 != 0) {
-            val params = holder.profile_pic.getLayoutParams() as RelativeLayout.LayoutParams
+            val params = holder.rlprofile_pic.getLayoutParams() as RelativeLayout.LayoutParams
             params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT)
-            params.setMargins(0,0,40,0)
-            holder.profile_pic.setLayoutParams(params)
+            holder.rlprofile_pic.setLayoutParams(params)
 
             val deatilsparams = holder.deatils.getLayoutParams() as RelativeLayout.LayoutParams
-            deatilsparams.addRule(RelativeLayout.LEFT_OF,R.id.profile_pic)
+            deatilsparams.addRule(RelativeLayout.LEFT_OF,R.id.rlprofile_pic)
             deatilsparams.addRule(RelativeLayout.RIGHT_OF,0)
-            deatilsparams.setMargins(0,0,40,0)
-
             holder.deatils.setLayoutParams(deatilsparams)
         } else {
-            val params = holder.profile_pic.getLayoutParams() as RelativeLayout.LayoutParams
+            val params = holder.rlprofile_pic.getLayoutParams() as RelativeLayout.LayoutParams
             params.addRule(RelativeLayout.ALIGN_PARENT_LEFT)
-            params.setMargins(40,0,0,0)
-            holder.profile_pic.setLayoutParams(params)
+            holder.rlprofile_pic.setLayoutParams(params)
+
 
             val deatilsparams = holder.deatils.getLayoutParams() as RelativeLayout.LayoutParams
             deatilsparams.addRule(RelativeLayout.LEFT_OF,0)
-            deatilsparams.setMargins(40,0,20,0)
-
-            deatilsparams.addRule(RelativeLayout.RIGHT_OF,R.id.profile_pic)
+            deatilsparams.addRule(RelativeLayout.RIGHT_OF,R.id.rlprofile_pic)
             holder.deatils.setLayoutParams(deatilsparams)
         }
         holder.name.text = "Name : "+aboutusList.get(position).Name
@@ -90,22 +85,26 @@ class AboutUsAdapter(
     inner class ReyclerViewHolder(v: View) :
         RecyclerView.ViewHolder(v) {
         val profile_pic: ImageView
+        val about_us_icon_dp: ImageView
         val deatils: LinearLayout
         val description: TextView
         val role: TextView
         val experience: TextView
         val name: TextView
         val level: TextView
+        val rlprofile_pic: RelativeLayout
 
 
         init {
             profile_pic = v.findViewById<View>(R.id.profile_pic) as ImageView
+            about_us_icon_dp = v.findViewById<View>(R.id.about_us_icon_dp) as ImageView
             deatils = v.findViewById<View>(R.id.deatils) as LinearLayout
             description = v.findViewById<View>(R.id.description) as TextView
             role = v.findViewById<View>(R.id.role) as TextView
             experience = v.findViewById<View>(R.id.experience) as TextView
             name = v.findViewById<View>(R.id.name) as TextView
             level = v.findViewById<View>(R.id.level) as TextView
+            rlprofile_pic = v.findViewById<View>(R.id.rlprofile_pic) as RelativeLayout
 
         }
     }
