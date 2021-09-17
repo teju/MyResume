@@ -5,6 +5,7 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
@@ -36,7 +37,17 @@ class KeyNotesAdapter(
                 .into(holder.image_view)
         } catch (e: Exception) {
         }
+        setAnimation(holder.itemView,position)
+
     }
+    private fun setAnimation(viewToAnimate: View, position: Int) {
+        val animation = AnimationUtils.loadAnimation(
+            context,
+            R.anim.item_animation_fall_down
+        )
+        viewToAnimate.startAnimation(animation)
+    }
+
     override fun getItemCount(): Int {
         return keynotesList.size
     }

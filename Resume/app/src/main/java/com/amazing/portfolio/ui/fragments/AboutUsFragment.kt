@@ -1,9 +1,13 @@
 package com.amazing.portfolio.ui.fragments
 
+import android.graphics.Rect
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
+import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.amazing.portfolio.R
 import com.amazing.portfolio.model.AboutUsData
@@ -17,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_about_us.*
 class AboutUsFragment : BaseFragment() {
     private var aboutUsAdapter: AboutUsAdapter? = null
     val aboutusList = ArrayList<AboutUsData>()
-
+    var isAnimated = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -45,6 +49,51 @@ class AboutUsFragment : BaseFragment() {
         getAboutUSist()
         ld.showLoadingV2()
         whatapp()
+        animations()
+    }
+
+    override fun onHiddenChanged(hidden: Boolean) {
+        animations()
+    }
+    fun animations() {
+        val animation = AnimationUtils.loadAnimation(
+            context, R.anim.item_animation_fall_down)
+        aboutus_1.startAnimation(animation)
+        animation.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation?) {
+
+            }
+
+            override fun onAnimationEnd(animation: Animation?) {
+                ll_second.visibility = View.VISIBLE
+                val ll_secondanimation = AnimationUtils.loadAnimation(
+                    context, R.anim.item_animation_fall_down)
+                ll_second.startAnimation(ll_secondanimation)
+                ll_secondanimation.setAnimationListener(object :Animation.AnimationListener{
+                    override fun onAnimationStart(animation: Animation?) {
+
+                    }
+
+                    override fun onAnimationEnd(animation: Animation?) {
+                        ll_third.visibility = View.VISIBLE
+                        val ll_secondanimation = AnimationUtils.loadAnimation(
+                            context, R.anim.item_animation_fall_down)
+                        ll_third.startAnimation(ll_secondanimation)
+                    }
+
+                    override fun onAnimationRepeat(animation: Animation?) {
+
+                    }
+
+                })
+            }
+
+            override fun onAnimationRepeat(animation: Animation?) {
+
+            }
+
+        })
+
     }
 
     fun  getAboutUSist() {
@@ -54,7 +103,7 @@ class AboutUsFragment : BaseFragment() {
                 aboutusList.clear()
                 ld.hide()
                 for (postSnapshot in dataSnapshot.children) {
-                    val products : AboutUsData = postSnapshot.getValue(AboutUsData::class.java)!!
+                    val products: AboutUsData = postSnapshot.getValue(AboutUsData::class.java)!!
                     aboutusList.add(products)
 
                 }
@@ -66,7 +115,25 @@ class AboutUsFragment : BaseFragment() {
                 // Getting Post failed, log a message
             }
         })
+        myScrollView.setOnScrollChangeListener {
+                v: NestedScrollView?, scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int ->
+            isViewVisible(recyclerView)
+        }
 
     }
-
+    private fun isViewVisible(view: View): Boolean {
+        val scrollBounds = Rect()
+        myScrollView.getDrawingRect(scrollBounds)
+        val top = view.y
+        val bottom = top + view.height
+        return if (scrollBounds.top < top) {
+            if(!isAnimated) {
+                aboutUsAdapter?.notifyDataSetChanged()
+            }
+            isAnimated = true
+            true
+        } else {
+            false
+        }
+    }
 }

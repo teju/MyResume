@@ -4,59 +4,84 @@
     android:layout_width="match_parent" >
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/pagerlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipChildren="false"
         android:background="@android:color/transparent"
         android:clipToPadding="false">
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/our_works_bg"
+            android:adjustViewBounds="true"
+            android:layout_margin="25dp"
+            android:alpha="0.6"
+            android:layout_height="match_parent">
+        </ImageView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="30dp"
             android:layout_height="match_parent">
-            <RelativeLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="30dp"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:layout_width="120dp"
-                    android:id="@+id/logo"
-                    android:layout_centerVertical="true"
-                    android:adjustViewBounds="true"
-                    android:layout_height="120dp">
+                    android:layout_width="match_parent"
+                    android:id="@+id/app_image"
+                    android:scaleType="fitXY"
+                    android:layout_height="wrap_content">
                 </ImageView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:id="@+id/ratings"
-                    android:padding="10dp"
-                    android:backgroundTint="@color/soft_transparent_grey"
-                    android:background="@drawable/rounded_corner_blue"
-                    android:layout_centerVertical="true"
-                    android:drawablePadding="10dp"
-                    android:textColor="@color/White"
-                    android:drawableRight="@drawable/star"
-                    android:layout_alignParentRight="true"
-                    android:layout_height="40dp">
-                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tv_tittle"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/shipporimincho_extrabold"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/_18sp"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tv_description"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/shipporimincho_semibold"
+                        android:textColor="@color/White"
+                        android:layout_height="wrap_content">
+                    </TextView>
 
-            </RelativeLayout>
+                </LinearLayout>
+
+            </FrameLayout>
             <TextView
                 android:layout_width="wrap_content"
-                android:id="@+id/tv_description"
-                android:layout_margin="20dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/White"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Slide Gallery"
+                android:fontFamily="@font/shipporimincho_extrabold"
+                android:textColor="@color/Black"
                 android:layout_alignParentRight="true"
                 android:layout_height="wrap_content">
             </TextView>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/owline"
+                android:layout_height="wrap_content">
+
+            </ImageView>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:id="@+id/rv_images"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:layout_height="wrap_content">
 

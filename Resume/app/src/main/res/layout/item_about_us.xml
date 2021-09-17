@@ -16,7 +16,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:padding="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -40,7 +42,6 @@
                     android:id="@+id/profile_pic"
                     android:layout_centerInParent="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/app_logo"
                     android:adjustViewBounds="true"
                     android:layout_height="80dp">
                 </com.amazing.portfolio.ui.views.RoundImageView>
@@ -69,7 +70,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:fontFamily="@font/poppins_bold"
+                    android:fontFamily="@font/shipporimincho_extrabold"
                     android:textColor="@color/Black"
                     android:id="@+id/name"
                     android:layout_marginTop="5dp"
@@ -94,10 +95,9 @@
         </RelativeLayout>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_marginTop="10dp"
             android:id="@+id/description"
             android:textColor="@color/Black"
-            android:fontFamily="@font/poppins_regular"
+            android:fontFamily="@font/shipporimincho_semibold"
             android:layout_height="wrap_content">
         </TextView>
 

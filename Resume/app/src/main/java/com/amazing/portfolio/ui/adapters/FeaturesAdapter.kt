@@ -32,6 +32,15 @@ class FeaturesAdapter(
         Glide.with(context)
             .load(featureList.get(position))
             .into(holder.image_view)
+        setAnimation(holder.itemView,position)
+
+    }
+    private fun setAnimation(viewToAnimate: View, position: Int) {
+        val animation = AnimationUtils.loadAnimation(
+            context,
+            R.anim.slide_down
+        )
+        viewToAnimate.startAnimation(animation)
     }
 
     override fun getItemCount(): Int {

@@ -45,6 +45,9 @@ class FeaturesFragmentOne : BaseFragment() ,View.OnClickListener{
         return v
     }
 
+    override fun onHiddenChanged(hidden: Boolean) {
+        featureAdapter?.notifyDataSetChanged()
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val linearLayoutManager = LinearLayoutManager(activity!!)

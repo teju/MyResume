@@ -3,6 +3,7 @@ package com.amazing.portfolio.ui.adapters
 import android.R.attr.thumb
 import android.content.Context
 import android.net.Uri
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -51,11 +52,11 @@ class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
     val storage = FirebaseStorage.getInstance()
 
     fun bind(item: AppData) {
-        view.list_item_icon.setImageResource(R.drawable.ic_launcher_background)
         Glide.with(itemView.context)
-            .load(item.image.trim())
+            .load(item.app_image_main.trim())
             .into(view.list_item_icon)
-
+        view.description.text = item.description.trim()
+        view.tittle.text = Html.fromHtml(item.app_title.trim())
 
     }
 }

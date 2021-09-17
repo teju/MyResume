@@ -455,9 +455,9 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
         }
 
         fabIconIndex = selectedIndex
-        if(index != 2) {
+       /* if(index != 2) {
             menuAVDs[index].stop()
-        }
+        }*/
         prevSelectedIndex = selectedIndex
         selectedIndex = index
         // make all item except current item invisible
@@ -615,10 +615,10 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
                     // internally uses WeakReference. So settings the callback only during initialization
                     // will result in callback being cleared after certain time. This is a good place
                     // to set the callback so that we can sync the drawable animation with our canvas
-                    if(index != 2) {
+                    /*if(index != 2) {
                         menuAVDs[index].callback = avdUpdateCallback
                         menuAVDs[index].start()
-                    }
+                    }*/
                 }
 
                 override fun onAnimationEnd(animation: Animator?) {
@@ -747,7 +747,7 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
                 Color.TRANSPARENT
             )
         }
-        if(fabIconIndex == 2) {
+        /*if(fabIconIndex == 2) {
             canvas.drawCircle(centerX, curCenterY, fabSize / 1f,fabPainttrans)
             menuAVDs[fabIconIndex].setBounds(
                 (centerX - menuIcons[fabIconIndex].width ).toInt(),
@@ -764,7 +764,13 @@ class CurvedBottomNavigationView @JvmOverloads constructor(
                 (centerX + menuIcons[fabIconIndex].width / 2).toInt(),
                 (curCenterY + menuIcons[fabIconIndex].height / 2).toInt()
             )
-        }
+        }*/
+        canvas.drawCircle(centerX, curCenterY, fabSize / 2f, fabPaint)
+        menuAVDs[fabIconIndex].setBounds(
+            (centerX - menuIcons[fabIconIndex].width / 2).toInt(),
+            (curCenterY - menuIcons[fabIconIndex].height / 2).toInt(),
+            (centerX + menuIcons[fabIconIndex].width / 2).toInt(),
+            (curCenterY + menuIcons[fabIconIndex].height / 2).toInt())
         // draw the AVD within the circle
 
         menuAVDs[fabIconIndex].draw(canvas)
