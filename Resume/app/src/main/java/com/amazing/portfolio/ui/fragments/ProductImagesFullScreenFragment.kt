@@ -11,12 +11,13 @@ import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.CenterZoomLinearLayoutManager
 import com.amazing.portfolio.ui.adapters.ProductImagesFullScreenAdapter
 import kotlinx.android.synthetic.main.fragment_product_images.*
 
 class ProductImagesFullScreenFragment : BaseFragment() {
     var images = ArrayList<String>()
-
+    var app_name = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -38,12 +39,13 @@ class ProductImagesFullScreenFragment : BaseFragment() {
         val  animLinear = AnimationUtils.loadAnimation(getActivity(), R.anim.bounce);
         v?.setAnimation(animLinear);
 
-        val linearLayoutManager = LinearLayoutManager(activity!!, RecyclerView.HORIZONTAL,false)
+        val linearLayoutManager = CenterZoomLinearLayoutManager(activity!!, RecyclerView.HORIZONTAL,false)
         product_images.layoutManager = linearLayoutManager
 
         val adapter = ProductImagesFullScreenAdapter(activity!!)
         adapter.images = images
         product_images.adapter = adapter
+        header.text = app_name+" Gallery"
     }
 
 

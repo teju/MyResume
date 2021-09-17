@@ -79,6 +79,7 @@ class ActivityMain : AppCompatActivity() {
                 Handler().postDelayed({
                    setFragment(LoginFragment())
                     splash_img.visibility = View.GONE
+                    our_works_bg.visibility = View.VISIBLE
                     rllanding.visibility = View.GONE
                 }, 3000)
 

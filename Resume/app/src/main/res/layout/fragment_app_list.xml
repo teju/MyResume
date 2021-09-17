@@ -40,18 +40,7 @@
             android:src="@drawable/our_works_header"
             android:layout_height="wrap_content">
         </ImageView>
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:id="@+id/rvnames"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:visibility="gone"
-            android:layout_marginRight="15dp"
-            android:layout_below="@+id/tv1"
-            android:layout_height="wrap_content">
-
-        </androidx.recyclerview.widget.RecyclerView>
-        <com.amazing.portfolio.ui.adapters.HorizontalCarouselRecyclerView
+        <com.amazing.portfolio.etc.SnappingRecyclerView
             android:id="@+id/item_list"
             android:layout_below="@+id/rvnames"
             android:layout_width="match_parent"

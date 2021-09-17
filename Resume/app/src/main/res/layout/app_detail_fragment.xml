@@ -24,25 +24,29 @@
             android:layout_height="match_parent">
             <FrameLayout
                 android:layout_width="match_parent"
+                android:id="@+id/flTop"
+                android:background="@drawable/rounded_one_side"
                 android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:id="@+id/app_image"
-                    android:scaleType="fitXY"
-                    android:layout_height="wrap_content">
-                </ImageView>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:id="@+id/app_image"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center"
+                        android:layout_height="200dp">
+                    </ImageView>
                     <TextView
                         android:layout_width="wrap_content"
                         android:id="@+id/tv_tittle"
-                        android:layout_gravity="center_vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
                         android:fontFamily="@font/shipporimincho_extrabold"
                         android:textColor="@color/White"
                         android:textSize="@dimen/_18sp"
@@ -51,7 +55,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:id="@+id/tv_description"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:textSize="15dp"
+                        android:layout_marginBottom="40dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
                         android:fontFamily="@font/shipporimincho_semibold"
                         android:textColor="@color/White"
                         android:layout_height="wrap_content">
@@ -65,7 +74,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
-                android:text="Slide Gallery"
+                android:id="@+id/tvgallery"
+                android:textSize="25dp"
                 android:fontFamily="@font/shipporimincho_extrabold"
                 android:textColor="@color/Black"
                 android:layout_alignParentRight="true"

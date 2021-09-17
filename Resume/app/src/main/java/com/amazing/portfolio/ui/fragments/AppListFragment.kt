@@ -10,6 +10,7 @@ import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.CenterZoomLinearLayoutManager
 import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.AppData
 import com.amazing.portfolio.model.Products
@@ -23,14 +24,10 @@ import kotlinx.android.synthetic.main.fragment_app_list.*
 
 
 class AppListFragment : BaseFragment() {
-    private var aboutUsAdapter: AppNamesAdapter? = null
+    private var itemAdapter: ItemAdapter? = null
     var TAG = "AppListFragment"
     val appsList = ArrayList<AppData>()
-    private var products: ArrayList<AppData> = ArrayList()
 
-    private val possibleItems = listOf(
-        Products()
-    )
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         v = inflater.inflate(R.layout.fragment_app_list, container, false)
         return v
@@ -45,48 +42,30 @@ class AppListFragment : BaseFragment() {
     fun initUI() {
         val displayMetrics = DisplayMetrics()
         activity!!.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics)
-        item_list.initialize(itemAdapter)
-        item_list.setViewsToChangeColor(listOf(R.id.list_item_background,R.id.list_item_icon))
-        itemAdapter.context = activity!!
-        itemAdapter.setItems(appsList)
         getAppList()
         ld.showLoadingV2()
-        item_list.setOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-                val myLayoutManager:LinearLayoutManager = item_list.getLayoutManager() as LinearLayoutManager
-                val firstVisibleItemCount = myLayoutManager.findFirstVisibleItemPosition()
-                val lastVisibleItemPosition = myLayoutManager.findLastVisibleItemPosition()
-                aboutUsAdapter?.selectedPos = firstVisibleItemCount
-                aboutUsAdapter?.notifyDataSetChanged()
-                try {
-                    if (dx > 0) {
-                        rvnames.scrollToPosition(firstVisibleItemCount + 2)
-                    } else if (dx < 0) {
-                        rvnames.scrollToPosition(firstVisibleItemCount - 2)
-                    }
-                } catch (e:Exception) {
-
-                }
-            }
-
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-            }
-        })
+        initAppNames()
     }
     fun initAppNames() {
-        val linearLayoutManager = LinearLayoutManager(activity!!,RecyclerView.HORIZONTAL,false)
-        rvnames.layoutManager = linearLayoutManager
-        aboutUsAdapter = AppNamesAdapter(activity!!)
-        aboutUsAdapter?.aboutusList = appsList
-        aboutUsAdapter?.itemClick  = object :ItemClickListener {
+        val linearLayoutManageritem = CenterZoomLinearLayoutManager(activity!!,RecyclerView.HORIZONTAL,false)
+        item_list.layoutManager = linearLayoutManageritem
+        itemAdapter = ItemAdapter(item_list.width)
+        itemAdapter?.context = activity!!
+        itemAdapter?.setItems(appsList)
+       /* aboutUsAdapter?.itemClick  = object :ItemClickListener {
             override fun onClickpos(pos: Int) {
                 item_list.smoothScrollToPosition(pos)
             }
-        }
-        rvnames.adapter = aboutUsAdapter
+        }*/
+        itemAdapter?.itemClick = object  : ItemClickListener {
+            override fun onClickpos(pos: Int) {
+                val appDetailFragment = AppDetailFragment()
+                appDetailFragment.products = appsList.get(pos)
+                home().setFragment(appDetailFragment)
+            }
 
+        }
+        item_list.adapter = itemAdapter
     }
     fun  getAppList() {
         val databaseReference = FirebaseDatabase.getInstance().getReference("/AppDetails");
@@ -101,9 +80,8 @@ class AppListFragment : BaseFragment() {
                     Log.d(TAG,"onDataChange "+postSnapshot.value)
 
                 }
-                itemAdapter.setItems(appsList)
-                itemAdapter.notifyDataSetChanged()
-                initAppNames()
+                itemAdapter?.setItems(appsList)
+                itemAdapter?.notifyDataSetChanged()
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
@@ -113,6 +91,7 @@ class AppListFragment : BaseFragment() {
         })
 
     }
+/*
     private val itemAdapter by lazy {
         ItemAdapter { position: Int, item: AppData ->
             item_list.smoothScrollToPosition(position)
@@ -121,6 +100,7 @@ class AppListFragment : BaseFragment() {
             home().setFragment(appDetailFragment)
         }
     }
+*/
 
 
 }

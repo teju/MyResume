@@ -2,11 +2,60 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@color/White"
+    android:orientation="vertical"
     android:layout_height="match_parent">
-    <androidx.recyclerview.widget.RecyclerView
+    <ImageView
         android:layout_width="match_parent"
-        android:id="@+id/product_images"
+        android:src="@drawable/our_works_bg"
+        android:adjustViewBounds="true"
+        android:layout_margin="25dp"
+        android:alpha="0.6"
         android:layout_height="match_parent">
+    </ImageView>
 
-    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/Black"
+            android:id="@+id/tv1"
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/app_o_gee_white"
+                android:layout_height="wrap_content">
+            </ImageView>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/header"
+            android:textSize="25dp"
+            android:fontFamily="@font/shipporimincho_extrabold"
+            android:textColor="@color/Black"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content">
+        </TextView>
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/owline"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <com.amazing.portfolio.etc.SnappingRecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/product_images"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent">
+        </com.amazing.portfolio.etc.SnappingRecyclerView>
+    </LinearLayout>
+
 </RelativeLayout>

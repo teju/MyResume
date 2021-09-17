@@ -1,6 +1,8 @@
 package com.amazing.portfolio.ui.fragments
 
+import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +13,7 @@ import android.view.animation.AnimationUtils
 import android.os.Handler
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.amazing.portfolio.etc.CenterZoomLinearLayoutManager
 import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.AppData
 import com.amazing.portfolio.ui.adapters.ProductImagesAdapter
@@ -35,37 +38,20 @@ class AppDetailFragment : BaseFragment() {
         return v
     }
 
-
-    private val mDelayedTransactionHandler = Handler()
-    private val mRunnable = Runnable {
-        try {
-            val animation = AnimationUtils.loadAnimation(
-                activity,
-                R.anim.scale_up
-            );
-
-            white_bg.visibility = View.VISIBLE
-            white_bg.setAnimation(animation);
-
-        } catch (e : Exception){
-
-        }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //mDelayedTransactionHandler.postDelayed(mRunnable, 1000);
-        val  animLinear = AnimationUtils.loadAnimation(getActivity(), R.anim.bounce);
+        val  animLinear = AnimationUtils.loadAnimation(getActivity(), R.anim.bottom_up);
         v?.setAnimation(animLinear);
-
-        val linearLayoutManager = LinearLayoutManager(activity!!, RecyclerView.HORIZONTAL,false)
-        rv_images.layoutManager = linearLayoutManager
+        val linearLayoutManageritem = LinearLayoutManager(activity!!,RecyclerView.HORIZONTAL,false)
+        rv_images.layoutManager = linearLayoutManageritem
         productImagesAdapter = ProductImagesAdapter(activity!!)
         rv_images.adapter = productImagesAdapter
         productImagesAdapter?.itemClick = object : ItemClickListener{
             override fun onClickpos(pos: Int) {
                 val productImagesFullScreenFragment = ProductImagesFullScreenFragment()
                 productImagesFullScreenFragment.images = products?.releated_images!!
+                productImagesFullScreenFragment.app_name = products?.app_name!!
                 home().setFragment(productImagesFullScreenFragment)
             }
 
@@ -74,17 +60,13 @@ class AppDetailFragment : BaseFragment() {
     }
 
     fun initData() {
-        val slideAnimation = AnimationUtils.loadAnimation(activity!!, R.anim.left_enter)
-        val slideAnimationRight = AnimationUtils.loadAnimation(activity!!, R.anim.right_enter)
-
-        rv_images.startAnimation(slideAnimation)
-        tv_description.startAnimation(slideAnimationRight)
         productImagesAdapter?.images = products?.releated_images!!
         Glide.with(activity!!)
-            .load(products?.app_image_detail_page)
+            .load(products?.logo)
             .into(app_image)
         tv_description.text = products?.description
         tv_tittle.text = products?.app_title
-
+        tvgallery.text = products?.app_name+" Gallery"
+        flTop.getBackground().setColorFilter(Color.parseColor( products?.app_colour), PorterDuff.Mode.SRC_ATOP);
     }
 }

@@ -1,0 +1,299 @@
+{
+  "AppDetails" : [ {
+    "ID" : "null",
+    "app_image_detail_page" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fow1top.png?alt=media&token=e9db78a1-8237-4f42-aa27-e638da5050bc",
+    "app_image_main" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowmain.png?alt=media&token=386f8eac-58b2-449b-b00b-2a907b2de0dc",
+    "app_name" : "Slide",
+    "app_title" : "Slide",
+    "description" : "SLIDE is a global social-personal financial mobile application built just for your financial well-being. We believe in instant, fast and easy payments, making life awesome! < br / > From anywhere in the world, you can send money to your loved ones, top up any mobile number and pay your bills instantly with just one SLIDE!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi1.png?alt=media&token=e4c9c18f-5e30-42e0-96be-1bddef99fed0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi2.png?alt=media&token=97a12a65-ebe3-4b01-92c3-1509ad110f50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi3.png?alt=media&token=ad7e543c-ea54-46ff-b9bd-dc8a067861ce", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi4.png?alt=media&token=0506d1d7-19ce-4237-a923-c3ab271da6dc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi5.png?alt=media&token=40c71656-786a-4b78-87ed-3d6a9a070b22" ],
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_image_detail_page" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fow1top.png?alt=media&token=e9db78a1-8237-4f42-aa27-e638da5050bc",
+    "app_image_main" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowmain.png?alt=media&token=386f8eac-58b2-449b-b00b-2a907b2de0dc",
+    "app_name" : "Slide",
+    "app_title" : "Slide",
+    "description" : "SLIDE is a global social-personal financial mobile application built just for your financial well-being. We believe in instant, fast and easy payments, making life awesome! < br / > From anywhere in the world, you can send money to your loved ones, top up any mobile number and pay your bills instantly with just one SLIDE!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi1.png?alt=media&token=e4c9c18f-5e30-42e0-96be-1bddef99fed0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi2.png?alt=media&token=97a12a65-ebe3-4b01-92c3-1509ad110f50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi3.png?alt=media&token=ad7e543c-ea54-46ff-b9bd-dc8a067861ce", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi4.png?alt=media&token=0506d1d7-19ce-4237-a923-c3ab271da6dc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi5.png?alt=media&token=40c71656-786a-4b78-87ed-3d6a9a070b22" ],
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_image_detail_page" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fow1top.png?alt=media&token=e9db78a1-8237-4f42-aa27-e638da5050bc",
+    "app_image_main" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowmain.png?alt=media&token=386f8eac-58b2-449b-b00b-2a907b2de0dc",
+    "app_name" : "Slide",
+    "app_title" : "Slide",
+    "description" : "SLIDE is a global social-personal financial mobile application built just for your financial well-being. We believe in instant, fast and easy payments, making life awesome! < br / > From anywhere in the world, you can send money to your loved ones, top up any mobile number and pay your bills instantly with just one SLIDE!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi1.png?alt=media&token=e4c9c18f-5e30-42e0-96be-1bddef99fed0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi2.png?alt=media&token=97a12a65-ebe3-4b01-92c3-1509ad110f50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi3.png?alt=media&token=ad7e543c-ea54-46ff-b9bd-dc8a067861ce", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi4.png?alt=media&token=0506d1d7-19ce-4237-a923-c3ab271da6dc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi5.png?alt=media&token=40c71656-786a-4b78-87ed-3d6a9a070b22" ],
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_image_detail_page" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fow1top.png?alt=media&token=e9db78a1-8237-4f42-aa27-e638da5050bc",
+    "app_image_main" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowmain.png?alt=media&token=386f8eac-58b2-449b-b00b-2a907b2de0dc",
+    "app_name" : "Slide",
+    "app_title" : "Slide",
+    "description" : "SLIDE is a global social-personal financial mobile application built just for your financial well-being. We believe in instant, fast and easy payments, making life awesome! < br / > From anywhere in the world, you can send money to your loved ones, top up any mobile number and pay your bills instantly with just one SLIDE!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi1.png?alt=media&token=e4c9c18f-5e30-42e0-96be-1bddef99fed0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi2.png?alt=media&token=97a12a65-ebe3-4b01-92c3-1509ad110f50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi3.png?alt=media&token=ad7e543c-ea54-46ff-b9bd-dc8a067861ce", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi4.png?alt=media&token=0506d1d7-19ce-4237-a923-c3ab271da6dc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi5.png?alt=media&token=40c71656-786a-4b78-87ed-3d6a9a070b22" ],
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_image_detail_page" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fow1top.png?alt=media&token=e9db78a1-8237-4f42-aa27-e638da5050bc",
+    "app_image_main" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowmain.png?alt=media&token=386f8eac-58b2-449b-b00b-2a907b2de0dc",
+    "app_name" : "Slide",
+    "app_title" : "Slide",
+    "description" : "SLIDE is a global social-personal financial mobile application built just for your financial well-being. We believe in instant, fast and easy payments, making life awesome! < br / > From anywhere in the world, you can send money to your loved ones, top up any mobile number and pay your bills instantly with just one SLIDE!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi1.png?alt=media&token=e4c9c18f-5e30-42e0-96be-1bddef99fed0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi2.png?alt=media&token=97a12a65-ebe3-4b01-92c3-1509ad110f50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi3.png?alt=media&token=ad7e543c-ea54-46ff-b9bd-dc8a067861ce", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi4.png?alt=media&token=0506d1d7-19ce-4237-a923-c3ab271da6dc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi5.png?alt=media&token=40c71656-786a-4b78-87ed-3d6a9a070b22" ],
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_image_detail_page" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fow1top.png?alt=media&token=e9db78a1-8237-4f42-aa27-e638da5050bc",
+    "app_image_main" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowmain.png?alt=media&token=386f8eac-58b2-449b-b00b-2a907b2de0dc",
+    "app_name" : "Slide",
+    "app_title" : "Slide",
+    "description" : "SLIDE is a global social-personal financial mobile application built just for your financial well-being. We believe in instant, fast and easy payments, making life awesome! < br / > From anywhere in the world, you can send money to your loved ones, top up any mobile number and pay your bills instantly with just one SLIDE!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi1.png?alt=media&token=e4c9c18f-5e30-42e0-96be-1bddef99fed0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi2.png?alt=media&token=97a12a65-ebe3-4b01-92c3-1509ad110f50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi3.png?alt=media&token=ad7e543c-ea54-46ff-b9bd-dc8a067861ce", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi4.png?alt=media&token=0506d1d7-19ce-4237-a923-c3ab271da6dc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi5.png?alt=media&token=40c71656-786a-4b78-87ed-3d6a9a070b22" ],
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_image_detail_page" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fow1top.png?alt=media&token=e9db78a1-8237-4f42-aa27-e638da5050bc",
+    "app_image_main" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowmain.png?alt=media&token=386f8eac-58b2-449b-b00b-2a907b2de0dc",
+    "app_name" : "Slide",
+    "app_title" : "Slide",
+    "description" : "SLIDE is a global social-personal financial mobile application built just for your financial well-being. We believe in instant, fast and easy payments, making life awesome! < br / > From anywhere in the world, you can send money to your loved ones, top up any mobile number and pay your bills instantly with just one SLIDE!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi1.png?alt=media&token=e4c9c18f-5e30-42e0-96be-1bddef99fed0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi2.png?alt=media&token=97a12a65-ebe3-4b01-92c3-1509ad110f50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi3.png?alt=media&token=ad7e543c-ea54-46ff-b9bd-dc8a067861ce", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi4.png?alt=media&token=0506d1d7-19ce-4237-a923-c3ab271da6dc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi5.png?alt=media&token=40c71656-786a-4b78-87ed-3d6a9a070b22" ],
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_image_detail_page" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fow1top.png?alt=media&token=e9db78a1-8237-4f42-aa27-e638da5050bc",
+    "app_image_main" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowmain.png?alt=media&token=386f8eac-58b2-449b-b00b-2a907b2de0dc",
+    "app_name" : "Slide",
+    "app_title" : "Slide",
+    "description" : "SLIDE is a global social-personal financial mobile application built just for your financial well-being. We believe in instant, fast and easy payments, making life awesome! < br / > From anywhere in the world, you can send money to your loved ones, top up any mobile number and pay your bills instantly with just one SLIDE!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi1.png?alt=media&token=e4c9c18f-5e30-42e0-96be-1bddef99fed0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi2.png?alt=media&token=97a12a65-ebe3-4b01-92c3-1509ad110f50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi3.png?alt=media&token=ad7e543c-ea54-46ff-b9bd-dc8a067861ce", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi4.png?alt=media&token=0506d1d7-19ce-4237-a923-c3ab271da6dc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi5.png?alt=media&token=40c71656-786a-4b78-87ed-3d6a9a070b22" ],
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_image_detail_page" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fow1top.png?alt=media&token=e9db78a1-8237-4f42-aa27-e638da5050bc",
+    "app_image_main" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowmain.png?alt=media&token=386f8eac-58b2-449b-b00b-2a907b2de0dc",
+    "app_name" : "Slide",
+    "app_title" : "Slide",
+    "description" : "SLIDE is a global social-personal financial mobile application built just for your financial well-being. We believe in instant, fast and easy payments, making life awesome! < br / > From anywhere in the world, you can send money to your loved ones, top up any mobile number and pay your bills instantly with just one SLIDE!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "releated_images" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi1.png?alt=media&token=e4c9c18f-5e30-42e0-96be-1bddef99fed0", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi2.png?alt=media&token=97a12a65-ebe3-4b01-92c3-1509ad110f50", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi3.png?alt=media&token=ad7e543c-ea54-46ff-b9bd-dc8a067861ce", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi4.png?alt=media&token=0506d1d7-19ce-4237-a923-c3ab271da6dc", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FSlide%2Fowi5.png?alt=media&token=40c71656-786a-4b78-87ed-3d6a9a070b22" ],
+    "text_colour" : "light"
+  } ],
+  "aboutus" : [ {
+    "Description" : "Well-qualified Full Stack Developer familiar with a wide range of programming utilities and languages. Knowledgeable of web development and DevOps. Able to handle any part of the process with ease. Collaborative team player with excellent technical abilities offering 6 years of related experience. Proposed technical feasibility solutions for new functional designs and suggested options for performance improvement of technical objects. Managed milestones from initial steps through final delivery. Reviewed code, debugged problems,troubleshooting, diagnostics and analysis to uncover root malfunctions and corrected issues. ",
+    "Experience" : "6 years",
+    "Level" : "Expert",
+    "Name" : "Tejaswini",
+    "Role" : "iOS & Android Developer",
+    "bg_view" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FBG%2FTR.png?alt=media&token=4411a789-2f6b-4984-9304-ececfb5c325a",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2Fteju.jpg?alt=media&token=9f3993c9-6c11-4c15-8c73-cb62d3150312"
+  }, {
+    "Description" : "Data Scientist, Machine Learning Engineer, Artificial Intelligence Engineer with a good math background, who takes pride in building models that translate data points into business insights. Always looking for a challenging and fast-paced environment which develop skills and apply knowledge to real-world business problems. Responsibilities Includes, thinking the solution of Problems related data and Machine Learning. And Obviously code in Python. ",
+    "Experience" : "3 years",
+    "Level" : "Skillful",
+    "Name" : "Chaithanya",
+    "Role" : "Data Scientist & AI Developer",
+    "bg_view" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FBG%2FTB.png?alt=media&token=25fb1cbc-4e65-4ae4-b939-a5f1089b61e9",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2Fchai.jpg?alt=media&token=0e2f4e93-7d16-4fdd-9711-745eb34d8c77"
+  }, {
+    "Description" : "Passionately Curious about Business Development. Fascinated most about service and marketing. Love to dig into customer problems and solve them with modern technology. Create, scale, and optimize service portfolio that matters. To accomplish this, focus on key results, build amazing teams, and quickly adapt to new insights. Enjoyed many executive positions throughout career.  ",
+    "Experience" : "6 years",
+    "Level" : "Proficient",
+    "Name" : "Nijin",
+    "bg_view" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FBG%2FTG.png?alt=media&token=cdd0816a-cc0a-4e06-bca7-5046832b531f",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FNijin.jpg?alt=media&token=d22455b8-3724-4339-a0eb-9ba9dbfc063b",
+    "role" : "Business Development Manager"
+  }, {
+    "Description" : "Experienced in Program/Project Management professional skills, with a demonstrated history of working in IT and services industry. Project scope review and analysis. Gathering end user requirements through documentation, client communication, project transformation, observation and questionnaires. Development task allocation. Organizing and motivating a project team. Project Delivery, Management, Financial Management and Stakeholder Management. Planned projects defining goals, schedule, scope/deliverables, and budget with high values. Excellent presentation, communication and organizational skills. Coordinated cross-functional teams up to a size of 30 in acquiring software and hardware resources, monitoring status, and controlling project changes.",
+    "Experience" : "8 years",
+    "Level" : "Proficient",
+    "Name" : "Zeeshan",
+    "bg_view" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FBG%2FTR1.png?alt=media&token=fb9ad83c-d2d9-4186-b0fd-1620a8be5c78",
+    "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/About%20Us.%2FZsh.jpg?alt=media&token=b2d8c7db-6eda-49d1-9817-f45b918e5094",
+    "role" : "Project Manager"
+  } ],
+  "features" : {
+    "contents" : [ {
+      "content" : "It does not matter the team is in New York, Singapore, Sweden, Bangalore or anywhere in the world. World class IT team on demand.\nWe specialise in Mobile app development, block chain and AI projects. Expert Indian Developers for our esteemed client from all over the world",
+      "description" : "null",
+      "subtitle" : " The New Normal . . . . . ",
+      "tittle" : "Remote Work's . . . . . ."
+    }, {
+      "content" : "We create a fast and smooth app for Android & iOS on native platform, we also deliver products with outsourcing app development model.\nRejuvenate your brand, increase visibility and accessibility through professionally built mobile apps from Smart IT ian’s across the world. We’ll make your Mobile App Development easy and problem-free using agile app development strategies to meet your various Business requirements.",
+      "description" : "We build not just Apps but an experiences that You will never forget.",
+      "subtitle" : "null",
+      "tittle" : "Mobile App Development"
+    }, {
+      "content" : "We are just a text away to estimate your unique app idea, we imagine your future app and get started with the development. Build what you need on time & stay in budget. Get a guaranteed price for your app before you start, You control it. add more features and pay more, remove features and you’ll pay less. There’s no guesswork with your app. You decide how fast you want it delivered. Almost Done! Find the Whats App logo below and reach us with a lightening speed. Team replies typically in few minutes.",
+      "description" : "null",
+      "subtitle" : " Let's Get Started.",
+      "tittle" : "Turn your idea into an app, fast !!"
+    }, {
+      "content" : "Let our experts handle all your ideas and document into a right set of configurations to code & decode to the right paths of success. Reliable code - Rigorous testing. Everything just works automated. We use AI and ML to test your code. Human testers recheck it. We do not have to waste time on typos & concentrate on making your app more engaging. Quick development & delivery. We maintain your project to keep it running smoothly. AppOGee Cloud Experts make huge savings and chose best cloud partner to run your app. As AppOGee says remote works is the new normal. We have experienced it before 2021 pandemic. We always have worked Remotely",
+      "description" : "null",
+      "subtitle" : "LEAD'S IT",
+      "tittle" : "New Capablities "
+    } ],
+    "keynotes" : [ {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%202.png?alt=media&token=e77a4249-6f37-41a5-93d2-14d583a15439",
+      "description" : "Mobile app development for iPhone, iPad and Android in Native. Natives are very fast. Easily distributed in google apple app stores.<br />More interactive and intuitive. Easily interact with any feature of the phone.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FKN%201mdpi.png?alt=media&token=d8c339c4-f09e-452d-b751-97c4d0056327",
+      "title" : "Native Mobile Apps"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%204.png?alt=media&token=3e064c70-408b-498a-9a84-f02008c67be6",
+      "description" : "Futuristic app development techniques to create iOS mobile apps for iPhone and iPad.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FKN%202mdpi.png?alt=media&token=99116a9e-e9cb-45cc-845c-d7b7d43f5967",
+      "title" : "Latest iOS Apps"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%203.png?alt=media&token=448c4cf6-5237-4fe7-91d2-d6cbad7b9baf",
+      "description" : "Our highly skilled & knowledgeable team of Android & iOS app developers deliver the best & neatest code possible, which will be branched & sub branched in a chain.<br />Easy fix even to adapt the change in future version updates.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FKN%203mdpi.png?alt=media&token=b4fecca0-38f3-4496-aa57-34e82913d635",
+      "title" : "Skilful Team"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%205.png?alt=media&token=2183eae8-0e05-4da7-8f7b-70caf3e62f5a",
+      "description" : "We use agile methodology to deliver apps that match your goals, timeline and budget.<br />We seek immediate solutions and evolve through the collaborative effort of self-organizing &amp; cross functional teams and their customers.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FKN%204mdpi.png?alt=media&token=aa3b06b0-6d5f-45bb-9215-c472ebaa8ccd",
+      "title" : "Trusted Delivery"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%204.png?alt=media&token=3e064c70-408b-498a-9a84-f02008c67be6",
+      "description" : "We test as until we stress the RAM to the core for crashes or bugs before production.<br />Our QA’s (Quality Assurance) team ensures smooth app functioning.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FKN%208mdpi.png?alt=media&token=b89ca636-8caf-41e4-b122-f48f07b6c983",
+      "title" : "Rigorous Quality"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%203.png?alt=media&token=448c4cf6-5237-4fe7-91d2-d6cbad7b9baf",
+      "description" : "We follow App Store & Playstore policies & guidelines thoroughly & every time we be up to date with updates to address industry specific security requirements and business compliance standards.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FKN%207mdpi.png?alt=media&token=201a950f-38c5-43be-a7c5-66fb38758dcb",
+      "title" : "Security & Compliance"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%205.png?alt=media&token=2183eae8-0e05-4da7-8f7b-70caf3e62f5a",
+      "description" : "Team viewer, Skype, G meet etc,...Access granted, watch as we work, we provide complete project visibility from day one, work with you and always available for you.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FKN%206mdpi.png?alt=media&token=88bc2c24-46f9-4426-b65a-b13fe4943b4e",
+      "title" : "Transparency"
+    }, {
+      "bg_img" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fbg_images%2FKeynote%203.png?alt=media&token=448c4cf6-5237-4fe7-91d2-d6cbad7b9baf",
+      "description" : "We offer your best in Industry & friendly Mobile App Development Project competitive quotes and rates, pay by hours of works or pay as whole quote.",
+      "image" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FKN%205mdpi.png?alt=media&token=1b06d9e4-e697-42ce-bb10-17469edb7d15",
+      "title" : "Competetive Quotes"
+    } ],
+    "keynotes_icons" : [ {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCustomised%20Mobile%20Apps.png?alt=media&token=a1f6e4e8-e72f-4ea4-8d99-09903462f756",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Customised%20Mobile%20Apps.png?alt=media&token=2df8787c-415a-494e-8da7-8e26c6668b29"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FLatest%20iOS%20Apps.png?alt=media&token=3dfa9b1f-5d36-4987-b91f-93c45f644a9b",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUn%20Latest%20iOS%20Apps.png?alt=media&token=10da1383-a75b-4da2-a50b-80c9ab1f5669"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FSkilful%20Team.png?alt=media&token=1ce5b7e7-642e-4020-bd02-1150ee088534",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Skilful%20Team.png?alt=media&token=01da1c3c-61fa-4845-ae09-caa537f3e1a8"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FTrusted%20Delivery.png?alt=media&token=5aef60a6-0cc3-45e1-a22c-bfc9a537991a",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Trusted%20Delivery.png?alt=media&token=31d2f629-29a0-4e9c-992f-0e4f617a2d72"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FRigorous%20Quality.png?alt=media&token=f10a7976-7e83-4b16-8c06-338570c1b781",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Rigorous%20Quality.png?alt=media&token=eb96e6ef-55bc-4a4e-97c1-a1a06c5c0a7a"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FSecurity%20_%20Compliance.png?alt=media&token=eee315b3-8c3f-4653-a549-c47204a84483",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUN%20Security%20_%20Compliance.png?alt=media&token=6d4da893-06b1-44ca-a795-2ec7a859e13c"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FProject%20Transparency.png?alt=media&token=0f587552-9826-4685-8b2e-9bf06406b447",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FUn%20Project%20Transparency.png?alt=media&token=2b80aed5-275b-442f-ad5d-beee5e76f5cc"
+    }, {
+      "selected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2FCompetitive%20Price.png?alt=media&token=0092229e-6d7b-4aa9-8051-562e17002e75",
+      "unselected" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2Fkeynote%20icons%2Funselected%20Competitive%20Price.png?alt=media&token=d207f225-018a-4716-a086-594fd7ffd642"
+    } ],
+    "scrollImages" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2FF1mdpi.png?alt=media&token=7bffecac-cc93-4cfe-8b39-83b7d4d83f51", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2FF2mdpi.png?alt=media&token=9fc22f23-994d-46c3-bc15-19b2aa492998", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2FF3mdpi.png?alt=media&token=cd555893-4ad4-4d61-8731-f09df7dd6d49", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2FF4mdpi.png?alt=media&token=d95402e9-2676-44cd-a1d7-13ab48e8b711", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2FF5mdpi.png?alt=media&token=076780f5-fe86-49ec-a532-013b3b89430f" ]
+  },
+  "home_page" : [ "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/home%2Fwelcome.png?alt=media&token=db6dba24-c0a4-430c-a3f4-80320c6ab8a1", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/home%2Fsmart_o_gee.png?alt=media&token=a1861979-1f7e-458b-900f-d397d8f065de", "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/home%2Flets_connect.png?alt=media&token=a1370e9a-ea2a-4b91-a1e5-72da0d970045" ],
+  "myApps" : [ {
+    "ID" : "null",
+    "app_name" : "Netzealous",
+    "bg_colour" : "#1A78B7",
+    "description" : "NetZealous, a provider of Professional Education, e-learning solutions. Our training services set new benchmarks, as a result of which our customers get customized, cost-effective, on-demand training solutions from us. Our trainings are effective and tailored to suit their exact needs, and are from Experts who are well-known in the industry.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FNetZealous%2FcLogo.png?alt=media&token=e9fefb5c-2ae1-4ce9-8b32-df5b656ccca9",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "Caferides",
+    "bg_colour" : "#900D11",
+    "description" : "Caferides is a high-end luxury motorcycles renting company based in Kerala, the Gods Own Country. Kerala's first authorised motorcycle rental firm.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FCaferides%2FCLogo.png?alt=media&token=84b5d9b1-b179-4bb3-84fb-7dd6d715b4ad",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "Compliance4All",
+    "bg_colour" : "#3497DA",
+    "description" : "Compliance4All, the ultimate continuing professional education provider offers you regulatory and compliance trainings from the industry,s leading experts.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FComplaince4All%2Fclogo.png?alt=media&token=bff58296-7623-42e0-a317-59b90e6b4a40",
+    "playstore_link" : "null",
+    "text_colour" : "dark"
+  }, {
+    "ID" : "null",
+    "app_name" : "Eazy Chat",
+    "bg_colour" : "#85B1F2",
+    "description" : "Be together whenever, with our free* all-in-one communication app, complete with unlimited text, voice, video calling and group video chat features and more.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FEazy%2FCNlogo.png?alt=media&token=02a434b6-1292-4209-aa43-468ece6e51cf",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "GIVB",
+    "bg_colour" : "#8A4145",
+    "description" : "GIVB is a suite of global social-personal financial mobile applications designed and built especially for the underserved or unbanked smallholders in agrifood supply chains.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGIVB%2FcLogo.png?alt=media&token=f7438514-f696-4dae-91e5-6569ce8ff7b1",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "Game On Nila",
+    "bg_colour" : "#C62044",
+    "description" : "Game On Nila is a Sport Singapore portal with sports news, events calendar as well as facilities and coaches directory for everyone to watch and play sports!",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGON%2Fclogo.png?alt=media&token=79e9b9f6-e8da-4a98-8796-c8c905473307",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "GridChamps",
+    "bg_colour" : "#13171F",
+    "description" : "GridChamps, bet on your favorite sports and esports around the world using live in-play odds from a major sportsbook. Now you can enjoy the fun and thrill of sports",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FGridChamps%2Fclogo.png?alt=media&token=2545a4b2-cf05-449d-bcc7-a1bf21bca193",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "MaaTiffan",
+    "bg_colour" : "#A60000",
+    "description" : "MaaTiffan, It is a healthy home made food tiffan subscription service. South Indian & Multi Cuisine subscription based daily meal service.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2FcLogo.png?alt=media&token=f6f5dafb-7d46-4494-9ab1-daba37fa9ec9",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  }, {
+    "ID" : "null",
+    "app_name" : "MaaTiffan",
+    "bg_colour" : "#000000",
+    "description" : "MaaTiffan, It is a healthy home made food tiffan subscription service. South Indian & Multi Cuisine subscription based daily meal service.",
+    "logo" : "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/apps%2FMaaTiffan%2FLogo.png?alt=media&token=26102330-591c-4333-b2dd-ba686767436c",
+    "playstore_link" : "null",
+    "text_colour" : "light"
+  } ]
+}
