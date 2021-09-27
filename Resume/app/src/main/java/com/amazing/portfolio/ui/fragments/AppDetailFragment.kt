@@ -23,6 +23,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.app_detail_fragment.*
+import kotlinx.android.synthetic.main.list_item.view.*
 import java.lang.Exception
 
 class AppDetailFragment : BaseFragment() {
@@ -64,6 +65,14 @@ class AppDetailFragment : BaseFragment() {
         Glide.with(activity!!)
             .load(products?.logo)
             .into(app_image)
+        if(products?.text_colour.equals("light",ignoreCase = true)) {
+            tv_description.setTextColor(activity?.resources?.getColor(R.color.White)!!)
+            tv_tittle.setTextColor(activity?.resources?.getColor(R.color.White)!!)
+
+        } else {
+            tv_description.setTextColor(activity?.resources?.getColor(R.color.Black)!!)
+            tv_tittle.setTextColor(activity?.resources?.getColor(R.color.Black)!!)
+        }
         tv_description.text = products?.description
         tv_tittle.text = products?.app_title
         tvgallery.text = products?.app_name+" Gallery"

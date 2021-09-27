@@ -69,7 +69,7 @@ class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
             view.tittle.setTextColor(itemView.context.resources.getColor(R.color.White))
         } else {
             view.description.setTextColor(itemView.context.resources.getColor(R.color.Black))
-            view.tittle.setTextColor(itemView.context.resources.getColor(R.color.White))
+            view.tittle.setTextColor(itemView.context.resources.getColor(R.color.Black))
         }
 
     }
