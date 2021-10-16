@@ -14,9 +14,11 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.BaseHelper
 import com.amazing.portfolio.etc.Helper
 import com.amazing.portfolio.etc.Keys
 import com.amazing.portfolio.etc.UserInfoManager
+import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.etc.callback.NotifyListener
 import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
@@ -69,6 +71,7 @@ class ActivityMain : AppCompatActivity() {
         logoMoveAnimation.setAnimationListener(object : AnimationListener {
             override fun onAnimationStart(animation: Animation) {
             }
+
             override fun onAnimationRepeat(animation: Animation) {
                 // TODO Auto-generated method stub
             }
@@ -77,7 +80,7 @@ class ActivityMain : AppCompatActivity() {
                 app_o_gee.visibility = View.VISIBLE
 
                 Handler().postDelayed({
-                   setFragment(LoginFragment())
+                    setFragment(LoginFragment())
                     splash_img.visibility = View.GONE
                     our_works_bg.visibility = View.VISIBLE
                     rllanding.visibility = View.GONE
@@ -105,7 +108,8 @@ class ActivityMain : AppCompatActivity() {
             MAIN_FLOW_INDEX = MAIN_FLOW_INDEX + 1
             f.add(R.id.layoutFragment, frag, MAIN_FLOW_TAG + MAIN_FLOW_INDEX).
                 addToBackStack(
-                MAIN_FLOW_TAG)
+                    MAIN_FLOW_TAG
+                )
                 .commitAllowingStateLoss()
             Helper.hideKeyboard(this)
         } catch (e: Exception) {
@@ -121,7 +125,7 @@ class ActivityMain : AppCompatActivity() {
 
         }
     }
-    fun setFragment(frag: Fragment,from : Int,to : Int) {
+    fun setFragment(frag: Fragment, from: Int, to: Int) {
         try {
             val f = getSupportFragmentManager().beginTransaction()
             val list = getSupportFragmentManager().getFragments()
@@ -130,11 +134,12 @@ class ActivityMain : AppCompatActivity() {
                     f.hide(frag)
                 }
             }
-            f.setCustomAnimations(from,to);
+            f.setCustomAnimations(from, to);
             MAIN_FLOW_INDEX = MAIN_FLOW_INDEX + 1
             f.add(R.id.layoutFragment, frag, MAIN_FLOW_TAG + MAIN_FLOW_INDEX).
                 addToBackStack(
-                    MAIN_FLOW_TAG)
+                    MAIN_FLOW_TAG
+                )
                 .commitAllowingStateLoss()
             Helper.hideKeyboard(this)
         } catch (e: Exception) {
@@ -143,7 +148,10 @@ class ActivityMain : AppCompatActivity() {
 
     }
 
-    fun jumpToPreviousFlowThenGoTo(fullFragPackageNameThatStillExistInStack: String, targetFrag: Fragment){
+    fun jumpToPreviousFlowThenGoTo(
+        fullFragPackageNameThatStillExistInStack: String,
+        targetFrag: Fragment
+    ){
         jumpToPreviousFragment(fullFragPackageNameThatStillExistInStack)
         setFragment(targetFrag)
     }
@@ -157,7 +165,10 @@ class ActivityMain : AppCompatActivity() {
             var list = getSupportFragmentManager().getFragments()
             for(i in  0..(list.size - 1)){
 
-                if(list.get(i).javaClass.name.equals(fullFragPackageNameThatStillExistInStack, ignoreCase = false)){
+                if(list.get(i).javaClass.name.equals(
+                        fullFragPackageNameThatStillExistInStack,
+                        ignoreCase = false
+                    )){
                     indexTag = list.get(i).tag
                     fragmentName = list.get(i).javaClass.name
                 }
@@ -176,7 +187,10 @@ class ActivityMain : AppCompatActivity() {
                     try {
                         if((MAIN_FLOW_TAG + i).equals(indexTag, ignoreCase = true)) break
                         try {
-                            if(fragmentName.equals(currentFragment.javaClass.name, ignoreCase = true)) break
+                            if(fragmentName.equals(
+                                    currentFragment.javaClass.name,
+                                    ignoreCase = true
+                                )) break
                         } catch (e: Exception) { }
                         if((indexTag).contains(MAIN_FLOW_TAG, ignoreCase = true)) {
                             getSupportFragmentManager().popBackStackImmediate()
@@ -225,7 +239,10 @@ class ActivityMain : AppCompatActivity() {
 
     fun clearFragment() {
 
-        getSupportFragmentManager().popBackStack(MAIN_FLOW_TAG, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        getSupportFragmentManager().popBackStack(
+            MAIN_FLOW_TAG,
+            FragmentManager.POP_BACK_STACK_INCLUSIVE
+        )
 
         for (i in MAIN_FLOW_INDEX downTo 0) {
             try {
@@ -238,7 +255,10 @@ class ActivityMain : AppCompatActivity() {
 
         }
 
-        getSupportFragmentManager().popBackStack("MAIN_TAB", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        getSupportFragmentManager().popBackStack(
+            "MAIN_TAB",
+            FragmentManager.POP_BACK_STACK_INCLUSIVE
+        )
         MAIN_FLOW_INDEX = 0
     }
     val currentFragment: Fragment
@@ -256,7 +276,7 @@ class ActivityMain : AppCompatActivity() {
                     f.show(frag)
                 }
             } catch (e: Exception) {
-                System.out.println("setOrShowExistingFragmentByTag foundVisible "+e.toString())
+                System.out.println("setOrShowExistingFragmentByTag foundVisible " + e.toString())
 
             }
         }
@@ -281,7 +301,7 @@ class ActivityMain : AppCompatActivity() {
                 (currentFragment as BaseFragment).httpScope.onPause()
             } catch (e: Exception) {
                 Helper.logException(null, e)
-                System.out.println("setOrShowExistingFragmentByTag foundVisible "+e.toString())
+                System.out.println("setOrShowExistingFragmentByTag foundVisible " + e.toString())
             }
             super.onBackPressed()
         }
@@ -322,7 +342,7 @@ class ActivityMain : AppCompatActivity() {
             if(!foundVisible)
             proceedDoOnBackPressed()
 
-        } catch (e : java.lang.Exception) {
+        } catch (e: java.lang.Exception) {
             e.printStackTrace()
             super.onBackPressed()
         }
@@ -368,7 +388,7 @@ class ActivityMain : AppCompatActivity() {
                 try {
                     transaction.show(fragment).commitAllowingStateLoss()
                 } catch (e1: Exception) {
-                    System.out.println("setOrShowExistingFragmentByTag Exception transaction "+e.toString())
+                    System.out.println("setOrShowExistingFragmentByTag Exception transaction " + e.toString())
 
                     Helper.logException(this@ActivityMain, e)
                 }
@@ -389,14 +409,23 @@ class ActivityMain : AppCompatActivity() {
         }
 
     }
-    fun setFragmentInFragment(fragmentLayout: Int, frag: Fragment, tag: String, backstackTag: String) {
+    fun setFragmentInFragment(
+        fragmentLayout: Int,
+        frag: Fragment,
+        tag: String,
+        backstackTag: String
+    ) {
         try {
-            supportFragmentManager.beginTransaction().add(fragmentLayout, frag, tag).addToBackStack(backstackTag)
+            supportFragmentManager.beginTransaction().add(fragmentLayout, frag, tag).addToBackStack(
+                backstackTag
+            )
                 .commit()
             Helper.hideKeyboard(this)
         } catch (e: Exception) {
             try {
-                supportFragmentManager.beginTransaction().add(fragmentLayout, frag, tag).addToBackStack(backstackTag)
+                supportFragmentManager.beginTransaction().add(fragmentLayout, frag, tag).addToBackStack(
+                    backstackTag
+                )
                     .commitAllowingStateLoss()
                 Helper.hideKeyboard(this)
             } catch (e1: Exception) {
@@ -431,15 +460,25 @@ class ActivityMain : AppCompatActivity() {
     public fun toggle(show: Boolean) {
         if(show) {
             left_project_list.visibility = View.GONE
-            arrow_right_drop_circle.animate().rotation(360f).setInterpolator(LinearInterpolator()).setDuration(500)
+            arrow_right_drop_circle.animate().rotation(360f).setInterpolator(LinearInterpolator()).setDuration(
+                500
+            )
         } else {
             left_project_list.visibility = View.VISIBLE
-            arrow_right_drop_circle.animate().rotation(-180f).setInterpolator(LinearInterpolator()).setDuration(500)
+            arrow_right_drop_circle.animate().rotation(-180f).setInterpolator(LinearInterpolator()).setDuration(
+                500
+            )
         }
     }
 
     fun sideView() {
-        mAdapter = MyProjectsAdapter(this,rv)
+        mAdapter = MyProjectsAdapter(this, rv, object : ItemClickListener {
+            override fun onClickpos(pos: Int) {
+
+                BaseHelper.openAMUInPlaystore(applicationContext, mDatas.get(pos).playstore_link)
+            }
+
+        })
         mAdapter?.mDatas = mDatas
         rv.setAdapter(mAdapter)
         rv.addOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -469,14 +508,12 @@ class ActivityMain : AppCompatActivity() {
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 mDatas.clear()
-                mDatas.add(Products())
                 for (postSnapshot in dataSnapshot.children) {
-                    val products : Products = postSnapshot.getValue(Products::class.java)!!
+                    val products: Products = postSnapshot.getValue(Products::class.java)!!
                     mDatas.add(products)
-
                 }
+
                 mAdapter?.mDatas = mDatas
-                mDatas.add(Products())
                 mAdapter?.notifyDataSetChanged()
 
             }
@@ -489,7 +526,7 @@ class ActivityMain : AppCompatActivity() {
     open fun showNotifyDialog(
         tittle: String?,
         messsage: String?,
-        button_positive:String?,
+        button_positive: String?,
         button_negative: String?,
         n: NotifyListener
     ){

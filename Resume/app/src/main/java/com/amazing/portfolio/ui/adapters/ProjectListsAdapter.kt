@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.model.featuresContent.KeyNotes
 import com.bumptech.glide.Glide
@@ -20,7 +21,7 @@ import java.lang.Exception
 import java.util.*
 
 class ProjectListsAdapter(
-    context: Context) : RecyclerView.Adapter<ProjectListsAdapter.ReyclerViewHolder>() {
+    context: Context,var itemClickListener: ItemClickListener) : RecyclerView.Adapter<ProjectListsAdapter.ReyclerViewHolder>() {
     private var lastPosition = 0
     private val layoutInflater: LayoutInflater
     private val context: Context
@@ -42,9 +43,14 @@ class ProjectListsAdapter(
             if (projectList.get(position).text_colour.contains("light")) {
                 holder.app_name.setTextColor(context.resources.getColor(R.color.White))
                 holder.tv_description.setTextColor(context.resources.getColor(R.color.White))
+                holder.tv_platforn.setTextColor(context.resources.getColor(R.color.White))
             } else {
                 holder.app_name.setTextColor(context.resources.getColor(R.color.Black))
                 holder.tv_description.setTextColor(context.resources.getColor(R.color.Black))
+                holder.tv_platforn.setTextColor(context.resources.getColor(R.color.Black))
+            }
+            holder.parent.setOnClickListener {
+                itemClickListener.onClickpos(position)
             }
         } catch (e:Exception){
 
@@ -61,6 +67,7 @@ class ProjectListsAdapter(
         val app_logo: ImageView
         val app_name: TextView
         val tv_description: TextView
+        val tv_platforn: TextView
 
 
         init {
@@ -68,6 +75,7 @@ class ProjectListsAdapter(
             app_logo = v.findViewById<View>(R.id.app_logo) as ImageView
             app_name = v.findViewById<View>(R.id.app_name) as TextView
             tv_description = v.findViewById<View>(R.id.tv_description) as TextView
+            tv_platforn = v.findViewById<View>(R.id.tv_platforn) as TextView
 
         }
     }

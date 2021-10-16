@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/White">
+    android:background="@color/transparent">
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:background="@color/transparent"
         android:layout_height="match_parent">
         <ImageView
             android:layout_width="match_parent"
@@ -79,8 +80,9 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
-                android:layout_width="300dp"
+                android:layout_width="250dp"
                 android:visibility="gone"
+                android:layout_marginTop="20dp"
                 android:id="@+id/left_project_list"
                 android:layout_height="match_parent">
                 <ImageView
@@ -107,7 +109,7 @@
                 android:id="@+id/arrow_right_drop_circle"
                 android:visibility="gone"
                 android:rotation="180"
-                android:src="@drawable/arrow_right_drop_circle"
+                android:src="@drawable/arrow_left"
                 android:layout_height="50dp">
 
             </ImageView>

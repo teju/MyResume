@@ -1,10 +1,13 @@
 package com.amazing.portfolio.etc;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.RectF;
+import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 
@@ -61,6 +64,15 @@ public class BaseHelper {
 
         bottomSheetModalDialog.show();
 
+    }
+    public static void openAMUInPlaystore(Context context,String url) {
+        try {
+            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(i);
+        } catch (android.content.ActivityNotFoundException anfe) {
+            anfe.printStackTrace();
+        }
     }
     public static String  saveSmallerImage(
             String pathOfInputImage, int dstWidth, int dstHeight) {

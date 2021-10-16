@@ -36,7 +36,7 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
     )
     private var mAdapter: MyProjectsAdapter? = null
     var mDatas = ArrayList<String>()
-
+    var selectedTab = 0
     private val navLabels = intArrayOf(
         R.string.features,
         R.string.keynote,
@@ -62,12 +62,12 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
         view: View,
         savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
         tab_tablayout.setupWithViewPager(viewpager)
 
         setupViewPager()
         setUpTAbs()
+        viewpager.setCurrentItem(selectedTab);
+
         tabbarClickListener = object  : TabBarClickListener {
             override fun onClicked() {
             }

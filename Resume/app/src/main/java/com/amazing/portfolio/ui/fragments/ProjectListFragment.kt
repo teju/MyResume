@@ -1,6 +1,9 @@
 package com.amazing.portfolio.ui.fragments
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -16,6 +19,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.BaseHelper
+import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.AppData
 import com.amazing.portfolio.model.Products
 import com.amazing.portfolio.ui.adapters.AnimatedLayoutManager
@@ -64,7 +69,12 @@ class ProjectListFragment : BaseFragment() {
         recycler_view.doOnLayout {
             (recycler_view.layoutManager as AnimatedLayoutManager).animateItemsIn()
         }
-        projectsAdapter = ProjectListsAdapter(activity!!)
+        projectsAdapter = ProjectListsAdapter(activity!!,object :ItemClickListener {
+            override fun onClickpos(pos: Int) {
+              BaseHelper.openAMUInPlaystore(activity!!,appsList.get(pos).playstore_link)
+            }
+
+        })
         projectsAdapter?.projectList = ArrayList()
         recycler_view.adapter = projectsAdapter
         autoScroll()

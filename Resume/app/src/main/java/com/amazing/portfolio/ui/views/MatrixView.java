@@ -20,21 +20,32 @@ public class MatrixView extends LinearLayout {
 
     @Override
     protected void dispatchDraw(Canvas canvas) {
-        canvas.save();
-        int top = getTop();
+        try {
+            canvas.save();
+            int top = getTop() ;
 
-        float rotate = calculateAngel(top, h);
-        float scale = calcuylateScale(top, h);
-        System.out.println("MatrixView "+h +" top "+top+ " rotate "+rotate+ "getHeight "+getHeight());
+            float rotate = calculateAngel(top, h);
+            float scale = calcuylateScale(top, h);
+            System.out.println("MatrixView " + h + " top " + top + " rotate " + rotate + " getHeight " + getHeight());
 
-        Matrix m = canvas.getMatrix();
-        m.preTranslate(-2 / getWidth(), -2 / getHeight());
-        m.postScale(scale, scale);
-        m.postTranslate(2 / getWidth(), 2 / getHeight());
-        m.postRotate(rotate);
-        canvas.concat(m);
-        super.dispatchDraw(canvas);
-        canvas.restore();
+            Matrix m = canvas.getMatrix();
+            m.preTranslate(-2 / getWidth(), -2 / getHeight());
+
+            m.postScale(scale, scale);
+            m.postTranslate(2 / getWidth(), 2 / getHeight());
+            if(top <= 0) {
+                m.postRotate(0 );
+
+            } else {
+                m.postRotate(rotate );
+            }
+
+            canvas.concat(m);
+            super.dispatchDraw(canvas);
+            canvas.restore();
+        }catch (Exception e){
+
+        }
     }
 
     @Override
