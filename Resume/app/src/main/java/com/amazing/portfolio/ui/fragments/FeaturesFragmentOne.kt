@@ -16,10 +16,12 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.featuresContent.Features
 import com.amazing.portfolio.ui.adapters.AboutUsAdapter
 import com.amazing.portfolio.ui.adapters.FeaturesAdapter
 import com.amazing.portfolio.ui.adapters.ImagePagerAdapter
+import com.amazing.portfolio.ui.fragments.features_detail.FeatureOneFragmentDetail
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_features_one.*
 
@@ -31,7 +33,6 @@ class FeaturesFragmentOne : BaseFragment() ,View.OnClickListener{
     val data  = ArrayList<String>()
     var databaseReference: DatabaseReference? = null
     var list: List<String> = ArrayList()
-    val featuresList = ArrayList<Features>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -54,8 +55,29 @@ class FeaturesFragmentOne : BaseFragment() ,View.OnClickListener{
         recyclerView.layoutManager = linearLayoutManager
         featureAdapter = FeaturesAdapter(activity!!)
         featureAdapter?.featureList = ArrayList()
+        featureAdapter?.itemClickListener = object :ItemClickListener {
+            override fun onClickpos(pos: Int) {
+                val feaDetailFragment = FeatureOneFragmentDetail()
+                if(pos == 0) {
+                    feaDetailFragment.url = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature1.png?alt=media&token=4fd8c68b-f354-403e-9426-555ae79e6394"
+                }
+                if(pos == 1) {
+                    feaDetailFragment.url = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature2.png?alt=media&token=67493d6f-217f-43c7-bd3e-384379387be8"
+                }
+                if(pos == 2) {
+                    feaDetailFragment.url = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature3.png?alt=media&token=68af12d7-b4b7-4873-a616-a5a566a87805"
+                }
+                if(pos == 3) {
+                    feaDetailFragment.url = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature4.png?alt=media&token=be70b148-a6fe-4909-a82a-06d67a4ce598"
+                }
+                if(pos == 4) {
+                    feaDetailFragment.url = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature5.png?alt=media&token=5f58b8e2-1bee-4929-9018-7e3d3eacdbaa"
+                }
+                home().setFragment(feaDetailFragment)
+            }
+        }
         recyclerView.adapter = featureAdapter
-        whatapp()
+        whatapp(activity!!)
         ld.showLoadingV2()
         fetchImage()
     }

@@ -1,6 +1,8 @@
 package com.amazing.portfolio.ui.fragments
 
+import android.content.Intent
 import android.graphics.Rect
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +19,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.fragment_about_us.*
+import java.lang.Exception
 
 class AboutUsFragment : BaseFragment() {
     private var aboutUsAdapter: AboutUsAdapter? = null
@@ -48,8 +51,9 @@ class AboutUsFragment : BaseFragment() {
 
         getAboutUSist()
         ld.showLoadingV2()
-        whatapp()
+        whatapp(activity!!)
         animations()
+        followUS()
     }
 
     override fun onHiddenChanged(hidden: Boolean) {
@@ -57,7 +61,8 @@ class AboutUsFragment : BaseFragment() {
     }
     fun animations() {
         val animation = AnimationUtils.loadAnimation(
-            context, R.anim.item_animation_fall_down)
+            context, R.anim.item_animation_fall_down
+        )
         aboutus_1.startAnimation(animation)
         animation.setAnimationListener(object : Animation.AnimationListener {
             override fun onAnimationStart(animation: Animation?) {
@@ -67,9 +72,10 @@ class AboutUsFragment : BaseFragment() {
             override fun onAnimationEnd(animation: Animation?) {
                 ll_second.visibility = View.VISIBLE
                 val ll_secondanimation = AnimationUtils.loadAnimation(
-                    context, R.anim.item_animation_fall_down)
+                    context, R.anim.item_animation_fall_down
+                )
                 ll_second.startAnimation(ll_secondanimation)
-                ll_secondanimation.setAnimationListener(object :Animation.AnimationListener{
+                ll_secondanimation.setAnimationListener(object : Animation.AnimationListener {
                     override fun onAnimationStart(animation: Animation?) {
 
                     }
@@ -77,7 +83,8 @@ class AboutUsFragment : BaseFragment() {
                     override fun onAnimationEnd(animation: Animation?) {
                         ll_third.visibility = View.VISIBLE
                         val ll_secondanimation = AnimationUtils.loadAnimation(
-                            context, R.anim.item_animation_fall_down)
+                            context, R.anim.item_animation_fall_down
+                        )
                         ll_third.startAnimation(ll_secondanimation)
                     }
 
@@ -115,12 +122,43 @@ class AboutUsFragment : BaseFragment() {
                 // Getting Post failed, log a message
             }
         })
-        myScrollView.setOnScrollChangeListener {
-                v: NestedScrollView?, scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int ->
+        myScrollView.setOnScrollChangeListener { v: NestedScrollView?, scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int ->
             isViewVisible(recyclerView)
         }
 
     }
+    fun followUS() {
+        val i = Intent(Intent.ACTION_VIEW)
+
+        try {
+            var url = ""
+
+            li.setOnClickListener {
+                url = "https://www.linkedin.com/company/dappogee/"
+                i.setData(Uri.parse(url));
+                activity?.startActivity(i);
+            }
+            fb.setOnClickListener {
+                url = "https://www.facebook.com/AppOGee-100127409146163/?ref=pages_you_manage"
+                i.setData(Uri.parse(url));
+                activity?.startActivity(i);
+            }
+            insta.setOnClickListener {
+                url = "https://www.instagram.com/dappogee/"
+                i.setData(Uri.parse(url));
+                activity?.startActivity(i);
+            }
+            tw.setOnClickListener {
+                url = "https://twitter.com/dAppOGee"
+                i.setData(Uri.parse(url));
+                activity?.startActivity(i);
+            }
+
+        }catch (e:Exception){
+
+        }
+    }
+
     private fun isViewVisible(view: View): Boolean {
         val scrollBounds = Rect()
         myScrollView.getDrawingRect(scrollBounds)

@@ -1,42 +1,33 @@
 package com.amazing.portfolio.ui.fragments
 
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver.OnGlobalLayoutListener
-import android.view.animation.LinearInterpolator
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.callback.TabBarClickListener
 import com.amazing.portfolio.ui.adapters.MyProjectsAdapter
 import com.amazing.portfolio.ui.adapters.ViewPagerAdapter
-import com.amazing.portfolio.ui.views.layoutmanager.BannerLayoutManager
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.feature_tab_item.*
 import kotlinx.android.synthetic.main.fragment_features_tab.*
 
 
-class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
+class FeaturesTabFragment() : BaseFragment(), TabBarClickListener {
     private val MAX_LINES_COLLAPSED = 3
     private val navIcons = intArrayOf(
         R.drawable.features,
         R.drawable.keynote,
         R.drawable.works
     )
+    var selectedTabPos: Int = 0
     private var mAdapter: MyProjectsAdapter? = null
     var mDatas = ArrayList<String>()
-    var selectedTab = 0
     private val navLabels = intArrayOf(
         R.string.features,
         R.string.keynote,
@@ -58,15 +49,22 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
 
     }
 
+    override fun onHiddenChanged(hidden: Boolean) {
+        val sel = selectedTabPos
+        viewpager.postDelayed(Runnable {
+            viewpager.setCurrentItem(selectedTabPos) },
+            100)
+    }
     override fun onViewCreated(
         view: View,
-        savedInstanceState: Bundle?) {
+        savedInstanceState: Bundle?
+    ) {
         super.onViewCreated(view, savedInstanceState)
         tab_tablayout.setupWithViewPager(viewpager)
 
         setupViewPager()
         setUpTAbs()
-        viewpager.setCurrentItem(selectedTab);
+
 
         tabbarClickListener = object  : TabBarClickListener {
             override fun onClicked() {
@@ -145,7 +143,7 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
 
         // setting adapter to view pager.
         viewpager.setAdapter(adapter)
-        viewpager.setOnPageChangeListener(object  : ViewPager.OnPageChangeListener{
+        viewpager.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
 
             }
@@ -167,7 +165,7 @@ class FeaturesTabFragment : BaseFragment(), TabBarClickListener {
             }
 
             override fun onPageSelected(position: Int) {
-                if(position == 2) {
+                if (position == 2) {
                     Handler().postDelayed({
                         home().toggle(false)
                     }, 1000)

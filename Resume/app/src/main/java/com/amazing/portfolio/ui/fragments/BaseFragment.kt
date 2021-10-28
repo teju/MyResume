@@ -1,6 +1,8 @@
 package com.amazing.portfolio.ui.fragments
 
 import android.Manifest
+import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Typeface
@@ -13,25 +15,19 @@ import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.*
 import androidx.lifecycle.Observer
-import com.amazing.portfolio.etc.Helper
-import com.amazing.portfolio.etc.UserInfoManager
-import com.amazing.portfolio.etc.generics.GenericFragment
-
-import java.util.*
-import java.util.concurrent.Executors
-import kotlin.coroutines.CoroutineContext
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Constants
+import com.amazing.portfolio.etc.Helper
+import com.amazing.portfolio.etc.UserInfoManager
 import com.amazing.portfolio.etc.callback.*
+import com.amazing.portfolio.etc.generics.GenericFragment
 import com.amazing.portfolio.ui.ActivityMain
 import com.amazing.portfolio.ui.fragments.dialog.DatePickerDialogFragment
 import com.amazing.portfolio.ui.fragments.dialog.NoInternetDialogFragment
-import com.amazing.portfolio.ui.fragments.dialog.NotifyDialogFragment
 import com.amazing.portfolio.ui.views.LoadingCompound
 import com.google.android.material.appbar.AppBarLayout
 import kotlinx.android.synthetic.main.whatsapp.*
@@ -40,6 +36,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.asCoroutineDispatcher
 import java.net.URLEncoder
+import java.util.*
+import java.util.concurrent.Executors
+import kotlin.coroutines.CoroutineContext
+
 
 open class BaseFragment : GenericFragment() {
 
@@ -134,10 +134,11 @@ open class BaseFragment : GenericFragment() {
 
         }
 
-        v?.setOnClickListener(object : View.OnClickListener{
+        v?.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 Helper.hideKeyboard(activity!!)
-            }})
+            }
+        })
 
         val permissionListener: PermissionListener = object : PermissionListener {
             override fun onCheckPermission(permission: String, isGranted: Boolean) {
@@ -154,16 +155,17 @@ open class BaseFragment : GenericFragment() {
 
             override fun onUserNotGrantedThePermission() {
               home() .showNotifyDialog(
-                    "",getString(R.string.please_allow_deera_access_permission_camera),
-                    getString(R.string.ok),"",object : NotifyListener {
-                        override fun onButtonClicked(which: Int) {}
-                    })
+                  "", getString(R.string.please_allow_deera_access_permission_camera),
+                  getString(R.string.ok), "", object : NotifyListener {
+                      override fun onButtonClicked(which: Int) {}
+                  })
             }
         }
         val permissions = java.util.ArrayList<String>()
         permissions.add(android.Manifest.permission.CAMERA)
         permissions.add(android.Manifest.permission.READ_EXTERNAL_STORAGE)
         permissions.add(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        permissions.add(android.Manifest.permission.CALL_PHONE)
         checkPermissions(permissions, permissionListener)
 
 
@@ -216,7 +218,11 @@ open class BaseFragment : GenericFragment() {
         return true
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
         try {
             if (requestCode == Constants.REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS) {
 
@@ -230,28 +236,40 @@ open class BaseFragment : GenericFragment() {
                         } else {
                             isAllGranted = true
                         }
-                    } else if (permission.equals(Manifest.permission.READ_CONTACTS, ignoreCase = true)) {
+                    } else if (permission.equals(
+                            Manifest.permission.READ_CONTACTS,
+                            ignoreCase = true
+                        )) {
                         if (grantResults[index] != PackageManager.PERMISSION_GRANTED) {
                             isAllGranted = false
                             break
                         } else {
                             isAllGranted = true
                         }
-                    } else if (permission.equals(Manifest.permission.WRITE_CONTACTS, ignoreCase = true)) {
+                    } else if (permission.equals(
+                            Manifest.permission.WRITE_CONTACTS,
+                            ignoreCase = true
+                        )) {
                         if (grantResults[index] != PackageManager.PERMISSION_GRANTED) {
                             isAllGranted = false
                             break
                         } else {
                             isAllGranted = true
                         }
-                    } else if (permission.equals(Manifest.permission.READ_EXTERNAL_STORAGE, ignoreCase = true)) {
+                    } else if (permission.equals(
+                            Manifest.permission.READ_EXTERNAL_STORAGE,
+                            ignoreCase = true
+                        )) {
                         if (grantResults[index] != PackageManager.PERMISSION_GRANTED) {
                             isAllGranted = false
                             break
                         } else {
                             isAllGranted = true
                         }
-                    } else if (permission.equals(Manifest.permission.WRITE_EXTERNAL_STORAGE, ignoreCase = true)) {
+                    } else if (permission.equals(
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                            ignoreCase = true
+                        )) {
                         if (grantResults[index] != PackageManager.PERMISSION_GRANTED) {
                             isAllGranted = false
                             break
@@ -272,14 +290,20 @@ open class BaseFragment : GenericFragment() {
                         } else {
                             isAllGranted = true
                         }
-                    } else if (permission.equals(Manifest.permission.ACCESS_FINE_LOCATION, ignoreCase = true)) {
+                    } else if (permission.equals(
+                            Manifest.permission.ACCESS_FINE_LOCATION,
+                            ignoreCase = true
+                        )) {
                         if (grantResults[index] != PackageManager.PERMISSION_GRANTED) {
                             isAllGranted = false
                             break
                         } else {
                             isAllGranted = true
                         }
-                    } else if (permission.equals(Manifest.permission.ACCESS_COARSE_LOCATION, ignoreCase = true)) {
+                    } else if (permission.equals(
+                            Manifest.permission.ACCESS_COARSE_LOCATION,
+                            ignoreCase = true
+                        )) {
                         if (grantResults[index] != PackageManager.PERMISSION_GRANTED) {
                             isAllGranted = false
                             break
@@ -358,9 +382,11 @@ open class BaseFragment : GenericFragment() {
 
 
 
-    fun showLoadingLogicError(ld: LoadingCompound, errorLogicCode : String){
-        ld.showError(getString(R.string.appogee__network_error),
-            String.format("%s (%s)", getString(R.string.appogee__unknown_response), errorLogicCode))
+    fun showLoadingLogicError(ld: LoadingCompound, errorLogicCode: String){
+        ld.showError(
+            getString(R.string.appogee__network_error),
+            String.format("%s (%s)", getString(R.string.appogee__unknown_response), errorLogicCode)
+        )
     }
 
 
@@ -368,13 +394,23 @@ open class BaseFragment : GenericFragment() {
         try {
             val spannableContent = SpannableString(myText)
             // val typeface = Typeface.createFromAsset(context!!.assets, "font/poppins_bold")
-            spannableContent.setSpan(StyleSpan(Typeface.BOLD), start, end, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
+            spannableContent.setSpan(
+                StyleSpan(Typeface.BOLD),
+                start,
+                end,
+                Spannable.SPAN_INCLUSIVE_INCLUSIVE
+            )
 
             return spannableContent
-        } catch (e : java.lang.Exception) {
+        } catch (e: java.lang.Exception) {
             val spannableContent = SpannableString(myText)
             // val typeface = Typeface.createFromAsset(context!!.assets, "font/poppins_bold")
-            spannableContent.setSpan(StyleSpan(Typeface.BOLD), start, end - 1, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
+            spannableContent.setSpan(
+                StyleSpan(Typeface.BOLD),
+                start,
+                end - 1,
+                Spannable.SPAN_INCLUSIVE_INCLUSIVE
+            )
 
             return spannableContent
         }
@@ -382,7 +418,10 @@ open class BaseFragment : GenericFragment() {
 
 
 
-    fun checkPermissions(permissionsThatNeedTobeCheck: List<String>, permissionListener: PermissionListener) {
+    fun checkPermissions(
+        permissionsThatNeedTobeCheck: List<String>,
+        permissionListener: PermissionListener
+    ) {
 
         BaseFragment.permissionsThatNeedTobeCheck = permissionsThatNeedTobeCheck
         BaseFragment.permissionListener = permissionListener
@@ -398,6 +437,9 @@ open class BaseFragment : GenericFragment() {
                     permissionsNeeded.add("Read External Storage")
             }else if (s.equals(Manifest.permission.WRITE_EXTERNAL_STORAGE, ignoreCase = true)) {
                 if (!addPermission(permissionsList, Manifest.permission.WRITE_EXTERNAL_STORAGE))
+                    permissionsNeeded.add("Write External Storage")
+            }else if (s.equals(Manifest.permission.CALL_PHONE, ignoreCase = true)) {
+                if (!addPermission(permissionsList, Manifest.permission.CALL_PHONE))
                     permissionsNeeded.add("Write External Storage")
             }
         }
@@ -439,28 +481,63 @@ open class BaseFragment : GenericFragment() {
         }
     }
 
-    fun whatapp() {
-        /*contact_us.setOnClickListener {
-            contact_us.visibility = View.GONE
-            rl_whatsapp.visibility = View.VISIBLE
-            try {
-                val myScrollView = v?.findViewById<NestedScrollView>(R.id.myScrollView)
+    fun whatapp(activity: Activity) {
+        try {
+            val mobile = "919980588711"
+            val msg = "Hi AppOGee,\n" +
+                    "I want you to help me developing my project.\n" +
+                    "Call me back!"
+            val TELEGRAM_PAGE_ID = "HiAppogee"
 
-                myScrollView?.post(Runnable
-                {
-                    myScrollView.fullScroll(View.FOCUS_DOWN)
-                })
-            } catch (e:java.lang.Exception){
-
+            telephone.setOnClickListener {
+                val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + mobile))
+                startActivity(intent)
             }
-        }
-        contact_us_full.setOnClickListener {
-            contact_us.visibility = View.VISIBLE
-            rl_whatsapp.visibility = View.GONE
-        }
-        rl_whatsapp.setOnClickListener {
-            contactUS()
-        }*/
-    }
+            whatsapp.setOnClickListener {
+                try {
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://api.whatsapp.com/send?phone=$mobile&text=$msg")
+                        )
+                    )
+                } catch (e: java.lang.Exception) {
+                    //whatsapp app not install
+                }
+            }
 
+            telegram.setOnClickListener {
+
+                val intent =
+                    Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=" + TELEGRAM_PAGE_ID))
+                intent.putExtra(Intent.EXTRA_TEXT, msg)
+                startActivity(intent)
+            }
+
+            gmail.setOnClickListener {
+                val sendIntent = Intent(Intent.ACTION_SEND)
+                sendIntent.type = "message/rfc822"
+                sendIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("vision@appogee.in,zeeshan@appogee.in"))
+                sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Call me back!")
+                sendIntent.putExtra(Intent.EXTRA_TEXT, msg)
+                startActivity(sendIntent)
+            }
+            messenger.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + mobile))
+                intent.putExtra("sms_body", msg)
+                startActivity(intent)
+            }
+        }catch (e:java.lang.Exception){
+
+        }
+    }
+    open fun isAppAvailable(context: Context, appName: String?): Boolean {
+        val pm: PackageManager = context.getPackageManager()
+        return try {
+            pm.getPackageInfo(appName, PackageManager.GET_ACTIVITIES)
+            true
+        } catch (e: java.lang.Exception) {
+            false
+        }
+    }
 }

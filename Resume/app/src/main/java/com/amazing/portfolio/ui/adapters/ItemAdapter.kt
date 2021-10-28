@@ -58,18 +58,26 @@ class ItemAdapter(val screenWidth:Int) : RecyclerView.Adapter<ItemViewHolder>() 
 
 class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
     fun bind(item: AppData) {
-        Glide.with(itemView.context)
-            .load(item.logo.trim())
-            .into(view.list_item_icon)
-        view.description.text = item.description.trim()
-        view.tittle.text = Html.fromHtml(item.app_title.trim())
-        view.llTop.getBackground().setColorFilter(Color.parseColor( item?.app_colour), PorterDuff.Mode.SRC_ATOP);
-        if(item.text_colour.equals("light",ignoreCase = true)) {
-            view.description.setTextColor(itemView.context.resources.getColor(R.color.White))
-            view.tittle.setTextColor(itemView.context.resources.getColor(R.color.White))
+        if(item.app_title.equals("more_items")) {
+            view.more_items.visibility = View.VISIBLE
+            view.list_item_background.visibility = View.GONE
         } else {
-            view.description.setTextColor(itemView.context.resources.getColor(R.color.Black))
-            view.tittle.setTextColor(itemView.context.resources.getColor(R.color.Black))
+            view.more_items.visibility = View.GONE
+            view.list_item_background.visibility = View.VISIBLE
+            Glide.with(itemView.context)
+                .load(item.logo.trim())
+                .into(view.list_item_icon)
+            view.description.text = item.description.trim()
+            view.tittle.text = Html.fromHtml(item.app_title.trim())
+            view.llTop.getBackground()
+                .setColorFilter(Color.parseColor(item?.app_colour), PorterDuff.Mode.SRC_ATOP);
+            if (item.text_colour.equals("light", ignoreCase = true)) {
+                view.description.setTextColor(itemView.context.resources.getColor(R.color.White))
+                view.tittle.setTextColor(itemView.context.resources.getColor(R.color.White))
+            } else {
+                view.description.setTextColor(itemView.context.resources.getColor(R.color.Black))
+                view.tittle.setTextColor(itemView.context.resources.getColor(R.color.Black))
+            }
         }
 
     }

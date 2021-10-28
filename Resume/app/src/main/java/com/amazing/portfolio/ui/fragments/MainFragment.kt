@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.amazing.portfolio.R
 import com.amazing.portfolio.etc.Helper
-import com.amazing.portfolio.etc.callback.NotifyListener
-import com.amazing.portfolio.ui.fragments.dialog.NotifyDialogFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 import np.com.susanthapa.curved_bottom_navigation.CbnMenuItem
 
@@ -16,7 +14,7 @@ class MainFragment : BaseFragment() {
     val MAINFRAGMENT_LAYOUT = R.layout.main_fragment
     private var currentTab = FIRST_TAB
     var instance : Int = 0
-
+    var selectedTab:Int = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -109,7 +107,9 @@ class MainFragment : BaseFragment() {
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "SECOND_TAB",
                 "MAIN_TAB",
-                FeaturesTabFragment(), Helper.listFragmentsMainTab
+                FeaturesTabFragment().apply {
+                    selectedTabPos = selectedTab
+                }, Helper.listFragmentsMainTab
             )
 
         } else if (which == THIRD_TAB) {
@@ -124,7 +124,7 @@ class MainFragment : BaseFragment() {
 
             home().setOrShowExistingFragmentByTag(
                 R.id.mainLayoutFragment, "FOURTH_TAB",
-                "MAIN_TAB", AppListFragment(), Helper.listFragmentsMainTab
+                "MAIN_TAB", AppListFragment(this), Helper.listFragmentsMainTab
             )
 
         } else if (which == FIFTH_TAB) {

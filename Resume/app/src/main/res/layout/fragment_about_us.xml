@@ -162,14 +162,85 @@
                 android:layout_marginTop="10dp"
                 android:layout_height="match_parent">
             </androidx.recyclerview.widget.RecyclerView>
-            <ImageView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:src="@drawable/about_us_contact"
-                android:adjustViewBounds="true"
-                android:layout_marginBottom="60dp"
                 android:layout_marginTop="20dp"
                 android:layout_height="wrap_content">
-            </ImageView>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/about_us_bottom_bg"
+                    android:adjustViewBounds="true"
+                    android:layout_height="match_parent">
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/shipporimincho_semibold"
+                    android:textColor="@color/White"
+                    android:text="@string/address"
+                    android:id="@+id/tvaddress"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/followus"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_below="@+id/tvaddress"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/li"
+                        android:id="@+id/li"
+                        android:layout_height="30dp">
+                    </ImageView>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/fb"
+                        android:id="@+id/fb"
+                        android:layout_height="30dp">
+                    </ImageView>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/in"
+                        android:id="@+id/insta"
+                        android:layout_height="30dp">
+                    </ImageView>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/tw"
+                        android:id="@+id/tw"
+                        android:layout_height="30dp">
+                    </ImageView>
+
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:adjustViewBounds="true"
+                    android:layout_below="@+id/followus"
+                    android:src="@drawable/app_o_gee_white"
+                    android:layout_height="wrap_content">
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/connect"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="-100dp"
+                android:layout_height="wrap_content">
+                <include layout="@layout/whatsapp"></include>
+            </RelativeLayout>
+
         </LinearLayout>
         <com.amazing.portfolio.ui.views.LoadingCompound
             android:layout_width="match_parent"

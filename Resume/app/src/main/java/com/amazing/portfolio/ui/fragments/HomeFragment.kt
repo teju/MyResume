@@ -37,7 +37,7 @@ class HomeFragment : BaseFragment() ,View.OnClickListener{
         super.onViewCreated(view, savedInstanceState)
         ld.showLoadingV2()
         getImageList()
-        whatapp()
+        whatapp(activity!!)
     }
     fun initUI() {
         myScrollView.getViewTreeObserver()

@@ -5,6 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 android {
+    signingConfigs {
+        release {
+            storeFile file('/Users/teju/Documents/Extra Works/MyResume/keystore/Untitled')
+            storePassword 'appogee'
+            keyAlias 'AppOGee'
+            keyPassword 'appogee'
+        }
+    }
     compileSdkVersion project.ext.myCompileSdkVersion
     buildToolsVersion project.ext.myBuildToolsVersion
     defaultConfig {
@@ -19,6 +27,9 @@ android {
     }
     dataBinding{
         enabled=true
+    }
+    lintOptions {
+        checkReleaseBuilds false
     }
     buildTypes {
         release {

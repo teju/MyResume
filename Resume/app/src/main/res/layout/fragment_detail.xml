@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/myScrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root_container"
+        android:background="@color/White"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/feature_detail_bg"
+            android:adjustViewBounds="true"
+            android:alpha="0.6"
+            android:layout_height="match_parent">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/Black"
+                android:layout_height="50dp">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/app_o_gee_white"
+                    android:layout_height="wrap_content">
+                </ImageView>
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/header"
+                android:adjustViewBounds="true"
+                android:layout_height="wrap_content">
+            </ImageView>
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/wv1"
+                android:layout_marginTop="10dp"
+                tools:ignore="WebViewLayout" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/connect"
+                android:layout_height="wrap_content">
+                <include layout="@layout/whatsapp"></include>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -74,7 +74,7 @@ class FeaturesFragmentTwo : BaseFragment() {
         })
         ld.showLoadingV2()
         fetchIcons()
-        whatapp()
+        whatapp(activity!!)
     }
 
     fun fetchData() {

@@ -12,6 +12,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.amazing.portfolio.R
+import com.amazing.portfolio.etc.callback.ItemClickListener
 import com.amazing.portfolio.model.AboutUsData
 import com.bumptech.glide.Glide
 import java.util.*
@@ -21,7 +22,9 @@ class FeaturesAdapter(
     context: Context) : RecyclerView.Adapter<FeaturesAdapter.ReyclerViewHolder>() {
     private val layoutInflater: LayoutInflater
     private val context: Context
+    public var itemClickListener: ItemClickListener? = null
     public var featureList = ArrayList<String>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReyclerViewHolder {
         val item =
             layoutInflater.inflate(R.layout.item_features_view, parent, false)
@@ -33,6 +36,9 @@ class FeaturesAdapter(
             .load(featureList.get(position))
             .into(holder.image_view)
         setAnimation(holder.itemView,position)
+        holder.image_view.setOnClickListener {
+            itemClickListener?.onClickpos(position)
+        }
 
     }
     private fun setAnimation(viewToAnimate: View, position: Int) {

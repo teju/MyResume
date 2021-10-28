@@ -77,7 +77,7 @@ class MenuScreenFragment(
         planet3.setOnClickListener(this)
         planet4.setOnClickListener(this)
         planet5.setOnClickListener(this)
-        whatapp()
+        whatapp(activity!!)
     }
 
 
@@ -110,9 +110,9 @@ class MenuScreenFragment(
                     instance = pos
                 })
             } else {
-                mainFragment?.instance = pos
+               /* mainFragment?.instance = pos
                 mainFragment?.setCurrentItem(pos)
-                mainFragment?.showTab()
+                mainFragment?.showTab()*/
             }
         }
 
