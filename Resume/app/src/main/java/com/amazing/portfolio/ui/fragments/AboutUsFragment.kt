@@ -139,12 +139,12 @@ class AboutUsFragment : BaseFragment() {
                 activity?.startActivity(i);
             }
             fb.setOnClickListener {
-                url = "https://www.facebook.com/AppOGee-100127409146163/?ref=pages_you_manage"
+                url = "https://www.facebook.com/OfficialAppogee"
                 i.setData(Uri.parse(url));
                 activity?.startActivity(i);
             }
             insta.setOnClickListener {
-                url = "https://www.instagram.com/dappogee/"
+                url = "https://www.instagram.com/officialappogee/"
                 i.setData(Uri.parse(url));
                 activity?.startActivity(i);
             }

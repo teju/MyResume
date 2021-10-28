@@ -1,4 +1,4 @@
-package com.amazing.portfolio.ui.fragments.features_detail
+package com.amazing.portfolio.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.fragment_detail.*
 
 
-class FeatureOneFragmentDetail : Fragment() {
+class FeatureDetailFragment : Fragment() {
     var url: String = ""
     var weburl: String = "https://www.tutorialspoint.com/android/android_webview_layout.htm"
     override fun onCreate(savedInstanceState: Bundle?) {

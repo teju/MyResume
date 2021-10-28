@@ -487,7 +487,7 @@ open class BaseFragment : GenericFragment() {
             val msg = "Hi AppOGee,\n" +
                     "I want you to help me developing my project.\n" +
                     "Call me back!"
-            val TELEGRAM_PAGE_ID = "HiAppogee"
+            val TELEGRAM_PAGE_ID = "@DAppOGee"
 
             telephone.setOnClickListener {
                 val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + mobile))
