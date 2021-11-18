@@ -24,6 +24,7 @@ class NotifyDialogFragment : BaseDialogFragment() {
     var button_positive : String? = ""
     var button_negative : String? = ""
     var showTick : Boolean = false
+    var isShowing : Boolean = false
     lateinit var listener: NotifyListener
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

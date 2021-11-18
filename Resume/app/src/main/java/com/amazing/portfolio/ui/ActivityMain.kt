@@ -41,6 +41,8 @@ class ActivityMain : AppCompatActivity() {
         private var MAIN_FLOW_INDEX = 0
         private val MAIN_FLOW_TAG = "MainFlowFragment"
     }
+
+    private var isDialogShow: Boolean = false
     private var mAdapter: MyProjectsAdapter? = null
     var mDatas = ArrayList<Products>()
     private val MOVE_DEFAULT_TIME: Long = 1000
@@ -289,6 +291,7 @@ class ActivityMain : AppCompatActivity() {
                             if (which == NotifyDialogFragment.BUTTON_POSITIVE) {
                                 this@ActivityMain.finish()
                             }
+                            isDialogShow = false
                         }
                     })
 
@@ -539,7 +542,11 @@ class ActivityMain : AppCompatActivity() {
         f.button_negative = button_negative
         f.showTick = false
         f.isCancelable = false
-        f.show(supportFragmentManager, NotifyDialogFragment.TAG)
+        if(!isDialogShow) {
+            f.show(supportFragmentManager, NotifyDialogFragment.TAG)
+        }
+        isDialogShow = true;
+
     }
 
 }

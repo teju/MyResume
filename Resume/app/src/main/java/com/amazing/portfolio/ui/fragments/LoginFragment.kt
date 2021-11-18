@@ -100,6 +100,8 @@ class LoginFragment : BaseFragment() ,View.OnClickListener, GoogleApiClient.OnCo
                         + ", Image: " + personPhotoUrl
             )
             updateUI(personName!!,acct.email!!,"","",personPhotoUrl);
+        } else{
+            home().setFragment(MainFragment())
         }
         ld.hide()
     }
