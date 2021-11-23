@@ -161,12 +161,7 @@ open class BaseFragment : GenericFragment() {
                   })
             }
         }
-        val permissions = java.util.ArrayList<String>()
-        permissions.add(android.Manifest.permission.CAMERA)
-        permissions.add(android.Manifest.permission.READ_EXTERNAL_STORAGE)
-        permissions.add(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-        permissions.add(android.Manifest.permission.CALL_PHONE)
-        checkPermissions(permissions, permissionListener)
+
 
 
     }
