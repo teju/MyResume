@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		796A9D7D2481446C00233FCF /* AppOGeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A9D7C2481446C00233FCF /* AppOGeeTests.swift */; };
 		796A9D882481446C00233FCF /* AppOGeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A9D872481446C00233FCF /* AppOGeeUITests.swift */; };
 		796A9D98248145CC00233FCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796A9D97248145CC00233FCF /* Main.storyboard */; };
+		BD1C132827834AE100AC1CC5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C132727834AE000AC1CC5 /* LoginViewController.swift */; };
 		BD3F51622643EAA200F14311 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3F51612643EAA000F14311 /* MenuViewController.swift */; };
 		BE23F9C716819DE3F981000F /* Pods_AppOGee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D1CF156318ADAFF2ED1307 /* Pods_AppOGee.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,7 @@
 		796A9D892481446C00233FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796A9D97248145CC00233FCF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B2D1CF156318ADAFF2ED1307 /* Pods_AppOGee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppOGee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1C132727834AE000AC1CC5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = AppOGee/controller/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		BD3F51612643EAA000F14311 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = AppOGee/controller/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				7918C2AB2483C74C00DD5B33 /* WorkTabViewController.swift */,
 				7918C2B82483D04700DD5B33 /* WorkListViewController.swift */,
 				BD3F51612643EAA000F14311 /* MenuViewController.swift */,
+				BD1C132727834AE000AC1CC5 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				7918C2B22483C99A00DD5B33 /* CarouselCollectionViewCell.swift in Sources */,
 				7918C2B72483CAFC00DD5B33 /* UPCarouselFlowLayout.swift in Sources */,
 				7918C2AC2483C74C00DD5B33 /* WorkTabViewController.swift in Sources */,
+				BD1C132827834AE100AC1CC5 /* LoginViewController.swift in Sources */,
 				BD3F51622643EAA200F14311 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

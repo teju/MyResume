@@ -7,37 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13C3400CE0DB2FBE176DF60BFF8355EF /* RBBCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C8465781F68AEA26AC1CC7DF6F7DEC /* RBBCustomAnimation.m */; };
-		1B5CE526BDBE6A4F13A9B33778698E68 /* RBBEasingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C458C103096357D26BBE03CDA20A8F /* RBBEasingFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23F0EDE0B0412516DC6A21CEE7FA7A94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEFE490E4A06D19E868B2B9014BB8BF /* QuartzCore.framework */; };
-		30C594ABC2B82D684C068ED27E9D8E36 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BB5FCD2CCE00F4524683FD2BCBF323 /* NSValue+PlatformIndependence.m */; };
-		34E75FBAAADCD5631033025B35A3ECF2 /* RBBLinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A10C64EF430A5116D923E6F7265018B /* RBBLinearInterpolation.m */; };
-		45413F960B1F448BE24CD65AD14F48B9 /* RBBLinearInterpolation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DACD28F2D8F0AED45363AEEE7E6D18C /* RBBLinearInterpolation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62F41CFC261F1871022D05D9102BA5F2 /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FAD4AB6A00840B1298234424360AE7 /* RBBTweenAnimation.m */; };
-		63A728AC8C25323D85E2A34F3DE6A409 /* UIColor+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1019D18F69AF76F1CB89232605939703 /* UIColor+PlatformIndependence.m */; };
-		68E8FD4E84BE662CB70081BDB5876A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FE7C6ECA71C614A5A667C679B23874 /* Foundation.framework */; };
-		6B04DC411F315BA12E63BF6797B6CD36 /* RBBAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E971EC4DB658B494AB3FB5060FF5CB /* RBBAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F1FF7977D4EB1C2B3DBFB5B4BA79088 /* RBBCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A9442A8400D8ACC62F8EF49B8DC9B /* RBBCubicBezier.m */; };
-		90F557B42EBA806A260898B656BDC916 /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF5C2F000973290B3F2BEFC578166E6 /* RBBBlockBasedArray.m */; };
-		92F4BADC45E87E591038B551EC681B37 /* RBBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 544CA215519E5899E2A59D101FD0C1C8 /* RBBAnimation.m */; };
-		9EA75933ED320E674FACD8CA94E145F7 /* RBBCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3956EB931C00095AC94E69D3DAB6B5E9 /* RBBCustomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2C5DF08F109EA2DBF0E561BBFD93DEE /* NSValue+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 998248A4E49E01B02D50CA17D171142C /* NSValue+PlatformIndependence.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A90DF566DCB2FE1C13DB36570B8E036D /* RBBTweenAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 028131901205D5E407178CD44749ED1F /* RBBTweenAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD0405D78E25040B19749C449FC1FBB6 /* UIColor+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = E789C52389CDA449BBA1A5275003E411 /* UIColor+PlatformIndependence.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BFFAF11E45D37119FD0E45A26ECB4B73 /* RBBAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 344358163688F48748CEF89467832F80 /* RBBAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2A1C5B672F1254918A12184FC88EC6B /* RBBAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0554F6B100C943865B7258826EA9EB /* RBBAnimation-dummy.m */; };
-		DAC2FD38CDE8B95C5F1AD3C39CF23507 /* RBBSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 13857AAF45C89743E0F796F826AB1F61 /* RBBSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7FCBB4B8C39024A06AF75529A452F3A /* RBBSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B94E1B3679FE59E2014B939F7E71526 /* RBBSpringAnimation.m */; };
-		E9DE81D784DBB3E897B5D16C610F395C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FE7C6ECA71C614A5A667C679B23874 /* Foundation.framework */; };
-		F221C55F791BD07C4E9FBE2553E909C6 /* RBBCubicBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = D34459FF6A1371EC8A7580EBAFABED48 /* RBBCubicBezier.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2B2F8B077167DDD62326EB926DECAB2 /* Pods-AppOGee-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ADEA10C29AEB1EF571DA318788C554 /* Pods-AppOGee-dummy.m */; };
-		F45D6FBDDD9F02A7CB8154761F454014 /* RBBBlockBasedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7E3CD8337297ED8154D1EBED900E63 /* RBBBlockBasedArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5502A4129BDD2DF2EC6F09F06E42DE6 /* RBBEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC2F1159E2F10883132607AF65B1215 /* RBBEasingFunction.m */; };
-		FACC1C1F0D2020C77E11298468131CA2 /* Pods-AppOGee-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0962F1F95684F981B93D86782A408AF5 /* Pods-AppOGee-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		174EC2952CE4CC71518BE686B93C51AE /* RBBSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 13857AAF45C89743E0F796F826AB1F61 /* RBBSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		231ECC9920C160FC1CFA2E4F68088FD8 /* RBBEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC2F1159E2F10883132607AF65B1215 /* RBBEasingFunction.m */; };
+		29EB3AC2B00D770E4C631C183C45EF9A /* RBBAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0554F6B100C943865B7258826EA9EB /* RBBAnimation-dummy.m */; };
+		2C8C0CF6C137D3DA5BAD28520D6AA1A5 /* UIColor+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = E789C52389CDA449BBA1A5275003E411 /* UIColor+PlatformIndependence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EDBC2CF63D21AF5EDD2CF4CF688E65D /* RBBLinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A10C64EF430A5116D923E6F7265018B /* RBBLinearInterpolation.m */; };
+		3814326C903EBBA29329257876B39324 /* RBBCubicBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = D34459FF6A1371EC8A7580EBAFABED48 /* RBBCubicBezier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A711672E783C8F4521F4B4D818D9066 /* RBBSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B94E1B3679FE59E2014B939F7E71526 /* RBBSpringAnimation.m */; };
+		3E5490EDCEDB4847B0D26685C6005484 /* RBBTweenAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 028131901205D5E407178CD44749ED1F /* RBBTweenAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		594104110D4787B4DD3E59E23615F579 /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF5C2F000973290B3F2BEFC578166E6 /* RBBBlockBasedArray.m */; };
+		5C543D0A4C2682DAE71BC9DC4E9A1895 /* RBBAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 344358163688F48748CEF89467832F80 /* RBBAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CB8B80DFDC57EA5F617EA9FED54F3C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FE7C6ECA71C614A5A667C679B23874 /* Foundation.framework */; };
+		6643854B05FAC380ED11427A3A58AE9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FE7C6ECA71C614A5A667C679B23874 /* Foundation.framework */; };
+		66FF7E9911C2B8AB88B08003EA43BEA1 /* RBBEasingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C458C103096357D26BBE03CDA20A8F /* RBBEasingFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71E953706DA8B1215F52D939FEF4D0D0 /* RBBCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3956EB931C00095AC94E69D3DAB6B5E9 /* RBBCustomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81FB007E515B343297D681B290BB9E92 /* NSValue+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 998248A4E49E01B02D50CA17D171142C /* NSValue+PlatformIndependence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82AD628B03D0C0ADC5685E4B4ED2F8CF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEFE490E4A06D19E868B2B9014BB8BF /* QuartzCore.framework */; };
+		86D5D83FFD6734F6C9CBEF12CFCB8B28 /* Pods-AppOGee-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0962F1F95684F981B93D86782A408AF5 /* Pods-AppOGee-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EEF49EB11EF1812C1D0764C054BDCF3 /* Pods-AppOGee-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ADEA10C29AEB1EF571DA318788C554 /* Pods-AppOGee-dummy.m */; };
+		A33B361FA157D7DE8493A1265F2B04C9 /* RBBCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C8465781F68AEA26AC1CC7DF6F7DEC /* RBBCustomAnimation.m */; };
+		AA8A9B0BF331EBEB42E0A8221B94D06A /* UIColor+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 1019D18F69AF76F1CB89232605939703 /* UIColor+PlatformIndependence.m */; };
+		AB43C75C7E8F1BE63C9EFEB2A065FD69 /* RBBBlockBasedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7E3CD8337297ED8154D1EBED900E63 /* RBBBlockBasedArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6A91EB516F193184074DC5DD74D6941 /* RBBLinearInterpolation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DACD28F2D8F0AED45363AEEE7E6D18C /* RBBLinearInterpolation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C092E652CF5FFBAD46B849541AB79927 /* RBBAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E971EC4DB658B494AB3FB5060FF5CB /* RBBAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C207A4B8770E104B578B5D3844DCD713 /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FAD4AB6A00840B1298234424360AE7 /* RBBTweenAnimation.m */; };
+		C926561190B4CCF62C6FB72DD9610E39 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BB5FCD2CCE00F4524683FD2BCBF323 /* NSValue+PlatformIndependence.m */; };
+		E76A11C6BADB944D5EAEE2189D326D8C /* RBBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 544CA215519E5899E2A59D101FD0C1C8 /* RBBAnimation.m */; };
+		ECAB2D1DC18FC7D325B4069582180195 /* RBBCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A9442A8400D8ACC62F8EF49B8DC9B /* RBBCubicBezier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7B0DA0784967525AC7248B4DA9C47E52 /* PBXContainerItemProxy */ = {
+		0FE00CBF611FC41AB85150E752B1490B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -66,7 +66,7 @@
 		5EC2F1159E2F10883132607AF65B1215 /* RBBEasingFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBBEasingFunction.m; path = RBBAnimation/RBBEasingFunction.m; sourceTree = "<group>"; };
 		6071AE1C2DFC99CD316C3CAD6B6E3322 /* Pods-AppOGee-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppOGee-Info.plist"; sourceTree = "<group>"; };
 		6A36B31814E44123CC181859390A7DE1 /* Pods-AppOGee-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppOGee-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6E914877460521A70D36DCF56B04D7D2 /* Pods_AppOGee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppOGee.framework; path = "Pods-AppOGee.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E914877460521A70D36DCF56B04D7D2 /* Pods-AppOGee */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AppOGee"; path = Pods_AppOGee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790FC21B3C4484BFF1F7F6C4A14D3D66 /* RBBAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RBBAnimation.modulemap; sourceTree = "<group>"; };
 		7B065C754143EC691C88643C0DA20DB5 /* Pods-AppOGee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppOGee.debug.xcconfig"; sourceTree = "<group>"; };
 		8DACD28F2D8F0AED45363AEEE7E6D18C /* RBBLinearInterpolation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBLinearInterpolation.h; path = RBBAnimation/RBBLinearInterpolation.h; sourceTree = "<group>"; };
@@ -86,25 +86,25 @@
 		DF655F156A0D0E4653B4E90082669249 /* RBBAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RBBAnimation.release.xcconfig; sourceTree = "<group>"; };
 		E52CE1AAA831495984815B9A767D37FC /* Pods-AppOGee-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppOGee-acknowledgements.plist"; sourceTree = "<group>"; };
 		E789C52389CDA449BBA1A5275003E411 /* UIColor+PlatformIndependence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+PlatformIndependence.h"; path = "RBBAnimation/UIColor+PlatformIndependence.h"; sourceTree = "<group>"; };
-		E829082A69644CBAAD17DB530798FAD2 /* RBBAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RBBAnimation.framework; path = RBBAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E829082A69644CBAAD17DB530798FAD2 /* RBBAnimation */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RBBAnimation; path = RBBAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7E3CD8337297ED8154D1EBED900E63 /* RBBBlockBasedArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBBBlockBasedArray.h; path = RBBAnimation/RBBBlockBasedArray.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		96A375F783AD6AA5C56FF30D7F8F95A2 /* Frameworks */ = {
+		3530A53351D096E8B20722AC4D0D13BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68E8FD4E84BE662CB70081BDB5876A06 /* Foundation.framework in Frameworks */,
+				5CB8B80DFDC57EA5F617EA9FED54F3C7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE802D7AB22955CD81391DABF7D23857 /* Frameworks */ = {
+		58C83C83EF2E62DF20073BFF05BCF6B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9DE81D784DBB3E897B5D16C610F395C /* Foundation.framework in Frameworks */,
-				23F0EDE0B0412516DC6A21CEE7FA7A94 /* QuartzCore.framework in Frameworks */,
+				6643854B05FAC380ED11427A3A58AE9C /* Foundation.framework in Frameworks */,
+				82AD628B03D0C0ADC5685E4B4ED2F8CF /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,11 +171,11 @@
 			path = "../Target Support Files/RBBAnimation";
 			sourceTree = "<group>";
 		};
-		AEB7B76662702E555183AACC962AA027 /* Products */ = {
+		BBA280A0EF0E7CF2A244FFBBF1E63C13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E914877460521A70D36DCF56B04D7D2 /* Pods_AppOGee.framework */,
-				E829082A69644CBAAD17DB530798FAD2 /* RBBAnimation.framework */,
+				6E914877460521A70D36DCF56B04D7D2 /* Pods-AppOGee */,
+				E829082A69644CBAAD17DB530798FAD2 /* RBBAnimation */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				06C395E2E6AA205578F7CE7C90E5BAD9 /* Pods */,
-				AEB7B76662702E555183AACC962AA027 /* Products */,
+				BBA280A0EF0E7CF2A244FFBBF1E63C13 /* Products */,
 				D7358EDA08D765A4F015885BF40BBBB7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -228,29 +228,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5E860516A0E7890FBE0A88DCFB9C3724 /* Headers */ = {
+		4F168F064B20CEAEAC404B7D0A30BAE6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2C5DF08F109EA2DBF0E561BBFD93DEE /* NSValue+PlatformIndependence.h in Headers */,
-				6B04DC411F315BA12E63BF6797B6CD36 /* RBBAnimation-umbrella.h in Headers */,
-				BFFAF11E45D37119FD0E45A26ECB4B73 /* RBBAnimation.h in Headers */,
-				F45D6FBDDD9F02A7CB8154761F454014 /* RBBBlockBasedArray.h in Headers */,
-				F221C55F791BD07C4E9FBE2553E909C6 /* RBBCubicBezier.h in Headers */,
-				9EA75933ED320E674FACD8CA94E145F7 /* RBBCustomAnimation.h in Headers */,
-				1B5CE526BDBE6A4F13A9B33778698E68 /* RBBEasingFunction.h in Headers */,
-				45413F960B1F448BE24CD65AD14F48B9 /* RBBLinearInterpolation.h in Headers */,
-				DAC2FD38CDE8B95C5F1AD3C39CF23507 /* RBBSpringAnimation.h in Headers */,
-				A90DF566DCB2FE1C13DB36570B8E036D /* RBBTweenAnimation.h in Headers */,
-				BD0405D78E25040B19749C449FC1FBB6 /* UIColor+PlatformIndependence.h in Headers */,
+				81FB007E515B343297D681B290BB9E92 /* NSValue+PlatformIndependence.h in Headers */,
+				5C543D0A4C2682DAE71BC9DC4E9A1895 /* RBBAnimation.h in Headers */,
+				C092E652CF5FFBAD46B849541AB79927 /* RBBAnimation-umbrella.h in Headers */,
+				AB43C75C7E8F1BE63C9EFEB2A065FD69 /* RBBBlockBasedArray.h in Headers */,
+				3814326C903EBBA29329257876B39324 /* RBBCubicBezier.h in Headers */,
+				71E953706DA8B1215F52D939FEF4D0D0 /* RBBCustomAnimation.h in Headers */,
+				66FF7E9911C2B8AB88B08003EA43BEA1 /* RBBEasingFunction.h in Headers */,
+				B6A91EB516F193184074DC5DD74D6941 /* RBBLinearInterpolation.h in Headers */,
+				174EC2952CE4CC71518BE686B93C51AE /* RBBSpringAnimation.h in Headers */,
+				3E5490EDCEDB4847B0D26685C6005484 /* RBBTweenAnimation.h in Headers */,
+				2C8C0CF6C137D3DA5BAD28520D6AA1A5 /* UIColor+PlatformIndependence.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7F68292F1229FE3A570628A9F0BCE0E /* Headers */ = {
+		9C40BD929F36FF61733BDCFD21F46C27 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACC1C1F0D2020C77E11298468131CA2 /* Pods-AppOGee-umbrella.h in Headers */,
+				86D5D83FFD6734F6C9CBEF12CFCB8B28 /* Pods-AppOGee-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,31 +259,31 @@
 /* Begin PBXNativeTarget section */
 		3EFCBA9738182EC7571695925FA1790F /* Pods-AppOGee */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3BD27AECFF529DC3EC08F7EBE756F5D /* Build configuration list for PBXNativeTarget "Pods-AppOGee" */;
+			buildConfigurationList = 0060928AF266AB3AC7A60CFE8BA25218 /* Build configuration list for PBXNativeTarget "Pods-AppOGee" */;
 			buildPhases = (
-				D7F68292F1229FE3A570628A9F0BCE0E /* Headers */,
-				8905F9C42F878C484D521E669A008BCD /* Sources */,
-				96A375F783AD6AA5C56FF30D7F8F95A2 /* Frameworks */,
-				1BACCE70B16370FC5F8FA11FC57F9818 /* Resources */,
+				9C40BD929F36FF61733BDCFD21F46C27 /* Headers */,
+				AD26595352D1D336061F3E71F0FB0BD8 /* Sources */,
+				3530A53351D096E8B20722AC4D0D13BA /* Frameworks */,
+				2269D56AEEFCEF7C596FBDA2776E4AB2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7D967CC9F0E02DD84D036A3C80230AC9 /* PBXTargetDependency */,
+				28CD505124078C7E7B22AAED160A4496 /* PBXTargetDependency */,
 			);
 			name = "Pods-AppOGee";
-			productName = "Pods-AppOGee";
-			productReference = 6E914877460521A70D36DCF56B04D7D2 /* Pods_AppOGee.framework */;
+			productName = Pods_AppOGee;
+			productReference = 6E914877460521A70D36DCF56B04D7D2 /* Pods-AppOGee */;
 			productType = "com.apple.product-type.framework";
 		};
 		ACCBF396038057A99D9EEABCED9FBCB5 /* RBBAnimation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16987E3FFAD501026E5D48DDD61521B6 /* Build configuration list for PBXNativeTarget "RBBAnimation" */;
+			buildConfigurationList = 4F80EDFB0055CE5A0E11E870C5CA2395 /* Build configuration list for PBXNativeTarget "RBBAnimation" */;
 			buildPhases = (
-				5E860516A0E7890FBE0A88DCFB9C3724 /* Headers */,
-				F3546551D476EFB30E12471A037A4170 /* Sources */,
-				EE802D7AB22955CD81391DABF7D23857 /* Frameworks */,
-				FAF41C2158947A7969C500601CCBA054 /* Resources */,
+				4F168F064B20CEAEAC404B7D0A30BAE6 /* Headers */,
+				72FD01DC9D75BD4E03B686B8B2C0E53D /* Sources */,
+				58C83C83EF2E62DF20073BFF05BCF6B4 /* Frameworks */,
+				BD3EAF111EDDC932083B5C2CAF795C17 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -291,7 +291,7 @@
 			);
 			name = RBBAnimation;
 			productName = RBBAnimation;
-			productReference = E829082A69644CBAAD17DB530798FAD2 /* RBBAnimation.framework */;
+			productReference = E829082A69644CBAAD17DB530798FAD2 /* RBBAnimation */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -300,19 +300,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = AEB7B76662702E555183AACC962AA027 /* Products */;
+			productRefGroup = BBA280A0EF0E7CF2A244FFBBF1E63C13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -323,14 +323,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1BACCE70B16370FC5F8FA11FC57F9818 /* Resources */ = {
+		2269D56AEEFCEF7C596FBDA2776E4AB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAF41C2158947A7969C500601CCBA054 /* Resources */ = {
+		BD3EAF111EDDC932083B5C2CAF795C17 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,50 +340,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8905F9C42F878C484D521E669A008BCD /* Sources */ = {
+		72FD01DC9D75BD4E03B686B8B2C0E53D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B2F8B077167DDD62326EB926DECAB2 /* Pods-AppOGee-dummy.m in Sources */,
+				C926561190B4CCF62C6FB72DD9610E39 /* NSValue+PlatformIndependence.m in Sources */,
+				E76A11C6BADB944D5EAEE2189D326D8C /* RBBAnimation.m in Sources */,
+				29EB3AC2B00D770E4C631C183C45EF9A /* RBBAnimation-dummy.m in Sources */,
+				594104110D4787B4DD3E59E23615F579 /* RBBBlockBasedArray.m in Sources */,
+				ECAB2D1DC18FC7D325B4069582180195 /* RBBCubicBezier.m in Sources */,
+				A33B361FA157D7DE8493A1265F2B04C9 /* RBBCustomAnimation.m in Sources */,
+				231ECC9920C160FC1CFA2E4F68088FD8 /* RBBEasingFunction.m in Sources */,
+				2EDBC2CF63D21AF5EDD2CF4CF688E65D /* RBBLinearInterpolation.m in Sources */,
+				3A711672E783C8F4521F4B4D818D9066 /* RBBSpringAnimation.m in Sources */,
+				C207A4B8770E104B578B5D3844DCD713 /* RBBTweenAnimation.m in Sources */,
+				AA8A9B0BF331EBEB42E0A8221B94D06A /* UIColor+PlatformIndependence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3546551D476EFB30E12471A037A4170 /* Sources */ = {
+		AD26595352D1D336061F3E71F0FB0BD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30C594ABC2B82D684C068ED27E9D8E36 /* NSValue+PlatformIndependence.m in Sources */,
-				D2A1C5B672F1254918A12184FC88EC6B /* RBBAnimation-dummy.m in Sources */,
-				92F4BADC45E87E591038B551EC681B37 /* RBBAnimation.m in Sources */,
-				90F557B42EBA806A260898B656BDC916 /* RBBBlockBasedArray.m in Sources */,
-				7F1FF7977D4EB1C2B3DBFB5B4BA79088 /* RBBCubicBezier.m in Sources */,
-				13C3400CE0DB2FBE176DF60BFF8355EF /* RBBCustomAnimation.m in Sources */,
-				F5502A4129BDD2DF2EC6F09F06E42DE6 /* RBBEasingFunction.m in Sources */,
-				34E75FBAAADCD5631033025B35A3ECF2 /* RBBLinearInterpolation.m in Sources */,
-				E7FCBB4B8C39024A06AF75529A452F3A /* RBBSpringAnimation.m in Sources */,
-				62F41CFC261F1871022D05D9102BA5F2 /* RBBTweenAnimation.m in Sources */,
-				63A728AC8C25323D85E2A34F3DE6A409 /* UIColor+PlatformIndependence.m in Sources */,
+				8EEF49EB11EF1812C1D0764C054BDCF3 /* Pods-AppOGee-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D967CC9F0E02DD84D036A3C80230AC9 /* PBXTargetDependency */ = {
+		28CD505124078C7E7B22AAED160A4496 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RBBAnimation;
 			target = ACCBF396038057A99D9EEABCED9FBCB5 /* RBBAnimation */;
-			targetProxy = 7B0DA0784967525AC7248B4DA9C47E52 /* PBXContainerItemProxy */;
+			targetProxy = 0FE00CBF611FC41AB85150E752B1490B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		181202E305A3356A3159E3E060754E43 /* Release */ = {
+		061680453315064739DF05393D919C89 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 517777ED2441BF5F6B7312D0602275E8 /* Pods-AppOGee.release.xcconfig */;
+			baseConfigurationReference = DF655F156A0D0E4653B4E90082669249 /* RBBAnimation.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -392,23 +390,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AppOGee/Pods-AppOGee-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/RBBAnimation/RBBAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RBBAnimation/RBBAnimation-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AppOGee/Pods-AppOGee.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/RBBAnimation/RBBAnimation.modulemap";
+				PRODUCT_MODULE_NAME = RBBAnimation;
+				PRODUCT_NAME = RBBAnimation;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -416,7 +413,7 @@
 			};
 			name = Release;
 		};
-		7DB3728FE5E8439F4AD2D668E624E53D /* Debug */ = {
+		521F689B8D2A5629EE3667338D76F6FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B065C754143EC691C88643C0DA20DB5 /* Pods-AppOGee.debug.xcconfig */;
 			buildSettings = {
@@ -515,10 +512,12 @@
 			};
 			name = Release;
 		};
-		A6A1333369016D96664C523FF512A805 /* Debug */ = {
+		975608EE8CC9C3819A4B742851239B76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AACDBBC44400AFDDB0A857748B779E6E /* RBBAnimation.debug.xcconfig */;
+			baseConfigurationReference = 517777ED2441BF5F6B7312D0602275E8 /* Pods-AppOGee.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -527,56 +526,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RBBAnimation/RBBAnimation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RBBAnimation/RBBAnimation-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-AppOGee/Pods-AppOGee-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/RBBAnimation/RBBAnimation.modulemap";
-				PRODUCT_MODULE_NAME = RBBAnimation;
-				PRODUCT_NAME = RBBAnimation;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AppOGee/Pods-AppOGee.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DC40C842478FC37DD4ED5E22B192D8CE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF655F156A0D0E4653B4E90082669249 /* RBBAnimation.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RBBAnimation/RBBAnimation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RBBAnimation/RBBAnimation-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/RBBAnimation/RBBAnimation.modulemap";
-				PRODUCT_MODULE_NAME = RBBAnimation;
-				PRODUCT_NAME = RBBAnimation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -650,14 +616,48 @@
 			};
 			name = Debug;
 		};
+		FB1864DE037DE54F89E987E80B8B8B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AACDBBC44400AFDDB0A857748B779E6E /* RBBAnimation.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RBBAnimation/RBBAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RBBAnimation/RBBAnimation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RBBAnimation/RBBAnimation.modulemap";
+				PRODUCT_MODULE_NAME = RBBAnimation;
+				PRODUCT_NAME = RBBAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16987E3FFAD501026E5D48DDD61521B6 /* Build configuration list for PBXNativeTarget "RBBAnimation" */ = {
+		0060928AF266AB3AC7A60CFE8BA25218 /* Build configuration list for PBXNativeTarget "Pods-AppOGee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A6A1333369016D96664C523FF512A805 /* Debug */,
-				DC40C842478FC37DD4ED5E22B192D8CE /* Release */,
+				521F689B8D2A5629EE3667338D76F6FA /* Debug */,
+				975608EE8CC9C3819A4B742851239B76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -671,11 +671,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3BD27AECFF529DC3EC08F7EBE756F5D /* Build configuration list for PBXNativeTarget "Pods-AppOGee" */ = {
+		4F80EDFB0055CE5A0E11E870C5CA2395 /* Build configuration list for PBXNativeTarget "RBBAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7DB3728FE5E8439F4AD2D668E624E53D /* Debug */,
-				181202E305A3356A3159E3E060754E43 /* Release */,
+				FB1864DE037DE54F89E987E80B8B8B55 /* Debug */,
+				061680453315064739DF05393D919C89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

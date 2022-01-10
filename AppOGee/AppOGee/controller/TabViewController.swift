@@ -12,26 +12,27 @@ class TabViewController: AMTabsViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setTabsControllers()
         // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 
    private func setTabsControllers() {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let graveViewController = storyboard.instantiateViewController(withIdentifier: "WorkTabViewController")
-      let bumpkinViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
-    let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
-
-      let fireworkViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
-      let ghostViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+     
+      let homeViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+      let featuresViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+       let worksViewController = storyboard.instantiateViewController(withIdentifier: "WorkTabViewController")
+      let aboutViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
 
       viewControllers = [
-        graveViewController,
-        bumpkinViewController,
-        menuViewController,
-        fireworkViewController,
-        ghostViewController
+        homeViewController,
+        featuresViewController,
+        worksViewController,
+        aboutViewController
       ]
     }
 

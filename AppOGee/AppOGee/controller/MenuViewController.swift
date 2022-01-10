@@ -17,6 +17,8 @@ class MenuViewController: UIViewController ,TabItem{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+
         rotate2(imageView: image_1, aCircleTime: 5.0)
     }
     
