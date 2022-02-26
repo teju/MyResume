@@ -23,8 +23,8 @@ class TabViewController: AMTabsViewController {
    private func setTabsControllers() {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
      
-      let homeViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
-      let featuresViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+      let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+      let featuresViewController = storyboard.instantiateViewController(withIdentifier: "FeaturesTabViewController")
        let worksViewController = storyboard.instantiateViewController(withIdentifier: "WorkTabViewController")
       let aboutViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
 

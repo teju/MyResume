@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>521259117375-e0mqvrcditfeqo2kvf0ju7mebj5meul8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.521259117375-e0mqvrcditfeqo2kvf0ju7mebj5meul8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCjHSQMTKbewQhGhO-O8F_l7bbIk7r16_w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>521259117375</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.appogee.AppOGee</string>
+	<key>PROJECT_ID</key>
+	<string>appogee-2a96b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>appogee-2a96b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:521259117375:ios:c6301babc4d49fcf48418a</string>
+	<key>DATABASE_URL</key>
+	<string>https://appogee-2a96b-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

@@ -20,11 +20,17 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
        // animate(self.imageview)
-        animateBackground()
+        //animateBackground()
     }
+    @IBAction func skip(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabViewController")
+        self.navigationController?.pushViewController(initialViewController, animated: true)
+    }
+    
     func animateBackground() {
         let animationOptions = UIView.AnimationOptions.repeat
-        let backgroundImage = UIImage(named:"Oen1Hm0.jpeg")!
+        let backgroundImage = UIImage(named:"sign_in_page.jpeg")!
         var amountToKeepImageSquare = backgroundImage.size.height - self.view.frame.size.height
 
         // UIImageView 1
