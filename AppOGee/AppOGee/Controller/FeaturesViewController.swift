@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     var itemText: String?
 
     @IBOutlet weak var featurestableview: UITableView!
     
+    var refPlayer = DatabaseReference()
+    var playerList = NSMutableArray()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,38 +27,12 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        FirebaseApp.configure()
-           refPlayer = Database.database().reference().child("Player");
-           
+           refPlayer = Database.database().reference().child("features/scrollImages");
+            self.playerList.removeAllObjects()
+
            refPlayer.observe(DataEventType.value, with: {(snapshot) in
-               if snapshot.childrenCount > 0 {
-                   self.playerList.removeAll()
-                   
-                   for players in snapshot.children.allObjects as! [DataSnapshot]{
-                       let playerOject = players.value as? [String: AnyObject]
-                     //  let playerId = playerOject?["id"]
-                       let playerName = playerOject?["navn"]
-                       let playerweek = playerOject?["uke"]
-                     // let playerPlayed = playerOject?["spillet"]
-                      // let playerExtra = playerOject?["extra"]
-                    //   let playerWalkover = playerOject?["walkover"]
-                    //   let playerKommentar = playerOject?["kommentar"]
-                       
-                       
-                       
-                       let player = PlayerModel(//id: playerId as! String,
-                                                navn: (playerName as! String?)!,
-                                                uke: (playerweek as! String?)!
-                                              //  spillet: (playerPlayed as! String?)!,
-                                             //   extra : (playerExtra as! String?)!,
-                                             //   walkover: (playerWalkover as! String?)!,
-                                             //   kommentar: (playerKommentar as! String?)!
-                                                )
-                       
-                       self.playerList.append(player)
-                   }
-                   self.tableViewer.reloadData()
-               }
+               let snap = snapshot.value as! NSMutableArray
+               print(snap)
                
            })
     }
