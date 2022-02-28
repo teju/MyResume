@@ -95,6 +95,7 @@ public class ViewPager: NSObject {
         setupTabContainerView()
         setupPageViewController()
         setupTabAndIndicator()
+        displayViewController(atIndex: 0)
     }
     
     // MARK:- Private Helpers

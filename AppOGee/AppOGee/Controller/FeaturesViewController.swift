@@ -25,7 +25,7 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
         featurestableview.delegate = self
         featurestableview.dataSource = self
         featurestableview.backgroundView = UIImageView(image: UIImage(named: "features_bg.png"))
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,8 +57,9 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
         cell.featureImg.sd_setImage(with:imageURL)
 
         return cell
+       
     }
-
+   
 }
 
 

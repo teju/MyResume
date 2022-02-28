@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="shipporimincho_regular.ttf">
+            <string>ShipporiMincho-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ContactUs" id="iN0-l3-epB" customClass="ContactUs" customModule="AppOGee" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="491" height="254"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQq-aq-6zg">
+                    <rect key="frame" x="0.0" y="0.0" width="491" height="244"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="Rde-NX-FN6">
+                            <rect key="frame" x="0.0" y="11" width="491" height="239"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get free quote for your business idea.Lets Talk!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFd-KD-n24">
+                            <rect key="frame" x="128" y="63" width="235" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="3S4-qX-uwX"/>
+                                <constraint firstAttribute="width" constant="235" id="NJd-na-Djp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnd-IZ-0Ye">
+                            <rect key="frame" x="80" y="141" width="50" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="telephone"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rx9-HM-aGh">
+                            <rect key="frame" x="360" y="141" width="50" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="messenger"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMh-Gl-Klu">
+                            <rect key="frame" x="225" y="141" width="50" height="50"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="telegram"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqQ-BP-D2Z">
+                            <rect key="frame" x="292" y="141" width="50" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="gmail"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ork-Q3-ewR">
+                            <rect key="frame" x="151" y="141" width="50" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="whatsapp"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="244" id="Cd3-KU-9et"/>
+                        <constraint firstItem="Rde-NX-FN6" firstAttribute="top" secondItem="WQq-aq-6zg" secondAttribute="top" constant="11" id="HTd-Y6-Z1r"/>
+                        <constraint firstItem="Rde-NX-FN6" firstAttribute="centerX" secondItem="WQq-aq-6zg" secondAttribute="centerX" id="HqC-Z6-qNc"/>
+                        <constraint firstItem="JFd-KD-n24" firstAttribute="top" secondItem="WQq-aq-6zg" secondAttribute="top" constant="63" id="Ux3-Qw-HBM"/>
+                        <constraint firstAttribute="bottom" secondItem="Rde-NX-FN6" secondAttribute="bottom" constant="-6" id="YkX-Yc-kxv"/>
+                        <constraint firstItem="Rde-NX-FN6" firstAttribute="centerX" secondItem="JFd-KD-n24" secondAttribute="centerX" id="fxw-Ji-hTx"/>
+                        <constraint firstItem="uMh-Gl-Klu" firstAttribute="top" secondItem="JFd-KD-n24" secondAttribute="bottom" constant="24" id="j1m-I3-laT"/>
+                        <constraint firstItem="Rde-NX-FN6" firstAttribute="leading" secondItem="WQq-aq-6zg" secondAttribute="leading" id="mgG-nY-x7t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WQq-aq-6zg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gf9-Qx-BPV"/>
+                <constraint firstItem="WQq-aq-6zg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="h7x-Hu-gi7"/>
+                <constraint firstItem="WQq-aq-6zg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rJr-oL-ViZ"/>
+                <constraint firstAttribute="bottom" secondItem="WQq-aq-6zg" secondAttribute="bottom" constant="10" id="yZO-gc-BR8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="29.710144927536234" y="-451.33928571428567"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="connect" width="1113" height="447"/>
+        <image name="gmail" width="512" height="512"/>
+        <image name="messenger" width="512" height="512"/>
+        <image name="telegram" width="512" height="512"/>
+        <image name="telephone" width="128" height="128"/>
+        <image name="whatsapp" width="512" height="512"/>
+    </resources>
+</document>

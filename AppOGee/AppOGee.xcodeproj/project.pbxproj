@@ -22,6 +22,8 @@
 		BD3FF9DE27CD22A30045FAC8 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3FF9DD27CD22A30045FAC8 /* ProjectsViewController.swift */; };
 		BD3FF9E027CD25930045FAC8 /* KeyNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3FF9DF27CD25930045FAC8 /* KeyNotesTableViewCell.swift */; };
 		BD3FF9E227CD3E190045FAC8 /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3FF9E127CD3E190045FAC8 /* ProjectsTableViewCell.swift */; };
+		BD3FF9E427CD54CD0045FAC8 /* ContactUs.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD3FF9E327CD54CC0045FAC8 /* ContactUs.xib */; };
+		BD3FF9E627CD55370045FAC8 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3FF9E527CD55370045FAC8 /* ContactUs.swift */; };
 		BD4B042727CA0D4B000422E7 /* FeaturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B042627CA0D4B000422E7 /* FeaturesTableViewCell.swift */; };
 		BD4B042927CA1BD5000422E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */; };
 		BD631BEE27CA342400BC4F0C /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD631BED27CA342400BC4F0C /* Features.swift */; };
@@ -90,6 +92,8 @@
 		BD3FF9DD27CD22A30045FAC8 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		BD3FF9DF27CD25930045FAC8 /* KeyNotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNotesTableViewCell.swift; sourceTree = "<group>"; };
 		BD3FF9E127CD3E190045FAC8 /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
+		BD3FF9E327CD54CC0045FAC8 /* ContactUs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUs.xib; sourceTree = "<group>"; };
+		BD3FF9E527CD55370045FAC8 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
 		BD4B042627CA0D4B000422E7 /* FeaturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTableViewCell.swift; sourceTree = "<group>"; };
 		BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD631BED27CA342400BC4F0C /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 				7918C2B02483C99A00DD5B33 /* CarouselCollectionViewCell.swift */,
 				7918C2B12483C99A00DD5B33 /* Character.swift */,
 				7918C2AE2483C7F200DD5B33 /* GradientView.swift */,
+				BD3FF9E327CD54CC0045FAC8 /* ContactUs.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			children = (
 				BD4B042627CA0D4B000422E7 /* FeaturesTableViewCell.swift */,
 				BD3FF9DF27CD25930045FAC8 /* KeyNotesTableViewCell.swift */,
+				BD3FF9E527CD55370045FAC8 /* ContactUs.swift */,
 				BD3FF9E127CD3E190045FAC8 /* ProjectsTableViewCell.swift */,
 			);
 			path = cells;
@@ -405,6 +411,7 @@
 				BD690C5727C91C1B00417537 /* poppins_bold.ttf in Resources */,
 				BD4B042927CA1BD5000422E7 /* GoogleService-Info.plist in Resources */,
 				BD690C5B27C91C1B00417537 /* shipporimincho_medium.ttf in Resources */,
+				BD3FF9E427CD54CD0045FAC8 /* ContactUs.xib in Resources */,
 				796A9D98248145CC00233FCF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +496,7 @@
 				7918C2D924841D6F00DD5B33 /* AMTabView.swift in Sources */,
 				BD3FF9E227CD3E190045FAC8 /* ProjectsTableViewCell.swift in Sources */,
 				7918C2AF2483C7F200DD5B33 /* GradientView.swift in Sources */,
+				BD3FF9E627CD55370045FAC8 /* ContactUs.swift in Sources */,
 				BDBE751C27C950C600D1AA32 /* ViewPager.swift in Sources */,
 				7918C2B22483C99A00DD5B33 /* CarouselCollectionViewCell.swift in Sources */,
 				7918C2B72483CAFC00DD5B33 /* UPCarouselFlowLayout.swift in Sources */,

@@ -12,6 +12,8 @@ public final class ViewPagerTabView: UIView {
     
     internal var titleLabel:UILabel?
     internal var imageView:UIImageView?
+    internal var tabBgView:UIImageView?
+
     internal var width: CGFloat = 0
     
     /*--------------------------
@@ -92,9 +94,12 @@ public final class ViewPagerTabView: UIView {
         let distribution = options.distribution
         
         let imageSize = options.tabViewImageSize
-        
+        let tabbgimageSize = options.tabBgViewImageSize
+
+       
+       
         switch distribution {
-            
+           
         case .segmented:
             
             if withText {
@@ -103,6 +108,8 @@ public final class ViewPagerTabView: UIView {
                 buildTitleLabel(withOptions: options, text: tab.title)
                 
                 setupForAutolayout(view: imageView)
+             
+                
                 imageView?.heightAnchor.constraint(equalToConstant: imageSize.height).isActive = true
                 imageView?.widthAnchor.constraint(equalToConstant: imageSize.width).isActive = true
                 imageView?.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -134,10 +141,20 @@ public final class ViewPagerTabView: UIView {
                 buildTitleLabel(withOptions: options, text: tab.title)
                 
                 setupForAutolayout(view: imageView)
+                buildTabBgImageView(withOptions: options)
+                setupForAutolayout(view: tabBgView)
+                self.bringSubviewToFront(imageView!)
+                tabBgView?.isHidden = true
+
                 imageView?.heightAnchor.constraint(equalToConstant: imageSize.height).isActive = true
                 imageView?.widthAnchor.constraint(equalToConstant: imageSize.width).isActive = true
                 imageView?.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
                 imageView?.topAnchor.constraint(equalTo: self.topAnchor, constant: options.tabViewImageMarginTop).isActive = true
+                
+                tabBgView?.heightAnchor.constraint(equalToConstant: tabbgimageSize.height).isActive = true
+                tabBgView?.widthAnchor.constraint(equalToConstant: tabbgimageSize.width).isActive = true
+                tabBgView?.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+                tabBgView?.topAnchor.constraint(equalTo: self.topAnchor, constant: options.tabViewImageMarginTop).isActive = true
                 
                 setupForAutolayout(view: titleLabel)
                 titleLabel?.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
@@ -191,16 +208,28 @@ public final class ViewPagerTabView: UIView {
         imageView?.image = image
     }
     
-    internal func addHighlight(options:ViewPagerOptions) {
+    fileprivate func buildTabBgImageView(withOptions options:ViewPagerOptions?) {
         
+        tabBgView = UIImageView()
+        tabBgView?.contentMode = .scaleAspectFit
+        tabBgView?.image =  UIImage(named: "feature_tab_icon_bg.png")
+    }
+    
+    internal func addHighlight(options:ViewPagerOptions) {
         self.backgroundColor = options.tabViewBackgroundHighlightColor
         self.titleLabel?.textColor = options.tabViewTextHighlightColor
+        tabBgView?.isHidden = false
+        self.titleLabel?.isHidden = true
+
     }
     
     internal func removeHighlight(options:ViewPagerOptions) {
         
         self.backgroundColor = options.tabViewBackgroundDefaultColor
         self.titleLabel?.textColor = options.tabViewTextDefaultColor
+        self.titleLabel?.isHidden = false
+        tabBgView?.isHidden = true
+
     }
     
     internal func setupForAutolayout(view: UIView?) {
@@ -210,4 +239,25 @@ public final class ViewPagerTabView: UIView {
         v.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(v)
     }
+    
 }
+extension UIImage {
+       func imageWithColor(tintColor: UIColor) -> UIImage {
+           UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+
+           let context = UIGraphicsGetCurrentContext()!
+           context.translateBy(x: 0, y: self.size.height)
+           context.scaleBy(x: 1.0, y: -1.0);
+           context.setBlendMode(.normal)
+
+           let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height) as CGRect
+           context.clip(to: rect, mask: self.cgImage!)
+           tintColor.setFill()
+           context.fill(rect)
+
+           let newImage = UIGraphicsGetImageFromCurrentImageContext()!
+           UIGraphicsEndImageContext()
+
+           return newImage
+       }
+   }
