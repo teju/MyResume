@@ -61,10 +61,18 @@ extension FeaturesTabViewController: ViewPagerDataSource {
     }
     
     func viewControllerAtPosition(position:Int) -> UIViewController {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "FeaturesViewController") as! FeaturesViewController
-        vc.itemText = "\(tabs[position].title)"
-        
-        return vc
+        if(position == 0) {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "FeaturesViewController") as! FeaturesViewController
+            vc.itemText = "\(tabs[position].title)"
+            return vc
+        } else if(position == 1) {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "KeyNotesViewController") as! KeyNotesViewController
+            return vc
+        } else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProjectsViewController") as! ProjectsViewController
+            return vc
+        }
+
     }
     
     func tabsForPages() -> [ViewPagerTab] {

@@ -62,11 +62,15 @@ PODS:
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
   - RBBAnimation (0.4.0)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
 
 DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - RBBAnimation (= 0.4.0)
+  - SDWebImage (~> 4.3.3)
 
 SPEC REPOS:
   trunk:
@@ -82,6 +86,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - RBBAnimation
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Firebase: fb5114cd2bf96e2ff7bcb01d0d9a156cf5fd2f07
@@ -96,7 +101,8 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: f3cc6c4794fc6bc574e0d36599f7e0e1f281029d
+PODFILE CHECKSUM: 8d89ec8976b426c7a1c1780cfdd98f3675c5798f
 
 COCOAPODS: 1.11.2

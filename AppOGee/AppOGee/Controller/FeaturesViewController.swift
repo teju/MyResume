@@ -8,14 +8,15 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     var itemText: String?
 
     @IBOutlet weak var featurestableview: UITableView!
     
-    var refPlayer = DatabaseReference()
-    var playerList = NSMutableArray()
+    var refFeatures = DatabaseReference()
+    var featuresList = NSMutableArray()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +24,21 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
         self.loadViewIfNeeded()
         featurestableview.delegate = self
         featurestableview.dataSource = self
+        featurestableview.backgroundView = UIImageView(image: UIImage(named: "features_bg.png"))
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-           refPlayer = Database.database().reference().child("features/scrollImages");
-            self.playerList.removeAllObjects()
+        refFeatures = Database.database().reference().child("features/scrollImages");
+            self.featuresList.removeAllObjects()
 
-           refPlayer.observe(DataEventType.value, with: {(snapshot) in
-               let snap = snapshot.value as! NSMutableArray
-               print(snap)
-               
+        refFeatures.observe(DataEventType.value, with: {(snapshot) in
+               self.featuresList = snapshot.value as! NSMutableArray
+               print(self.featuresList)
+               self.featurestableview.reloadData()
+              self.featurestableview.backgroundView = UIImageView(image: UIImage(named: "features_bg.png"))
+
            })
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,18 +46,19 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return  self.featuresList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "featurescell",
                                                      for: indexPath as IndexPath) as! FeaturesTableViewCell
+        let imageURL = URL(string:featuresList[indexPath.row] as! String )
+        
+        cell.featureImg.sd_setImage(with:imageURL)
+
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
+
 }
 
 

@@ -1,16 +1,18 @@
 //
-//  FeaturesTableViewCell.swift
+//  KeyNotesTableViewCell.swift
 //  AppOGee
 //
-//  Created by Tejaswini N on 26/02/22.
+//  Created by Tejaswini N on 28/02/22.
 //  Copyright © 2022 Tejaswini N. All rights reserved.
 //
 
 import UIKit
 
-class FeaturesTableViewCell: UITableViewCell {
+class KeyNotesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var featureImg: UIImageView!
+    @IBOutlet weak var lbDescription: UILabel!
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var bgImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
