@@ -60,6 +60,13 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>PUGifLoading.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>Pods-AppOGee.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -79,14 +86,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>13</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>14</integer>
 		</dict>
 		<key>leveldb-library.xcscheme</key>
 		<dict>

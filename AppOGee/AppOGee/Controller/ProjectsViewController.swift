@@ -8,12 +8,15 @@
 
 import UIKit
 import Firebase
+import PUGifLoading
 
 class ProjectsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var refProjects = DatabaseReference()
     var projectList = NSMutableArray()
     var isFromHome = false
+    let loading = PUGIFLoading()
+
     @IBOutlet weak var projectsTableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +24,17 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         projectsTableview.delegate = self
         refProjects = Database.database().reference().child("/myApps");
             self.projectList.removeAllObjects()
-        projectsTableview.backgroundView = UIImageView(image: UIImage(named: "features_bg.png"))
+        let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
+        bgImg.alpha = 0.6
+        projectsTableview.backgroundView = bgImg
+        loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
 
         refProjects.observe(DataEventType.value, with: {(snapshot) in
                self.projectList = snapshot.value as! NSMutableArray
                print(self.projectList)
                self.projectsTableview.reloadData()
+            self.loading.hide()
+
         })
     
     }

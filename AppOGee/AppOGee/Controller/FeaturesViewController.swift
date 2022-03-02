@@ -9,9 +9,11 @@
 import UIKit
 import Firebase
 import SDWebImage
+import PUGifLoading
 
 class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     var itemText: String?
+    let loading = PUGIFLoading()
 
     @IBOutlet weak var featurestableview: UITableView!
     
@@ -24,12 +26,16 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
         self.loadViewIfNeeded()
         featurestableview.delegate = self
         featurestableview.dataSource = self
-        featurestableview.backgroundView = UIImageView(image: UIImage(named: "features_bg.png"))
+        let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
+        bgImg.alpha = 0.6
+        featurestableview.backgroundView = bgImg
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
+
         refFeatures = Database.database().reference().child("features/scrollImages");
             self.featuresList.removeAllObjects()
 
@@ -38,6 +44,7 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
                print(self.featuresList)
                self.featurestableview.reloadData()
               self.featurestableview.backgroundView = UIImageView(image: UIImage(named: "features_bg.png"))
+            self.loading.hide()
 
            })
     }
@@ -58,6 +65,29 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
 
         return cell
        
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "WebDetailsViewController") as! WebDetailsViewController
+        if(indexPath.row == 0) {
+            initialViewController.imgurl = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature1.png?alt=media&token=4fd8c68b-f354-403e-9426-555ae79e6394"
+            initialViewController.weburl = "https://appogee.in/remoteworks.html"
+        } else  if(indexPath.row == 1) {
+            initialViewController.weburl = "https://appogee.in/mobAppDev.html"
+            initialViewController.imgurl = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature2.png?alt=media&token=67493d6f-217f-43c7-bd3e-384379387be8"
+        } else if(indexPath.row == 2) {
+            initialViewController.weburl = "https://appogee.in/webDesign.html"
+            initialViewController.imgurl = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature3.png?alt=media&token=63e88873-2337-4065-b5b6-22b431f8f6dc"
+        }  else if(indexPath.row == 3) {
+            initialViewController.weburl = "https://appogee.in/idea.html"
+            initialViewController.imgurl = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature4.png?alt=media&token=be70b148-a6fe-4909-a82a-06d67a4ce598"
+        }  else if(indexPath.row == 4) {
+            initialViewController.weburl = "https://appogee.in/suppMaintain.html"
+            initialViewController.imgurl = "https://firebasestorage.googleapis.com/v0/b/appogee-2a96b.appspot.com/o/features%2FFeatures%2F%2BFeature%2FpFeature5.png?alt=media&token=5f58b8e2-1bee-4929-9018-7e3d3eacdbaa"
+
+        }
+        self.navigationController?.pushViewController(initialViewController, animated: true)
+
     }
    
 }

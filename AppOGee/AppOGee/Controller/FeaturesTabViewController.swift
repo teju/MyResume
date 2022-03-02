@@ -62,7 +62,8 @@ extension FeaturesTabViewController: ViewPagerDataSource {
     
     func viewControllerAtPosition(position:Int) -> UIViewController {
         if(position == 0) {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "FeaturesViewController") as! FeaturesViewController
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "FeaturesViewController") as! FeaturesViewController
             vc.itemText = "\(tabs[position].title)"
             return vc
         } else if(position == 1) {

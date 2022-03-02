@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import PUGifLoading
 
 class WorkTabViewController: UIViewController ,TabItem, UICollectionViewDelegate, UICollectionViewDataSource{
     weak var selectedImageView : UIImageView?
     var refProjects = DatabaseReference()
-    
+    let loading = PUGIFLoading()
+
     var tabImage: UIImage? {
          return UIImage(named: "Projects")
        }
@@ -46,15 +48,20 @@ class WorkTabViewController: UIViewController ,TabItem, UICollectionViewDelegate
            self.currentPage = 0
            
            NotificationCenter.default.addObserver(self, selector: #selector(WorkTabViewController.rotationDidChange), name: UIDevice.orientationDidChangeNotification, object: nil)
-           
+           loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
+
            refProjects = Database.database().reference().child("/AppDetails");
                self.items.removeAllObjects()
-           collectionView.backgroundView = UIImageView(image: UIImage(named: "features_bg.png"))
+           let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
+           bgImg.alpha = 0.6
+           collectionView.backgroundView = bgImg
 
            refProjects.observe(DataEventType.value, with: {(snapshot) in
                   self.items = snapshot.value as! NSMutableArray
                   print(self.items)
                   self.collectionView.reloadData()
+               self.loading.hide()
+
            })
        
        }
@@ -160,7 +167,7 @@ class WorkTabViewController: UIViewController ,TabItem, UICollectionViewDelegate
        
        func handleTransition() {
           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-          let controller = storyboard.instantiateViewController(withIdentifier: "WorkListViewController") as! WorkListViewController
+          let controller = storyboard.instantiateViewController(withIdentifier: "WebDetailsViewController") as! WebDetailsViewController
           self.navigationController?.pushViewController(controller, animated: true)
        }
        

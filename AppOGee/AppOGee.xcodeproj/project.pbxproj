@@ -27,6 +27,7 @@
 		BD4B042727CA0D4B000422E7 /* FeaturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B042627CA0D4B000422E7 /* FeaturesTableViewCell.swift */; };
 		BD4B042927CA1BD5000422E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */; };
 		BD631BEE27CA342400BC4F0C /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD631BED27CA342400BC4F0C /* Features.swift */; };
+		BD64A4B427CF52EA00D8DEDC /* loading_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD64A4B327CF52EA00D8DEDC /* loading_animation.gif */; };
 		BD690C5527C91C1B00417537 /* shipporimincho_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD690C4E27C91C1B00417537 /* shipporimincho_bold.ttf */; };
 		BD690C5627C91C1B00417537 /* shipporimincho_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD690C4F27C91C1B00417537 /* shipporimincho_semibold.ttf */; };
 		BD690C5727C91C1B00417537 /* poppins_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD690C5027C91C1B00417537 /* poppins_bold.ttf */; };
@@ -43,7 +44,7 @@
 		BDBE752B27C9538800D1AA32 /* WorkTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE752327C9538200D1AA32 /* WorkTabViewController.swift */; };
 		BDBE752C27C9538800D1AA32 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE752427C9538300D1AA32 /* MenuViewController.swift */; };
 		BDBE752D27C9538800D1AA32 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE752527C9538500D1AA32 /* InitialViewController.swift */; };
-		BDBE752E27C9538800D1AA32 /* WorkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE752627C9538600D1AA32 /* WorkListViewController.swift */; };
+		BDBE752E27C9538800D1AA32 /* WebDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE752627C9538600D1AA32 /* WebDetailsViewController.swift */; };
 		BDBE752F27C9538800D1AA32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE752727C9538700D1AA32 /* LoginViewController.swift */; };
 		BDBE753027C9538800D1AA32 /* FeaturesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE752827C9538800D1AA32 /* FeaturesTabViewController.swift */; };
 		BDBE753227C953C000D1AA32 /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE753127C953C000D1AA32 /* FeaturesViewController.swift */; };
@@ -97,6 +98,7 @@
 		BD4B042627CA0D4B000422E7 /* FeaturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTableViewCell.swift; sourceTree = "<group>"; };
 		BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD631BED27CA342400BC4F0C /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
+		BD64A4B327CF52EA00D8DEDC /* loading_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading_animation.gif; path = ../../Resume/app/src/main/res/drawable/loading_animation.gif; sourceTree = "<group>"; };
 		BD690C4E27C91C1B00417537 /* shipporimincho_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = shipporimincho_bold.ttf; path = ../../../Resume/app/src/main/res/font/shipporimincho_bold.ttf; sourceTree = "<group>"; };
 		BD690C4F27C91C1B00417537 /* shipporimincho_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = shipporimincho_semibold.ttf; path = ../../../Resume/app/src/main/res/font/shipporimincho_semibold.ttf; sourceTree = "<group>"; };
 		BD690C5027C91C1B00417537 /* poppins_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = poppins_bold.ttf; path = ../../../Resume/app/src/main/res/font/poppins_bold.ttf; sourceTree = "<group>"; };
@@ -113,7 +115,7 @@
 		BDBE752327C9538200D1AA32 /* WorkTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTabViewController.swift; sourceTree = "<group>"; };
 		BDBE752427C9538300D1AA32 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BDBE752527C9538500D1AA32 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		BDBE752627C9538600D1AA32 /* WorkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkListViewController.swift; sourceTree = "<group>"; };
+		BDBE752627C9538600D1AA32 /* WebDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebDetailsViewController.swift; sourceTree = "<group>"; };
 		BDBE752727C9538700D1AA32 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BDBE752827C9538800D1AA32 /* FeaturesTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturesTabViewController.swift; sourceTree = "<group>"; };
 		BDBE753127C953C000D1AA32 /* FeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 				BDBE752727C9538700D1AA32 /* LoginViewController.swift */,
 				BDBE752427C9538300D1AA32 /* MenuViewController.swift */,
 				BDBE752227C9538100D1AA32 /* TabViewController.swift */,
-				BDBE752627C9538600D1AA32 /* WorkListViewController.swift */,
+				BDBE752627C9538600D1AA32 /* WebDetailsViewController.swift */,
 				BDBE752327C9538200D1AA32 /* WorkTabViewController.swift */,
 				BDBE753127C953C000D1AA32 /* FeaturesViewController.swift */,
 				BD3FF9DB27CD22160045FAC8 /* KeyNotesViewController.swift */,
@@ -211,6 +213,7 @@
 		796A9D642481446900233FCF /* AppOGee */ = {
 			isa = PBXGroup;
 			children = (
+				BD64A4B327CF52EA00D8DEDC /* loading_animation.gif */,
 				BD631BEC27CA340C00BC4F0C /* model */,
 				BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */,
 				BD4B042527CA0D1F000422E7 /* cells */,
@@ -404,6 +407,7 @@
 			files = (
 				796A9D6C2481446C00233FCF /* Assets.xcassets in Resources */,
 				BD690C5A27C91C1B00417537 /* poppins_regular.ttf in Resources */,
+				BD64A4B427CF52EA00D8DEDC /* loading_animation.gif in Resources */,
 				BD690C5627C91C1B00417537 /* shipporimincho_semibold.ttf in Resources */,
 				BD690C5927C91C1B00417537 /* shipporimincho_extrabold.ttf in Resources */,
 				BD690C5527C91C1B00417537 /* shipporimincho_bold.ttf in Resources */,
@@ -503,7 +507,7 @@
 				BDBE753027C9538800D1AA32 /* FeaturesTabViewController.swift in Sources */,
 				BDBE751D27C950C600D1AA32 /* ViewPagerTabView.swift in Sources */,
 				BDBE752927C9538800D1AA32 /* HomeViewController.swift in Sources */,
-				BDBE752E27C9538800D1AA32 /* WorkListViewController.swift in Sources */,
+				BDBE752E27C9538800D1AA32 /* WebDetailsViewController.swift in Sources */,
 				BD4B042727CA0D4B000422E7 /* FeaturesTableViewCell.swift in Sources */,
 				BDBE752D27C9538800D1AA32 /* InitialViewController.swift in Sources */,
 			);

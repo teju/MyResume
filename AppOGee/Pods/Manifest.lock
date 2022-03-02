@@ -61,6 +61,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
+  - PUGifLoading (1.0.3)
   - RBBAnimation (0.4.0)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
@@ -69,6 +70,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
+  - PUGifLoading
   - RBBAnimation (= 0.4.0)
   - SDWebImage (~> 4.3.3)
 
@@ -85,6 +87,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - PUGifLoading
     - RBBAnimation
     - SDWebImage
 
@@ -100,9 +103,10 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  PUGifLoading: b36d080b4fcde4edee37df4dc138be6ca1b3568b
   RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
 
-PODFILE CHECKSUM: 8d89ec8976b426c7a1c1780cfdd98f3675c5798f
+PODFILE CHECKSUM: 6bcc3857a047775619fe7ae57b79d59747520e43
 
 COCOAPODS: 1.11.2

@@ -8,10 +8,12 @@
 
 import UIKit
 import Firebase
+import PUGifLoading
 
 class KeyNotesViewController: UIViewController  ,UITableViewDataSource, UITableViewDelegate{
   
     @IBOutlet weak var Keynotestableview: UITableView!
+    let loading = PUGIFLoading()
 
     var refKeynotes = DatabaseReference()
     var keyNotesList = NSMutableArray()
@@ -21,7 +23,10 @@ class KeyNotesViewController: UIViewController  ,UITableViewDataSource, UITableV
         super.viewDidLoad()
         Keynotestableview.delegate = self
         Keynotestableview.dataSource = self
-        Keynotestableview.backgroundView = UIImageView(image: UIImage(named: "features_bg.png"))
+        let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
+        bgImg.alpha = 0.6
+        Keynotestableview.backgroundView = bgImg
+        loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
 
         refKeynotes = Database.database().reference().child("features/keynotes");
          self.keyNotesList.removeAllObjects()
@@ -30,6 +35,7 @@ class KeyNotesViewController: UIViewController  ,UITableViewDataSource, UITableV
             self.keyNotesList = snapshot.value as! NSMutableArray
             print(self.keyNotesList)
             self.Keynotestableview.reloadData()
+            self.loading.hide()
         })
     }
 
