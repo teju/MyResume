@@ -6,5 +6,4 @@ pod 'Firebase/Messaging'
 pod 'Firebase/Database'
 pod 'SDWebImage', '~> 4.3.3'
 pod 'PUGifLoading'
-
 end

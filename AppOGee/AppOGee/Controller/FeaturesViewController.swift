@@ -43,8 +43,8 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
                self.featuresList = snapshot.value as! NSMutableArray
                print(self.featuresList)
                self.featurestableview.reloadData()
-              self.featurestableview.backgroundView = UIImageView(image: UIImage(named: "features_bg.png"))
-            self.loading.hide()
+    
+                self.loading.hide()
 
            })
     }
@@ -60,8 +60,8 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "featurescell",
                                                      for: indexPath as IndexPath) as! FeaturesTableViewCell
         let imageURL = URL(string:featuresList[indexPath.row] as! String )
-        
         cell.featureImg.sd_setImage(with:imageURL)
+       // cell.featureImg.downloaded(from: featuresList[indexPath.row] as! String)
 
         return cell
        
@@ -93,3 +93,23 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
 }
 
 
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
+}
