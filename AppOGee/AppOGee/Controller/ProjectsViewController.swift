@@ -22,6 +22,8 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         projectsTableview.dataSource = self
         projectsTableview.delegate = self
+        
+
         refProjects = Database.database().reference().child("/myApps");
             self.projectList.removeAllObjects()
         let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
@@ -41,8 +43,10 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidAppear(_ animated: Bool) {
         if(isFromHome) {
             self.navigationController?.isNavigationBarHidden = false
+        } else {
+            self.navigationController?.isNavigationBarHidden = true
         }
-      
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

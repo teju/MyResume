@@ -98,6 +98,7 @@ class WorkTabViewController: UIViewController ,TabItem, UICollectionViewDelegate
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "ProjectsViewController") as! ProjectsViewController
             initialViewController.isFromHome = true
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
             self.navigationController?.pushViewController(initialViewController, animated: true)
         }
 
@@ -140,9 +141,10 @@ class WorkTabViewController: UIViewController ,TabItem, UICollectionViewDelegate
                let storyboard = UIStoryboard(name: "Main", bundle: nil)
                let initialViewController = storyboard.instantiateViewController(withIdentifier: "ProjectsViewController") as! ProjectsViewController
                initialViewController.isFromHome = true
+               self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
                self.navigationController?.pushViewController(initialViewController, animated: true)
            } else {
-               handleTransition()
+               handleTransition(position: indexPath.row)
            }
        }
 
@@ -163,15 +165,10 @@ class WorkTabViewController: UIViewController ,TabItem, UICollectionViewDelegate
 //            }
        }
     
-       
-       
-       func handleTransition() {
+    func handleTransition(position:Int) {
           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-          let controller = storyboard.instantiateViewController(withIdentifier: "WebDetailsViewController") as! WebDetailsViewController
+          let controller = storyboard.instantiateViewController(withIdentifier: "AppDetailsViewController") as! AppDetailsViewController
+        controller.dict = items[position] as! NSDictionary
           self.navigationController?.pushViewController(controller, animated: true)
        }
-       
-       
-
-       
 }

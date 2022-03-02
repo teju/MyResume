@@ -18,6 +18,7 @@
 		796A9D7D2481446C00233FCF /* AppOGeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A9D7C2481446C00233FCF /* AppOGeeTests.swift */; };
 		796A9D882481446C00233FCF /* AppOGeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A9D872481446C00233FCF /* AppOGeeUITests.swift */; };
 		796A9D98248145CC00233FCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796A9D97248145CC00233FCF /* Main.storyboard */; };
+		BD158ECA27CF9971009547E4 /* AppDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD158EC927CF9971009547E4 /* AppDetailsViewController.swift */; };
 		BD3FF9DC27CD22160045FAC8 /* KeyNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3FF9DB27CD22160045FAC8 /* KeyNotesViewController.swift */; };
 		BD3FF9DE27CD22A30045FAC8 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3FF9DD27CD22A30045FAC8 /* ProjectsViewController.swift */; };
 		BD3FF9E027CD25930045FAC8 /* KeyNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3FF9DF27CD25930045FAC8 /* KeyNotesTableViewCell.swift */; };
@@ -89,6 +90,7 @@
 		796A9D892481446C00233FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		796A9D97248145CC00233FCF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B2D1CF156318ADAFF2ED1307 /* Pods_AppOGee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppOGee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD158EC927CF9971009547E4 /* AppDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailsViewController.swift; sourceTree = "<group>"; };
 		BD3FF9DB27CD22160045FAC8 /* KeyNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNotesViewController.swift; sourceTree = "<group>"; };
 		BD3FF9DD27CD22A30045FAC8 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		BD3FF9DF27CD25930045FAC8 /* KeyNotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNotesTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				BDBE753127C953C000D1AA32 /* FeaturesViewController.swift */,
 				BD3FF9DB27CD22160045FAC8 /* KeyNotesViewController.swift */,
 				BD3FF9DD27CD22A30045FAC8 /* ProjectsViewController.swift */,
+				BD158EC927CF9971009547E4 /* AppDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				7918C2AF2483C7F200DD5B33 /* GradientView.swift in Sources */,
 				BD3FF9E627CD55370045FAC8 /* ContactUs.swift in Sources */,
 				BDBE751C27C950C600D1AA32 /* ViewPager.swift in Sources */,
+				BD158ECA27CF9971009547E4 /* AppDetailsViewController.swift in Sources */,
 				7918C2B22483C99A00DD5B33 /* CarouselCollectionViewCell.swift in Sources */,
 				7918C2B72483CAFC00DD5B33 /* UPCarouselFlowLayout.swift in Sources */,
 				BDBE753027C9538800D1AA32 /* FeaturesTabViewController.swift in Sources */,

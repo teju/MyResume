@@ -19,7 +19,10 @@ class InitialViewController: UIViewController {
        
         dribbleAnim()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+    }
     func dribbleAnim() {
         UIView.animate(withDuration: 4.0, animations: {() -> Void in
             self.app_logo.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
