@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UITableViewController ,TabItem{
    
     var tabImage: UIImage? {
-      return UIImage(named: "dummy")
+      return UIImage(named: "Home")
     }
     
     override func viewDidLoad() {

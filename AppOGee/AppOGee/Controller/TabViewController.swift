@@ -12,6 +12,8 @@ class TabViewController: AMTabsViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var color1 = hexStringToUIColor(hex: "#1E3567")
+        AMTabView.settings.ballColor = color1
         
         setTabsControllers()
         // Do any additional setup after loading the view.

@@ -13,7 +13,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
 
     var refProjects = DatabaseReference()
     var projectList = NSMutableArray()
-    
+    var isFromHome = false
     @IBOutlet weak var projectsTableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,12 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         })
     
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        if(isFromHome) {
+            self.navigationController?.isNavigationBarHidden = false
+        }
+      
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

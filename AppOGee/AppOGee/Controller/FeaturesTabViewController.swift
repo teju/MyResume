@@ -15,7 +15,7 @@ class FeaturesTabViewController: UIViewController ,TabItem{
     var options: ViewPagerOptions?
     var pager:ViewPager?
     var tabImage: UIImage? {
-      return UIImage(named: "dummy")
+      return UIImage(named: "Asset 2")
     }
     var tabs3 = [
         ViewPagerTab(title: "Features", image: UIImage(named: "features")),
@@ -70,6 +70,7 @@ extension FeaturesTabViewController: ViewPagerDataSource {
             return vc
         } else {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProjectsViewController") as! ProjectsViewController
+            vc.isFromHome = false
             return vc
         }
 
