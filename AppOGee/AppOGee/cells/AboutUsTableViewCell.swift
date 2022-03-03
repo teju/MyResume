@@ -8,8 +8,10 @@
 
 import UIKit
 
-class AboutUsTableViewCell: UITableViewCell {
-
+class AboutUsTableViewCell: UICollectionViewCell {
+    @IBOutlet weak var profilebg: UIImageView!
+    
+    @IBOutlet weak var lbDescription: UILabel!
     @IBOutlet weak var lbLevel: UILabel!
     @IBOutlet weak var lbExperience: UILabel!
     @IBOutlet weak var lbName: UILabel!
@@ -20,10 +22,6 @@ class AboutUsTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
 
 }

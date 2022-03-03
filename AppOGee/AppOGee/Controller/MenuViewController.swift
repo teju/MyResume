@@ -10,13 +10,14 @@ import UIKit
 import Firebase
 import PUGifLoading
 
-class MenuViewController: UITableViewController ,TabItem{
+class MenuViewController: UITableViewController ,TabItem,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     @IBOutlet weak var lbOurStory: UILabel!
-    @IBOutlet weak var about_us_tableView: UITableView!
     var refAboutUs = DatabaseReference()
     var aboutUsList = NSMutableArray()
     let loading = PUGIFLoading()
-
+    @IBOutlet weak var collection_view: UICollectionView!
+    
+    @IBOutlet var mainTableView: UITableView!
     var tabImage: UIImage? {
       return UIImage(named: "About Us")
     }
@@ -29,21 +30,19 @@ class MenuViewController: UITableViewController ,TabItem{
             tableView.sectionHeaderTopPadding = 0
         }
         loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
-
-        refAboutUs = Database.database().reference().child("/aboutus");
+        collection_view.delegate = self
+        collection_view.dataSource = self
+        
         self.aboutUsList.removeAllObjects()
-
+        refAboutUs = Database.database().reference().child("/aboutus");
         refAboutUs.observe(DataEventType.value, with: {(snapshot) in
                self.aboutUsList = snapshot.value as! NSMutableArray
                print(self.aboutUsList)
-               self.about_us_tableView.reloadData()
+               self.collection_view.reloadData()
                 self.loading.hide()
 
         })
-        about_us_tableView.dataSource = self
-        about_us_tableView.delegate = self
-        about_us_tableView.estimatedRowHeight = 273.0
-        about_us_tableView.rowHeight = UITableView.automaticDimension
+        
         lbOurStory.text = "We are a digital design and mobile application development company that deliver great iconic logos and applications to our esteemed clients.\n\nWe collaborates with entrepreneurs and start up businesses to create unforgettable brands.\n\nWe are constantly building new products &amp; practical designs that generates long term profits for brand &amp; services that enables entrepreneurs to build profitable brand faster.\n\nWe cordially invite you to join us   and become a part of a growing family."
     }
     
@@ -51,68 +50,35 @@ class MenuViewController: UITableViewController ,TabItem{
         return CGFloat.leastNonzeroMagnitude
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = about_us_tableView.dequeueReusableCell(withIdentifier: "about_us",
-                                                     for: indexPath as IndexPath) as! AboutUsTableViewCell
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return aboutUsList.count
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "about_us",
+                                                     for: indexPath as IndexPath) as!   AboutUsTableViewCell
+      
         let dict =  aboutUsList[indexPath.row] as! NSDictionary
         let imageURL = URL(string: dict["image"] as! String )
-        cell.lbName.text = "Name : \(dict["Name"] as! String )"
-        cell.lbLevel.text = "Level : \(dict["Level"] as! String )"
-        cell.lbExperience.text = "Experience : \(dict["Experience"] as! String )"
-        cell.lbRole.text = (dict["role"] as! String )
         cell.profilePhoto.sd_setImage(with:imageURL)
+        
+        cell.lbName.text = "Name: \( dict["Name"] as! String)"
+        cell.lbLevel.text = "Level: \( dict["Level"] as! String)"
+        cell.lbLevel.text = "Experience: \( dict["Experience"] as! String)"
+        cell.profilePhoto.frame.size.width = 60
+        cell.profilePhoto.frame.size.height = 60
+        cell.lbDescription.text = "\( dict["Description"] as! String)"
+        cell.profilebg.frame.size.width = 140
+        cell.profilebg.frame.size.height = 140
+        //cell.lbRole.text = dict["role"] as! String
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(tableView == about_us_tableView) {
-            return aboutUsList.count
-        } else {
-            return super.tableView(tableView, numberOfRowsInSection: section)
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width,height: 400)
     }
-//
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(tableView == about_us_tableView) {
-            return UITableView.automaticDimension
-        }
-        return super.tableView(tableView, heightForRowAt: indexPath)
-
-    }
-    
-    func rotate2(imageView: UIImageView, aCircleTime: Double) { //UIView
-     
-         UIView.animate(withDuration: aCircleTime/5, delay: 0.0, options: .curveLinear, animations: {
-             imageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-         }, completion: { finished in
-             UIView.animate(withDuration: aCircleTime/5, delay: 0.0, options: .curveLinear, animations: {
-                 imageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi*2))
-             }, completion: { finished in
-                 self.rotate2(imageView: imageView, aCircleTime: aCircleTime)
-             })
-         })
-    }
-    
-    func zoomOut(imageview : UIImageView) {
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
-                // HERE
-            imageview.transform = CGAffineTransform.identity.scaledBy(x: 3, y: 3) // Scale your image
-
-            }) { (finished) in
-                 //imageview.transform = CGAffineTransform.identity // undo in 1 seconds
-
-                
-        }
-    }
-    
-    func nukeAllAnimations(imageview : UIImageView) {
-         imageview.layer.removeAllAnimations()
-         imageview.layoutIfNeeded()
-    }
-    
-    @IBAction func image1_click(_ sender: Any) {
-       
-
-    }
-
 }

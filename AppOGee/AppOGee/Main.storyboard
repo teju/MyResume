@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="poppins_bold.ttf">
+        <array key="shipporimincho_bold.ttf">
             <string>ShipporiMincho-Bold</string>
         </array>
         <array key="shipporimincho_extrabold.ttf">
@@ -212,21 +212,21 @@
                             <color key="backgroundColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="deviceCMYK"/>
                         </view>
                         <sections>
-                            <tableViewSection id="HEL-yG-GTu">
+                            <tableViewSection headerTitle="Section-1" id="HEL-yG-GTu">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="1038" id="PSK-Vg-Qxi">
-                                        <rect key="frame" x="0.0" y="134.66666603088379" width="375" height="1038"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="1013" id="PSK-Vg-Qxi">
+                                        <rect key="frame" x="0.0" y="134.66666603088379" width="375" height="1013"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PSK-Vg-Qxi" id="X0M-e1-kY4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1038"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1013"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about_us_head" translatesAutoresizingMaskIntoConstraints="NO" id="2me-xD-Pg2">
-                                                    <rect key="frame" x="157" y="-12" width="218" height="69"/>
+                                                    <rect key="frame" x="157" y="-11" width="218" height="69"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOa-Cz-GQ9">
-                                                    <rect key="frame" x="20" y="45" width="335" height="106"/>
+                                                    <rect key="frame" x="20" y="44" width="335" height="106"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <string key="text">We Re-Innovate our Vision day to day &amp;amp; always stay updated with technology. We aim to provide end-to-end rapid design &amp;amp; development services to all emerging startups.</string>
                                                     <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="15"/>
@@ -234,34 +234,34 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="our_services" translatesAutoresizingMaskIntoConstraints="NO" id="tfb-Nh-RfA">
-                                                    <rect key="frame" x="0.0" y="153" width="135" height="216"/>
+                                                    <rect key="frame" x="0.0" y="149" width="135" height="216"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Our keys to developing high class products is our team of dedicated professionals, complaisance &amp;amp; precision." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2Z-4b-4bm">
-                                                    <rect key="frame" x="126" y="158" width="222" height="106"/>
+                                                    <rect key="frame" x="126" y="154" width="222" height="106"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="15"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about_us_design" translatesAutoresizingMaskIntoConstraints="NO" id="8m2-3i-JRH">
-                                                    <rect key="frame" x="112" y="272" width="229" height="139"/>
+                                                    <rect key="frame" x="112" y="265" width="229" height="139"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about_us_design" translatesAutoresizingMaskIntoConstraints="NO" id="nQP-6D-Ags">
-                                                    <rect key="frame" x="12" y="426" width="197" height="139"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about_us_app_dev" translatesAutoresizingMaskIntoConstraints="NO" id="nQP-6D-Ags">
+                                                    <rect key="frame" x="12" y="414" width="197" height="139"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="end_to_end" translatesAutoresizingMaskIntoConstraints="NO" id="ldQ-cQ-6YF">
-                                                    <rect key="frame" x="217" y="442" width="149" height="101"/>
+                                                    <rect key="frame" x="217" y="431" width="149" height="101"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="our_story" translatesAutoresizingMaskIntoConstraints="NO" id="qdW-XI-tZt">
-                                                    <rect key="frame" x="10" y="588" width="218" height="69"/>
+                                                    <rect key="frame" x="10" y="573" width="218" height="69"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-fv-UNg">
-                                                    <rect key="frame" x="28" y="656" width="320" height="359"/>
+                                                    <rect key="frame" x="28" y="632" width="320" height="359"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <string key="text">We are a digital design and mobile application development company that deliver great iconic logos and applications to our esteemed clients.\n\nWe collaborates with entrepreneurs and start up businesses to create unforgettable brands.\n\nWe are constantly building new products &amp;amp; practical designs that generates long term profits for brand &amp;amp; services that enables entrepreneurs to build profitable brand faster.\n\nWe cordially invite you to join us   and become a part of a growing family.</string>
                                                     <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="15"/>
@@ -272,88 +272,124 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="713" id="q4d-qX-8O9">
-                                        <rect key="frame" x="0.0" y="1172.6666660308838" width="375" height="713"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Section-2" id="URX-P9-ncQ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="838" id="Ocz-tE-OpE">
+                                        <rect key="frame" x="0.0" y="1214.9999980926514" width="375" height="838"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q4d-qX-8O9" id="zpC-wF-Lw3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="713"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ocz-tE-OpE" id="Fdx-GI-Ol3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="838"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="our_story" translatesAutoresizingMaskIntoConstraints="NO" id="a2a-Qa-9Nf">
-                                                    <rect key="frame" x="79" y="-2" width="218" height="69"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="our_story" id="xNd-H5-3xE">
+                                                    <rect key="frame" x="0.0" y="5" width="375" height="69"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H3X-7d-43a">
-                                                    <rect key="frame" x="8" y="75" width="359" height="599"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="about_us" rowHeight="182" id="PvJ-Zv-3dB" customClass="AboutUsTableViewCell" customModule="AppOGee" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="44.666666030883789" width="359" height="182"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pD7-iy-GNN">
+                                                    <rect key="frame" x="0.0" y="74" width="367" height="764"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g77-Qi-dNb">
+                                                        <size key="itemSize" width="367" height="370"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="about_us" id="8i3-AD-HR8" customClass="AboutUsTableViewCell" customModule="AppOGee" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="367" height="370"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PvJ-Zv-3dB" id="tlF-Ip-cIS">
-                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="182"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="KLu-IH-aXS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="367" height="370"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about_us_icon_dp" translatesAutoresizingMaskIntoConstraints="NO" id="k4y-lR-IQt">
-                                                                        <rect key="frame" x="-8" y="8" width="144" height="144"/>
-                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                    </imageView>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Azs-Vh-iS4">
-                                                                        <rect key="frame" x="25" y="45" width="70" height="70"/>
+                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-wJ-YRj">
+                                                                        <rect key="frame" x="144" y="20" width="215" height="140"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS &amp; Android DEveloper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-hx-5Vm">
+                                                                                <rect key="frame" x="13" y="3" width="167" height="64"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                <color key="backgroundColor" red="0.20392156859999999" green="0.8862745098" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="20"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS &amp; Android DEveloper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXH-8e-NJf">
+                                                                                <rect key="frame" x="13" y="62" width="191" height="31"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="14"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS &amp; Android DEveloper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLq-cx-sPx">
+                                                                                <rect key="frame" x="13" y="87" width="191" height="31"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="14"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS &amp; Android DEveloper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRn-cA-z5S">
+                                                                                <rect key="frame" x="13" y="110" width="191" height="31"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="14"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xib-nh-whd">
+                                                                                <rect key="frame" x="-126" y="142" width="333" height="196"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="15"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esZ-SG-kcn">
+                                                                        <rect key="frame" x="8" y="20" width="140" height="140"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
-                                                                                <real key="value" value="30"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS &amp; Android DEveloper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-Hl-cnm">
-                                                                        <rect key="frame" x="137" y="13" width="211" height="64"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                        <color key="backgroundColor" red="0.20392156862745098" green="0.88627450980392153" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="20"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS &amp; Android DEveloper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrV-Kz-xGH">
-                                                                        <rect key="frame" x="137" y="77" width="217" height="31"/>
-                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="14"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS &amp; Android DEveloper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvG-rX-6c7">
-                                                                        <rect key="frame" x="137" y="100" width="217" height="31"/>
-                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="14"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS &amp; Android DEveloper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf3-3V-Rf6">
-                                                                        <rect key="frame" x="137" y="126" width="217" height="31"/>
-                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="14"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about_us_icon_dp" translatesAutoresizingMaskIntoConstraints="NO" id="2hn-9p-hEA">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                                            </imageView>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nijin" translatesAutoresizingMaskIntoConstraints="NO" id="mnE-2d-Og3">
+                                                                                <rect key="frame" x="39" y="44" width="60" height="60"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                                                        <real key="value" value="30"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </view>
                                                                 </subviews>
-                                                            </tableViewCellContentView>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="367" height="370"/>
                                                             <connections>
-                                                                <outlet property="lbExperience" destination="EvG-rX-6c7" id="vSv-tm-cXw"/>
-                                                                <outlet property="lbLevel" destination="Qf3-3V-Rf6" id="h2O-gA-waO"/>
-                                                                <outlet property="lbName" destination="NrV-Kz-xGH" id="M3e-H6-VAh"/>
-                                                                <outlet property="lbRole" destination="TZI-Hl-cnm" id="QjZ-sq-F7o"/>
-                                                                <outlet property="profilePhoto" destination="Azs-Vh-iS4" id="bVi-4D-CBX"/>
+                                                                <outlet property="lbDescription" destination="Xib-nh-whd" id="I1d-Ji-Apx"/>
+                                                                <outlet property="lbExperience" destination="fLq-cx-sPx" id="YZT-tT-Yg1"/>
+                                                                <outlet property="lbLevel" destination="zRn-cA-z5S" id="jPc-Oc-XyC"/>
+                                                                <outlet property="lbName" destination="zXH-8e-NJf" id="Iic-cA-1wV"/>
+                                                                <outlet property="lbRole" destination="aRI-hx-5Vm" id="3zJ-8e-M28"/>
+                                                                <outlet property="profilePhoto" destination="mnE-2d-Og3" id="bDs-7u-qls"/>
+                                                                <outlet property="profilebg" destination="2hn-9p-hEA" id="lQz-xG-EhU"/>
                                                             </connections>
-                                                        </tableViewCell>
-                                                    </prototypes>
-                                                </tableView>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -364,13 +400,14 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="about_us_tableView" destination="H3X-7d-43a" id="M3u-Tu-DS5"/>
+                        <outlet property="collection_view" destination="pD7-iy-GNN" id="oZH-uj-0bY"/>
                         <outlet property="lbOurStory" destination="dX9-fv-UNg" id="HEf-E6-T1t"/>
+                        <outlet property="mainTableView" destination="sMp-hd-tr7" id="zvN-h3-dh2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Uu-PM-Ilp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2621.739130434783" y="796.875"/>
+            <point key="canvasLocation" x="2621.5999999999999" y="796.55172413793105"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="wxV-ud-30K">
@@ -657,7 +694,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="cXF-n2-IbL">
-                                    <rect key="frame" x="0.0" y="279" width="375" height="181"/>
+                                    <rect key="frame" x="0.0" y="279.33333206176758" width="375" height="181"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="vN2-S9-0WE">
@@ -671,7 +708,7 @@
                                             <state key="normal" backgroundImage="telegram"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KB1-Ev-6e9">
-                                            <rect key="frame" x="236" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="237" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="gmail"/>
@@ -683,7 +720,7 @@
                                             <state key="normal" backgroundImage="messenger"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la3-2I-Gns">
-                                            <rect key="frame" x="89" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="88" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="whatsapp"/>
@@ -765,7 +802,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="v9R-zT-GZN">
-                                    <rect key="frame" x="0.0" y="505" width="375" height="181"/>
+                                    <rect key="frame" x="0.0" y="505.33333206176758" width="375" height="181"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-XP-O2D">
@@ -779,7 +816,7 @@
                                             <state key="normal" backgroundImage="telegram"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24g-mC-ncD">
-                                            <rect key="frame" x="236" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="237" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="gmail"/>
@@ -791,7 +828,7 @@
                                             <state key="normal" backgroundImage="messenger"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGY-rz-f7s">
-                                            <rect key="frame" x="89" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="88" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="whatsapp"/>
@@ -909,7 +946,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Jab-dJ-bh8">
-                                    <rect key="frame" x="0.0" y="222" width="375" height="208"/>
+                                    <rect key="frame" x="0.0" y="222.33333206176758" width="375" height="208"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="vjn-gd-R80">
@@ -923,7 +960,7 @@
                                             <state key="normal" backgroundImage="telegram"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwy-ZS-jeI">
-                                            <rect key="frame" x="236" y="119" width="50" height="50"/>
+                                            <rect key="frame" x="237" y="119" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="gmail"/>
@@ -935,7 +972,7 @@
                                             <state key="normal" backgroundImage="messenger"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXC-Kt-WMW">
-                                            <rect key="frame" x="89" y="119" width="50" height="50"/>
+                                            <rect key="frame" x="88" y="119" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="whatsapp"/>
@@ -1123,7 +1160,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="releated_images" id="sHt-c9-MUb" customClass="ReleatedImagesCollectionViewCell" customModule="AppOGee" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="4" width="332" height="376"/>
+                                                            <rect key="frame" x="0.0" y="3.6666666666666665" width="332" height="376"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iwC-uh-hxW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="332" height="376"/>
@@ -1209,7 +1246,7 @@
                             <color key="backgroundColor" systemColor="labelColor"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="XEQ-M4-092">
-                            <rect key="frame" x="0.0" y="747" width="375" height="208"/>
+                            <rect key="frame" x="0.0" y="747.33333206176769" width="375" height="208"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="auZ-dA-UCs">
@@ -1376,6 +1413,8 @@
     </scenes>
     <resources>
         <image name="KN 5mdpi" width="1846" height="1495"/>
+        <image name="Nijin" width="578" height="578"/>
+        <image name="about_us_app_dev" width="441" height="296"/>
         <image name="about_us_design" width="434" height="286"/>
         <image name="about_us_head" width="396" height="135"/>
         <image name="about_us_icon_dp" width="368" height="368"/>
