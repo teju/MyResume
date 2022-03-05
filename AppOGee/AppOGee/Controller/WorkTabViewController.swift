@@ -10,10 +10,9 @@ import UIKit
 import Firebase
 import PUGifLoading
 
-class WorkTabViewController: UIViewController ,TabItem, UICollectionViewDelegate, UICollectionViewDataSource{
+class WorkTabViewController: BaseViewController ,TabItem, UICollectionViewDelegate, UICollectionViewDataSource{
     weak var selectedImageView : UIImageView?
-    var refProjects = DatabaseReference()
-    let loading = PUGIFLoading()
+   
 
     var tabImage: UIImage? {
          return UIImage(named: "Projects")
@@ -49,12 +48,13 @@ class WorkTabViewController: UIViewController ,TabItem, UICollectionViewDelegate
            
            NotificationCenter.default.addObserver(self, selector: #selector(WorkTabViewController.rotationDidChange), name: UIDevice.orientationDidChangeNotification, object: nil)
            loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
-
-           refProjects = Database.database().reference().child("/AppDetails");
-               self.items.removeAllObjects()
            let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
            bgImg.alpha = 0.6
            collectionView.backgroundView = bgImg
+           
+           refProjects = Database.database().reference().child("/AppDetails");
+               self.items.removeAllObjects()
+          
 
            refProjects.observe(DataEventType.value, with: {(snapshot) in
                   self.items = snapshot.value as! NSMutableArray

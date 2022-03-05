@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeaturesTabViewController: UIViewController ,TabItem{
+class FeaturesTabViewController: BaseViewController ,TabItem{
 
     @IBOutlet weak var tabview: UIView!
     var tabs = [ViewPagerTab]()
