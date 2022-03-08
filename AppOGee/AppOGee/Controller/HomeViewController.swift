@@ -18,6 +18,9 @@ class HomeViewController: UITableViewController ,TabItem{
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.view.backgroundColor = UIColor.white
+        tableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0);
+
     }
     
    
