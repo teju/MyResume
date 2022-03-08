@@ -27,7 +27,7 @@ class FeaturesTabViewController: BaseViewController ,TabItem{
     override func viewDidLoad() {
         super.viewDidLoad()
         displayViewPager()
-        
+        self.view.backgroundColor = UIColor.black
         guard let options = self.options else { return }
         pager = ViewPager(viewController: self,containerView: tabview)
         pager?.setOptions(options: options)

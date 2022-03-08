@@ -21,6 +21,7 @@ class KeyNotesViewController: UIViewController  ,UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
         Keynotestableview.delegate = self
         Keynotestableview.dataSource = self
         let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
