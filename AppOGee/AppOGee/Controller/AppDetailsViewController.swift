@@ -55,7 +55,9 @@ class AppDetailsViewController: UITableViewController ,UICollectionViewDelegate,
         let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
         bgImg.alpha = 0.6
         tableView.backgroundView = bgImg
-        tableView.contentInset = UIEdgeInsets(top: -30, left: 0, bottom: 0, right: 0);
+        //collectionview.backgroundView = bgImg
+
+        tableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0);
 
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0
