@@ -46,9 +46,8 @@ class BaseViewController: UIViewController {
         
         if(appstableView.isHidden) {
             self.btnShowProjects.frame.origin.x = -15
-
         } else {
-            self.btnShowProjects.frame.origin.x = 260
+            self.btnShowProjects.frame.origin.x = self.appstableView.frame.width - 10
 
         }
     }
@@ -62,7 +61,7 @@ class BaseViewController: UIViewController {
             }, completion: {(_ finished: Bool) -> Void in
                 if(self.appstableView.isHidden) {
                     self.appstableView.isHidden = false
-                    self.btnShowProjects.frame.origin.x = 260
+                    self.btnShowProjects.frame.origin.x = self.appstableView.frame.width - 30
                 } else{
                     self.appstableView.isHidden = true
                     self.btnShowProjects.frame.origin.x = -5
