@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="shipporimincho_bold.ttf">
+        <array key="poppins_bold.ttf">
             <string>ShipporiMincho-Bold</string>
         </array>
         <array key="shipporimincho_extrabold.ttf">
@@ -228,30 +228,45 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="telephone"/>
+                                            <connections>
+                                                <action selector="phone:" destination="9la-ae-Kbu" eventType="touchUpInside" id="cqk-l4-9Wl"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzz-eh-aU0">
                                             <rect key="frame" x="102" y="26" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="whatsapp"/>
+                                            <connections>
+                                                <action selector="whatsapp:" destination="9la-ae-Kbu" eventType="touchUpInside" id="VPC-9a-bFw"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW6-JL-qCj">
                                             <rect key="frame" x="188" y="26" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="telegram"/>
+                                            <connections>
+                                                <action selector="telegram:" destination="9la-ae-Kbu" eventType="touchUpInside" id="5vG-Gz-BXx"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8f-Dv-8lG">
                                             <rect key="frame" x="269" y="26" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="gmail"/>
+                                            <connections>
+                                                <action selector="gmail:" destination="9la-ae-Kbu" eventType="touchUpInside" id="KGk-Ae-6xO"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-Cg-fB0">
                                             <rect key="frame" x="347" y="26" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="messenger"/>
+                                            <connections>
+                                                <action selector="twitter:" destination="9la-ae-Kbu" eventType="touchUpInside" id="v9F-pn-hZX"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -284,6 +299,9 @@
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button" image="li"/>
+                                            <connections>
+                                                <action selector="linked:" destination="9la-ae-Kbu" eventType="touchUpInside" id="krO-V1-5pt"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoa-kD-JY1">
                                             <rect key="frame" x="114" y="21" width="40" height="40"/>
@@ -291,6 +309,9 @@
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button" image="in"/>
+                                            <connections>
+                                                <action selector="insta:" destination="9la-ae-Kbu" eventType="touchUpInside" id="Xb9-6T-kjF"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EP3-9j-MCc">
                                             <rect key="frame" x="218" y="21" width="40" height="40"/>
@@ -298,6 +319,9 @@
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button" image="fb"/>
+                                            <connections>
+                                                <action selector="facebook:" destination="9la-ae-Kbu" eventType="touchUpInside" id="Ig8-Ae-aYt"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXl-bz-tH7">
                                             <rect key="frame" x="333" y="21" width="40" height="40"/>
@@ -305,6 +329,10 @@
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button" image="tw"/>
+                                            <connections>
+                                                <action selector="twitter:" destination="9la-ae-Kbu" eventType="touchUpInside" id="VHd-sO-llY"/>
+                                                <action selector="twitterUrl:" destination="9la-ae-Kbu" eventType="touchUpInside" id="YgX-OR-fCp"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -338,7 +366,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOa-Cz-GQ9">
-                                                    <rect key="frame" x="20" y="43" width="374" height="106"/>
+                                                    <rect key="frame" x="20" y="42" width="374" height="106"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <string key="text">We Re-Innovate our Vision day to day &amp;amp; always stay updated with technology. We aim to provide end-to-end rapid design &amp;amp; development services to all emerging startups.</string>
                                                     <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="15"/>
@@ -365,7 +393,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="end_to_end" translatesAutoresizingMaskIntoConstraints="NO" id="ldQ-cQ-6YF">
-                                                    <rect key="frame" x="217" y="430" width="188" height="101"/>
+                                                    <rect key="frame" x="217" y="429" width="188" height="101"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="our_story" translatesAutoresizingMaskIntoConstraints="NO" id="qdW-XI-tZt">
@@ -395,7 +423,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="our_story" id="xNd-H5-3xE">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="our_story" id="xNd-H5-3xE">
                                                     <rect key="frame" x="20" y="5" width="375" height="69"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -411,9 +439,9 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="about_us" id="8i3-AD-HR8" customClass="AboutUsTableViewCell" customModule="AppOGee" customModuleProvider="target">
-                                                            <rect key="frame" x="7.5" y="0.0" width="367" height="370"/>
+                                                            <rect key="frame" x="19.5" y="0.0" width="367" height="370"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="KLu-IH-aXS">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KLu-IH-aXS">
                                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="370"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
@@ -422,7 +450,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iOS &amp; Android DEveloper" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-hx-5Vm">
-                                                                                <rect key="frame" x="13" y="3" width="167" height="64"/>
+                                                                                <rect key="frame" x="13" y="3" width="166" height="64"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <color key="backgroundColor" red="0.20392156859999999" green="0.8862745098" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="20"/>
@@ -464,7 +492,7 @@
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="esZ-SG-kcn">
-                                                                        <rect key="frame" x="8" y="20" width="140" height="140"/>
+                                                                        <rect key="frame" x="7" y="20" width="140" height="140"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="about_us_icon_dp" translatesAutoresizingMaskIntoConstraints="NO" id="2hn-9p-hEA">
@@ -472,7 +500,7 @@
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                             </imageView>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nijin" translatesAutoresizingMaskIntoConstraints="NO" id="mnE-2d-Og3">
-                                                                                <rect key="frame" x="39" y="44" width="60" height="60"/>
+                                                                                <rect key="frame" x="39" y="45" width="60" height="60"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
@@ -702,11 +730,11 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adl" translatesAutoresizingMaskIntoConstraints="NO" id="DUH-E9-FVs">
-                                                    <rect key="frame" x="-5" y="690" width="419" height="374"/>
+                                                    <rect key="frame" x="-5" y="689" width="419" height="374"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="native_sdk" translatesAutoresizingMaskIntoConstraints="NO" id="BfT-7B-Zkl">
-                                                    <rect key="frame" x="-4" y="944" width="419" height="390"/>
+                                                    <rect key="frame" x="-4" y="943" width="419" height="390"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_features" translatesAutoresizingMaskIntoConstraints="NO" id="ppS-bV-nwF">
@@ -714,7 +742,7 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lets_connect" translatesAutoresizingMaskIntoConstraints="NO" id="pUc-Hp-Fcz">
-                                                    <rect key="frame" x="-6" y="1464" width="419" height="321"/>
+                                                    <rect key="frame" x="-6" y="1463" width="419" height="321"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="ler-9X-fwl">
@@ -737,30 +765,46 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" backgroundImage="telegram"/>
+                                                    <connections>
+                                                        <action selector="telegram:" destination="kPI-79-K9m" eventType="touchUpInside" id="9Kf-Uh-wt0"/>
+                                                        <action selector="twitter:" destination="kPI-79-K9m" eventType="touchUpInside" id="nqi-hx-aVX"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-Tw-0qs">
                                                     <rect key="frame" x="263" y="1871" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" backgroundImage="gmail"/>
+                                                    <connections>
+                                                        <action selector="gmail:" destination="kPI-79-K9m" eventType="touchUpInside" id="bXu-ak-dKb"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ot-qa-ed0">
                                                     <rect key="frame" x="342" y="1871" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" backgroundImage="messenger"/>
+                                                    <connections>
+                                                        <action selector="twitter:" destination="kPI-79-K9m" eventType="touchUpInside" id="KaJ-in-VHX"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDW-FD-NoL">
                                                     <rect key="frame" x="98" y="1871" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" backgroundImage="whatsapp"/>
+                                                    <connections>
+                                                        <action selector="whatsapp:" destination="kPI-79-K9m" eventType="touchUpInside" id="lJw-0d-DWS"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2I-md-BFW">
                                                     <rect key="frame" x="14" y="1871" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" backgroundImage="telephone"/>
+                                                    <connections>
+                                                        <action selector="phone:" destination="kPI-79-K9m" eventType="touchUpInside" id="R0z-tn-H8j"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
@@ -828,45 +872,60 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="cXF-n2-IbL">
-                                    <rect key="frame" x="0.0" y="279" width="438" height="181"/>
+                                    <rect key="frame" x="0.0" y="279" width="414" height="181"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="vN2-S9-0WE">
-                                            <rect key="frame" x="0.0" y="-36" width="438" height="217"/>
+                                            <rect key="frame" x="0.0" y="-36" width="414" height="217"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-Bn-rQC">
-                                            <rect key="frame" x="197" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="185" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="telegram"/>
+                                            <connections>
+                                                <action selector="telegram:" destination="VNw-rX-WSN" eventType="touchUpInside" id="lWB-Xf-s2Z"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KB1-Ev-6e9">
-                                            <rect key="frame" x="283" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="265" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="gmail"/>
+                                            <connections>
+                                                <action selector="gmail:" destination="VNw-rX-WSN" eventType="touchUpInside" id="yBT-gu-dCt"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzL-hb-gXF">
-                                            <rect key="frame" x="366" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="343" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="messenger"/>
+                                            <connections>
+                                                <action selector="twitter:" destination="VNw-rX-WSN" eventType="touchUpInside" id="f7B-xg-pPb"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la3-2I-Gns">
-                                            <rect key="frame" x="105" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="99" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="whatsapp"/>
+                                            <connections>
+                                                <action selector="whatsapp:" destination="VNw-rX-WSN" eventType="touchUpInside" id="CFp-v8-llR"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcH-Rm-aWR">
-                                            <rect key="frame" x="16" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="15" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="telephone"/>
+                                            <connections>
+                                                <action selector="phone:" destination="VNw-rX-WSN" eventType="touchUpInside" id="Tcn-cN-avn"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get free quote for your business idea.Lets Talk!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tja-4y-WXv">
-                                            <rect key="frame" x="58" y="23" width="323" height="54"/>
+                                            <rect key="frame" x="58" y="23" width="299" height="54"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -936,45 +995,60 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="v9R-zT-GZN">
-                                    <rect key="frame" x="0.0" y="505" width="438" height="181"/>
+                                    <rect key="frame" x="0.0" y="505" width="414" height="181"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-XP-O2D">
-                                            <rect key="frame" x="0.0" y="-36" width="438" height="217"/>
+                                            <rect key="frame" x="0.0" y="-36" width="414" height="217"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Df-R7-dhL">
-                                            <rect key="frame" x="197" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="185" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="telegram"/>
+                                            <connections>
+                                                <action selector="telegram:" destination="bIv-KD-e6g" eventType="touchUpInside" id="CRq-D2-N6h"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24g-mC-ncD">
-                                            <rect key="frame" x="283" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="265" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="gmail"/>
+                                            <connections>
+                                                <action selector="gmail:" destination="bIv-KD-e6g" eventType="touchUpInside" id="4X4-md-9z6"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2y5-ff-QIm">
-                                            <rect key="frame" x="366" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="343" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="messenger"/>
+                                            <connections>
+                                                <action selector="twitter:" destination="bIv-KD-e6g" eventType="touchUpInside" id="91t-cT-5zk"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGY-rz-f7s">
-                                            <rect key="frame" x="105" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="99" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="whatsapp"/>
+                                            <connections>
+                                                <action selector="whatsapp:" destination="bIv-KD-e6g" eventType="touchUpInside" id="mhj-sO-xzG"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4D-VU-OOQ">
-                                            <rect key="frame" x="16" y="97" width="50" height="50"/>
+                                            <rect key="frame" x="15" y="97" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="telephone"/>
+                                            <connections>
+                                                <action selector="phone:" destination="bIv-KD-e6g" eventType="touchUpInside" id="YQB-2B-Bf9"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get free quote for your business idea.Lets Talk!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFe-d1-NJl">
-                                            <rect key="frame" x="58" y="23" width="323" height="54"/>
+                                            <rect key="frame" x="58" y="23" width="299" height="54"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1080,45 +1154,60 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Jab-dJ-bh8">
-                                    <rect key="frame" x="0.0" y="222" width="438" height="208"/>
+                                    <rect key="frame" x="0.0" y="222" width="414" height="208"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="vjn-gd-R80">
-                                            <rect key="frame" x="0.0" y="-9" width="438" height="217"/>
+                                            <rect key="frame" x="0.0" y="-9" width="414" height="217"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-yJ-Ojk">
-                                            <rect key="frame" x="197" y="119" width="50" height="50"/>
+                                            <rect key="frame" x="185" y="119" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="telegram"/>
+                                            <connections>
+                                                <action selector="telegram:" destination="6Lz-O0-pPV" eventType="touchUpInside" id="YSe-Wb-Avw"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwy-ZS-jeI">
-                                            <rect key="frame" x="283" y="119" width="50" height="50"/>
+                                            <rect key="frame" x="265" y="119" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="gmail"/>
+                                            <connections>
+                                                <action selector="gmail:" destination="6Lz-O0-pPV" eventType="touchUpInside" id="qVO-35-tcD"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng7-EH-md6">
-                                            <rect key="frame" x="366" y="119" width="50" height="50"/>
+                                            <rect key="frame" x="343" y="119" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="messenger"/>
+                                            <connections>
+                                                <action selector="twitter:" destination="6Lz-O0-pPV" eventType="touchUpInside" id="afm-2T-GqM"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXC-Kt-WMW">
-                                            <rect key="frame" x="105" y="119" width="50" height="50"/>
+                                            <rect key="frame" x="99" y="119" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="whatsapp"/>
+                                            <connections>
+                                                <action selector="whatsapp:" destination="6Lz-O0-pPV" eventType="touchUpInside" id="AT9-vo-kCR"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ot-ZQ-NYc">
-                                            <rect key="frame" x="16" y="119" width="50" height="50"/>
+                                            <rect key="frame" x="15" y="119" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" backgroundImage="telephone"/>
+                                            <connections>
+                                                <action selector="phone:" destination="6Lz-O0-pPV" eventType="touchUpInside" id="Wz1-Us-McP"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get free quote for your business idea.Lets Talk!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gE-2O-01g">
-                                            <rect key="frame" x="58" y="44" width="323" height="54"/>
+                                            <rect key="frame" x="58" y="44" width="299" height="54"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1367,15 +1456,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="zHV-JK-aiq">
-                            <rect key="frame" x="0.0" y="0.0" width="438" height="348"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="348"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_o_gee_white" translatesAutoresizingMaskIntoConstraints="NO" id="ijD-ch-RE2">
-                                    <rect key="frame" x="156" y="40" width="133" height="33"/>
+                                    <rect key="frame" x="144" y="40" width="133" height="33"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kgr-Lb-0Mj">
-                                    <rect key="frame" x="0.0" y="95" width="438" height="271"/>
+                                    <rect key="frame" x="0.0" y="95" width="414" height="271"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfS-L4-jz9">
@@ -1394,46 +1483,46 @@
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="XEQ-M4-092">
-                            <rect key="frame" x="0.0" y="780" width="438" height="208"/>
+                            <rect key="frame" x="0.0" y="780" width="414" height="208"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="auZ-dA-UCs">
-                                    <rect key="frame" x="0.0" y="-58" width="438" height="266"/>
+                                    <rect key="frame" x="0.0" y="-58" width="414" height="266"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get free quote for your business idea.Lets Talk!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0D-Ub-TPA">
-                                    <rect key="frame" x="58" y="23" width="323" height="54"/>
+                                    <rect key="frame" x="58" y="23" width="299" height="54"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="ShipporiMincho-Regular" family="Shippori Mincho" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FR-B6-RuD">
-                                    <rect key="frame" x="199" y="99" width="50" height="50"/>
+                                    <rect key="frame" x="187" y="99" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" backgroundImage="telegram"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFt-6T-iaZ">
-                                    <rect key="frame" x="284" y="99" width="50" height="50"/>
+                                    <rect key="frame" x="266" y="99" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" backgroundImage="gmail"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qp-p6-nBH">
-                                    <rect key="frame" x="368" y="99" width="50" height="50"/>
+                                    <rect key="frame" x="345" y="99" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" backgroundImage="messenger"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiH-Cf-COD">
-                                    <rect key="frame" x="109" y="99" width="50" height="50"/>
+                                    <rect key="frame" x="102" y="99" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" backgroundImage="whatsapp"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9S-Pp-amm">
-                                    <rect key="frame" x="20" y="99" width="50" height="50"/>
+                                    <rect key="frame" x="19" y="99" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" backgroundImage="telephone"/>
@@ -1526,7 +1615,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="releated_images" id="qzk-Ax-19g" customClass="ReleatedImagesCollectionViewCell" customModule="AppOGee" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-6" width="410" height="774"/>
+                                        <rect key="frame" x="0.0" y="9" width="410" height="774"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ttg-W0-N9m">
                                             <rect key="frame" x="0.0" y="0.0" width="410" height="774"/>

@@ -16,6 +16,8 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     var projectList = NSMutableArray()
     var isFromHome = false
     let loading = PUGIFLoading()
+    var message = "Hi AppOGee,\nI want you to help me developing my project.\nCall me back!"
+    var mobile = "919980588711"
 
     @IBOutlet weak var projectsTableview: UITableView!
     override func viewDidLoad() {
@@ -55,7 +57,12 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  self.projectList.count
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dict =  projectList[indexPath.row] as! NSDictionary
+        let sms: String = dict["playstore_link"] as! String
+        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectscell",
                                                      for: indexPath as IndexPath) as! ProjectsTableViewCell
@@ -82,6 +89,44 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
+    @IBAction func phone(_ sender: Any) {
+        if let url = URL(string: "tel://\(mobile)") {
+             UIApplication.shared.openURL(url)
+         }
+    }
+    
+    @IBAction func whatsapp(_ sender: Any) {
+        let url : NSString = "https://api.whatsapp.com/send?phone=\(mobile)&text=\(message)" as NSString
+        let urlStr : NSString = url.addingPercentEscapes(using: String.Encoding.utf8.rawValue)! as NSString
+        let whatsappURL : NSURL = NSURL(string: urlStr as String)!
+        
+        if UIApplication.shared.canOpenURL(whatsappURL as URL) {
+            UIApplication.shared.openURL(whatsappURL as URL)
+        }
+    }
+    @IBAction func telegram(_ sender: Any) {
+        let whatsappURL = URL.init(string: "tg://resolve?domain=@DAppOGee")
+        if UIApplication.shared.canOpenURL(whatsappURL! as URL) {
+            UIApplication.shared.openURL(whatsappURL! as URL)
+        }
+    }
+    @IBAction func twitter(_ sender: Any) {
+        let sms: String = "sms:\(mobile)&body=\(message)"
+        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
+
+    }
+    
+    @IBAction func gmail(_ sender: Any) {
+        let googleUrlString = "googlegmail:///co?subject=Call me back!&body=\(message)&to=zeeshan@appogee.in" as NSString
+        let urlStr : NSString = googleUrlString.addingPercentEscapes(using: String.Encoding.utf8.rawValue)! as NSString
+        let whatsappURL : NSURL = NSURL(string: urlStr as String)!
+        
+        if UIApplication.shared.canOpenURL(whatsappURL as URL) {
+            UIApplication.shared.openURL(whatsappURL as URL)
+        }
+    }
+    
 }
 func hexStringToUIColor (hex:String) -> UIColor {
     var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()

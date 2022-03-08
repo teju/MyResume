@@ -121,4 +121,10 @@ extension BaseViewController:UITableViewDelegate,UITableViewDataSource {
         cell.setPersonModel(logo: dict["logo"] as! String)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dict =  items[indexPath.row] as! NSDictionary
+        let sms: String = dict["playstore_link"] as! String
+        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
+    }
 }
