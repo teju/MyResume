@@ -20,6 +20,9 @@ class PhotoFullViewViewController: UIViewController ,UICollectionViewDelegate,UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "releated_images",
                                                      for: indexPath as IndexPath) as!   ReleatedImagesCollectionViewCell
+        let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
+        bgImg.alpha = 0.6
+        cell.backgroundView = bgImg
         let imageURL = URL(string: releated_images[indexPath.row] as! String )
         cell.releatedimgView.sd_setImage(with:imageURL)
         return cell
@@ -34,9 +37,7 @@ class PhotoFullViewViewController: UIViewController ,UICollectionViewDelegate,UI
 
         collection_view.delegate = self
         collection_view.dataSource = self
-        let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
-        bgImg.alpha = 0.6
-        collection_view.backgroundView = bgImg
+       
 
     }
     override func viewDidAppear(_ animated: Bool) {

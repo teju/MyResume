@@ -18,6 +18,8 @@ class WebDetailsViewController: UITableViewController , WKUIDelegate,WKNavigatio
     var weburl = ""
     var webHeight = 0.0
     @IBOutlet weak var featureWebView: UIView!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageURL = URL(string:imgurl )
@@ -27,6 +29,8 @@ class WebDetailsViewController: UITableViewController , WKUIDelegate,WKNavigatio
         if #available(iOS 15.0, *) {
             self.tableview.sectionHeaderTopPadding = 0
         }
+       
+        
     }
     
     @IBAction func back(_ sender: Any) {
@@ -61,6 +65,7 @@ class WebDetailsViewController: UITableViewController , WKUIDelegate,WKNavigatio
         return webHeight
         
     }
+    
     
 //    func zoomOut(imageview : UIView) {
 //        UIView.animate(withDuration: 0.5, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
