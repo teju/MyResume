@@ -103,19 +103,39 @@ class BaseTableViewController: UITableViewController {
         appstableView.backgroundColor = .clear
 
     }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return super.numberOfSections(in: tableView) - 1
+    }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        if(tableView == appstableView) {
+            return 120
+        } else{
+            return super.tableView(tableView, heightForRowAt: indexPath)
+        }
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
+        if(tableView == appstableView) {
+            if(self.items.count > 1) {
+                return self.items.count
+            } else {
+                return 0
+            }
+        }else {
+            return super.tableView(tableView, numberOfRowsInSection: section)
+        }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier:  EWArcTableViewCell.identifier) as? EWArcTableViewCell else {
-            return EWArcTableViewCell()
+        if(tableView == appstableView) {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier:  EWArcTableViewCell.identifier) as? EWArcTableViewCell else {
+                return EWArcTableViewCell()
+            }
+            let dict =  items[indexPath.row] as! NSDictionary
+            cell.setPersonModel(logo: dict["logo"] as! String)
+            return cell
+        } else {
+            return super.tableView(tableView, cellForRowAt: indexPath)
+
         }
-        let dict =  items[indexPath.row] as! NSDictionary
-        cell.setPersonModel(logo: dict["logo"] as! String)
-        return cell
     }
 }
 

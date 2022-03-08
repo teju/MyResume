@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>shipporimincho_semibold.ttf</string>
-		<string>shipporimincho_regular.ttf</string>
-		<string>shipporimincho_medium.ttf</string>
-		<string>shipporimincho_extrabold.ttf</string>
-		<string>shipporimincho_bold.ttf</string>
-		<string>poppins_regular.ttf</string>
-		<string>poppins_bold.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -26,10 +16,31 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>shipporimincho_semibold.ttf</string>
+		<string>shipporimincho_regular.ttf</string>
+		<string>shipporimincho_medium.ttf</string>
+		<string>shipporimincho_extrabold.ttf</string>
+		<string>shipporimincho_bold.ttf</string>
+		<string>poppins_regular.ttf</string>
+		<string>poppins_bold.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Main</string>
 	<key>UIMainStoryboardFile</key>

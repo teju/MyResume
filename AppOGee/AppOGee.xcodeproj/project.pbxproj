@@ -33,6 +33,7 @@
 		BD497C1027D339C5000240B4 /* EWArcTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD497C0E27D339C5000240B4 /* EWArcTableViewCell.swift */; };
 		BD497C1127D339C5000240B4 /* EWArcTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD497C0F27D339C5000240B4 /* EWArcTableView.swift */; };
 		BD497C1327D37CCB000240B4 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD497C1227D37CCB000240B4 /* BaseTableViewController.swift */; };
+		BD497C1527D39499000240B4 /* client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD497C1427D39499000240B4 /* client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist */; };
 		BD4B042727CA0D4B000422E7 /* FeaturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B042627CA0D4B000422E7 /* FeaturesTableViewCell.swift */; };
 		BD4B042927CA1BD5000422E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */; };
 		BD631BEE27CA342400BC4F0C /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD631BED27CA342400BC4F0C /* Features.swift */; };
@@ -113,6 +114,7 @@
 		BD497C0E27D339C5000240B4 /* EWArcTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWArcTableViewCell.swift; sourceTree = "<group>"; };
 		BD497C0F27D339C5000240B4 /* EWArcTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWArcTableView.swift; sourceTree = "<group>"; };
 		BD497C1227D37CCB000240B4 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		BD497C1427D39499000240B4 /* client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		BD4B042627CA0D4B000422E7 /* FeaturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTableViewCell.swift; sourceTree = "<group>"; };
 		BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD631BED27CA342400BC4F0C /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		796A9D642481446900233FCF /* AppOGee */ = {
 			isa = PBXGroup;
 			children = (
+				BD497C1427D39499000240B4 /* client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist */,
 				BD64A4B327CF52EA00D8DEDC /* loading_animation.gif */,
 				BD631BEC27CA340C00BC4F0C /* model */,
 				BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */,
@@ -346,6 +349,7 @@
 				796A9D5F2481446900233FCF /* Frameworks */,
 				796A9D602481446900233FCF /* Resources */,
 				24120E9FA159E68AFF44A9F0 /* [CP] Embed Pods Frameworks */,
+				58302A02C5ECDD1870F40EE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -452,6 +456,7 @@
 				BD690C5B27C91C1B00417537 /* shipporimincho_medium.ttf in Resources */,
 				BD3FF9E427CD54CD0045FAC8 /* ContactUs.xib in Resources */,
 				796A9D98248145CC00233FCF /* Main.storyboard in Resources */,
+				BD497C1527D39499000240B4 /* client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +492,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58302A02C5ECDD1870F40EE1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppOGee/Pods-AppOGee-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DD665ADFACE87D9A04FADAB2 /* [CP] Check Pods Manifest.lock */ = {
@@ -709,6 +731,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BQ48L7HSQ5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppOGee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -728,6 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BQ48L7HSQ5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppOGee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
