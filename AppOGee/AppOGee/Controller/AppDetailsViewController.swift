@@ -85,6 +85,9 @@ class AppDetailsViewController: UITableViewController ,UICollectionViewDelegate,
         collectionview.reloadData()
     }
     
+    @IBAction func back(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     override func viewDidAppear(_ animated: Bool) {
         //self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)

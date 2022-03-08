@@ -1244,6 +1244,19 @@
                                                         <constraint firstItem="ZyB-OT-iWa" firstAttribute="top" secondItem="8k9-Ex-pxh" secondAttribute="bottom" constant="10" id="yNt-F7-dX4"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWV-t9-wWM">
+                                                    <rect key="frame" x="3" y="23.333333969116211" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="chevron-left">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="back:" destination="xDg-14-kW9" eventType="touchUpInside" id="aXX-zv-G5d"/>
+                                                        <action selector="back:" destination="AqZ-eI-lMv" eventType="touchUpInside" id="rk0-2q-sXs"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="cgH-Dg-wZI" secondAttribute="trailing" id="8l4-0v-iVO"/>
