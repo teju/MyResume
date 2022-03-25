@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
        // animate(self.imageview)
-        //animateBackground()
+        animateBackground()
     }
     @IBAction func skip(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -36,27 +36,12 @@ class LoginViewController: UIViewController {
     }
     
     func animateBackground() {
-        let animationOptions = UIView.AnimationOptions.repeat
-        let backgroundImage = UIImage(named:"sign_in_page.jpeg")!
-        var amountToKeepImageSquare = backgroundImage.size.height - self.view.frame.size.height
-
-        // UIImageView 1
-        var backgroundImageView1 = UIImageView(image: backgroundImage)
-        backgroundImageView1.frame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: backgroundImage.size.width - amountToKeepImageSquare, height: self.view.frame.size.height)
-        
-        self.view.addSubview(backgroundImageView1)
-
-        // UIImageView 2
-        var backgroundImageView2 = UIImageView(image: backgroundImage)
-        backgroundImageView2.frame = CGRect(x: backgroundImageView1.frame.size.width, y: self.view.frame.origin.y, width: backgroundImage.size.width - amountToKeepImageSquare, height: self.view.frame.height)
-        self.view.addSubview(backgroundImageView2)
-
-        // Animate background
-        UIView.animate(withDuration: 6.0, delay: 0.0, options: animationOptions, animations: {
-            backgroundImageView1.frame = backgroundImageView1.frame.offsetBy(dx: -1 * backgroundImageView1.frame.size.width, dy: 0.0)
-            backgroundImageView2.frame = backgroundImageView2.frame.offsetBy(dx: -1 * backgroundImageView2.frame.size.width, dy: 0.0)
+        let oldCenter = imageview.center
+            let newCenter = CGPoint(x: oldCenter.x , y: oldCenter.y - 300)
+            UIView.animate(withDuration: 2.0, delay: 0.0, options:
+            [.curveLinear, .repeat], animations: {
+                self.imageview.center = newCenter
             }, completion: nil)
-
        
     }
     
