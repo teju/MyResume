@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
        // animate(self.imageview)
-        animateBackground()
+        //animateBackground()
     }
     @IBAction func skip(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -52,6 +52,7 @@ class LoginViewController: UIViewController {
             }, completion: nil)
     }
 }
+
 extension LoginViewController: GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!,
