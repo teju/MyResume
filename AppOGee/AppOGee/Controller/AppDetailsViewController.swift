@@ -56,8 +56,8 @@ class AppDetailsViewController: UITableViewController ,UICollectionViewDelegate,
         bgImg.alpha = 0.6
         collectionview.backgroundView = bgImg
 
-        tableView.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0);
-
+        tableView.contentInset = UIEdgeInsets(top: -30, left: 0, bottom: 0, right: 0);
+       
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0
         }
@@ -81,9 +81,13 @@ class AppDetailsViewController: UITableViewController ,UICollectionViewDelegate,
             lbDescription.textColor = UIColor.black
         }
         releated_images =  dict["releated_images"] as! NSMutableArray
+        
         collectionview.reloadData()
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            return 0
+        }
     @IBAction func back(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
