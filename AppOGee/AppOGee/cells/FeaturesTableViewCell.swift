@@ -10,6 +10,7 @@ import UIKit
 
 class FeaturesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lbl: UILabel!
     @IBOutlet weak var featureImg: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
