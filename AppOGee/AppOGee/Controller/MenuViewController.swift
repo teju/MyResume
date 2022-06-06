@@ -48,7 +48,7 @@ class MenuViewController: UITableViewController ,TabItem,UICollectionViewDelegat
         
         lbOurStory.text = "We are a digital design and mobile application development company that deliver great iconic logos and applications to our esteemed clients.\n\nWe collaborates with entrepreneurs and start up businesses to create unforgettable brands.\n\nWe are constantly building new products &amp; practical designs that generates long term profits for brand &amp; services that enables entrepreneurs to build profitable brand faster.\n\nWe cordially invite you to join us   and become a part of a growing family."
         
-        lbBottomText.text = "Get in touch\nBusiness: zeeshan@appogee.in / +91 9980588711\nGeneral: vision@appogee.in / +91 9980588711\n\nFind Us\nScott Matrix, Brickfield, Kualalumpur, Malaysia 50470\n26, Lingarajapura, Bangalore, Karnataka 560084\nDD Misty Hills, Kakkanad, Kochi, Kerala 682030\n\nFollow us on:"
+        lbBottomText.text = "Get in touch\nBusiness: zeeshan@appogee.in / +91 9980588711\nGeneral: vision@appogee.in / +91 9980588711\n\nFind Us\nScott Matrix, Brickfield, Kualalumpur, Malaysia 50470\n26, Lingarajapuram, Bangalore, Karnataka 560084\nJade Height, Kakkanad, Kochi, Kerala 682030\n\nFollow us on:"
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
