@@ -14,6 +14,8 @@ class FeaturesTabViewController: BaseViewController ,TabItem{
     var tabs = [ViewPagerTab]()
     var options: ViewPagerOptions?
     var pager:ViewPager?
+    var repeated = false
+
     var tabImage: UIImage? {
       return UIImage(named: "Asset 2")
     }
@@ -35,6 +37,7 @@ class FeaturesTabViewController: BaseViewController ,TabItem{
         pager?.setDelegate(delegate: self)
         pager?.build()
         
+        
     }
     
 
@@ -50,7 +53,6 @@ class FeaturesTabViewController: BaseViewController ,TabItem{
         options!.tabViewImageSize =  CGSize(width: 30, height: 30)
         options!.distribution = .equal
         
-
     }
     
 }
@@ -64,7 +66,7 @@ extension FeaturesTabViewController: ViewPagerDataSource {
         if(position == 0) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "FeaturesViewController") as! FeaturesViewController
-            vc.itemText = "\(tabs[position].title)"
+           // vc.itemText = "\(tabs[position].title)"
             return vc
         } else if(position == 1) {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "KeyNotesViewController") as! KeyNotesViewController
@@ -90,9 +92,11 @@ extension FeaturesTabViewController: ViewPagerDelegate {
     
     func willMoveToControllerAtIndex(index:Int) {
         print("Moving to page \(index)")
+        
     }
     
     func didMoveToControllerAtIndex(index: Int) {
         print("Moved to page \(index)")
+       
     }
 }

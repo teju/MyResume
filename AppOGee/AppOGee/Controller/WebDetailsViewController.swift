@@ -43,7 +43,7 @@ class WebDetailsViewController: UITableViewController , WKUIDelegate,WKNavigatio
         self.webView.evaluateJavaScript("document.readyState", completionHandler: { (complete, error) in
         if complete != nil {
             self.webView.evaluateJavaScript("document.body.scrollHeight", completionHandler: { (height, error) in
-                self.webHeight = webView.scrollView.contentSize.height + 250
+                self.webHeight = webView.scrollView.contentSize.height + 270
                 self.webView.frame = CGRect(x: 0,y: 0,width: self.featureWebView.frame.width,height:  self.webHeight)
                 self.tableview.reloadData()
             })
