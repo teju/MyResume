@@ -45,7 +45,7 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
                self.featuresList = snapshot.value as! NSMutableArray
                print(self.featuresList)
                self.featurestableview.reloadData()
-    
+            self.featurestableview.reloadData()
                 self.loading.hide()
 
            })
@@ -106,6 +106,9 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
         if UIApplication.shared.canOpenURL(whatsappURL as URL) {
             UIApplication.shared.openURL(whatsappURL as URL)
         }
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 230
     }
     @IBAction func telegram(_ sender: Any) {
         let whatsappURL = URL.init(string: "tg://resolve?domain=@DAppOGee")
