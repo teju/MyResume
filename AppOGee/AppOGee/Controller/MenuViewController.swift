@@ -80,7 +80,8 @@ class MenuViewController: UITableViewController ,TabItem,UICollectionViewDelegat
         cell.profilebg.frame.size.width = 140
         cell.profilebg.frame.size.height = 140
         cell.lbRole.text = "\(dict["role"] as! String)"
-        
+        cell.lbRole.textInsets = UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)
+
         return cell
     }
     
@@ -144,5 +145,23 @@ class MenuViewController: UITableViewController ,TabItem,UICollectionViewDelegat
         let sms: String = "https://www.linkedin.com/company/dappogee/"
         let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
+    }
+}
+class EdgeInsetLabel: UILabel {
+    var textInsets = UIEdgeInsets.zero {
+        didSet { invalidateIntrinsicContentSize() }
+    }
+
+    override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+        let textRect = super.textRect(forBounds: bounds, limitedToNumberOfLines: numberOfLines)
+        let invertedInsets = UIEdgeInsets(top: -textInsets.top,
+                                          left: -textInsets.left,
+                                          bottom: -textInsets.bottom,
+                                          right: -textInsets.right)
+        return textRect.inset(by: invertedInsets)
+    }
+
+    override func drawText(in rect: CGRect) {
+        super.drawText(in: rect.inset(by: textInsets))
     }
 }

@@ -450,11 +450,11 @@ Lets Talk!!</string>
                                                                         <rect key="frame" x="144" y="20" width="215" height="140"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-hx-5Vm">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-hx-5Vm" customClass="EdgeInsetLabel" customModule="AppOGee" customModuleProvider="target">
                                                                                 <rect key="frame" x="13" y="3" width="166" height="64"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <color key="backgroundColor" red="0.20392156859999999" green="0.8862745098" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="17"/>
+                                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -521,7 +521,7 @@ Lets Talk!!</string>
                                                                 <outlet property="lbExperience" destination="fLq-cx-sPx" id="YZT-tT-Yg1"/>
                                                                 <outlet property="lbLevel" destination="zRn-cA-z5S" id="jPc-Oc-XyC"/>
                                                                 <outlet property="lbName" destination="zXH-8e-NJf" id="Iic-cA-1wV"/>
-                                                                <outlet property="lbRole" destination="aRI-hx-5Vm" id="3zJ-8e-M28"/>
+                                                                <outlet property="lbRole" destination="aRI-hx-5Vm" id="czi-qZ-ocs"/>
                                                                 <outlet property="profilePhoto" destination="mnE-2d-Og3" id="bDs-7u-qls"/>
                                                                 <outlet property="profilebg" destination="2hn-9p-hEA" id="lQz-xG-EhU"/>
                                                             </connections>
@@ -877,7 +877,7 @@ Lets Talk!!</string>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="cXF-n2-IbL">
-                                    <rect key="frame" x="0.0" y="263.33333206176758" width="390" height="181"/>
+                                    <rect key="frame" x="0.0" y="263" width="390" height="181"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="vN2-S9-0WE">
@@ -992,7 +992,7 @@ Lets Talk!!</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="v9R-zT-GZN">
-                                    <rect key="frame" x="0.0" y="505.33333206176758" width="390" height="181"/>
+                                    <rect key="frame" x="0.0" y="505" width="390" height="181"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-XP-O2D">
@@ -1153,7 +1153,7 @@ Lets Talk!!</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Jab-dJ-bh8">
-                                    <rect key="frame" x="0.0" y="222.33333206176758" width="390" height="208"/>
+                                    <rect key="frame" x="0.0" y="222" width="390" height="208"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="vjn-gd-R80">
