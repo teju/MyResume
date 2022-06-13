@@ -36,6 +36,7 @@ class AppDetailsViewController: UITableViewController ,UICollectionViewDelegate,
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "PhotoFullViewViewController") as! PhotoFullViewViewController
         controller.releated_images = releated_images
+        controller.strTitle = "\( dict["app_name"] as! String) Gallery"
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

@@ -73,7 +73,7 @@ class MenuViewController: UITableViewController ,TabItem,UICollectionViewDelegat
         
         cell.lbName.text = "Name: \( dict["Name"] as! String)"
         cell.lbLevel.text = "Level: \( dict["Level"] as! String)"
-        cell.lbLevel.text = "Experience: \( dict["Experience"] as! String)"
+        cell.lbExperience.text = "Experience: \( dict["Experience"] as! String)"
         cell.profilePhoto.frame.size.width = 60
         cell.profilePhoto.frame.size.height = 60
         cell.lbDescription.text = "\( dict["Description"] as! String)"

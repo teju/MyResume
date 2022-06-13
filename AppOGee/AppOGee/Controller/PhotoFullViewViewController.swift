@@ -10,7 +10,8 @@ import UIKit
 
 class PhotoFullViewViewController: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     var releated_images = NSMutableArray()
-
+    @IBOutlet weak var lbTitle: UILabel!
+    var strTitle = ""
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         releated_images.count
     }
@@ -37,7 +38,8 @@ class PhotoFullViewViewController: UIViewController ,UICollectionViewDelegate,UI
 
         collection_view.delegate = self
         collection_view.dataSource = self
-       
+        lbTitle.text = strTitle
+
 
     }
     override func viewDidAppear(_ animated: Bool) {
