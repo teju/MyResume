@@ -454,7 +454,7 @@ Lets Talk!!</string>
                                                                                 <rect key="frame" x="13" y="3" width="166" height="64"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                 <color key="backgroundColor" red="0.20392156859999999" green="0.8862745098" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="20"/>
+                                                                                <fontDescription key="fontDescription" name="ShipporiMincho-ExtraBold" family="Shippori Mincho" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -1485,7 +1485,7 @@ Lets Talk!!</string>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="XEQ-M4-092">
-                            <rect key="frame" x="0.0" y="754.66666603088379" width="390" height="208"/>
+                            <rect key="frame" x="0.0" y="754.6666660308839" width="390" height="208"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="auZ-dA-UCs">

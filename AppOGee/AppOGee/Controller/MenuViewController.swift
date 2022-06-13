@@ -79,7 +79,8 @@ class MenuViewController: UITableViewController ,TabItem,UICollectionViewDelegat
         cell.lbDescription.text = "\( dict["Description"] as! String)"
         cell.profilebg.frame.size.width = 140
         cell.profilebg.frame.size.height = 140
-        cell.lbRole.text = dict["role"] as! String
+        cell.lbRole.text = "\(dict["role"] as! String)"
+        
         return cell
     }
     
