@@ -108,7 +108,7 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 230
+        return 200
     }
     @IBAction func telegram(_ sender: Any) {
         let whatsappURL = URL.init(string: "tg://resolve?domain=@DAppOGee")
