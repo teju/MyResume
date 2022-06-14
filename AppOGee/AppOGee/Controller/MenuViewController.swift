@@ -42,6 +42,7 @@ class MenuViewController: UITableViewController ,TabItem,UICollectionViewDelegat
                self.aboutUsList = snapshot.value as! NSMutableArray
                print(self.aboutUsList)
                self.collection_view.reloadData()
+            self.tableView.reloadData()
                 self.loading.hide()
 
         })
@@ -81,12 +82,20 @@ class MenuViewController: UITableViewController ,TabItem,UICollectionViewDelegat
         cell.profilebg.frame.size.height = 140
         cell.lbRole.text = "\(dict["role"] as! String)"
         cell.lbRole.textInsets = UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)
+        cell.lbDescription.sizeToFit()
 
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(indexPath.section == 1) {
+            return CGFloat(self.aboutUsList.count * 450) + 100
+        }
+        
+        return super.tableView(tableView, heightForRowAt: indexPath)
+
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width,height: 400)
+        return CGSize(width: UIScreen.main.bounds.width,height: 450)
     }
     @IBAction func phone(_ sender: Any) {
         if let url = URL(string: "tel://\(mobile)") {
