@@ -733,19 +733,19 @@ Lets Talk!!</string>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adl" translatesAutoresizingMaskIntoConstraints="NO" id="DUH-E9-FVs">
-                                                    <rect key="frame" x="-5" y="688" width="395" height="374"/>
+                                                    <rect key="frame" x="-5" y="679" width="395" height="383"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="native_sdk" translatesAutoresizingMaskIntoConstraints="NO" id="BfT-7B-Zkl">
-                                                    <rect key="frame" x="-5" y="939" width="396" height="394"/>
+                                                    <rect key="frame" x="-5" y="932" width="396" height="401"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_features" translatesAutoresizingMaskIntoConstraints="NO" id="ppS-bV-nwF">
-                                                    <rect key="frame" x="-2" y="1211" width="395" height="374"/>
+                                                    <rect key="frame" x="-2" y="1202" width="395" height="383"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lets_connect" translatesAutoresizingMaskIntoConstraints="NO" id="pUc-Hp-Fcz">
-                                                    <rect key="frame" x="-6" y="1463" width="397" height="321"/>
+                                                    <rect key="frame" x="-6" y="1454" width="397" height="330"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="ler-9X-fwl">
@@ -878,7 +878,7 @@ Lets Talk!!</string>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="cXF-n2-IbL">
-                                    <rect key="frame" x="0.0" y="263" width="390" height="181"/>
+                                    <rect key="frame" x="0.0" y="263.33333206176758" width="390" height="181"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="vN2-S9-0WE">
@@ -993,7 +993,7 @@ Lets Talk!!</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="v9R-zT-GZN">
-                                    <rect key="frame" x="0.0" y="505" width="390" height="181"/>
+                                    <rect key="frame" x="0.0" y="505.33333206176758" width="390" height="181"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-XP-O2D">
@@ -1154,7 +1154,7 @@ Lets Talk!!</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Jab-dJ-bh8">
-                                    <rect key="frame" x="0.0" y="222" width="390" height="208"/>
+                                    <rect key="frame" x="0.0" y="222.33333206176758" width="390" height="208"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="vjn-gd-R80">
@@ -1486,7 +1486,7 @@ Lets Talk!!</string>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="XEQ-M4-092">
-                            <rect key="frame" x="0.0" y="755" width="390" height="208"/>
+                            <rect key="frame" x="0.0" y="754.6666660308839" width="390" height="208"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="auZ-dA-UCs">
