@@ -15,6 +15,8 @@ class AppDetailsViewController: UITableViewController ,UICollectionViewDelegate,
         return releated_images.count
     }
     
+    @IBOutlet weak var btnBack: UIButton!
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -77,9 +79,12 @@ class AppDetailsViewController: UITableViewController ,UICollectionViewDelegate,
         if(dict["text_colour"] as! String == "light") {
             lbTitle.textColor = UIColor.white
             lbDescription.textColor = UIColor.white
+            btnBack.tintColor = UIColor.white
         } else {
             lbTitle.textColor = UIColor.black
             lbDescription.textColor = UIColor.black
+            btnBack.tintColor = UIColor.black
+
         }
         releated_images =  dict["releated_images"] as! NSMutableArray
         

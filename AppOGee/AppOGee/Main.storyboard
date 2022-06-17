@@ -78,7 +78,7 @@
                             </imageView>
                             <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9e-r5-zgl">
                                 <rect key="frame" x="-12" y="0.0" width="414" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app_o_gee_white" translatesAutoresizingMaskIntoConstraints="NO" id="JxD-dQ-rb8">
                                         <rect key="frame" x="140" y="27" width="132" height="33"/>
@@ -409,7 +409,7 @@ Lets Talk!!</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
@@ -424,7 +424,7 @@ Lets Talk!!</string>
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="838"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alpha_team" id="xNd-H5-3xE">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="alpha_team" id="xNd-H5-3xE">
                                                     <rect key="frame" x="8" y="5" width="375" height="69"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -442,7 +442,7 @@ Lets Talk!!</string>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="about_us" id="8i3-AD-HR8" customClass="AboutUsTableViewCell" customModule="AppOGee" customModuleProvider="target">
                                                             <rect key="frame" x="7.666666666666667" y="0.0" width="367" height="512"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KLu-IH-aXS">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="KLu-IH-aXS">
                                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="512"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
@@ -514,7 +514,7 @@ Lets Talk!!</string>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </view>
                                                                 </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="367" height="512"/>
                                                             <connections>
@@ -530,7 +530,7 @@ Lets Talk!!</string>
                                                     </cells>
                                                 </collectionView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
@@ -1346,7 +1346,7 @@ Lets Talk!!</string>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWV-t9-wWM">
-                                                    <rect key="frame" x="3" y="44.333333333333329" width="60" height="60"/>
+                                                    <rect key="frame" x="3" y="70" width="71" height="69"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1354,7 +1354,6 @@ Lets Talk!!</string>
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="back:" destination="xDg-14-kW9" eventType="touchUpInside" id="aXX-zv-G5d"/>
                                                         <action selector="back:" destination="AqZ-eI-lMv" eventType="touchUpInside" id="rk0-2q-sXs"/>
                                                     </connections>
                                                 </button>
@@ -1439,6 +1438,7 @@ Lets Talk!!</string>
                     </tableView>
                     <connections>
                         <outlet property="bgview" destination="cgH-Dg-wZI" id="lz3-gN-Avp"/>
+                        <outlet property="btnBack" destination="DWV-t9-wWM" id="gmO-RQ-6US"/>
                         <outlet property="collectionview" destination="Lv7-mK-Tr1" id="Zin-dW-kb1"/>
                         <outlet property="imgLogo" destination="h4n-uB-kxc" id="n2b-Li-mtH"/>
                         <outlet property="lbDescription" destination="ZyB-OT-iWa" id="oMA-uK-7oe"/>
