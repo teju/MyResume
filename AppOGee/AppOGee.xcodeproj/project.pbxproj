@@ -37,6 +37,7 @@
 		BD497C1527D39499000240B4 /* client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD497C1427D39499000240B4 /* client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist */; };
 		BD4B042727CA0D4B000422E7 /* FeaturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B042627CA0D4B000422E7 /* FeaturesTableViewCell.swift */; };
 		BD4B042927CA1BD5000422E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */; };
+		BD52F46D287813DD004F0FAB /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD52F46C287813DD004F0FAB /* ConnectionManager.swift */; };
 		BD631BEE27CA342400BC4F0C /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD631BED27CA342400BC4F0C /* Features.swift */; };
 		BD64A4B427CF52EA00D8DEDC /* loading_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD64A4B327CF52EA00D8DEDC /* loading_animation.gif */; };
 		BD690C5527C91C1B00417537 /* shipporimincho_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD690C4E27C91C1B00417537 /* shipporimincho_bold.ttf */; };
@@ -119,6 +120,7 @@
 		BD497C1427D39499000240B4 /* client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_682386723547-kpfjfm7pletg2rkq4p64j595tbehvaul.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		BD4B042627CA0D4B000422E7 /* FeaturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesTableViewCell.swift; sourceTree = "<group>"; };
 		BD4B042827CA1BD5000422E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD52F46C287813DD004F0FAB /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		BD631BED27CA342400BC4F0C /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		BD64A4B327CF52EA00D8DEDC /* loading_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading_animation.gif; path = ../../Resume/app/src/main/res/drawable/loading_animation.gif; sourceTree = "<group>"; };
 		BD690C4E27C91C1B00417537 /* shipporimincho_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = shipporimincho_bold.ttf; path = ../../../Resume/app/src/main/res/font/shipporimincho_bold.ttf; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				BD158ECD27CFAFB0009547E4 /* PhotoFullViewViewController.swift */,
 				BD497C0727D334CE000240B4 /* BaseViewController.swift */,
 				BD497C1227D37CCB000240B4 /* BaseTableViewController.swift */,
+				BD52F46C287813DD004F0FAB /* ConnectionManager.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				BD158ECC27CFA584009547E4 /* ReleatedImagesCollectionViewCell.swift in Sources */,
 				BD497C0827D334CE000240B4 /* BaseViewController.swift in Sources */,
 				BDBE752F27C9538800D1AA32 /* LoginViewController.swift in Sources */,
+				BD52F46D287813DD004F0FAB /* ConnectionManager.swift in Sources */,
 				796A9D662481446900233FCF /* AppDelegate.swift in Sources */,
 				BDBE752C27C9538800D1AA32 /* MenuViewController.swift in Sources */,
 				BDBE752B27C9538800D1AA32 /* WorkTabViewController.swift in Sources */,
@@ -735,7 +739,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = BQ48L7HSQ5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppOGee/Info.plist;
@@ -756,7 +760,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = BQ48L7HSQ5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppOGee/Info.plist;

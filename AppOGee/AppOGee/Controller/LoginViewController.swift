@@ -30,9 +30,15 @@ class LoginViewController: UIViewController {
         //animateBackground()
     }
     @IBAction func skip(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabViewController")
-        self.navigationController?.pushViewController(initialViewController, animated: true)
+        if(ConnectionManager.shared.hasConnectivity()) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabViewController")
+            self.navigationController?.pushViewController(initialViewController, animated: true)
+        } else {
+            let alert = UIAlertController(title: "No Internet Connection", message: "", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func animateBackground() {

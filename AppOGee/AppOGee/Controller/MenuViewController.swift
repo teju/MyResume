@@ -37,21 +37,33 @@ class MenuViewController: UITableViewController ,TabItem,UICollectionViewDelegat
         collection_view.dataSource = self
         
         self.aboutUsList.removeAllObjects()
-        refAboutUs = Database.database().reference().child("/aboutus");
-        refAboutUs.observe(DataEventType.value, with: {(snapshot) in
-               self.aboutUsList = snapshot.value as! NSMutableArray
-               print(self.aboutUsList)
-               self.collection_view.reloadData()
-            self.tableView.reloadData()
-                self.loading.hide()
-
-        })
+       
         
         lbOurStory.text = "We are a digital design and mobile application development company that deliver great iconic logos and applications to our esteemed clients.\n\nWe collaborates with entrepreneurs and start up businesses to create unforgettable brands.\n\nWe are constantly building new products &amp; practical designs that generates long term profits for brand &amp; services that enables entrepreneurs to build profitable brand faster.\n\nWe cordially invite you to join us   and become a part of a growing family."
         
         lbBottomText.text = "Get in touch\nBusiness: zeeshan@appogee.in / +91 9980588711\nGeneral: vision@appogee.in / +91 9980588711\n\nFind Us\nScott Matrix, Brickfield, Kualalumpur, Malaysia 50470\n26, Lingarajapuram, Bangalore, Karnataka 560084\nJade Height, Kakkanad, Kochi, Kerala 682030\n\nFollow us on:"
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if(ConnectionManager.shared.hasConnectivity()) {
+
+            refAboutUs = Database.database().reference().child("/aboutus");
+            refAboutUs.observe(DataEventType.value, with: {(snapshot) in
+                   self.aboutUsList = snapshot.value as! NSMutableArray
+                   print(self.aboutUsList)
+                   self.collection_view.reloadData()
+                self.tableView.reloadData()
+                    self.loading.hide()
+
+            })
+        } else {
+            loading.hide()
+            let alert = UIAlertController(title: "No Internet Connection", message: "", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat.leastNonzeroMagnitude
     }

@@ -29,17 +29,27 @@ class KeyNotesViewController: UIViewController  ,UITableViewDataSource, UITableV
         let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
         bgImg.alpha = 0.6
         Keynotestableview.backgroundView = bgImg
+       
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
+        if(ConnectionManager.shared.hasConnectivity()) {
+            refKeynotes = Database.database().reference().child("features/keynotes");
+             self.keyNotesList.removeAllObjects()
 
-        refKeynotes = Database.database().reference().child("features/keynotes");
-         self.keyNotesList.removeAllObjects()
-
-        refKeynotes.observe(DataEventType.value, with: {(snapshot) in
-            self.keyNotesList = snapshot.value as! NSMutableArray
-            print(self.keyNotesList)
-            self.Keynotestableview.reloadData()
-            self.loading.hide()
-        })
+            refKeynotes.observe(DataEventType.value, with: {(snapshot) in
+                self.keyNotesList = snapshot.value as! NSMutableArray
+                print(self.keyNotesList)
+                self.Keynotestableview.reloadData()
+                self.loading.hide()
+            })
+        } else {
+            loading.hide()
+            let alert = UIAlertController(title: "No Internet Connection", message: "", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     @IBAction func phone(_ sender: Any) {
         if let url = URL(string: "tel://\(mobile)") {

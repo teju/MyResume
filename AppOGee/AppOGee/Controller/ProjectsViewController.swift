@@ -24,22 +24,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         projectsTableview.dataSource = self
         projectsTableview.delegate = self
-        
-
-        refProjects = Database.database().reference().child("/myApps");
-            self.projectList.removeAllObjects()
-        let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
-        bgImg.alpha = 0.6
-        projectsTableview.backgroundView = bgImg
-        loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
-
-        refProjects.observe(DataEventType.value, with: {(snapshot) in
-               self.projectList = snapshot.value as! NSMutableArray
-               print(self.projectList)
-               self.projectsTableview.reloadData()
-            self.loading.hide()
-
-        })
+      
     
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +34,30 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
             self.navigationController?.isNavigationBarHidden = true
         }
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        
+        
+        if(ConnectionManager.shared.hasConnectivity()) {
+
+            refProjects = Database.database().reference().child("/myApps");
+                self.projectList.removeAllObjects()
+            let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
+            bgImg.alpha = 0.6
+            projectsTableview.backgroundView = bgImg
+            loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
+
+            refProjects.observe(DataEventType.value, with: {(snapshot) in
+                   self.projectList = snapshot.value as! NSMutableArray
+                   print(self.projectList)
+                   self.projectsTableview.reloadData()
+                self.loading.hide()
+
+            })
+        } else {
+            loading.hide()
+            let alert = UIAlertController(title: "No Internet Connection", message: "", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

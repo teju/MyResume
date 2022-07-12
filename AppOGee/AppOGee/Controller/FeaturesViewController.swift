@@ -37,18 +37,25 @@ class FeaturesViewController: UIViewController ,UITableViewDataSource, UITableVi
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loading.show("", gifimagename: "loading_animation",iWidth: 80,iHight: 80)
+        if(ConnectionManager.shared.hasConnectivity()) {
+            refFeatures = Database.database().reference().child("features/scrollImages");
+                self.featuresList.removeAllObjects()
 
-        refFeatures = Database.database().reference().child("features/scrollImages");
-            self.featuresList.removeAllObjects()
+            refFeatures.observe(DataEventType.value, with: {(snapshot) in
+                   self.featuresList = snapshot.value as! NSMutableArray
+                   print(self.featuresList)
+                   self.featurestableview.reloadData()
+                self.featurestableview.reloadData()
+                    self.loading.hide()
 
-        refFeatures.observe(DataEventType.value, with: {(snapshot) in
-               self.featuresList = snapshot.value as! NSMutableArray
-               print(self.featuresList)
-               self.featurestableview.reloadData()
-            self.featurestableview.reloadData()
-                self.loading.hide()
-
-           })
+               })
+        } else {
+            loading.hide()
+            let alert = UIAlertController(title: "No Internet Connection", message: "", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

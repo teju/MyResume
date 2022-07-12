@@ -51,21 +51,31 @@ class WorkTabViewController: BaseViewController ,TabItem, UICollectionViewDelega
            let bgImg =  UIImageView(image: UIImage(named: "features_bg.png"))
            bgImg.alpha = 0.6
            collectionView.backgroundView = bgImg
-           
-           refProjects = Database.database().reference().child("/AppDetails");
-               self.items.removeAllObjects()
           
-
-           refProjects.observe(DataEventType.value, with: {(snapshot) in
-                  self.items = snapshot.value as! NSMutableArray
-                  print(self.items)
-                  self.collectionView.reloadData()
-               self.loading.hide()
-
-           })
        
        }
-       
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if(ConnectionManager.shared.hasConnectivity()) {
+
+            refProjects = Database.database().reference().child("/AppDetails");
+                self.items.removeAllObjects()
+           
+
+            refProjects.observe(DataEventType.value, with: {(snapshot) in
+                   self.items = snapshot.value as! NSMutableArray
+                   print(self.items)
+                   self.collectionView.reloadData()
+                self.loading.hide()
+
+            })
+        } else {
+            loading.hide()
+            let alert = UIAlertController(title: "No Internet Connection", message: "", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
        fileprivate func setupLayout() {
            let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
            layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
